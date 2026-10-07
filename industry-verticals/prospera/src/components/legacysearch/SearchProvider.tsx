@@ -3,11 +3,13 @@
 import React, { useEffect } from 'react';
 import { PageController, WidgetsProvider } from '@sitecore-search/react';
 
-const SEARCH_CONFIG = {
-  env: process.env.NEXT_PUBLIC_SEARCH_ENV as any,
-  customerKey: process.env.NEXT_PUBLIC_SEARCH_CUSTOMER_KEY!,
-  apiKey: process.env.NEXT_PUBLIC_SEARCH_API_KEY!,
-};
+const searchEnv = process.env.NEXT_PUBLIC_SEARCH_ENV;
+const customerKey = process.env.NEXT_PUBLIC_SEARCH_CUSTOMER_KEY?.trim();
+const apiKey = process.env.NEXT_PUBLIC_SEARCH_API_KEY?.trim();
+
+// SDK 3 treats a missing customer key as OrderCloud and throws
+// "{discoverDomainId} has not been provided", which 500s every page.
+const isSearchConfigured = Boolean(customerKey && apiKey);
 
 function setSearchLocale(locale: string) {
   const context = PageController.getContext();
@@ -37,14 +39,22 @@ export function SearchProvider({
   locale,
 }: SearchProviderProps) {
   useEffect(() => {
+    if (!isSearchConfigured) {
+      return;
+    }
+
     setSearchLocale(locale);
   }, [locale]);
 
+  if (!isSearchConfigured || !customerKey || !apiKey) {
+    return children;
+  }
+
   return (
     <WidgetsProvider
-      env={SEARCH_CONFIG.env}
-      customerKey={SEARCH_CONFIG.customerKey}
-      apiKey={SEARCH_CONFIG.apiKey}
+      env={searchEnv as 'prod'}
+      customerKey={customerKey}
+      apiKey={apiKey}
       publicSuffix
     >
       {children}
