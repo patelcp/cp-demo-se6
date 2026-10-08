@@ -10,6 +10,7 @@ import {
   RichTextField,
   RichText,
   NextImage,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
@@ -39,6 +40,24 @@ export type FooterProps = {
   fields: Fields;
 };
 
+function hasImageSource(field?: ImageField): boolean {
+  return Boolean(field?.value?.src);
+}
+
+function FooterLogo({ field }: { field?: ImageField }): JSX.Element | null {
+  const { page } = useSitecore();
+
+  if (!field || (!page.mode.isEditing && !hasImageSource(field))) {
+    return null;
+  }
+
+  return (
+    <div className="logo">
+      <NextImage field={field} width={220} height={80} className="img-fluid" />
+    </div>
+  );
+}
+
 export const Default = (props: FooterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
@@ -47,14 +66,7 @@ export const Default = (props: FooterProps): JSX.Element => {
     <div className={`component component-spaced footer ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="content">
-          <div className="logo">
-            <NextImage
-              field={props.fields?.Image1}
-              width={200}
-              height={200}
-              className="img-fluid"
-            />
-          </div>
+          <FooterLogo field={props.fields?.Image1} />
           <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-4 row-gap-5 gx-5">
             <div className="col">
               <div className="title">
@@ -114,14 +126,7 @@ export const WithSocials = (props: FooterProps): JSX.Element => {
     >
       <div className="container">
         <div className="content">
-          <div className="logo">
-            <NextImage
-              field={props.fields?.Image1}
-              width={200}
-              height={200}
-              className="img-fluid"
-            />
-          </div>
+          <FooterLogo field={props.fields?.Image1} />
           <div className="row row-cols-1 row-cols-md-3 row-gap-5 gx-5">
             <div className="col">
               <div className="title eyebrow-accent">

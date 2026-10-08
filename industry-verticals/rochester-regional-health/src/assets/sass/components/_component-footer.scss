@@ -30,7 +30,18 @@
     }
 
     .logo {
-      flex-basis: 20%;
+      flex: 0 0 200px;
+      width: 200px;
+      max-width: 220px;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
 
       @include respond-to(mobile-large) {
         display: none;

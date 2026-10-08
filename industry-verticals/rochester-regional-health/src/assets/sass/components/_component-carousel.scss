@@ -117,6 +117,18 @@
       z-index: 1;
       padding: 2rem $size-padding 3rem;
 
+      h1 {
+        font-size: clamp(2.75rem, 5.5vw, 4.375rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.75rem;
+      }
+
+      .button-main {
+        background-color: var(--brand-navy, #173d57);
+        color: #fff;
+      }
+
       @include media-breakpoint-up(md) {
         position: absolute;
         width: 100%;

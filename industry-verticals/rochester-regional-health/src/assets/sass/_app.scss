@@ -45,6 +45,25 @@ h6 {
   font-weight: bold;
 }
 
+.site-financial {
+  h1 {
+    color: var(--brand-raspberry);
+  }
+
+  h2 {
+    color: var(--brand-navy);
+  }
+
+  // Navy and photo panels set their own light text. Keep those headings readable.
+  .cta-banner .container-widest-fluid,
+  .promo.promo-hero .field-promotext {
+    h1,
+    h2 {
+      color: inherit;
+    }
+  }
+}
+
 h1 {
   font-size: 2em;
 }

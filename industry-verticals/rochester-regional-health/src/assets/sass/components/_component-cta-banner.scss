@@ -7,14 +7,14 @@
   .container-widest-fluid {
     background-color: var(--bg-saturated);
     border-radius: var(--roundness);
-    margin-top: 6.5rem;
-    margin-bottom: 6.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
     color: var(--hr-color);
 
     @include respond-to(mobile-large) {
-      margin-top: 0 !important;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      margin-top: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .eyebrow-accent {
@@ -22,21 +22,22 @@
     }
 
     .button-main {
-      background-color: var(--text-body);
-      color: var(--bg-body);
+      background-color: var(--brand-raspberry, #b33259);
+      color: #fff;
 
       &:hover {
-        filter: brightness(85%);
+        color: #fff;
+        filter: brightness(1.08);
       }
     }
   }
 
   .image-wrapper {
-    margin-top: -6.5rem;
-    margin-bottom: -6.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 
     @include respond-to(mobile-large) {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
 
     img {
@@ -49,9 +50,13 @@
 
   .content-wrapper {
     margin: 3rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     @include respond-to(mobile-large) {
       margin: 2rem 0 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 
@@ -125,13 +130,13 @@
 
   &.with-large-image {
     .container-widest-fluid {
-      margin-top: 8.5rem;
-      margin-bottom: 8.5rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
     }
 
     .image-wrapper {
-      margin-top: -8.5rem;
-      margin-bottom: -8.5rem;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .content-column {
