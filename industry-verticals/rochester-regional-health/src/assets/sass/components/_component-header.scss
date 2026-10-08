@@ -129,23 +129,14 @@
 
   .eyebrow .col-placeholder,
   .eyebrow .row > .col {
-    flex-wrap: wrap !important;
     justify-content: flex-start !important;
     width: 100%;
     gap: 0.35rem;
   }
 
   .eyebrow .rich-text {
-    width: 100%;
     min-width: 0;
   }
-
-  .rrh-util {
-    justify-content: flex-start;
-    font-size: 13px;
-    padding: 8px 12px;
-  }
-
 }
 
 @media only screen and (max-width: 1023px) {
@@ -211,6 +202,103 @@
         font-size: 1.125rem;
         border-bottom: 1px solid #e6eef3;
       }
+    }
+  }
+}
+
+// Content RichText ships a competing <style> block. These selectors are scoped
+// under .header / .eyebrow so they win with or without that block.
+@media only screen and (max-width: 1023px) {
+  // The content stylesheet sets flex-wrap: wrap !important, which stacks the bar.
+  .component.eyebrow .col-placeholder,
+  .component.eyebrow .row > .col {
+    flex-wrap: nowrap !important;
+    align-items: center;
+  }
+
+  .component.eyebrow .col-placeholder > .component:first-child {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 40%;
+  }
+
+  .component.eyebrow .col-placeholder > div:last-child,
+  .component.eyebrow .col-placeholder .rich-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .component.eyebrow .rrh-util {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: 4px 12px;
+    font-size: 13px;
+    line-height: 1.2;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+
+    .rrh-util-cta {
+      padding: 4px 12px;
+    }
+  }
+
+  .component.header:has(.rrh-nav input:checked) {
+    position: relative;
+    z-index: 80;
+  }
+
+  .component.header .rrh-nav .rrh-nav-toggle:focus-visible {
+    outline: 2px solid #173d57;
+    outline-offset: 2px;
+  }
+
+  .component.header .rrh-nav input:checked + .rrh-nav-toggle {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.75rem;
+    z-index: 1002;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgb(23 61 87 / 25%);
+  }
+
+  .component.header .rrh-nav input:checked ~ nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: fixed;
+    top: var(--rrh-menu-top, 6.5rem);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    background: #fff;
+    padding: 0 1.5rem 2rem;
+    margin: 0;
+    gap: 0;
+    overflow: auto;
+
+    a {
+      padding: 0.9rem 0;
+      font-size: 1.125rem;
+      border-bottom: 1px solid #e6eef3;
     }
   }
 }
