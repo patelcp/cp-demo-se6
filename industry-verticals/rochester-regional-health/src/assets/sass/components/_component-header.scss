@@ -1,0 +1,273 @@
+@import 'src/assets/sass/abstracts/vars';
+
+.header {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @media only screen and (max-width: 1023px) {
+    position: relative;
+    z-index: 30;
+    padding: 0.75rem 1rem;
+  }
+
+  @include respond-to(mobile-large) {
+    padding: 0.75rem $size-padding;
+  }
+
+  .header-logo {
+    display: inline-block;
+    line-height: 0;
+  }
+
+  .header-logo img,
+  img {
+    display: block;
+    width: auto;
+    max-width: min(220px, 62vw);
+    height: auto;
+  }
+
+  .rich-text,
+  .navigation {
+    padding: 0 !important;
+  }
+}
+
+.rrh-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .rrh-nav-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: 600;
+
+    a {
+      color: #173d57;
+      text-decoration: none;
+    }
+  }
+}
+
+.eyebrow {
+  background: #0077c8;
+}
+
+.eyebrow .col-placeholder {
+  width: 100%;
+  justify-content: flex-end !important;
+}
+
+.eyebrow .col-placeholder > div {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.eyebrow .rich-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+}
+
+.rrh-util {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 8px 10px 24px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .rrh-util-cta {
+    background: #173d57;
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .eyebrow {
+    background: #0077c8;
+  }
+
+  .eyebrow .col-placeholder,
+  .eyebrow .row > .col {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    gap: 0.35rem;
+  }
+
+  .eyebrow .rich-text {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rrh-util {
+    justify-content: flex-start;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  .rrh-nav {
+    width: auto;
+    margin-left: auto;
+
+    .rrh-nav-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+
+      span {
+        display: block;
+        height: 3px;
+        width: 22px;
+        background: #173d57;
+        border-radius: 2px;
+      }
+    }
+
+    nav {
+      display: none;
+    }
+
+    input:checked + .rrh-nav-toggle {
+      position: fixed;
+      top: 0.75rem;
+      right: 1rem;
+      z-index: 1001;
+      background: #fff;
+
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+
+    input:checked ~ nav {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: #fff;
+      padding: 5rem 1.5rem 2rem;
+      margin: 0;
+
+      a {
+        padding: 0.9rem 0;
+        font-size: 1.125rem;
+        border-bottom: 1px solid #e6eef3;
+      }
+    }
+  }
+}
+
+.site-financial .header {
+  h1 {
+    font-size: 1.35rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.01em;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .play {
+      display: flex;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #173d57;
+
+      svg {
+        width: 1rem;
+      }
+
+      .dark & {
+        color: #fff;
+      }
+    }
+
+    .finance {
+      color: #0077c8;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// PLAY! services specific styles
+.site-services .header {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    svg {
+      width: 2.5rem;
+      margin-right: 1rem;
+    }
+
+    .services {
+      color: var(--text-accent);
+      font-weight: normal;
+    }
+  }
+}

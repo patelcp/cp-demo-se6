@@ -1,0 +1,96 @@
+# Skinned Demo Setup — Progress Tracker
+# Created after inputs are collected. Updated after each step.
+# Used by "resume skinned demo setup" to skip completed work.
+# Do NOT store secrets (tokens, client secrets, passwords) in this file.
+
+customer:
+  name: "Rochester Regional Health"
+  systemName: "RochesterRegionalHealth"
+  folder: "rochester-regional-health"
+  url: "https://www.rochesterregional.org/"
+  screenshotPath: ".cursor/skills/skinned-demo-setup/runs/rochester-regional-health/homepage.png"
+  startedAt: "2026-10-08T02:50:00Z"
+  lastUpdatedAt: "2026-10-08T03:15:00Z"
+
+selection:
+  collectionMode: "new"
+  customerCollection: "Healthcare"
+  collectionId: "356cc9edc96243f8b38eff68df9ef36b"
+  sourceSiteName: "ProsperaFinancial"
+  sourceSiteId: "08d9417d-5071-46ff-896b-eb76b0790526"
+  sourceCollectionId: "856641099059459ba079f76e3fa09063"
+  sourceFolder: "prospera"
+  needsMove: true
+
+artifacts:
+  newSiteId: "dd78e777-975c-441c-9766-e2d4b1d63d1f"
+  ehEnvironmentId: "6EN236qbD9VsrwKKQaiv33"
+  cmEnvironmentId: "37CuqhQAcMehIXxkFxbJGB"
+  renderingHostKey: "rochester-regional-health"
+
+steps:
+  inputs:
+    status: "complete"
+
+  preflight_auth:
+    status: "complete"
+    sitesApiOk: true
+    marketerMcpOk: false
+    error: "Marketer list_sites returned 404. Sites API succeeded. Continuing with Sites API."
+
+  collection_source_selection:
+    status: "complete"
+
+  source_verification:
+    status: "complete"
+    error: ""
+
+  step1a_collection:
+    status: "complete"
+
+  step1a_duplicate:
+    status: "complete"
+    tempSiteName: "RochesterRegionalHealth-copy"
+    error: ""
+
+  step1a_rename:
+    status: "complete"
+    error: ""
+
+  step1a_move_notify:
+    status: "complete"
+
+  step1b_local_copy:
+    status: "complete"
+    error: ""
+
+  step1c_env_local:
+    status: "complete"
+    error: ""
+
+  step1c_xmcloud_build:
+    status: "complete"
+    error: ""
+
+  move_verify:
+    status: "complete"
+    error: ""
+
+  step1d_editing_host:
+    status: "complete"
+    optedIn: true
+    error: "Type eh. No NEXT_PUBLIC_SEARCH_* variables in .env.local. Provisioning was NotStarted after create; deploying the host next."
+
+  step1_verification:
+    status: "complete"
+    error: ""
+
+  step2_build_demo:
+    status: "handed_off"
+    error: ""
+
+notes:
+  - "2026-10-08T02:53:00Z — Inputs recorded. Homepage screenshot saved. Waiting on new vs existing Site Collection, and Sites API automation credentials, before creating anything."
+  - "2026-10-08T03:00:00Z — User chose a new Site Collection named Healthcare. Still waiting on SITECORE_AUTOMATION_CLIENT_ID and SITECORE_AUTOMATION_CLIENT_SECRET."
+  - "2026-10-08T03:12:00Z — Healthcare collection created. Site copy finished inside Financial because the Sites API cannot target another collection. Asked the user to move it in Content Editor. Local folder, .env.local, and rendering host entry are in place. Rename still pending."
+  - "2026-10-08T03:16:00Z — User moved the site. Renamed to RochesterRegionalHealth (dd78e777-975c-441c-9766-e2d4b1d63d1f) and confirmed it is in Healthcare. Editing host 6EN236qbD9VsrwKKQaiv33 type eh. No search env vars to upsert."

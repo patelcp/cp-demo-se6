@@ -1,0 +1,116 @@
+# Client Brand Theme
+# Generated from https://www.rochesterregional.org/
+
+client:
+  name: "Rochester Regional Health"
+  sourceUrl: "https://www.rochesterregional.org/"
+  extractedAt: "2026-10-08T03:40:00Z"
+  extractedBy: "playwright-scraper"
+
+colors:
+  primary: "#173d57"
+  primaryForeground: "#ffffff"
+  secondary: "#0077c8"
+  secondaryForeground: "#ffffff"
+  accent: "#a1264a"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#3e3e3e"
+  muted: "#e7f3f6"
+  mutedForeground: "#3e3e3e"
+  headerBackground: "#0077c8"
+  headerForeground: "#ffffff"
+  footerBackground: "#173d57"
+  footerForeground: "#ffffff"
+  border: "#d7e3ea"
+  ring: "#0077c8"
+  extra: []
+
+typography:
+  headingFamily: "Fraunces"
+  headingWeight: "700"
+  bodyFamily: "Open Sans"
+  bodyWeight: "400"
+  monoFamily: ""
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Open+Sans:wght@400;600;700&display=swap"
+  scale:
+    hero: "70px"
+    h1: "70px"
+    h2: "50px"
+    h3: "32px"
+    body: "19px"
+    small: "14px"
+  headingTransform: "none"
+  letterSpacing: "-0.7px"
+  lineHeight: "32px"
+
+spacing:
+  density: "normal"
+  sectionGap: ""
+  containerMaxWidth: "1842px"
+  containerPadding: ""
+
+shape:
+  borderRadius: "1.5rem"
+  buttonRadius: "47px"
+  cardRadius: "32px"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "none"
+
+tone:
+  overall: "healthcare"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "split-image-text"
+  cardStyle: "image-top"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#173d57"
+      secondary: "#0077c8"
+      accent: "#a1264a"
+  fontFamily:
+    heading: ["Fraunces", "Georgia", "serif"]
+    body: ["Open Sans", "Helvetica", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "1.5rem"
+    button: "47px"
+    card: "32px"
+
+cssVariables: |
+  :root {
+    --brand-primary: #173d57;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #0077c8;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #a1264a;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #3e3e3e;
+    --brand-muted: #e7f3f6;
+    --brand-muted-fg: #3e3e3e;
+    --brand-header-bg: #0077c8;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #173d57;
+    --brand-footer-fg: #ffffff;
+    --brand-border: #d7e3ea;
+    --brand-ring: #0077c8;
+    --brand-heading-font: 'Fraunces', Georgia, serif;
+    --brand-body-font: 'Open Sans', Helvetica, Arial, sans-serif;
+    --brand-radius: 1.5rem;
+    --brand-button-radius: 47px;
+    --brand-card-radius: 32px;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Heading color #a1264a is taken from the hero screenshot. The scraper did not return a computed heading color."
+    - "Headings use proprietary Albra Semi. Fraunces is the Google Fonts substitute."
+    - "Body copy uses Gotham Book with Open Sans as the declared fallback."
+    - "Utility bar is #0077c8. Footer and primary buttons are #173d57. Links are #0077c8."

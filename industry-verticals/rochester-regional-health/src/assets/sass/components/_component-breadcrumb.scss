@@ -1,0 +1,105 @@
+.breadcrumb {
+  @extend .overflow-hidden;
+  @extend .bg-transparent;
+  @extend .pt-5;
+
+  ol {
+    @extend .p-0;
+  }
+
+  li {
+    @extend .d-inline-block;
+
+    a,
+    span {
+      @extend .d-inline-block;
+
+      color: var(--text-colored);
+      text-decoration: none;
+
+      &::before {
+        @extend .d-block;
+        @extend .fw-bold;
+        @extend .overflow-hidden;
+        @extend .invisible;
+
+        height: 0;
+        content: attr(title);
+        padding-left: 5px;
+        padding-right: 3px;
+      }
+
+      &:hover {
+        @extend .fw-bold;
+      }
+    }
+
+    &:not(:first-of-type)::before {
+      @extend .fw-normal;
+      @extend .d-inline;
+      @include fa-icon;
+
+      content: $fa-var-chevron-right;
+      vertical-align: middle;
+      font-size: 1.5em;
+      padding-right: 15px;
+    }
+
+    &:first-of-type::before {
+      @extend .fw-normal;
+      @extend .d-inline;
+      @include fa-icon;
+
+      content: $fa-var-home;
+      vertical-align: middle;
+      font-size: 2em;
+      padding-right: 15px;
+    }
+
+    &:first-of-type {
+      a {
+        display: none !important;
+      }
+    }
+
+    &:last-child {
+      @extend .fw-bold;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    overflow: visible;
+    max-width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 0.2rem;
+      margin: 0;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 1.35;
+
+      a,
+      span {
+        white-space: normal;
+      }
+
+      &:not(:first-of-type)::before,
+      &:first-of-type::before {
+        font-size: 12px;
+        padding-right: 6px;
+      }
+    }
+  }
+}
