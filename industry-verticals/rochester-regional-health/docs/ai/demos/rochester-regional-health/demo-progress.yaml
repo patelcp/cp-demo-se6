@@ -1,0 +1,71 @@
+# Demo Progress Tracker
+# Created automatically at the start of a demo build.
+# Updated after each MCP call or phase completion.
+# Used by "resume demo" to skip completed work.
+
+client:
+  name: "Rochester Regional Health"
+  sourceUrl: "https://www.rochesterregional.org/"
+  startedAt: "2026-10-08T03:25:00Z"
+  lastUpdatedAt: "2026-10-08T03:25:00Z"
+
+phases:
+  phase0_inputs:
+    status: "complete"
+    screenshot: true
+    url: "https://www.rochesterregional.org/"
+
+  phase0_5_manifest:
+    status: "pending"
+    validationMode: ""
+    result: ""
+
+  phase1_theme:
+    status: "complete"
+    themeFile: "docs/ai/themes/rochester-regional-health.theme.yaml"
+    userApproved: true
+
+  phase2_analysis:
+    status: "pending"
+    buildPlanFile: ""
+    totalSections: 0
+    userApproved: false
+
+  phase2_5_content:
+    status: "pending"
+    contentMapFile: ""
+    extractorUsed: false
+
+  phase3_content:
+    status: "pending"
+    completedSections: 0
+    totalSections: 0
+
+  phase4_theme:
+    status: "complete"
+    themeDelivery: "scss-site-financial"
+    cssWritten: true
+    fontsAdded: true
+
+  phase5_custom:
+    status: "pending"
+    customComponentsNeeded: 0
+    customComponentsBuilt: 0
+
+  phase5_5_variants:
+    status: "pending"
+    variantsNeeded: 0
+    variantsCreated: 0
+    variantSpecsFile: ""
+    skippedReason: ""
+
+  phase6_assembly:
+    status: "pending"
+    componentsAdded: 0
+    datasourcesWired: 0
+    totalComponents: 0
+
+  phase7_summary:
+    status: "pending"
+
+sections: []

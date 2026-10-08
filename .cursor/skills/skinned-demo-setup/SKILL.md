@@ -111,7 +111,7 @@ Skinned Demo Setup
 - [ ] Step 1a: Target collection ready (created or selected)
 - [ ] Step 1a: Site duplicated from <source-site-name>
 - [ ] Step 1a: Site renamed to customer name
-- [ ] User notified of Content Editor move if <needs-move> — continue without waiting
+- [ ] Cross-collection clone done in Content Editor (or skipped when !<needs-move>) — do not Sites-API-copy across collections
 - [ ] Step 1b: Local folder copied from <source-folder>
 - [ ] Step 1c: NEXT_PUBLIC_DEFAULT_SITE_NAME set in customer .env.local
 - [ ] Step 1c: xmcloud.build.json renderingHosts entry added
@@ -216,6 +216,10 @@ Confirm the plan with the user once:
 > Source code folder: `industry-verticals/<source-folder>`  
 > New site / folder: `<customer-system-name>` / `industry-verticals/<customer-folder>`
 
+If `<needs-move>` is true, include this in the same confirmation and wait for it before any site copy:
+
+> The Sites API duplicate always stays in `<source-site-name>`’s collection. This run will create the empty `<customer-collection>` collection, then you clone the site in Content Editor into that collection. I will not call the Sites API copy.
+
 Then proceed to Step 1a.
 
 ---
@@ -225,7 +229,11 @@ Then proceed to Step 1a.
 Base URL: `https://xmapps-api.sitecorecloud.io`  
 Details: [sites-api-reference.md](sites-api-reference.md)
 
-**Why no API move:** Sites API has no move-site endpoint. A duplicate stays in the **source** site’s collection. If `<needs-move>` is true, the user moves it in Content Editor while Step 1b runs.
+**Why a new collection gets an empty tile:** `POST /api/v1/sites/{siteId}/copy` accepts only `name`, `displayName`, `description`, and `posMappings`. It has no target collection. The job records `siteCollection` as the **source** collection, and Channels shows the new site there. Channels also cannot drag a site into another collection ([sites cannot be moved between collections](https://doc.sitecore.com/sai/en/users/sitecoreai/create-and-manage-sites/create-a-site-collection.html)). Do **not** call that copy when `<needs-move>` is true.
+
+Do **not** “fix” it with the Authoring GraphQL `moveItem` mutation. That mutation does not work on SitecoreAI (bug 540450). `copyItem` copies one item, not a site (content, media, and site definition).
+
+The supported cross-collection clone is Content Editor **Scripts > Clone Site**, which asks for a target site collection. A content-tree move can work after the fact, but it is a manual repair, not the way to create the site.
 
 ### 1. Target Site Collection
 
@@ -247,7 +255,9 @@ Record `<collectionId>`. Poll jobs if a `handle` is returned ([job polling](site
 
 Skip create. Use the already selected `<collectionId>` / `<customer-collection>`.
 
-### 2. Duplicate source site
+### 2. Create the site in the target collection
+
+**If `<needs-move>` is false** (source site is already in `<collectionId>`): duplicate with the Sites API, then rename.
 
 1. Confirm `<source-site-id>` for `<source-site-name>` (re-fetch if needed).
 2. `POST /api/v1/sites/{source-site-id}/copy` with a **temporary** unique name (e.g. `<customer-system-name>-copy`):
@@ -259,9 +269,8 @@ Skip create. Use the already selected `<collectionId>` / `<customer-collection>`
 }
 ```
 
-3. Poll until `Completed`. Resolve the new site id (`GET /api/v1/sites` by the temp name).
-
-### 3. Rename duplicated site
+3. Poll until the job `done` field is `true` ([job polling](sites-api-reference.md#job-polling)). Resolve the new site id (`GET /api/v1/sites` by the temp name). Confirm its `collectionId` equals `<collectionId>` before continuing.
+4. Rename:
 
 `POST /api/v1/sites/{newSiteId}/rename`
 
@@ -269,29 +278,23 @@ Skip create. Use the already selected `<collectionId>` / `<customer-collection>`
 { "name": "<customer-system-name>" }
 ```
 
-Poll until `Completed`. Confirm via `GET /api/v1/sites` that the renamed site exists.
+Poll until `done` is `true`. Confirm via `GET /api/v1/sites` that the renamed site exists in `<collectionId>`.
 
-### 4. Notify — Content Editor move (only if `<needs-move>`)
+**If `<needs-move>` is true:** do not call `POST /api/v1/sites/{siteId}/copy`. Create only the empty collection in step 1, then stop and tell the user:
 
-**If `<needs-move>` is false** (duplicate already in the target collection): skip this notify. Continue to Step 1b.
-
-**If `<needs-move>` is true:** tell the user they have a parallel action, then **immediately continue to Step 1b** without waiting:
-
-> Sites API work is done:
-> - Site Collection: `<customer-collection>` (`<collectionId>`)
-> - Site: `<customer-system-name>` (`<newSiteId>`) — still under the source site’s collection
+> `<customer-collection>` (`<collectionId>`) is ready and empty.
 >
-> **Your action (while I continue):** The Sites API cannot move sites between collections. Please use **Content Editor** to move the duplicated site into `<customer-collection>`.
+> **Your action:** In Content Editor, right-click `/sitecore/content/<source-collection>/<source-site-name>` → **Scripts** → **Clone Site**. Set the target to `/sitecore/content/<customer-collection>` and the name to `<customer-system-name>`. Channels Duplicate cannot do this; it stays in the source collection.
 >
-> I’ll copy `industry-verticals/<source-folder>` now, then verify the move when that finishes. Reply when you’ve completed the move if I haven’t verified it yet.
+> Reply when the clone is under `<customer-collection>`. I will not copy the head app until then.
 
-Do **not** wait for the user before starting Step 1b.
+Do **not** start Step 1b while waiting. When the user replies, `GET /api/v1/collections/{collectionId}/sites` and confirm `<customer-system-name>` is listed. If they cloned under a temporary name, rename it with the Sites API rename call above, then re-check the collection. If the site is still only in the source collection, stop and ask them to clone again. Do not drag-move it yourself and do not call `moveItem`.
 
 ---
 
 ## Step 1b — Local codebase folder
 
-Run right after Step 1a (parallel with the user’s move when `<needs-move>`):
+Run only after the new site is verified inside `<collectionId>` (Step 1a). Do not copy the head app while a cross-collection clone is still pending.
 
 1. Confirm `industry-verticals/<source-folder>` still exists.
 2. If `industry-verticals/<customer-folder>` already exists, ask before replacing.
@@ -352,7 +355,7 @@ If a `renderingHosts` key for that customer already exists, ask before overwriti
 | Result | Action |
 |---|---|
 | Site is under the target collection | Proceed to **Step 1d** |
-| Site is **not** under the target collection | Ask the user to finish the Content Editor move, then re-check. Do not continue until verified. |
+| Site is **not** under the target collection | Stop. Ask the user to finish **Scripts > Clone Site** into `<customer-collection>`. Do not call Sites API copy to retry, and do not continue until the site is listed in that collection. |
 
 ---
 
@@ -548,7 +551,7 @@ Set `steps.step2_build_demo.status: "handed_off"` in `setup-progress.yaml` befor
 - User declines collection mode / collection pick / source site / source folder confirmation
 - Chosen `<source-site-name>` or `industry-verticals/<source-folder>` missing
 - Copy/rename job status `Failed`
-- `<needs-move>` and move verification fails / user will not complete the Content Editor move
+- `<needs-move>` and the Content Editor clone is not in the target collection, or the user will not clone it there
 - User declines overwrite of an existing local customer folder
 - User declines overwrite of an existing `xmcloud.build.json` renderingHosts key
 - User opts into editing host but declines a required tooling install, or CLI create/upsert/verify fails

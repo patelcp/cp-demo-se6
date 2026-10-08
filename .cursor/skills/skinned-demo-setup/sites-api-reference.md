@@ -48,7 +48,9 @@ Optional query on most endpoints: `environmentId`.
 }
 ```
 
-Copy does **not** accept a target `collectionId`. The duplicate stays in the source site’s collection.
+Copy does **not** accept a target `collectionId`. The duplicate stays in the source site’s collection. The job payload includes `siteCollection` set to that source collection, and `done: true` when the clone finishes (the `status` field is often absent; a later poll can 404 once the job record is gone).
+
+Do not use this endpoint to place a site in a different collection. Content Editor **Scripts > Clone Site** is the operation that accepts a target site collection. Channels Duplicate stays in the current collection. Authoring GraphQL `moveItem` does not work on SitecoreAI (bug 540450).
 
 ### Rename site body
 
@@ -64,11 +66,10 @@ Copy does **not** accept a target `collectionId`. The duplicate stays in the sou
 
 `GET /api/v1/jobs/{jobHandle}/status`
 
-Terminal `status` values: `Completed` | `Failed`.  
-While `Queued` or `Running`, wait and retry (suggest 5–15s intervals; back off if long-running).
+Treat the job as finished when `done` is `true`. A following poll may return 404 because the job record has been removed; that 404 after `done: true` is completion, not failure. If `done` stays false, keep polling (suggest 5–15s intervals).
 
-On `Failed`, stop the skill and surface the job payload to the user.
+On an explicit failed job state, stop the skill and surface the job payload to the user.
 
 ## Not available
 
-- **Move site between collections** — no Sites API endpoint. Product docs: sites cannot be moved between collections via Channels automation; this skill notifies the user to move in **Content Editor** (parallel with local folder copy), then verifies via `GET /api/v1/collections/{collectionId}/sites`.
+- **Move site between collections** — no Sites API endpoint, and Channels cannot drag a site into another collection. Do not call `POST /api/v1/sites/{siteId}/copy` when the target collection differs from the source. Ask the user to run Content Editor **Scripts > Clone Site** with the target set to `/sitecore/content/<target-collection>`, then verify with `GET /api/v1/collections/{collectionId}/sites`. Do not use Authoring GraphQL `moveItem` (broken on SitecoreAI, bug 540450).
