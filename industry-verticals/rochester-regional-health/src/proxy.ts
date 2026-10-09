@@ -110,9 +110,10 @@ export const config = {
    * 4. /- (Sitecore media)
    * 5. /healthz (Health check)
    * 7. all root files inside /public
+   * 8. paths ending in .html (static files in /public, such as /google.html)
    */
   matcher: [
     '/',
-    '/((?!api/|sitemap|robots|_next/|healthz|sitecore/api/|-/|favicon.ico|sc_logo.svg).*)',
+    '/((?!api/|sitemap|robots|_next/|healthz|sitecore/api/|-/|favicon.ico|sc_logo.svg|.*\\.html).*)',
   ],
 };
