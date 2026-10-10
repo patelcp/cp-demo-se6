@@ -1,0 +1,31 @@
+# BEGIN CUSTOMER DEMO COORDINATION
+For customer-demo setup, skinning, resume, or Sitecore content work:
+1. Read .github/ai-boards/master-backlog.md and resolve the explicit customer slug.
+   Load only that customer's board and referenced active-task checkpoint. Do not
+   infer customer identity from the last chat, current browser tab, or default site.
+2. Resolve the canonical coordinator locator through the common Git directory.
+   Worktree board copies are snapshots. active_agent: None is NOT permission to write.
+   If the coordinator is missing, parallel_writes_enabled is false, or scope cannot
+   be verified, perform read-only planning and report the unmet prerequisite.
+3. Before any mutation, acquire a coordinator-issued session claim for the customer
+   and all affected resources. Use the assigned worktree and feature branch.
+   Revalidate ownership, canonical paths and target Sitecore identity before every
+   mutation batch. Stop on lost ownership. Never clear another session's lock.
+4. Change only assigned paths and verified Sitecore roots. Preserve unrelated edits.
+   Source Prospera, other customers, shared schema/designs, global build configuration,
+   and serialization settings require their own explicitly scoped integration task.
+   Never copy credentials, .env.local, caches, generated outputs or prior demo state
+   from the source app. Follow repository rules for environment provisioning.
+5. Keep existing setup-progress.yaml and customer demo-progress.yaml as the detailed
+   workflow records. Reference them from the board; do not duplicate phase state.
+   Track tasks by immutable customer-prefixed HTML-comment IDs, not line numbers.
+6. Record remote mutation intent, returned IDs/jobs and read-back evidence. On an
+   uncertain result, reconcile it before retrying. Documentation lookup is reference
+   material; it does not prove tenant identity or authorize content mutations.
+7. Checkpoint after meaningful work and before compaction or handoff: exact next
+   file/item/action, validation evidence, unresolved jobs, dirty files and workers.
+   Ask the coordinator to update with the expected board revision. At exit, stop
+   owned workers, persist progress, and release only this session's claims.
+8. Follow .github/ai-boards/prospera-integration-plan.md for the setup/build handoff.
+   Do not assume instructions.md is loaded unless the actual skill entry point reads it.
+# END CUSTOMER DEMO COORDINATION

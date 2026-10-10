@@ -34,28 +34,46 @@ If the user says "resume demo", "continue demo", "pick up where we left off", or
 
 ---
 
+## Standing demo rules
+
+Apply these on every run unless the user explicitly records an exception:
+
+- **More than Home.** Ask what story the demo tells, propose the pages that story needs, and get a URL and/or desktop and mobile screenshots for each page before planning components.
+- **Both screenshots.** Require a user-supplied desktop screenshot and a user-supplied mobile screenshot for the homepage. Require the same pair, or a source URL, for every additional page.
+- **Responsive by default.** Build for mobile, tablet, and desktop. Tablet follows the same layout system between the supplied breakpoints.
+- **Branded skin, not a pixel-perfect copy.** Prefer an existing component whose content model fits. Create a component only when skinning an existing one would misrepresent the section.
+- **Shared chrome.** Header and footer live in partial designs assigned to the page design, so every planned page inherits them.
+- **Industry-specific features.** Provider lookup, location search, booking, portals, and similar tools are customer-specific. Classify each as skin, create, or omit, and ask whether a created feature is visual-only or functional.
+- **Data policy before content writes.** Confirm real, fictional, or mixed use of scraped customer data before creating datasource items.
+
 ## Full workflow
 
-### Phase 0 — Gather inputs (screenshot required)
+### Phase 0 — Gather inputs (screenshots, story, and pages required)
 
-A screenshot is the **primary input** for demo creation. Without a visual reference, the build plan will be wrong.
+User-supplied screenshots are the **primary visual input**. Without both a desktop and a mobile reference, the page plan will miss layout changes.
 
-**Collect from the user:**
+**Collect from the user, unless skinned-demo-setup already supplied them:**
 1. **Client name** (required) — for file naming and content
-2. **Screenshot** (required) — full-page desktop screenshot of the homepage to replicate
-3. **Client URL** (optional) — used for content extraction in Phase 2.5 and theme scraping
-4. **Content Hub credentials** (if not already saved) — for image uploads in Phase 3
+2. **Desktop screenshot** (required) — full-page desktop homepage capture, overlays dismissed
+3. **Mobile screenshot** (required) — full-page mobile homepage capture, overlays dismissed
+4. **Demo story** (required) — ask what story the user is trying to tell, then propose the pages that story needs
+5. **Page references** (required) — for each proposed page, collect a source URL and/or desktop and mobile screenshots. Home is never the only page.
+6. **Data policy** (required before Phase 2.5 writes content) — `real`, `fictional`, or `mixed`
+7. **Client URL** (optional) — used for theme scraping and, when the data policy allows, content extraction
+8. **Content Hub credentials** (if not already saved) — for image uploads in Phase 3
 
-**How to obtain the screenshot:**
+**How to use references:**
 
 | User provides | Action |
 |---|---|
-| URL only | Run Playwright scraper to capture screenshot. If scraper fails (403, auth, CAPTCHA), ask user to provide a screenshot manually. Do NOT proceed without one. |
-| Screenshot only | Use it directly. URL-based content extraction (Phase 2.5) will be skipped — content comes from screenshot analysis. |
-| URL + screenshot | Use the screenshot for visual analysis (Phases 1-2). Use the URL for content extraction (Phase 2.5). |
-| Neither | Ask for at least a screenshot. Do not proceed without visual reference. |
+| URL only | Ask for the desktop and mobile screenshots. A Playwright capture may supplement them, but it does not replace the required user-supplied pair. |
+| One screenshot | Ask for the missing viewport. Do not proceed with only desktop or only mobile. |
+| Desktop + mobile screenshots | Use both for visual planning. Use a URL for extraction only after the data policy is confirmed. |
+| Additional page URL or screenshots | Add that page to the approved page list with its story purpose. |
 
-**HARD RULE: Never proceed to Phase 1 without a screenshot.** Web fetch and web search are insufficient — they miss layout, spacing, card styles, section backgrounds, and visual hierarchy that drive variant selection.
+**HARD RULE: Never proceed to Phase 1 without the desktop screenshot, the mobile screenshot, the demo story, and at least one page besides Home.** Web fetch and web search are insufficient visual references.
+
+Present the proposed page list and wait for approval before Phase 2. Record it in `demo-progress.yaml` under `client.story`, `client.dataPolicy`, and `client.pages`.
 
 **Content Hub credentials (always validate):**
 
@@ -134,50 +152,41 @@ Use the `sitecore-extract-theme` skill:
 
 **Do not proceed past Phase 1 until the user confirms the theme.**
 
-### Phase 2 — Analyze the homepage
+### Phase 2 — Analyze every planned page
 
-Use the `site-analyzer` agent (`docs/ai/agents/site-analyzer.md`):
+Use the `site-analyzer` agent (`docs/ai/agents/site-analyzer.md`) once per approved page:
 
 1. Read the component registry and theme mapping
-2. Inspect the desktop screenshot top-to-bottom
-3. Identify every section on the page
-4. Match each section to a template component + best-fit variant
-5. **Variant gap analysis** — for each matched section:
-   - Check if the selected variant already exists (named export in TSX + Variant Definition in Sitecore)
-   - If variant exists → mark as `variantMatch: "exact"`
-   - If no existing variant matches the visual → mark as `variantMatch: "none"` and describe the custom variant needed:
-     ```yaml
-     customVariantNeeded:
-       name: "EurobankCards"     # PascalCase, will become React export name
-       description: "2x3 card grid with top images, red accent links, hover scale effect"
-       parentComponent: "FeatureCardsGrid"  # existing component to add variant to
-     ```
-   - If a variant partially matches → mark as `variantMatch: "partial"` and note what differs
-6. Extract visible content from the screenshot (in English)
-7. **API-addable classification** — classify each component:
-   - `apiAddable: true` — has a datasource template, can be added via `add_component_on_page`
-   - `apiAddable: false` — context-only component (no datasource template), must be added manually in Pages editor
-
-   Context-only components (NavigationHeader, SiteFooter) will fail with "No datasource template found" when using `add_component_on_page`. Flag these in the build plan so the assembly phase skips them and includes them in the manual tasks checklist.
-8. Output two files:
-   - `docs/ai/demos/<client-kebab>/build-plan.yaml` — machine-readable plan for subsequent phases
-   - `docs/ai/demos/<client-kebab>/build-plan-summary.md` — human-readable summary using the template at `docs/ai/templates/build-plan-summary.template.md`
-9. **Present the summary (not the YAML) to the user in chat.** The summary includes:
-   - Section-by-section table with plain-language descriptions, matched components, variants, and confidence
-   - Sections needing attention (low confidence or custom)
-   - Variant decisions with reasoning
-   - Components grouped by type (API-addable vs manual vs custom)
-   - Build order in plain language
+2. Inspect that page’s desktop and mobile screenshots top-to-bottom
+3. Identify every section, including layout differences between the two viewports
+4. Classify each section before choosing a variant:
+   - `skin` — an existing component can carry the content after theme and variant selection
+   - `create` — no existing component can represent the section without misleading behavior; specify the new component
+   - `omit` — not needed for the demo story
+5. Treat provider lookup, location search, booking, portals, and similar behavior as industry-specific. Do not force them into a generic component. Ask whether each created feature should be visual-only or functional.
+6. Plan NavigationHeader and SiteFooter once, as partial designs shared by every page. Do not repeat them as body sections on each page.
+7. For each `skin` section, choose the closest existing variant. A visual difference stays `skin` with `variantMatch: "partial"` and a short note. Do not create a custom variant unless the user explicitly asks.
+8. Extract visible content from both screenshots in English, and note where mobile content or order differs.
+9. Classify body components as API-addable or not. NavigationHeader and SiteFooter are partial-design components: do not add them with `add_component_on_page`.
+10. Output one build plan and one summary covering every approved page:
+   - `docs/ai/demos/<client-kebab>/build-plan.yaml`
+   - `docs/ai/demos/<client-kebab>/build-plan-summary.md`
+11. Present the summary in chat. Include, per page, the section, its `skin` / `create` / `omit` decision, the component used or proposed, and any industry-specific feature that needs a visual-only or functional decision.
 
 **⛔ MANDATORY CHECKPOINT — Do not proceed past Phase 2.**
 
 Present the **build plan summary** to the user and STOP. The SE reads the summary to validate the plan — not the raw YAML. Wait for explicit approval before creating any Sitecore items, datasource content, or React code.
 
-**Ask TWO questions — do not continue without answers to both:**
-1. "Does the build plan look correct? Approved to proceed?"
-2. "Do you want pixel-perfect custom variants for each component (Phase 5.5), or are the generic template variants sufficient?"
+**Ask these questions — do not continue without answers:**
+1. "Does this page plan look correct, including which sections are skinned and which are new?"
+2. "For scraped content, should I use real public data, fictional demo data, or a mix? If mixed, which pages or fields stay real?"
+3. For each industry-specific feature marked `create`: "Should this be visual-only or functional?"
 
-Record the Phase 5.5 decision in `demo-progress.yaml` (`phases.phase5_5_variants.skippedReason` if declined).
+Do not ask for pixel-perfect variants. Record Phase 5.5 as skipped unless the user explicitly requests custom variants:
+
+```yaml
+phases.phase5_5_variants.skippedReason: "Branded skin; pixel-perfect variants were not requested."
+```
 
 The user must say "approved", "go ahead", "looks good", or equivalent before Phase 2.5 begins. If the user requests changes, update the plan and re-present.
 
@@ -185,7 +194,15 @@ The user must say "approved", "go ahead", "looks good", or equivalent before Pha
 
 ### Phase 2.5 — Extract and map content
 
-After the build plan is approved, extract precise content from the client site and map it to component fields.
+After the build plan is approved, extract structure from the client site and map it to component fields.
+
+**Data policy checkpoint.** Do not create Sitecore content until `client.dataPolicy` is `real`, `fictional`, or `mixed`.
+
+| Policy | What may be written |
+|---|---|
+| `real` | Scraped public copy and approved public images, translated to English when needed |
+| `fictional` | Section structure only. Replace names, statistics, testimonials, clinical or financial details, and personal data with fictional demo copy. Show that copy before creating items. |
+| `mixed` | Follow the approved per-page or per-field decision. Stop and ask when a section has no decision. |
 
 **Step 1 — Run the content extractor script:**
 ```bash
@@ -597,7 +614,9 @@ This phase bridges the gap between "same colors" (Phase 4 CSS variables) and "lo
 3. Variant Definition items in Sitecore (one per component)
 4. Updated variant checklist referencing the custom variant names
 
-**Decision:** If the user explicitly says generic variants are fine, skip this phase. Otherwise, create custom variants for all sections where `variantMatch` is `"none"` or `"partial"`. If the user wants pixel-perfect, create for ALL sections.
+**Decision:** Skip this phase by default. The demo is a branded skin, not a pixel-perfect copy. Run it only when the user explicitly asks for closer custom variants. A section marked `create` is built in Phase 5; that is separate from this phase.
+
+Every skinned or created component must respond correctly at mobile, tablet, and desktop widths unless the user recorded a viewport exception. Check the supplied desktop and mobile screenshots before marking the component done.
 
 **Update `demo-progress.yaml`** after completion:
 - `phases.phase5_5_variants.status: "complete"`
@@ -609,24 +628,23 @@ Add components to the page in build-plan order and wire each to its datasource i
 
 **Known limitation:** The Agent API cannot set rendering parameters (including variant selection) when adding components. Variants must be set manually in Pages editor after assembly. See `docs/ai/reference/agent-api-limitations.md`.
 
-#### Step 1 — Use the existing Home page (default)
+#### Step 1 — Assemble every approved page
 
-**Always use the existing Home page** unless the user explicitly asks for a new subpage. Do not create a new page by default — the Home page is the primary demo surface and already has the correct Page Design, partial designs (header/footer), and URL routing.
+Use the approved page list. Home is one page in the story, and the demo includes the other approved pages as well.
 
-**Steps:**
-1. Resolve the Home page: `get_content_item_by_path("/sitecore/content/<siteCollection>/<siteName>/Home")`
-2. Read current components: `get_components_on_page(homePageId)`
+**Header and footer are shared partial designs.**
+- Place NavigationHeader and SiteFooter in partial designs, not in each page’s `headless-main` placeholder.
+- Assign those partial designs on the Page Design or page-template standard values so every planned page inherits them.
+- Verify the assignment on each planned page before marking that page assembled. A page with its own copy of the header or footer is not complete.
+
+**For each approved page:**
+1. Resolve the existing page, or create it when the approved plan calls for a new path:
+   `get_content_item_by_path("/sitecore/content/<siteCollection>/<siteName>/<page-path>")`
+2. Read current components: `get_components_on_page(pageId)`
 3. Inventory what's already on the page:
-   - **Custom uiim components** already placed (match by `componentName`) — these will be re-wired to new client datasources, not re-added
-   - **OOB starter kit components** (RichText, Image, Container, Promo — identified by paths under `/sitecore/layout/Renderings/Feature/`) — these cannot be removed via MCP, note them for manual cleanup
-4. Use the Home page ID for all subsequent `add_component_on_page` and `set_component_datasource` calls
-
-**Only create a new subpage if the user explicitly requests it:**
-```
-create_page(name="<client-name> Demo", parentId=<home-page-id>, templateId=<page-template-id>)
-```
-
-Do NOT ask the user "should I use the Home page or create a new page?" — just use the Home page.
+   - **Custom uiim components** already placed (match by `componentName`) — re-wire these to the page’s datasources instead of adding duplicates
+   - **OOB starter kit components** (RichText, Image, Container, Promo — identified by paths under `/sitecore/layout/Renderings/Feature/`) — these cannot be removed via MCP; note them for manual cleanup
+4. Add and wire only that page’s body sections. Keep header and footer in the shared partial design.
 
 #### Step 2 — Add components to the page
 
@@ -832,5 +850,8 @@ docs/ai/demos/<client-kebab>/
 - **Automate images via Content Hub** — download during Phase 2.5 (`--download-images`), upload + approve + create public link via `upload-to-content-hub.mjs` in Phase 3 Step 5, set Image fields using DAM format (`<Image src="..." dam-id="..." />`). Requires Content Hub credentials in `credentials.local.yaml`. Fall back to manual `images-to-upload.md` if no credentials.
 - **Mark variants as manual** — generate the variant checklist, don't skip this step. See `docs/ai/reference/agent-api-limitations.md` for why.
 - **Use `insertAfterComponentId` for ordering** — add components sequentially, passing the previous component's instance ID to maintain build-plan order
-- **Use the existing Home page by default** — do not create a new subpage unless the user explicitly asks. The Home page already has the correct Page Design and URL routing. Note any OOB components for manual cleanup.
+- **Assemble every approved page** — Home plus the other pages required by the demo story. Header and footer stay in shared partial designs inherited by every page.
+- **Skin before creating** — use an existing component when its content model fits. Create a component only when skinning would misrepresent the section. Industry-specific tools are classified separately.
+- **Confirm real versus fictional data** — do not write scraped customer content until the data policy is approved.
+- **Build responsive layouts** — mobile, tablet, and desktop unless the user records an exception. Require both desktop and mobile screenshots.
 - **All content in English** — regardless of source page language, all datasource content must be in English (en). Translate from the source language during content extraction, never after content creation.

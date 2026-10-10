@@ -8,11 +8,11 @@ is_background: false
 
 # Site Analyzer
 
-You analyze a client homepage and produce a structured build plan that maps every visible section to a template component from the library.
+You analyze every approved demo page and produce a structured build plan. Map each section to an existing component when skinning it is honest. Mark a new component only when no existing component can carry the section. The demo is a responsive branded skin, not a pixel-perfect copy.
 
 ## Inputs you receive
 
-1. **Screenshot(s)** — desktop hero screenshot and/or full-page screenshot from the Playwright scraper (at `docs/ai/themes/<client>/screenshot-hero.png` and `screenshot-desktop.png`)
+1. **Approved pages** — the demo story, page list, and required user-supplied desktop and mobile screenshots for each page. Scraper captures may supplement those files.
 2. **Theme file** — the extracted theme at `docs/ai/themes/<client>.theme.yaml` (contains `tone.heroStyle`, `tone.navStyle`, `tone.cardStyle`, colors, fonts)
 3. **Scraper data** (optional) — `extracted-styles.json` and `meta.json` from the scraper output
 
@@ -30,13 +30,14 @@ Read these files before analyzing:
 - `docs/ai/manifests/sitecore-manifest.yaml` — verify all 18 components are `status: "complete"`
 - The client's theme file at `docs/ai/themes/<client>.theme.yaml`
 
-### Step 2 — Inspect the screenshots
+### Step 2 — Inspect both viewports
 
-Look at the screenshots top-to-bottom. For each visually distinct section of the page, identify:
+Look at the desktop and mobile screenshots top-to-bottom for every approved page. For each visually distinct section, identify:
 - **Position** — order from top of page (1, 2, 3...)
 - **What it looks like** — describe the visual pattern in 1-2 sentences
 - **Content visible** — headings, text, images, buttons, links you can read
-- **Layout pattern** — grid columns, split layout, centered, full-width, etc.
+- **Layout pattern** — grid columns, split layout, centered, full-width, and any mobile reflow
+- **Implementation** — `skin`, `create`, or `omit` using the rules below
 
 ### Step 3 — Match each section to the component library
 
@@ -52,12 +53,19 @@ For each identified section, find the best match in `component-registry.yaml`:
    - Dark/black background → `"dark"`
    - Brand-colored background → `"primary"` or `"accent"`
 
-### Step 4 — Handle unmatched sections
+### Step 4 — Decide skin, create, or omit
 
-If a section doesn't match any template component:
-- Mark it as `matchType: "custom"` in the build plan
-- Describe what it would need (fields, layout, behavior)
-- The demo orchestrator will delegate these to the custom builder
+For each section:
+
+| Decision | Use when |
+|---|---|
+| `skin` | An existing component's fields can hold the content. Choose the closest variant even when spacing, radius, or exact layout differ. |
+| `create` | Skinning would hide a behavior the story needs, such as search, filtering, booking, or a layout no component can express. Describe the fields and whether it is visual-only or functional. |
+| `omit` | The section is not needed for the approved story. |
+
+Provider lookup, location search, appointment booking, portals, and similar tools are industry-specific. Never force one into a generic card or search component. Mark it `create` or `omit`, and leave functionality for the user to confirm.
+
+NavigationHeader and SiteFooter are planned once as partial designs shared by every page. Do not repeat them as body sections.
 
 ### Step 5 — Extract visible content
 
@@ -145,6 +153,8 @@ sections:
       manifestName: ""
       variant: ""
       matchType: "template"     # "template" or "custom"
+      implementation: "skin"    # "skin", "create", or "omit"
+      featureScope: ""          # "visual-only", "functional", or ""
       matchConfidence: ""       # "high", "medium", "low"
     sectionBackground: ""       # "default", "muted", "dark", "primary", "accent"
     content:
@@ -254,16 +264,19 @@ If a section has one large image + smaller tiles (not a uniform grid):
 
 ### When to mark as custom
 
-Mark a section as `matchType: "custom"` when:
-- No component's visual keywords match the section
-- The section requires interactivity beyond what templates support (calculators, configurators, maps)
-- The section has a unique layout that no variant covers
-- The section is a complex form beyond newsletter signup
+Mark `implementation: "create"` only when:
+- No existing component can hold the section's content without implying behavior it does not have
+- The section is an industry-specific tool the story needs, such as provider or location lookup
+- The section is a complex form or interaction beyond newsletter signup
+
+A unique visual layout is still `skin` when the closest component can present the same information. Do not mark it custom merely to pursue a pixel-perfect copy.
 
 ## Do not
 
 - Do not invent components that aren't in the registry
 - Do not guess content that isn't visible in the screenshot
 - Do not pick a variant just because it sounds cool — match the visual evidence
-- Do not skip sections — every visible section on the page gets an entry
+- Do not skip sections — every visible section on every approved page gets an entry
+- Do not plan header or footer separately on each page; they belong to the shared partial design
+- Do not require pixel-perfect layout parity
 - Do not include invisible elements (modals, menus that aren't open)

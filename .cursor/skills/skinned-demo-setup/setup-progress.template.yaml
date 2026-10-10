@@ -8,7 +8,12 @@ customer:
   systemName: ""            # <customer-system-name>
   folder: ""                # <customer-folder> kebab-case
   url: ""
-  screenshotPath: ""        # path or attachment note — not binary
+  desktopScreenshotPath: "" # required user-supplied desktop capture
+  mobileScreenshotPath: ""  # required user-supplied mobile capture
+  story: ""                 # story the demo needs to tell
+  dataPolicy: ""            # real | fictional | mixed
+  responsive: "mobile-tablet-desktop"
+  pages: []                 # { name, url, desktopScreenshotPath, mobileScreenshotPath, purpose }
   startedAt: ""
   lastUpdatedAt: ""
 

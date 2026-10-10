@@ -61,11 +61,26 @@ If Step 2 is `handed_off` or `complete`, resume inside the customer folder via `
 
 ## Inputs (required)
 
-Collect before any work:
+Collect before any work. Do not start Sitecore or file changes until the required inputs are present.
 
 1. **Customer name** — used for Site name, optional new Site Collection name, local folder name, and Step 2 demo build
 2. **Customer URL** — passed to Step 2 / `sitecore-build-demo` (content extraction and theme scraping)
-3. **Screenshot of the customer’s homepage** — required; passed to Step 2 / `sitecore-build-demo` as the primary visual reference. Accept an attached image, a local file path, or ask the user to upload one. Do not proceed without a screenshot.
+3. **Desktop homepage screenshot** — required. Full-page desktop capture with cookie, region, and chat overlays dismissed.
+4. **Mobile homepage screenshot** — required. Full-page mobile capture with the same overlays dismissed.
+5. **Demo story** — required. Ask: “What story are you trying to tell in this demo?” Then propose the pages that story needs. The demo always includes more than Home.
+6. **Page references** — for every proposed page, including Home, ask for a source URL and/or a desktop screenshot and a mobile screenshot. Do not invent pages that have no reference and no explicit story purpose.
+7. **Data policy** — required before any scraped customer content is written into Sitecore. Ask whether to use **real** public content, **fictional** demo content, or a **mix**, and record which pages or fields stay real when mixed.
+
+Accept an attached image or a local file path for each screenshot. A scraper capture may supplement these files, but it does not replace the two user-supplied homepage screenshots.
+
+Standing assumptions, unless the user explicitly overrides one:
+
+| Assumption | Default |
+|---|---|
+| Viewports | Responsive mobile, tablet, and desktop |
+| Fidelity | Recognizable branded skin, not a pixel-perfect copy |
+| Header and footer | One shared partial design used by every page |
+| Industry features | Customer-specific. Provider lookup, location search, booking, and similar tools are planned separately from generic components |
 
 Derive names:
 
@@ -77,7 +92,7 @@ Derive names:
 Confirm derived names with the user once, then:
 
 1. Create `.cursor/skills/skinned-demo-setup/runs/<customer-folder>/setup-progress.yaml` from the template.
-2. Set `customer.name`, `customer.systemName`, `customer.folder`, `customer.url`, `customer.screenshotPath`, `customer.startedAt`, and `steps.inputs.status: "complete"`.
+2. Set `customer.name`, `customer.systemName`, `customer.folder`, `customer.url`, `customer.desktopScreenshotPath`, `customer.mobileScreenshotPath`, `customer.story`, `customer.dataPolicy`, `customer.startedAt`, and `steps.inputs.status: "complete"`. Record each planned page under `customer.pages`.
 3. Show the running plan summary in chat.
 4. Proceed (or, if a progress file already exists for this folder, offer to **resume** instead of starting over).
 
@@ -102,7 +117,7 @@ Keep the chat checklist and `setup-progress.yaml` `steps.*` in sync:
 
 ```
 Skinned Demo Setup
-- [ ] Inputs collected (customer name + URL + homepage screenshot)
+- [ ] Inputs collected (name, URL, desktop + mobile screenshots, story, pages, data policy)
 - [ ] Pre-flight: Sites API auth
 - [ ] Pre-flight: Marketer MCP auth
 - [ ] Collection mode chosen (new vs existing)
@@ -472,7 +487,7 @@ Confirm all artifacts:
 | `.env.local` site name | `NEXT_PUBLIC_DEFAULT_SITE_NAME` equals `<customer-system-name>` |
 | `xmcloud.build.json` | `renderingHosts.<customer-folder>` exists with `path` `./industry-verticals/<customer-folder>` |
 | Editing host (if opted in) | `eh-environment-id` captured; Type was `eh`; `NEXT_PUBLIC_SEARCH_*` vars verified via `variable list` (or none to upsert) |
-| Inputs retained | Customer name, URL, and homepage screenshot available for Step 2 |
+| Inputs retained | Customer name, URL, desktop and mobile screenshots, story, page list, and data policy available for Step 2 |
 
 Report IDs, names, source site/folder, and local path to the user.
 
@@ -522,13 +537,20 @@ If the skill file is missing, stop — the source folder copy was incomplete.
 
 ### 3. Pass inputs already collected
 
-Do not re-ask for name, URL, or screenshot unless something is missing or invalid. Seed Phase 0 as:
+Do not re-ask for name, URL, screenshots, story, pages, or data policy unless something is missing or invalid. Seed Phase 0 as:
 
 | sitecore-build-demo input | Value from this skill |
 |---|---|
 | Client name | Customer name |
 | Client URL | Customer URL |
-| Screenshot | Homepage screenshot collected in Inputs |
+| Desktop screenshot | Homepage desktop screenshot from Inputs |
+| Mobile screenshot | Homepage mobile screenshot from Inputs |
+| Demo story | Story collected in Inputs |
+| Pages | Approved page list, with each page’s URL and/or screenshots |
+| Data policy | `real`, `fictional`, or `mixed`, including any per-page exceptions |
+| Responsive | Mobile, tablet, and desktop unless the user recorded an exception |
+| Fidelity | Branded skin. Do not plan pixel-perfect copies unless the user explicitly asks |
+| Header and footer | Shared partial designs inherited by every planned page |
 | Code root | `industry-verticals/<customer-folder>/` |
 | Content root | `/sitecore/content/<customer-collection>/<customer-site>` |
 
@@ -538,7 +560,7 @@ Then follow `sitecore-build-demo` for everything else (Content Hub credentials, 
 
 Tell the user briefly:
 
-> Step 1 complete. Starting Step 2: running `sitecore-build-demo` as “build a demo for \<customer name\>” with the URL and screenshot you provided. Code changes go in `industry-verticals/<customer-folder>/`; content changes go in `/sitecore/content/<customer-collection>/<customer-site>`.
+> Step 1 complete. Starting Step 2: running `sitecore-build-demo` as “build a demo for \<customer name\>” using the story, page list, desktop and mobile screenshots, and data policy already collected. Header and footer stay in shared partial designs. Code changes go in `industry-verticals/<customer-folder>/`; content changes go in `/sitecore/content/<customer-collection>/<customer-site>`.
 
 Set `steps.step2_build_demo.status: "handed_off"` in `setup-progress.yaml` before running the demo skill. Then run the demo skill without inventing alternate demo-build steps outside that file.
 
@@ -546,7 +568,7 @@ Set `steps.step2_build_demo.status: "handed_off"` in `setup-progress.yaml` befor
 
 ## Stop conditions
 
-- Missing homepage screenshot (or user declines to provide one)
+- Missing desktop or mobile homepage screenshot, demo story, page list, or data policy (or the user declines to provide one)
 - Sites API or Marketer MCP auth fails after prompting
 - User declines collection mode / collection pick / source site / source folder confirmation
 - Chosen `<source-site-name>` or `industry-verticals/<source-folder>` missing
