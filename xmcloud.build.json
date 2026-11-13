@@ -117,5 +117,12 @@
       }
     }
   },
-  "authoringPath": "./authoring"
+  "authoringPath": "./authoring",
+  "deployItems": {
+    "modules": [
+      "nextjs-starter",
+      "prosperabank",
+      "Project.click-click-launch"
+    ]
+  }
 }

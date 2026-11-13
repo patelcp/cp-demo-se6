@@ -55,3 +55,17 @@ The production frontends are ready; the end-to-end editing foundation is not yet
 ## Follow-up on owner host selection
 
 Official managed-host documentation confirms that a subsequent authoring deployment materializes the registered rendering-host item. Deploy listing `aglc` is not itself proof that Page Builder has the native binding. The owner’s screenshot showed the Page Builder selector on Default, not verified use of the new shared host. No site settings were overwritten during this follow-up. Only one editing host is intended for both sites; a second CannabisSense editing host is unnecessary.
+
+## Approved follow-up: host-only release preparation
+
+The owner reports both BrandKits uploaded/applied. A fresh native read confirms both AGLC and CannabisSense now select `aglc`; the scoped pull captured three changed settings items and validates all 185 items. BrandKit application is owner-reported, not independently validated through a BrandKit API.
+
+`xmcloud.build.json` now explicitly selects the three pre-existing resource modules: `nextjs-starter`, `prosperabank`, and `Project.click-click-launch`. The author-owned `AGLC.Seed` remains available for reference/pull but is excluded from deployment IAR. No SCS push action was added. Existing rendering-host definitions and post-actions are unchanged.
+
+Compared against latest successful CM source `f979daca4795830562427292fd74c78292b91bbf`, all 3,497 existing authoring files have identical Git blob hashes, including 3,483 YAML records. The local official CLI resource build included all three baseline modules and successfully packaged 3,483 items. Artifact metadata and its SHA-256 are in `host-release-review.json`. This is a local candidate, not a recovered production artifact or proof of remote runtime state. No supported artifact-download endpoint was found in Deploy API v1-v4, and no connected browser surface was available to inspect build artifacts through Deploy UI.
+
+### Release decision still required
+
+CM is configured on `dev` with deploy-on-commit enabled, while repository guidance requires feature PRs into `dmz`. Current `dev` and this feature branch have diverged. Do not switch CM to this branch or merge broadly merely to register the host. Recommended workflow: review this foundation PR in `dmz`, then promote only the reviewed host/app and explicit module selection through the owner's agreed `dev` release route. Preserve existing resource inventory. Existing schema/reindex post-actions affect all indexes, so the shared deployment needs an agreed window. No branch changes, merges or CM deployment have been performed.
+
+After release: read back native Rendering Hosts/aglc, verify authenticated host and both Page Builder sites, perform native edit/save/reload, and refresh scoped serialization. Browser access is still needed for that end-to-end check.
