@@ -13,6 +13,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { getBaseUrl } from "lib/utils";
 
+// Refresh published Edge content on the next request after this interval.
+export const revalidate = 60;
+
 type PageProps = {
   params: Promise<{
     site: string;

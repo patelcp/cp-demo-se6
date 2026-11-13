@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "shared-slice",
+  "project": "aglc",
+  "title": "Shared authorable home slice",
+  "baseRevision": "7973577427004973baea3c256d1bdea12a50aafd",
+  "codeScopes": [
+    "industry-verticals/aglc"
+  ],
+  "cmsScopes": [
+    "/sitecore/content/aglc/aglc",
+    "/sitecore/content/aglc/cannabissense",
+    "/sitecore/templates/Project/AGLC",
+    "/sitecore/layout/Renderings/Project/AGLC",
+    "/sitecore/layout/Placeholder Settings/Project/AGLC"
+  ],
+  "designReferences": [
+    "https://aglc.ca/",
+    "https://cannabissense.ca/",
+    "docs/demos/aglc/shared-slice-design.md"
+  ],
+  "acceptanceCriteria": [
+    "Same five native rendering implementations on both Home pages with site-specific tokens and content.",
+    "Native SDK fields preserve editing metadata; repeatable cards/navigation are child items.",
+    "No changes to BrandKit assignments or unrelated customer resources.",
+    "Page-local hero/cards/CTA; site-owned shared header/footer partial data.",
+    "Tests, lint, typecheck, genuine Edge build and real layouts verified; Pages save/reload explicitly blocked until browser available."
+  ],
+  "rollback": "Before layout activation retain original Home final/shared rendering values and existing design bindings; restore only this slice placements if needed. Do not delete authored data or unrelated definitions.",
+  "stages": {
+    "implementation": {
+      "result": "not-ready",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:04:54.206Z",
+          "result": "not-ready",
+          "summary": "Five shared native frontend renderings implemented locally. Independent reviewer confirms empty HomeLink and empty navigation Title regressions fixed; 21 real-SDK SSR tests pass. No commit or deployment. Browser/Pages checks remain unrun; authenticated work paused pending transport security review.",
+          "revision": "7973577427004973baea3c256d1bdea12a50aafd",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": null,
+          "externalState": null
+        }
+      ]
+    },
+    "build": {
+      "result": "not-run",
+      "evidence": []
+    },
+    "deployment": {
+      "result": "not-run",
+      "evidence": []
+    },
+    "definitions": {
+      "result": "not-run",
+      "evidence": []
+    },
+    "publication": {
+      "result": "not-run",
+      "evidence": []
+    },
+    "authoring": {
+      "result": "blocked",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T22:27:45.483Z",
+          "result": "blocked",
+          "summary": "Connected Mac exposes no browser surface; native Page Builder render/edit/save/reload unrun. API/schema work continues independently.",
+          "revision": "7973577427004973baea3c256d1bdea12a50aafd",
+          "sourceFingerprint": "3385e3e1d546cc0ae1db42c9aedd140f6b1f648af790be30ba6c66b1aa42eaa5",
+          "artifact": null,
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "browser": {
+      "result": "not-run",
+      "evidence": []
+    },
+    "handoff": {
+      "result": "not-run",
+      "evidence": []
+    }
+  },
+  "nextAction": "Implement and verify native definitions plus matching frontend; deploy code before activating Home placements. No broad CM release or merge without explicit approved scope."
+}

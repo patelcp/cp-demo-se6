@@ -72,3 +72,37 @@ record those checks separately; none is implied by the health response.
 The installation audit after security maintenance reports 13 moderate findings and
 no high/critical findings. Do not treat this as a guarantee of vulnerability-free
 code. No broad automatic audit fix or major Sitecore SDK upgrade was performed.
+
+## First shared native slice
+
+Five native renderings: `SiteHeader`, `SiteFooter`, `Hero`, `CardGrid`, `CallToAction`.
+All consume `fields.data.datasource`; PascalCase field aliases hold `{ jsonValue }`
+with unchanged SDK field objects. Navigation/card children use `children.results`
+and stable `id`. Field contracts are in each component's `.props.ts`. No datasource
+renders nothing; optional missing fields produce no synthetic copy. Native field
+helpers retain editing metadata. Header/footer belong in shared partial designs;
+Hero/Grid/CTA datasource ownership belongs to each page.
+
+`Layout` selects theme using actual `page.siteName`, not hostname guesses or
+campaign parameters. Public CSS inspected 2026-11-13: https://aglc.ca/ uses
+`#850057` and `#3f4040`; https://cannabissense.ca/ uses `#004e35`, `#f6f4ef`,
+`#8dbf83`. Fonts, spacing, radii and layout are demo approximations, not official
+brand specifications. BrandKit guidance does not automatically apply website CSS.
+No remote fonts, tracking or personalization have been activated.
+
+The page route explicitly exports `revalidate = 60`. The installed SDK layout
+service delegates to GraphQL's native fetch without a separate persistent layout
+cache, and Cache Components is not enabled. After content reaches live Edge, the
+first request after 60 seconds may serve the previous page while regeneration
+runs; a subsequent request should show the new publication. This is not an exact
+60-second publication SLA. Failed regeneration retains the prior page. Deploy
+matching component code before activating native Home renderings, publish, then
+verify Edge and the regenerated live page. No public revalidation webhook added.
+See https://nextjs.org/docs/app/guides/incremental-static-regeneration.
+
+Local slice verification: lint and 24 Node tests passed; tests execute real React
+SSR with native field helpers, plus source-contract checks. Genuine Edge-context
+production build passed before ISR addition; standalone typecheck also passed
+after ISR addition. Repeat production build when authenticated access is cleared. Browser mobile-menu interaction, native insertion/edit-save-reload,
+image/link picker behavior and live visual QA remain release gates. No fixture
+route, content seed, tenant write or deployment is included in this frontend work.

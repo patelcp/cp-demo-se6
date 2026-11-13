@@ -1,0 +1,40 @@
+﻿---
+ID: "e682c0da-c767-4af4-843b-115be200c6b5"
+Parent: "a4408a5b-1be2-4699-b10a-e08859d34ac3"
+Template: "a99aa87e-ab91-4589-a7a3-3eb3ca24fdb3"
+Path: /sitecore/content/aglc/aglc/Home/Data/CardGrid/Forms and documents
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ad979685-4252-4cc2-8b65-207a8d5dcddc"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04e0cb6a-3c66-4224-a653-415196124c69"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/forms" text="Learn more" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223203Z
+    - ID: "764b8b59-7e70-406e-9b40-6a9721780fe9"
+      Hint: Title
+      Value: Forms and documents
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8c0be37b-af7c-4446-a692-e6f0cebe7d43"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261113T223203Z
+    - ID: "fc607c48-98bf-4d20-8d34-71c64cd5c21e"
+      Hint: Summary
+      Value: <p>Browse official forms, policies and supporting documents.</p>

@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "AGLC.Definitions",
+  "description": "Developer-owned new shared slice definitions only; excludes authored site content and existing platform-generated templates.",
+  "items": {
+    "includes": [
+      {
+        "name": "Templates",
+        "path": "/sitecore/templates/Project/AGLC/Components",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "Renderings",
+        "path": "/sitecore/layout/Renderings/Project/AGLC/Shared Experience",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCSiteHeaderVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteHeader",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCSiteFooterVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteFooter",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCHeroVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Hero",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCCardGridVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CardGrid",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCCallToActionVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CallToAction",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCheadless-headerPlaceholder",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-header",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCheadless-mainPlaceholder",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-main",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCheadless-footerPlaceholder",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-footer",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCPalette",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Available Renderings/Shared experience",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseSiteHeaderVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteHeader",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseSiteFooterVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteFooter",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseHeroVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Hero",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseCardGridVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CardGrid",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseCallToActionVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseheadless-headerPlaceholder",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-header",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseheadless-mainPlaceholder",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-main",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseheadless-footerPlaceholder",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-footer",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSensePalette",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      }
+    ]
+  }
+}

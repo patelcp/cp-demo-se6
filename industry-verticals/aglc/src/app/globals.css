@@ -1,1 +1,72 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+/* Demo tokens informed by public CSS on 2026-11-13, not official brand specifications.
+   AGLC: #850057 / #3f4040. CannabisSense: #004e35 / #f6f4ef / #8dbf83.
+   Typography, spacing and radii are approximations. BrandKit does not apply these tokens. */
+[data-site] { --brand: #850057; --brand-dark: #540036; --ink: #232429; --muted: #555459; --surface: #fff; --soft: #f6e4f4; --line: #ddd5dc; --radius: .25rem; --hero-bg: #f7f4f6; --heading-font: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--surface); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; min-height: 100vh; }
+[data-site="cannabissense"] { --brand: #004e35; --brand-dark: #003723; --ink: #004e35; --muted: #455761; --surface: #f6f4ef; --soft: #dcebd7; --line: #bccdb7; --radius: 1.5rem; --hero-bg: #e7eedf; --heading-font: Georgia, 'Times New Roman', serif; }
+[data-site] *, [data-site] *::before, [data-site] *::after { box-sizing: border-box; }
+[data-site] h1, [data-site] h2, [data-site] h3, [data-site] p { margin: 0; }
+[data-site] h1, [data-site] h2, [data-site] h3 { font-family: var(--heading-font); line-height: 1.12; text-wrap: balance; }
+[data-site] h1 { font-size: clamp(2.6rem, 5.3vw, 4.8rem); letter-spacing: -.045em; }
+[data-site] h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -.03em; }
+[data-site] h3 { font-size: 1.5rem; letter-spacing: -.02em; }
+[data-site] a { color: inherit; text-underline-offset: .24em; }
+[data-site] :focus-visible { outline: 3px solid var(--brand); outline-offset: 5px; }
+.shell { width: min(100% - 3rem, 76rem); margin-inline: auto; }
+.rich-text { line-height: 1.7; }
+.rich-text > * + * { margin-top: 1em; }
+.rich-text ul, .rich-text ol { padding-left: 1.5em; list-style: revert; }
+.rich-text a { text-decoration: underline; }
+.rich-text:empty, .actions:empty { display: none; }
+.site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: relative; z-index: 10; }
+.site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 6.5rem; padding-block: 1.2rem; }
+.site-brand { font-size: 1.5rem; font-weight: 800; color: var(--brand); }
+.site-brand > a { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
+.site-brand__logo { max-width: 10rem; max-height: 3.5rem; width: auto; height: auto; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1.7rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a { display: block; padding-block: .65rem; font-size: .95rem; font-weight: 700; text-decoration: none; border-bottom: 2px solid transparent; }
+.site-nav a:hover { color: var(--brand); border-color: var(--brand); }
+.menu-toggle { display: none; }
+.skip-link { position: absolute; top: .5rem; left: 1rem; padding: .75rem 1rem; transform: translateY(-200%); background: var(--surface); z-index: 20; }
+.skip-link:focus { transform: translateY(0); }
+.hero { background: var(--hero-bg); overflow: hidden; }
+.hero__inner { display: grid; gap: 3.5rem; align-items: center; padding-block: clamp(3.5rem, 7vw, 7rem); }
+.hero__inner[data-has-image="true"] { grid-template-columns: 1.12fr 1fr; }
+.hero__copy { max-width: 49rem; }
+.eyebrow { color: var(--brand); font-size: .85rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 1.25rem !important; }
+.hero__summary { font-size: 1.15rem; color: var(--muted); max-width: 38rem; margin-top: 1.7rem; }
+.hero__media { aspect-ratio: 1 / 1.08; border-radius: var(--radius); overflow: hidden; background: var(--soft); }
+.hero__image { width: 100%; height: 100%; object-fit: cover; }
+[data-site="cannabissense"] .hero__media { border-radius: 48% 48% 1.5rem 1.5rem; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-top: 2rem; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 3.2rem; padding: .8rem 1.4rem; background: var(--brand); color: #fff !important; border: 2px solid var(--brand); border-radius: var(--radius); font-weight: 700; line-height: 1.4; text-decoration: none; }
+.button:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+.button--secondary { background: transparent; color: var(--brand) !important; }
+.button--secondary:hover { background: var(--soft); border-color: var(--brand); }
+.card-section { padding-block: clamp(3.5rem, 6vw, 6rem); }
+.section-intro { max-width: 46rem; margin-bottom: 2.5rem; }
+.section-intro .rich-text { margin-top: 1.2rem; color: var(--muted); font-size: 1.1rem; }
+.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.content-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; background: var(--surface); }
+.content-card__media { aspect-ratio: 16/10; overflow: hidden; background: var(--soft); }
+.content-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.content-card__body { padding: 1.8rem; display: flex; flex-direction: column; gap: 1rem; flex: 1; }
+.content-card .rich-text { color: var(--muted); }
+.content-card__link { margin-top: auto; padding-top: .6rem; font-weight: 700; color: var(--brand) !important; text-decoration: underline; }
+.cta-section { padding-block: 1rem 5rem; }
+.cta-panel { display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding: clamp(2rem, 5vw, 4rem); border-radius: var(--radius); background: var(--soft); border-left: .4rem solid var(--brand); }
+.cta-panel > div { max-width: 44rem; }
+.cta-panel .rich-text { margin-top: 1.2rem; }
+.cta-panel > .button { flex-shrink: 0; }
+.site-footer { background: var(--brand-dark); color: #fff; padding-block: 4rem 2rem; }
+.site-footer :focus-visible { outline-color: #fff; }
+.site-footer__top { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 3rem; }
+.site-footer__brand { font-size: 1.7rem; font-weight: 700; margin-bottom: 1rem !important; }
+.site-footer__description { max-width: 32rem; }
+.site-footer nav ul { columns: 2; list-style: none; padding: 0; margin: 0; }
+.site-footer nav li { break-inside: avoid; padding-bottom: .8rem; }
+.site-footer nav a { text-decoration: underline; }
+.site-footer__copyright { border-top: 1px solid #ffffff50; padding-top: 1.7rem; font-size: .85rem; }
+@media (max-width: 64rem) { .site-header__inner { flex-wrap: wrap; gap: 1rem; } .menu-toggle { display: block; padding: .7rem 1rem; border: 1px solid var(--brand); color: var(--brand); border-radius: var(--radius); font: inherit; font-weight: 700; background: transparent; cursor: pointer; } .site-nav { width: 100%; display: none; } .site-nav[data-open="true"] { display: block; } .site-nav ul { flex-direction: column; gap: 0; } .hero__inner[data-has-image="true"] { gap: 2rem; } .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cta-panel { align-items: flex-start; flex-direction: column; gap: 1.5rem; } }
+@media (max-width: 40rem) { .shell { width: min(100% - 2rem, 76rem); } .hero__inner[data-has-image="true"] { grid-template-columns: 1fr; } .hero__media { aspect-ratio: 4/3; } .card-grid { grid-template-columns: 1fr; } .site-footer__top { grid-template-columns: 1fr; gap: 2rem; } .site-footer nav ul { columns: 1; } .actions { align-items: stretch; flex-direction: column; } }

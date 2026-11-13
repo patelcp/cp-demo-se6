@@ -1,0 +1,40 @@
+﻿---
+ID: "8d0abc77-c58b-4c95-9de8-118fef164206"
+Parent: "b2aaddc0-94cb-4968-8156-1f018d7e3c81"
+Template: "9451c6da-771e-42a5-965e-08c448cef1d0"
+Path: /sitecore/content/aglc/aglc/Home/Data/Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07a8384a-bcfc-459a-b051-8b95a695b2b2"
+      Hint: Eyebrow
+      Value: Alberta Gaming, Liquor and Cannabis
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223129Z
+    - ID: "4e370a53-8859-42f7-9c06-30f2e384b902"
+      Hint: PrimaryLink
+      Value: |
+        <link linktype="external" url="https://aglc.ca/licensing" text="Explore licensing" />
+    - ID: "7867a1b4-bac5-4882-814d-c1e5d8f7fcac"
+      Hint: Summary
+      Value: <p>Explore licensing information, forms and resources for Alberta’s gaming, liquor and cannabis sectors.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0670077c-5354-442a-972c-d842525a45d3"
+    - ID: "a1f8640d-de9e-4830-8871-e52a349b27e3"
+      Hint: SecondaryLink
+      Value: |
+        <link linktype="external" url="https://aglc.ca/forms" text="Find forms and documents" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "bdd08585-071f-4fb0-b0d9-d4ac034632c8"
+      Hint: Title
+      Value: Find the information you need.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261113T223129Z

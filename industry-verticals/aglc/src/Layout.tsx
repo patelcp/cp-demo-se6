@@ -33,7 +33,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       <Scripts />
       <SitecoreStyles layoutData={layout} />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={mainClassPageEditing}>
+      <div className={mainClassPageEditing} data-site={page.siteName?.toLowerCase()}>
         {mode.isDesignLibrary ? (
           route && (
             <DesignLibraryApp
@@ -57,7 +57,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 )}
               </div>
             </header>
-            <main>
+            <main id="main-content" tabIndex={-1}>
               <div id="content">
                 {route && (
                   <AppPlaceholder

@@ -1,7 +1,7 @@
 {
   "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
   "namespace": "AGLC.Seed",
-  "description": "Create-only blank-site baseline. Never overwrite marketer-authored content during ordinary deployments.",
+  "description": "Create-only site baseline and editorial content; excludes precisely scoped shared-slice developer definitions. Never overwrite authored content.",
   "items": {
     "includes": [
       {
@@ -14,13 +14,89 @@
         "name": "AGLC",
         "path": "/sitecore/content/aglc/aglc",
         "scope": "ItemAndDescendants",
-        "allowedPushOperations": "CreateOnly"
+        "allowedPushOperations": "CreateOnly",
+        "rules": [
+          {
+            "path": "/Presentation/Headless Variants/SiteHeader",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/SiteFooter",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/Hero",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/CardGrid",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/CallToAction",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-header",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-main",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-footer",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Available Renderings/Shared experience",
+            "scope": "Ignored"
+          }
+        ]
       },
       {
         "name": "CannabisSense",
         "path": "/sitecore/content/aglc/cannabissense",
         "scope": "ItemAndDescendants",
-        "allowedPushOperations": "CreateOnly"
+        "allowedPushOperations": "CreateOnly",
+        "rules": [
+          {
+            "path": "/Presentation/Headless Variants/SiteHeader",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/SiteFooter",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/Hero",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/CardGrid",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/CallToAction",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-header",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-main",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Placeholder Settings/headless-footer",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Available Renderings/Shared experience",
+            "scope": "Ignored"
+          }
+        ]
       }
     ]
   }

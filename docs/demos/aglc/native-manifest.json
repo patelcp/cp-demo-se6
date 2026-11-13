@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "collection": "aglc",
+    "name": "aglc",
+    "root": "/sitecore/content/aglc/aglc"
+  },
+  "resources": [],
+  "note": "Observed native IDs. Templates/renderings/variants/palette/placeholder controls developer-owned; page and partial datasources editorial-owned. Home activation pending matching code deployment.",
+  "items": {
+    "/sitecore/templates/Project/AGLC/Components": "5d6bc155012b4d9b81bf60e2c8688673",
+    "/sitecore/templates/Project/AGLC/Components/Navigation Link": "a7ad23cab3f24429b2e4b8f716c9a806",
+    "/sitecore/templates/Project/AGLC/Components/Navigation Link/Content": "309ef939378b4ea3a98792dba3c7fe23",
+    "/sitecore/templates/Project/AGLC/Components/Navigation Link/Content/Title": "2f073244a079407ba5ea50b10888b2f0",
+    "/sitecore/templates/Project/AGLC/Components/Navigation Link/Content/Link": "fa52a6dd1f0045a5ab0641dbaf526567",
+    "/sitecore/templates/Project/AGLC/Components/Navigation Link/__Standard Values": "d12c820507cf4940a9e0904e488ca23b",
+    "/sitecore/templates/Project/AGLC/Components/Card": "a99aa87eab914589a7a33eb3ca24fdb3",
+    "/sitecore/templates/Project/AGLC/Components/Card/Content": "944a1f68a0074198b635af0c8bfead29",
+    "/sitecore/templates/Project/AGLC/Components/Card/Content/Title": "764b8b597e70406e9b406a9721780fe9",
+    "/sitecore/templates/Project/AGLC/Components/Card/Content/Summary": "fc607c4898bf4d208d3471c64cd5c21e",
+    "/sitecore/templates/Project/AGLC/Components/Card/Content/Image": "f279a129991e4f6f96018765463bf6b6",
+    "/sitecore/templates/Project/AGLC/Components/Card/Content/Link": "04e0cb6a3c664224a653415196124c69",
+    "/sitecore/templates/Project/AGLC/Components/Card/__Standard Values": "105a986c54b34d8b8644dbff88e51779",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader": "50ab1213a49d4a179266db7df908728a",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader/Content": "70a5bf8cee374915b77bee557fa19de9",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader/Content/BrandName": "4ae50b6803c442cc982e20bc07b3b4db",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader/Content/Logo": "2bfe1d7f59a94c6889018ac6140accff",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader/Content/HomeLink": "8d8d4382c8f14c618ff7a97fcfa75523",
+    "/sitecore/templates/Project/AGLC/Components/SiteHeader/__Standard Values": "8a1f68da86af4aac8b7ae2e5cbff684b",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter": "5f3915235aac4230a8a6b18279eb2c6c",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter/Content": "3276fd491f1048f0bef778009d0009e2",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter/Content/BrandName": "fb006d86b55a462184a13ad0cbc5c115",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter/Content/Description": "6a96e26b2a7c4e1cb1d505d1c1f6dedd",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter/Content/Copyright": "910b7889c42e428695d54a9ac357e5e7",
+    "/sitecore/templates/Project/AGLC/Components/SiteFooter/__Standard Values": "3b92520686834567ac15dd5b79dd2085",
+    "/sitecore/templates/Project/AGLC/Components/Hero": "9451c6da771e42a5965e08c448cef1d0",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content": "ffdf7dfc389943f8b2414117fcd51f21",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/Eyebrow": "07a8384abcfc459ab0518b95a695b2b2",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/Title": "bdd08585071f4fb0b0d9d4ac034632c8",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/Summary": "7867a1b4bac54882814dc1e5d8f7fcac",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/Image": "8bfdb0c081e84897953be4fb5ee841d4",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/PrimaryLink": "4e370a53885942f79c0630f2e384b902",
+    "/sitecore/templates/Project/AGLC/Components/Hero/Content/SecondaryLink": "a1f8640dde9e48308871e52a349b27e3",
+    "/sitecore/templates/Project/AGLC/Components/Hero/__Standard Values": "2c9e4cd4ad664ad9967ab54b8363074f",
+    "/sitecore/templates/Project/AGLC/Components/CardGrid": "45f9bc08f72640419f45aa3379ef755e",
+    "/sitecore/templates/Project/AGLC/Components/CardGrid/Content": "b63f5da2d4e14209911192bcec146104",
+    "/sitecore/templates/Project/AGLC/Components/CardGrid/Content/Heading": "8d556eea198b436e82a08fc3781d658c",
+    "/sitecore/templates/Project/AGLC/Components/CardGrid/Content/Intro": "89fb46e3190b45fcb0934ba30a7c321e",
+    "/sitecore/templates/Project/AGLC/Components/CardGrid/__Standard Values": "ba990a9fd8474a3486e1e37ef2dd29ab",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction": "5043c04412dc47f9a538e519053df657",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction/Content": "246edb33568d45aea52be2537022805a",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction/Content/Title": "1bea189f79b64cc3a260ba0fda135d1f",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction/Content/Body": "df7519d36e8043f9a874676b3923b3ac",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction/Content/Link": "9720c77745694b1aab42bb6861245563",
+    "/sitecore/templates/Project/AGLC/Components/CallToAction/__Standard Values": "43e044b3900e4f8ba09c58f9ee9f7c9a",
+    "/sitecore/templates/Project/AGLC/Components/Rendering Parameters": "08ce84f8ca954cc29d596df33d225aa1",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience": "257ab132bb9b45ae94dc7697be6b17b9",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience/SiteHeader": "19d7d54ca35d426590d903cdd7860643",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience/SiteFooter": "57e2290a551947eeb87b9b421df11917",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience/Hero": "84c91e02b8574fb6b73ff1832b084c0e",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience/CardGrid": "27e326aa73b74da7b4e48d2f3e1d7a27",
+    "/sitecore/layout/Renderings/Project/AGLC/Shared Experience/CallToAction": "020e9010dad542f2b92aa403cb673bea",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteHeader": "03d36c24009246638518fcefd73ce7b5",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteHeader/Default": "19c6a372a90e4e10a9b0813da9ba75e9",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteFooter": "4c8a679b0cbe426bb4f6e2e67266387a",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteFooter/Default": "15e6c7fb5ca040008aca7e3bbf0f4ece",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Hero": "77e7a8430ca04810a25911c51db94f1f",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Hero/Default": "27e0cdf7060e4df499d5ac97e4360136",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CardGrid": "2582501999374f98b248db470821e3ba",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CardGrid/Default": "efdf5d60dd4b4b7da9dc0f562a356d97",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CallToAction": "99a125a7a1fe4a8783bfd68bd6ab686d",
+    "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CallToAction/Default": "db065b97ad424ddca386b27478fb3d26",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteHeader": "55fc7bf735e64525b4f586c46d480eb4",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteHeader/Default": "2067dfc61a804c38af0bf80fb6502c9b",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteFooter": "a3a372e10d704a79b6d1c5d6ce460f7d",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteFooter/Default": "471da70a2d1d4939bbce8223c305c3e2",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Hero": "eedbc98b5d064f75b14cf7c5db749c45",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Hero/Default": "e6b607e2541c431d9bd292583c4633b1",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CardGrid": "01a49721c20e4622b30651c0a32b2590",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CardGrid/Default": "0cd747db34ed4bb2bc0efad43b626c19",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction": "da39a891abe34106868277877e906539",
+    "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction/Default": "43f6c1c8d3ff41488ce6fedbe3c4948d",
+    "/sitecore/content/aglc/aglc/Home/Data": "b2aaddc094cb496881561f018d7e3c81",
+    "/sitecore/content/aglc/aglc/Home/Data/Hero": "8d0abc77c58b4c959de8118fef164206",
+    "/sitecore/content/aglc/aglc/Home/Data/CardGrid": "a4408a5b1be24699b10ae08859d34ac3",
+    "/sitecore/content/aglc/aglc/Home/Data/CallToAction": "c362935fcff04d57bb1f5ed783e82071",
+    "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Licensing": "13af8fb344ac477786d737055af2505f",
+    "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Forms and documents": "e682c0dac7674af4843b115be200c6b5",
+    "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Cannabis information": "080828c946644ff7970a157db3b89889",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header": "9e919bcce806457aac9d128285ed4cbb",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data": "496a9c95dc6646f4b4fb7e8633c8c50c",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header": "6a4d7333333d463ba92660514ce23305",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Licensing": "f71ea2fdfa004a7882c4cbfcc52a312f",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Liquor": "1cbea3f5922d4847be02bc4fa9f48fd8",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Cannabis": "239ff378807e45c3b84429d6826ce324",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Forms and documents": "b444161eeb414127a3d2414b656dc0e5",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer": "572079ae7b454bd9a9bb9e7d8fd26a2c",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data": "c3add2ef02fd48c9b8a0143f3258611a",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data/Site footer": "d3ddd95657b24f6d8fd3fdd089a5d0d6",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data/Site footer/Licensing": "14ceed4c00dc4d7b8472bcac326731b7",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data/Site footer/Liquor": "be941926e28c4fde9697f25ad72d5658",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data/Site footer/Cannabis": "48634463d55743968f4e70a5d4965435",
+    "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer/Data/Site footer/Forms and documents": "3d52fe75b5b74e1db1365920ef88381e",
+    "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-header": "9217015bd12c47b7b264811c46f94747",
+    "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-main": "d73a3ab3a21b487d8acd53207bbad4f2",
+    "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-footer": "19d1e7e7d1fd4468a0da4f993366fb35",
+    "/sitecore/content/aglc/aglc/Presentation/Available Renderings/Shared experience": "4c206d479052480987cf8bf6280bbf4e",
+    "/sitecore/content/aglc/cannabissense/Home/Data": "37b41cf48196498f802d0493e3059e5c",
+    "/sitecore/content/aglc/cannabissense/Home/Data/Hero": "2b0fd6fe23e54c79b51e18c35f280391",
+    "/sitecore/content/aglc/cannabissense/Home/Data/CardGrid": "4d9edd8f2b1841dd9802ce4386567db5",
+    "/sitecore/content/aglc/cannabissense/Home/Data/CallToAction": "a9dbc4b8f3164ca39bef566f0698f716",
+    "/sitecore/content/aglc/cannabissense/Home/Data/CardGrid/Cannabis basics": "bb0beeec86eb46c1aa0cd0b9910aed33",
+    "/sitecore/content/aglc/cannabissense/Home/Data/CardGrid/Understand the effects": "1490ceeb51d1433485b00ec07480cef1",
+    "/sitecore/content/aglc/cannabissense/Home/Data/CardGrid/Find useful resources": "2d447ac0e9304344ab25f620c55b98f5",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header": "435444b39da0406e874a50696c41d50f",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data": "b06ed5117b184b6c96f1c00abf311e86",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header": "5342d97d60f44cb69b8b7418bce8716c",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Cannabis basics": "16b81765e2ea4c7f916255aa51512c46",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Health effects": "339c9e22743e490f8624833fea57598f",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Lower-risk guidelines": "06f11862c4034cba9c6a352ee83b00ac",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Resources": "e438150fd4c2411cbf560bae1e43d156",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer": "38dfd0f862c64fd58992c0a8d3acfb92",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data": "669d934b18d34db6801d0ea6ea3e058c",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer": "5520dbcba1714fab9066cc3f130e6aca",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer/Cannabis basics": "b48d8ffc35e64400a33d6088ee96ecb8",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer/Health effects": "ce58308732dd4ba89c70018b3b8dd150",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer/Lower-risk guidelines": "789ded096acc4af398868b69895d6349",
+    "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer/Resources": "86bc8e7c81d847a5a17c055353a0619d",
+    "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-header": "6b48b49e7bd54d3e877db83104fedb8e",
+    "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-main": "5c1bd40b6fd14597b649da51494282b8",
+    "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-footer": "2bcb30a9e19b460aa16ae942d1667f9e",
+    "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience": "79c33318a88948bba20098d185a52bc6"
+  },
+  "components": {
+    "SiteHeader": {
+      "renderingId": "19d7d54ca35d426590d903cdd7860643",
+      "templateId": "50ab1213a49d4a179266db7df908728a",
+      "fields": {
+        "BrandName": "Single-Line Text",
+        "Logo": "Image",
+        "HomeLink": "General Link"
+      },
+      "childTemplateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+      "query": "query SiteHeader($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { BrandName: field(name: \"BrandName\") { jsonValue } Logo: field(name: \"Logo\") { jsonValue } HomeLink: field(name: \"HomeLink\") { jsonValue } children { results { id Title: field(name: \"Title\") { jsonValue } Link: field(name: \"Link\") { jsonValue } } } } }",
+      "ownership": "shared site partial",
+      "variants": {
+        "aglc": "19c6a372a90e4e10a9b0813da9ba75e9",
+        "cannabissense": "2067dfc61a804c38af0bf80fb6502c9b"
+      }
+    },
+    "SiteFooter": {
+      "renderingId": "57e2290a551947eeb87b9b421df11917",
+      "templateId": "5f3915235aac4230a8a6b18279eb2c6c",
+      "fields": {
+        "BrandName": "Single-Line Text",
+        "Description": "Rich Text",
+        "Copyright": "Single-Line Text"
+      },
+      "childTemplateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+      "query": "query SiteFooter($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { BrandName: field(name: \"BrandName\") { jsonValue } Description: field(name: \"Description\") { jsonValue } Copyright: field(name: \"Copyright\") { jsonValue } children { results { id Title: field(name: \"Title\") { jsonValue } Link: field(name: \"Link\") { jsonValue } } } } }",
+      "ownership": "shared site partial",
+      "variants": {
+        "aglc": "15e6c7fb5ca040008aca7e3bbf0f4ece",
+        "cannabissense": "471da70a2d1d4939bbce8223c305c3e2"
+      }
+    },
+    "Hero": {
+      "renderingId": "84c91e02b8574fb6b73ff1832b084c0e",
+      "templateId": "9451c6da771e42a5965e08c448cef1d0",
+      "fields": {
+        "Eyebrow": "Single-Line Text",
+        "Title": "Single-Line Text",
+        "Summary": "Rich Text",
+        "Image": "Image",
+        "PrimaryLink": "General Link",
+        "SecondaryLink": "General Link"
+      },
+      "childTemplateId": null,
+      "query": "query Hero($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Eyebrow: field(name: \"Eyebrow\") { jsonValue } Title: field(name: \"Title\") { jsonValue } Summary: field(name: \"Summary\") { jsonValue } Image: field(name: \"Image\") { jsonValue } PrimaryLink: field(name: \"PrimaryLink\") { jsonValue } SecondaryLink: field(name: \"SecondaryLink\") { jsonValue } } }",
+      "ownership": "page-local Data",
+      "variants": {
+        "aglc": "27e0cdf7060e4df499d5ac97e4360136",
+        "cannabissense": "e6b607e2541c431d9bd292583c4633b1"
+      }
+    },
+    "CardGrid": {
+      "renderingId": "27e326aa73b74da7b4e48d2f3e1d7a27",
+      "templateId": "45f9bc08f72640419f45aa3379ef755e",
+      "fields": {
+        "Heading": "Single-Line Text",
+        "Intro": "Rich Text"
+      },
+      "childTemplateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+      "query": "query CardGrid($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Heading: field(name: \"Heading\") { jsonValue } Intro: field(name: \"Intro\") { jsonValue } children { results { id Title: field(name: \"Title\") { jsonValue } Summary: field(name: \"Summary\") { jsonValue } Image: field(name: \"Image\") { jsonValue } Link: field(name: \"Link\") { jsonValue } } } } }",
+      "ownership": "page-local Data",
+      "variants": {
+        "aglc": "efdf5d60dd4b4b7da9dc0f562a356d97",
+        "cannabissense": "0cd747db34ed4bb2bc0efad43b626c19"
+      }
+    },
+    "CallToAction": {
+      "renderingId": "020e9010dad542f2b92aa403cb673bea",
+      "templateId": "5043c04412dc47f9a538e519053df657",
+      "fields": {
+        "Title": "Single-Line Text",
+        "Body": "Rich Text",
+        "Link": "General Link"
+      },
+      "childTemplateId": null,
+      "query": "query CallToAction($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Title: field(name: \"Title\") { jsonValue } Body: field(name: \"Body\") { jsonValue } Link: field(name: \"Link\") { jsonValue } } }",
+      "ownership": "page-local Data",
+      "variants": {
+        "aglc": "db065b97ad424ddca386b27478fb3d26",
+        "cannabissense": "43f6c1c8d3ff41488ce6fedbe3c4948d"
+      }
+    }
+  },
+  "sites": {
+    "aglc": {
+      "homeId": "b25704d668a64e4096a5b869529e992c",
+      "content": {
+        "Hero": "8d0abc77c58b4c959de8118fef164206",
+        "CardGrid": "a4408a5b1be24699b10ae08859d34ac3",
+        "CallToAction": "c362935fcff04d57bb1f5ed783e82071"
+      },
+      "partials": {
+        "SiteHeader": {
+          "itemId": "9e919bcce806457aac9d128285ed4cbb",
+          "datasourceId": "6a4d7333333d463ba92660514ce23305",
+          "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header"
+        },
+        "SiteFooter": {
+          "itemId": "572079ae7b454bd9a9bb9e7d8fd26a2c",
+          "datasourceId": "d3ddd95657b24f6d8fd3fdd089a5d0d6",
+          "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer"
+        }
+      },
+      "status": "seeded, not activated"
+    },
+    "cannabissense": {
+      "homeId": "4254bcfab9c3485aaadb8b5b3f8fd08d",
+      "content": {
+        "Hero": "2b0fd6fe23e54c79b51e18c35f280391",
+        "CardGrid": "4d9edd8f2b1841dd9802ce4386567db5",
+        "CallToAction": "a9dbc4b8f3164ca39bef566f0698f716"
+      },
+      "partials": {
+        "SiteHeader": {
+          "itemId": "435444b39da0406e874a50696c41d50f",
+          "datasourceId": "5342d97d60f44cb69b8b7418bce8716c",
+          "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header"
+        },
+        "SiteFooter": {
+          "itemId": "38dfd0f862c64fd58992c0a8d3acfb92",
+          "datasourceId": "5520dbcba1714fab9066cc3f130e6aca",
+          "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer"
+        }
+      },
+      "status": "seeded, not activated"
+    }
+  },
+  "phase": "native definitions and editorial seed created; no Home activation or publication"
+}

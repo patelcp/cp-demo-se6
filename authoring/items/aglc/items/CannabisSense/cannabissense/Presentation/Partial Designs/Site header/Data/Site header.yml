@@ -1,0 +1,30 @@
+﻿---
+ID: "5342d97d-60f4-4cb6-9b8b-7418bce8716c"
+Parent: "b06ed511-7b18-4b6c-96f1-c00abf311e86"
+Template: "50ab1213-a49d-4a17-9266-db7df908728a"
+Path: /sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223228Z
+    - ID: "4ae50b68-03c4-42cc-982e-20bc07b3b4db"
+      Hint: BrandName
+      Value: CannabisSense
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed60ab1c-d70f-499e-8d11-0c15edeb0e6d"
+    - ID: "8d8d4382-c8f1-4c61-8ff7-a97fcfa75523"
+      Hint: HomeLink
+      Value: |
+        <link linktype="internal" id="{4254bcfab9c3485aaadb8b5b3f8fd08d}" text="CannabisSense" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261113T223229Z
