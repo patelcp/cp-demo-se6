@@ -89,6 +89,15 @@
       "type": "sxa",
       "buildCommand": "build",
       "runCommand": "next:start"
+    },
+    "aglc": {
+      "path": "./industry-verticals/aglc",
+      "nodeVersion": "24.14.1",
+      "packageManager": "npm",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
     }
   },
   "postActions": {
