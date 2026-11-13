@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "AGLC.Seed",
+  "description": "Create-only blank-site baseline. Never overwrite marketer-authored content during ordinary deployments.",
+  "items": {
+    "includes": [
+      {
+        "name": "Collection",
+        "path": "/sitecore/content/aglc",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateOnly"
+      },
+      {
+        "name": "AGLC",
+        "path": "/sitecore/content/aglc/aglc",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateOnly"
+      },
+      {
+        "name": "CannabisSense",
+        "path": "/sitecore/content/aglc/cannabissense",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateOnly"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "baselineCommit": "f979daca4795830562427292fd74c78292b91bbf",
+  "candidateSourceBase": "fea1a4ad1f0d0dca5f460e82537e7a08fef1f8c0",
+  "baselineAuthoringFileCount": 3497,
+  "baselineYamlCount": 3483,
+  "changedOrMissingBaselineFiles": [],
+  "includedModules": [
+    "nextjs-starter",
+    "prosperabank",
+    "Project.click-click-launch"
+  ],
+  "excludedReferenceModule": "AGLC.Seed",
+  "locallyGeneratedIarItemCount": 3483,
+  "localIarSha256": "9ea28d26eeb196d8c7d92e92095cefd332f702d292fb25e16cc58dd39fa087b6",
+  "localIarBytes": 126046368,
+  "remoteDeployedIarInspected": false,
+  "cmsDeploymentPerformed": false
+}
