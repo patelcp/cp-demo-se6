@@ -2,7 +2,7 @@
 
 ## Scope and provenance
 
-This checkpoint precedes customer page and component development. The owner created an AGLC collection and two Empty-template sites, named AGLC and CannabisSense. Exact item IDs, technical site names, languages and native paths must be verified against the target environment after authentication is restored.
+This checkpoint precedes customer page and component development. The owner created an AGLC collection and two Empty-template sites, named AGLC and CannabisSense. Verified in cp-demo / cm: `/sitecore/content/aglc/aglc` and `/sitecore/content/aglc/cannabissense`, technical names `aglc` and `cannabissense`, language `en`.
 
 One shared head lives at `industry-verticals/aglc`, based on `examples/basic-nextjs` at `dcf12c31f006a32a78af0a4005bcd7b4140baaee`. Both brands will share component implementations; later themes and authored compositions remain site-specific.
 
@@ -13,23 +13,34 @@ One shared head lives at `industry-verticals/aglc`, based on `examples/basic-nex
 | [aglc-cp](https://vercel.com/cp-sc/aglc-cp) | cp-sc | industry-verticals/aglc | Node 24 | aglc |
 | [cannabissense-cp](https://vercel.com/cp-sc/cannabissense-cp) | cp-sc | industry-verticals/aglc | Node 24 | cannabissense |
 
-Both projects are linked to `patelcp/cp-demo-se6`, with `npm ci` and `npm run build`. Production branch remains `main`; do not silently promote the feature branch or merge unrelated work. No verified successful deployment, public alias or native binding exists at this checkpoint. Default site values remain to be confirmed against native sites.
+Both projects are linked to `patelcp/cp-demo-se6`, with `npm ci` and `npm run build`. Production branch remains `main`; no merge was performed. Explicit foundation production deployments from feature commit `df530a2` both succeeded. The two verified project domains are `aglc-cp.vercel.app` and `cannabissense-cp.vercel.app`, now reflected in native Site Grouping HostName and TargetHostName fields.
 
-## Authentication blocker
+## Current setup status
 
-The existing Sitecore CLI session reported an expired/corrupted refresh token. No CMS writes have been made. The connected desktop exposed no browser surfaces for interactive login. Credentials must not be pasted into chat or committed.
+Sitecore authentication was refreshed by the owner and verified. Existing sites were not recreated. Live Edge context and the existing CM editing secret were transferred directly into encrypted Vercel environment variables without writing secrets to tracked files.
 
-The pinned Sitecore CLI 6.0.23 was restored. The Mac has .NET 10; invocation through its DLL with per-process `DOTNET_ROLL_FORWARD=Major` worked for CLI help and reached the authenticated API. Restore/login should use the repository's supported CLI; do not change global runtime settings.
+The native blank baseline contains 185 items under the collection and two sites. `AGLC.Seed` is scoped to exactly those paths with `CreateOnly` push operations; validation passes. No serialization push has been run. A scoped SMART publish of the collection and related dependencies was submitted to Experience Edge.
 
-## Remaining setup order
+A dedicated managed editing-host environment named `aglc` is linked to the existing CM. It uses the shared head and feature branch with automatic deployments disabled. Its managed deployment completed successfully (`3GQKL8XQIkFTnRItmFdF3C`). The platform registered `https://xmc-7purwtl7yj2hsnwwr26uzy-eh.sitecorecloud.io`, but DNS resolution still failed at the final check. The native CM Rendering Hosts/aglc item has not appeared, so site RenderingHost assignments remain Default. A broad authoring deployment was deliberately not started on this shared CM. Existing rendering hosts and Default are untouched.
 
-1. Refresh Sitecore login; identify the cp-demo-se6 project/environment and verify both existing sites. Do not recreate them.
-2. Read the target environment's real Edge context and editing configuration through supported tools. Configure host variables securely; do not copy another customer's values.
-3. Pull the native AGLC collection baseline into narrowly scoped serialization modules. Record exact item IDs and paths first. Keep one-time seed content separate from developer-owned definitions; normal releases must preserve later author edits.
-4. Configure the shared editing head, either as a Sitecore-managed host or an explicitly registered external host. Preserve unrelated starter hosts. Never reuse the reserved `default` host name for a custom managed host.
-5. Build/deploy the two Vercel projects from the reviewed foundation commit and configure corresponding hostnames and editing-host assignments.
-6. Publish the intended minimal Home items and dependencies only. Verify both live hosts resolve to the correct sites, Page Builder renders, editing a native field saves/reloads, and no sample customer content is introduced.
-7. Validate serialization and record the remote commit/deployment IDs. Only then start actual demo development.
+The pinned Sitecore CLI 6.0.23 works through its DLL with per-process `DOTNET_ROLL_FORWARD=Major` on this Mac's .NET 10. No global runtime settings were changed.
+
+## Verified results
+
+- Both production aliases return HTTP 200 with distinct correct native site-route markers: [AGLC](https://aglc-cp.vercel.app/) and [CannabisSense](https://cannabissense-cp.vercel.app/).
+- Both `/healthz` endpoints return HTTP 200, and page responses carry `X-Robots-Tag: noindex, nofollow`.
+- Vercel deployments: `dpl_42vUx8KrhWLrvmAnUXZmUpWSaCEe` and `dpl_7ZHVgb4rFuHfxdkZseYgbpnPJaUa`, both READY.
+- Genuine local production build with live Edge passed, including metadata/site/import map generation, Next compilation, TypeScript and prerender. Separate type-check passed.
+- Tests (3), lint and scoped serialization validation passed. npm audit reports 13 moderate vulnerabilities and no high/critical; no forced breaking upgrades applied.
+- Native Home is intentionally blank. No sample business pages or customer features added.
+
+## Remaining before feature development
+
+1. Confirm managed editing-host DNS and health, then complete its native CM rendering-host registration through the supported deployment/configuration path. Avoid deploying unrelated serialization without review.
+2. Assign only the two AGLC Site Grouping items to the dedicated `aglc` rendering host after it exists and is healthy. Re-pull the scoped seed after this change.
+3. Verify Page Builder rendering and native-field save/reload. The connected desktop exposed no browser surface for this check, so it is explicitly unrun.
+
+The production frontends are ready; the end-to-end editing foundation is not yet signed off. Do not treat health/build success as Page Builder verification.
 
 ## Verification boundaries
 

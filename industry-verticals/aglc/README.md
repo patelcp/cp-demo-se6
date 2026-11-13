@@ -64,9 +64,9 @@ record those checks separately; none is implied by the health response.
 - `npm run lint`: passed (native Next.js flat config; inherited 404 JSX boundary fixed).
 - `npm test`: passed, three source-contract checks.
 - `npm run sitecore-tools:generate-map`: passed.
-- Production build: blocked at Sitecore site discovery (`MV-007`) until the target
-  Edge context is provided through secure host/process configuration.
-- Type check: blocked on generated site/import maps that require that discovery.
+- Production build: passed using the verified environment live Edge context in
+  process memory, including genuine site discovery and prerendering `/aglc/en`.
+- Type check: passed after the genuine generated site/import maps were available.
 - Sitecore/Page Builder/live URL acceptance: pending; see the deployment manifest.
 
 The installation audit after security maintenance reports 13 moderate findings and
