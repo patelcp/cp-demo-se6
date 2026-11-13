@@ -16,15 +16,15 @@ Languages:
       Value: AGLC
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "30043313-5fb8-4c5a-897a-9dda3305e20b"
+      Value: "70b3a7ee-6ad0-45a7-bef4-57a8c1423d39"
     - ID: "8d8d4382-c8f1-4c61-8ff7-a97fcfa75523"
       Hint: HomeLink
       Value: |
-        <link linktype="internal" id="{b25704d668a64e4096a5b869529e992c}" text="AGLC" />
+        <link linktype="internal" id="{B25704D6-68A6-4E40-96A5-B869529E992C}" text="AGLC" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223207Z
+      Value: 20261113T234338Z

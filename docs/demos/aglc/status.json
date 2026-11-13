@@ -1,29 +1,39 @@
 {
   "schemaVersion": 1,
   "project": "aglc",
-  "phase": "shared-slice-release-preparation",
-  "nextAction": "Finish scoped serialization review, commit feature branch and draft PR, then deploy both frontend projects and editing host from exact reviewed source before Home activation.",
+  "phase": "shared-slice-live-pages-ui-verification-pending",
+  "nextAction": "Verify Page Builder render/edit/save/reload on both sites with a signed-in browser, review draft PR26, then agree merge workflow before expanding remaining demo pages.",
   "checkpoints": [
     {
       "stage": "frontend",
-      "result": "local-checks-pass",
-      "evidence": "Five native shared renderings. 21 shared-slice real-SDK SSR tests independently pass; lint/typecheck reported passing. Empty HomeLink and navigation Title regressions fixed."
+      "result": "pass",
+      "evidence": "Five shared native renderings; lint/typecheck and24app tests pass."
     },
     {
-      "stage": "transport",
-      "result": "offline-review-pass",
-      "evidence": "Exact CM confinement, no redirects/proxies, sanitized failures. Five fake-only mocked tests independently pass; independent security review found no blocker."
+      "stage": "transport-activation",
+      "result": "pass",
+      "evidence": "Independent reviews plus9 offline tests pass."
+    },
+    {
+      "stage": "deployment",
+      "result": "pass",
+      "evidence": "Both Vercel production deployments READY at1e5a092; managed aglc editing-host deployment3KrfWmmlE2Y1bJAXWOCsIO all stages complete. CM/dev unchanged."
     },
     {
       "stage": "native",
-      "result": "serialization-validated",
-      "evidence": "New-session guarded reread: both Homes and four partial designs remain blank. Definitions80 and Seed231 YAML captured; exact exclusion rules avoid overlap, Seed CreateOnly. Scoped CLI validation passes, no CMS writes this reconciliation; IAR unchanged."
+      "result": "pass",
+      "evidence": "Six layouts and2page designs activated; exact scoped Edge publishing FINISHED.314 serialized items:81Definitions,233CreateOnly Seed; validation passes."
     },
     {
-      "stage": "authoring-browser",
+      "stage": "public-browser",
+      "result": "pass",
+      "evidence": "Both pages render all5components with distinct themes and3cards. Desktop/mobile visually checked; Menu/Escape/focus/no-overflow pass. Brand links resolve to root, HTTP200,noindex,zero console errors."
+    },
+    {
+      "stage": "pages-authoring",
       "result": "blocked",
-      "evidence": "No connected browser; Pages render/edit/save/reload unverified."
+      "evidence": "Signed-in Page Builder render/edit/save/reload unrun. Public browser proof does not prove editor operation."
     }
   ],
-  "note": "User authorized continuation after disclosure of residual old-token exposure. New session verified; use only exact intended endpoints. No new slice commit/deployment/activation/publication yet. Current local Edge build lacks transient configuration; hosted build will use existing encrypted project configuration."
+  "note": "Both public heads and separate editing host deployed from app commit1e5a092. Scoped native activation/publication and browser QA passed. No shared CM deployment or PR merge. Refreshed session used for intended endpoints only."
 }

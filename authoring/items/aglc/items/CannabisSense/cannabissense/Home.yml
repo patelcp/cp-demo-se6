@@ -5,10 +5,43 @@ Template: "95902259-996f-4932-980a-cdac2de84b0a"
 Path: /sitecore/content/aglc/cannabissense/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
     <image mediaid="{79B26BDC-CE2B-4587-BCBB-2F02E5AAC1C8}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ae10bd33-6748-49a6-bf5a-646471eac713"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{2B7BFB13-43E6-5392-8EFE-D82B0AA9CAA4}"
+          id="{84C91E02-B857-4FB6-B73F-F1832B084C0E}"
+          ds="{2B0FD6FE-23E5-4C79-B51E-18C35F280391}"
+          ph="headless-main"
+          par="FieldNames=%7BE6B607E2-541C-431D-9BD2-92583C4633B1%7D&amp;DynamicPlaceholderId=1" />
+        <r
+          uid="{5C98DD6F-8D38-5E95-8C39-EB9CF0645F63}"
+          id="{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}"
+          ds="{4D9EDD8F-2B18-41DD-9802-CE4386567DB5}"
+          ph="headless-main"
+          par="FieldNames=%7B0CD747DB-34ED-4BB2-BC0E-FAD43B626C19%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{B4CA1A82-37C3-51C5-96D0-E69F8131C0F4}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{A9DBC4B8-F316-4CA3-9BEF-566F0698F716}"
+          ph="headless-main"
+          par="FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=3" />
+      </d>
+    </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
@@ -36,11 +69,11 @@ Languages:
       Value: cannabissense
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cef01fee-16ee-48e2-88a9-2b7638e583d1"
+      Value: "6f45d3fc-c452-4bb2-b650-c37638bdd80b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T062056Z
+      Value: 20261113T232620Z

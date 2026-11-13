@@ -2,7 +2,7 @@
 
 ## Local checkpoint (2026-11-13)
 
-Branch: `feat/aglc-shared-slice`, based on foundation `7973577`. Changes are uncommitted. The existing foundation is live; this slice is not deployed.
+Branch: `feat/aglc-shared-slice`, based on foundation `7973577`. App commit `1e5a092` is deployed to both public heads and the editing host. Native activation and public QA passed; draft PR26 remains unmerged. See evidence/shared-slice-verification.md for current results.
 
 - Five shared native renderings: SiteHeader, SiteFooter, Hero, CardGrid, CallToAction.
 - Distinct AGLC/CannabisSense tokens selected by actual site name. Visual approximations are documented in the app README, not represented as official BrandKit standards.
@@ -10,9 +10,9 @@ Branch: `feat/aglc-shared-slice`, based on foundation `7973577`. Changes are unc
 - Lint, TypeScript and all 24 tests pass locally (21 slice tests plus 3 foundation tests).
 - Five offline transport tests pass; independent security review confirms endpoint confinement, redirect rejection, proxy disabling and sanitized errors.
 - 122 native items were prepared before the authentication pause. New-session reconciliation captured 80 developer-definition and 231 create-only seed YAML items. Scoped validation passes; both Homes and four partials retain blank layouts.
-- Home layouts have not been activated and no slice content has been published.
+- Home layouts are activated and scoped content is published; signed-in Page Builder acceptance remains pending.
 
-## Mandatory gates
+## Release sequence and remaining acceptance gate
 
 1. User explicitly authorized continuation after disclosure of residual old-token exposure. Use only the newly authenticated session, never the exposed token. A new login is not proof of revocation. Do not store credentials or incident tokens in repository artifacts.
 2. After clearance, use only the intended Sitecore endpoint and current authorized credentials. Re-read current native state before any change; preserve newer user edits and BrandKit assignments.

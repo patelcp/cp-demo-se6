@@ -13,7 +13,22 @@ SharedFields:
     <image mediaid="{2ECECF4C-15ED-4940-B070-0D016C79E473}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "a02e5c2e-a114-4f42-9cf9-1a926392c281"
+  Value: "2b01b10d-bdb5-4651-a713-e037fae47262"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{F51F362E-1836-5FA5-98EB-5F9D6840CC6C}"
+          id="{19D7D54C-A35D-4265-90D9-03CDD7860643}"
+          ds="{6A4D7333-333D-463B-A926-60514CE23305}"
+          ph="headless-header"
+          par="FieldNames=%7B19C6A372-A90E-4E10-A9B0-813DA9BA75E9%7D&amp;DynamicPlaceholderId=1" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -32,11 +47,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7c69ac4c-ef8e-4180-9c5f-e63b361d4608"
+      Value: "2622b292-a5b3-4b78-bbe2-21e8d8b66868"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223206Z
+      Value: 20261113T232617Z

@@ -6,7 +6,7 @@
     "root": "/sitecore/content/aglc/aglc"
   },
   "resources": [],
-  "note": "Observed native IDs. Templates/renderings/variants/palette/placeholder controls developer-owned; page and partial datasources editorial-owned. Home activation pending matching code deployment.",
+  "note": "Observed native IDs. Developer definitions include exact empty Rendering Parameters standard-values dependency generated during activation (automatic generation inferred). Page and partial datasources remain editorial-owned. Snapshot-guarded activation verified; no broad publish or serialized push.",
   "items": {
     "/sitecore/templates/Project/AGLC/Components": "5d6bc155012b4d9b81bf60e2c8688673",
     "/sitecore/templates/Project/AGLC/Components/Navigation Link": "a7ad23cab3f24429b2e4b8f716c9a806",
@@ -129,7 +129,10 @@
     "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-header": "6b48b49e7bd54d3e877db83104fedb8e",
     "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-main": "5c1bd40b6fd14597b649da51494282b8",
     "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-footer": "2bcb30a9e19b460aa16ae942d1667f9e",
-    "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience": "79c33318a88948bba20098d185a52bc6"
+    "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience": "79c33318a88948bba20098d185a52bc6",
+    "/sitecore/templates/Project/AGLC/Components/Rendering Parameters/__Standard Values": "139c2100dec44b1f9273b307e184f586",
+    "/sitecore/content/aglc/aglc/Presentation/Page Designs/Shared experience": "0e78a2b31229483a914b614237eadf56",
+    "/sitecore/content/aglc/cannabissense/Presentation/Page Designs/Shared experience": "ba3358d8891b4d4da19a545a0f534ab5"
   },
   "components": {
     "SiteHeader": {
@@ -235,7 +238,8 @@
           "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer"
         }
       },
-      "status": "seeded, not activated"
+      "status": "activated, selectively published, public QA passed; signed-in Pages acceptance pending",
+      "pageDesignId": "0e78a2b31229483a914b614237eadf56"
     },
     "cannabissense": {
       "homeId": "4254bcfab9c3485aaadb8b5b3f8fd08d",
@@ -256,8 +260,31 @@
           "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer"
         }
       },
-      "status": "seeded, not activated"
+      "status": "activated, selectively published, public QA passed; signed-in Pages acceptance pending",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5"
     }
   },
-  "phase": "native definitions and editorial seed created; no Home activation or publication"
+  "phase": "native layouts activated, selectively published, and public browser QA passed; signed-in Page Builder acceptance pending",
+  "publication": {
+    "target": "experienceedge",
+    "language": "en",
+    "reviewedItemCount": 131,
+    "completedSingleItemPublishes": 5,
+    "dependencyBatch": {
+      "submittedItems": 124,
+      "isDone": true,
+      "isFailed": false,
+      "state": "FINISHED",
+      "processed": 128
+    },
+    "homeBatch": {
+      "submittedItems": 2,
+      "isDone": true,
+      "isFailed": false,
+      "state": "FINISHED",
+      "processed": 4
+    },
+    "relatedItems": false,
+    "subItems": false
+  }
 }

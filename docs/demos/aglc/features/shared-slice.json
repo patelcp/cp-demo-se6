@@ -29,7 +29,7 @@
   "rollback": "Before layout activation retain original Home final/shared rendering values and existing design bindings; restore only this slice placements if needed. Do not delete authored data or unrelated definitions.",
   "stages": {
     "implementation": {
-      "result": "not-ready",
+      "result": "pass",
       "evidence": [
         {
           "recordedAt": "2026-11-13T23:04:54.206Z",
@@ -39,24 +39,88 @@
           "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
           "artifact": null,
           "externalState": null
+        },
+        {
+          "recordedAt": "2026-11-13T23:48:21.926Z",
+          "result": "pass",
+          "summary": "Five native shared renderings implemented, deployed and publicly verified on both sites. Signed-in Page Builder acceptance remains pending separately.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "2c5b562f7089f111e83f9f3ed7d040fc78c964170d4ccd2f8bab210e76bac7ff",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": null
         }
       ]
     },
     "build": {
-      "result": "not-run",
-      "evidence": []
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.144Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": null
+        }
+      ]
     },
     "deployment": {
-      "result": "not-run",
-      "evidence": []
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.042Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
     },
     "definitions": {
-      "result": "not-run",
-      "evidence": []
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.199Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
     },
     "publication": {
-      "result": "not-run",
-      "evidence": []
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.094Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
     },
     "authoring": {
       "result": "blocked",
@@ -73,13 +137,26 @@
       ]
     },
     "browser": {
-      "result": "not-run",
-      "evidence": []
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:05.867Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
     },
     "handoff": {
       "result": "not-run",
       "evidence": []
     }
   },
-  "nextAction": "Implement and verify native definitions plus matching frontend; deploy code before activating Home placements. No broad CM release or merge without explicit approved scope."
+  "nextAction": "Verify signed-in Page Builder render/edit/save/reload on both sites, review draft PR26 and agree merge before further demo expansion."
 }

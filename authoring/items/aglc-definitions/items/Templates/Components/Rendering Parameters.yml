@@ -13,7 +13,10 @@ SharedFields:
     {3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "25e5f35c-5be4-4808-8d56-3fb68781ede7"
+  Value: "d357afb0-d20b-4088-a481-b547f7da21e9"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{139C2100-DEC4-4B1F-9273-B307E184F586}"
 Languages:
 - Language: en
   Versions:
@@ -32,11 +35,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e3494466-7395-4863-b5fe-08dbd0157927"
+      Value: "4fa8a9c5-9bb5-40bd-b1da-07e71ebfcc9a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\chirag.patel@sitecore.com
+        sitecore\Anonymous
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T222823Z
+      Value: 20261113T232617Z

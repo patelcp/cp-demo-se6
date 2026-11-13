@@ -67,7 +67,7 @@ record those checks separately; none is implied by the health response.
 - Production build: passed using the verified environment live Edge context in
   process memory, including genuine site discovery and prerendering `/aglc/en`.
 - Type check: passed after the genuine generated site/import maps were available.
-- Sitecore/Page Builder/live URL acceptance: pending; see the deployment manifest.
+- Public URL acceptance passes on both sites; signed-in Page Builder edit/save/reload remains pending. See `docs/demos/aglc/evidence/shared-slice-verification.md`.
 
 The installation audit after security maintenance reports 13 moderate findings and
 no high/critical findings. Do not treat this as a guarantee of vulnerability-free
