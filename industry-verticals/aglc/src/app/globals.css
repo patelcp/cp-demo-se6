@@ -191,7 +191,7 @@
  .footer-groups { gap: 30px; }
  [data-site="cannabissense"] .site-header__inner { min-height: 85px; }
  [data-site="cannabissense"] .site-brand__logo { width: 180px; }
- [data-site="cannabissense"] .menu-toggle__lines { width: 30px; height: 25px; border-width: 3px; }
+ [data-site="cannabissense"] .menu-toggle__lines { width: 30px; height: 25px; border-top-width: 3px; border-bottom-width: 3px; }
  [data-site="cannabissense"] .menu-toggle__lines::after { height: 3px; top: 8px; }
  [data-site="cannabissense"] .hero__inner { min-height: 453px; padding-block: 240px 30px; }
  [data-site="cannabissense"] .hero__copy { width: 100%; min-height: 183px; padding: 35px 25px 50px; text-align: center; }
@@ -225,3 +225,13 @@
 [data-site="cannabissense"] .cta-section.band-green { background: #004e35; color: #70e37d; }
 @media (max-width: 900px) { [data-site="cannabissense"] .icon-band h2 { font-size: 28px; } }
 .site-nav img, .hero__quicklinks img, .utility-nav img { display: inline-block; width: 24px; height: 24px; object-fit: contain; vertical-align: middle; margin-right: 8px; }
+/* Public QA: inline SVGs without intrinsic width need an explicit flex size. */
+.brand-bar img { width: 110px; height: 25px; max-width: none; object-fit: contain; flex-shrink: 0; }
+/* Keep authored footer groups separate even when social labels are full words. */
+[data-site="cannabissense"] .footer-groups { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+[data-site="cannabissense"] .footer-group[data-group="social"] { order: 1; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] { order: 2; }
+[data-site="cannabissense"] .footer-group[data-group="legal"] { order: 3; grid-column: 1 / -1; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] ul, [data-site="cannabissense"] .footer-group[data-group="social"] ul { flex-wrap: wrap; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-end; }
+@media (max-width: 900px) { [data-site="cannabissense"] .footer-groups { grid-template-columns: minmax(0,1fr); } [data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-start; } }
