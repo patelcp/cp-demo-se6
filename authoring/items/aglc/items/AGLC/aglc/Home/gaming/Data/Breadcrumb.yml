@@ -1,0 +1,23 @@
+﻿---
+ID: "c847ec30-3140-4e05-8f66-8d1f0b09442c"
+Parent: "12932651-ecd0-4476-9aea-b39607baa9d7"
+Template: "29bb677e-232e-4db1-aa9d-5e24fc3f7470"
+Path: /sitecore/content/aglc/aglc/Home/gaming/Data/Breadcrumb
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054111Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2238b6f6-af49-4166-bdc2-80a49e8f4959"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054111Z

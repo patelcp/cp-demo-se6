@@ -1,0 +1,26 @@
+﻿---
+ID: "1e78de57-3044-4fd1-9559-302a565afd3d"
+Parent: "12932651-ecd0-4476-9aea-b39607baa9d7"
+Template: "637d49f6-fdf2-41dc-a7cd-86d9090ef40a"
+Path: /sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0034bd37-92a4-4c6a-8f67-bfcd1706a598"
+      Hint: Heading
+      Value: For charitable organizations and businesses
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054119Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e176f6c2-b35c-4b05-b3c7-db131459713e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054119Z

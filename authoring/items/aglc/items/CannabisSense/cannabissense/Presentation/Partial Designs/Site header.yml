@@ -1,0 +1,57 @@
+﻿---
+ID: "435444b3-9da0-406e-874a-50696c41d50f"
+Parent: "a6783081-af0b-4a56-b8d0-fb602b3ed57d"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: siteheader
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{34DCFF4F-2F33-4EE7-9D9A-7BD63288A765}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0a060103-1f46-4aac-b25e-74ae781c719d"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{230AB2BC-8EB4-5DE4-81FA-C9C14ED85E8F}"
+          id="{19D7D54C-A35D-4265-90D9-03CDD7860643}"
+          ds="{5342D97D-60F4-4CB6-9B8B-7418BCE8716C}"
+          ph="headless-header"
+          par="FieldNames=%7B2067DFC6-1A80-4C38-AF0B-F80FB6502C9B%7D&amp;DynamicPlaceholderId=1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223227Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f70466fb-5acb-4230-a1b6-bb4392af9fdb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261113T232619Z

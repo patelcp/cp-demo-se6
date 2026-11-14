@@ -1,0 +1,31 @@
+﻿---
+ID: "3b9760d2-7cf4-4794-9967-745bbeaff744"
+Parent: "732b541f-fdd7-4717-9302-59e26a1c3927"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/aglc/aglc/Presentation/Headless Variants/RichTextSection
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T053425Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "915ed0e1-8ecc-4222-955f-b0b31b8d9e6d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T053425Z

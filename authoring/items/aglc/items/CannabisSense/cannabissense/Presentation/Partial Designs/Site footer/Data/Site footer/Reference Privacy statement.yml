@@ -1,0 +1,40 @@
+﻿---
+ID: "23334cd2-a4b6-4bd7-aee3-baa2d0ff29b1"
+Parent: "5520dbcb-a171-4fab-9066-cc3f130e6aca"
+Template: "a7ad23ca-b3f2-4429-b2e4-b8f716c9a806"
+Path: /sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer/Data/Site footer/Reference Privacy statement
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8267e125-4aa3-4356-84d2-1e368b57773a"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T002238Z
+    - ID: "2f073244-a079-407b-a5ea-50b10888b2f0"
+      Hint: Title
+      Value: Privacy statement
+    - ID: "670fb610-b07a-42ac-9589-de0f7eb01b56"
+      Hint: Group
+      Value: legal
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "58fd2dc5-bc10-4f29-a7b0-5d1ef6270fde"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T002238Z
+    - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/privacy-statement" text="Privacy statement" />

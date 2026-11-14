@@ -1,0 +1,86 @@
+﻿---
+ID: "b50c3c68-c422-4967-93ae-4fe87746093b"
+Parent: "4254bcfa-b9c3-485a-aadb-8b5b3f8fd08d"
+Template: "95902259-996f-4932-980a-cdac2de84b0a"
+Path: "/sitecore/content/aglc/cannabissense/Home/use-legally"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{25ACE9A5-7FFA-4750-AB11-E0062F90B4A5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "54aee870-ddf4-4aa4-ac91-24a55c09a87f"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{4B05356D-97C3-5443-AF63-16909EF035CF}"
+          id="{C4E6929B-3B4B-406D-B547-55C8AF094E7A}"
+          ds="{84561A00-56E1-458C-8157-8B63C6AB9A20}"
+          ph="headless-main"
+          par="FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1" />
+        <r
+          uid="{CDBCFFE1-7639-56C9-AE3C-E182E81A3DAF}"
+          id="{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}"
+          ds="{C8DA0317-AF25-460F-B792-F05EF090E859}"
+          ph="headless-main"
+          par="FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{C8BD2AC2-D799-5D46-A116-75499A9354D4}"
+          id="{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}"
+          ds="{A1323EAC-F369-4F76-95E7-905AE7C36B4B}"
+          ph="headless-main"
+          par="FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3" />
+        <r
+          uid="{A7069CD6-689C-513A-94A6-1E7DCF9CDF77}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{66473C45-0CED-4EA8-B8E3-24745FF3FB92}"
+          ph="headless-main"
+          par="FieldNames=%7BD1CADF34-8ED7-4A64-A2A9-E6CB8C3245FF%7D&amp;DynamicPlaceholderId=4" />
+        <r
+          uid="{64DAD2AB-82FF-5E3C-8FF1-8F56AADC2EFE}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{D00220F5-062F-434E-8F4D-EAF30D9AEDB1}"
+          ph="headless-main"
+          par="FieldNames=%7BD1CADF34-8ED7-4A64-A2A9-E6CB8C3245FF%7D&amp;DynamicPlaceholderId=5" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "4052c3d1-6fcb-4e4f-8c73-bcdcfa2bc42f"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Use legally
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054105Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "use-legally"
+    - ID: "75b183c2-6155-4a48-a7d2-45cd98c691c1"
+      Hint: Title
+      Value: Use legally
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b107722c-f834-4b64-9153-c5a98ba372ac"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060354Z

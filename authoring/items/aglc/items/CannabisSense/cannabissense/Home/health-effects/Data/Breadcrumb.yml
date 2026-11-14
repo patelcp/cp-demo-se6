@@ -1,0 +1,23 @@
+﻿---
+ID: "c4985076-6cd3-497b-8e29-d23ab0dca442"
+Parent: "eff2c3cc-fdc3-4bae-88a8-ecb8ada93aee"
+Template: "29bb677e-232e-4db1-aa9d-5e24fc3f7470"
+Path: "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Breadcrumb"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054230Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "746e89d6-7208-4871-9829-196810e5075a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054230Z

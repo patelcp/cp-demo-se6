@@ -1,0 +1,26 @@
+﻿---
+ID: "2947c62f-7e85-4247-866e-b25c50be774f"
+Parent: "548e3061-e254-4419-bc62-596bdf2b618a"
+Template: "45f9bc08-f726-4041-9f45-aa3379ef755e"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054131Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a10cfeb8-7810-4d9e-9bf3-5fe242357002"
+    - ID: "8d556eea-198b-436e-82a0-8fc3781d658c"
+      Hint: Heading
+      Value: Trending
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054131Z

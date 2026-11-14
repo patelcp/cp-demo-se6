@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "aglc",
+  "plugin": {
+    "name": "sitecore-demo-builder",
+    "version": "0.1.2"
+  },
+  "appRoot": "industry-verticals/aglc",
+  "docsRoot": "docs/demos/aglc",
+  "site": {
+    "collection": "aglc",
+    "name": "aglc",
+    "root": "/sitecore/content/aglc/aglc"
+  },
+  "nativeManifest": "docs/demos/aglc/native-manifest.json",
+  "codeScopes": [
+    "industry-verticals/aglc"
+  ],
+  "cmsScopes": [
+    "/sitecore/content/aglc/aglc",
+    "/sitecore/content/aglc/cannabissense",
+    "/sitecore/templates/Project/AGLC",
+    "/sitecore/layout/Renderings/Project/AGLC",
+    "/sitecore/layout/Placeholder Settings/Project/AGLC",
+    "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/aglc/InteriorPages",
+    "/sitecore/media library/Project/aglc/cannabissense/InteriorPages"
+  ],
+  "connections": {
+    "primary": "authoring-graphql-and-sitecore-cli",
+    "documentation": "official-sitecore-and-context7",
+    "verification": "authenticated CM verified; Marketer MCP not exposed"
+  },
+  "starter": {
+    "repository": "https://github.com/Sitecore/xmcloud-starter-js",
+    "revision": "7973577427004973baea3c256d1bdea12a50aafd",
+    "provenance": "Current repository HEAD; confirm its relationship to the upstream starter before claiming an upstream revision."
+  },
+  "capabilities": {
+    "personalization": "not-selected",
+    "experiment": "not-selected",
+    "dam": "not-selected",
+    "search": "not-selected"
+  },
+  "additionalSites": [
+    {
+      "collection": "aglc",
+      "name": "cannabissense",
+      "root": "/sitecore/content/aglc/cannabissense"
+    }
+  ]
+}

@@ -1,1 +1,315 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@font-face { font-family: 'Open Sans'; src: url('/fonts/OpenSans-Variable.ttf') format('truetype'); font-weight: 300 800; font-style: normal; font-display: swap; }
+@font-face { font-family: Poppins; src: url('/fonts/Poppins-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Poppins; src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: Poppins; src: url('/fonts/Poppins-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+/* Reference observations: aglc.ca and cannabissense.ca, 2026-11-14.
+   Utopia Std Headline is licensed; Georgia is an explicit temporary substitution.
+   Website styling is code, not an automatic application of a BrandKit. */
+[data-site] { --brand: #850057; --ink: #333; --surface: #fff; --font: 'Open Sans', Arial, sans-serif; --display: var(--font); color: var(--ink); background: var(--surface); font-family: var(--font); line-height: 1.5; min-height: 100vh; }
+[data-site="cannabissense"] { --brand: #004e35; --ink: #004e35; --surface: #f6f4ef; --font: Poppins, 'Trebuchet MS', Arial, sans-serif; --display: Georgia, Cambria, serif; }
+[data-site] *, [data-site] *::before, [data-site] *::after { box-sizing: border-box; }
+[data-site] h1, [data-site] h2, [data-site] h3, [data-site] p { margin: 0; }
+[data-site] h1, [data-site] h2, [data-site] h3 { font-family: var(--display); line-height: 1.25; }
+[data-site] h1 { font-size: 48px; font-weight: 800; }
+[data-site] h2 { font-size: 40px; font-weight: 800; }
+[data-site] h3 { font-size: 20px; font-weight: 700; }
+[data-site] a { color: inherit; text-underline-offset: .24em; }
+[data-site] :focus-visible { outline: 3px solid #edbe48; outline-offset: 4px; }
+.visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
+.shell { width: calc(100% - 64px); max-width: 1440px; margin-inline: auto; }
+.rich-text > * + * { margin-top: 1em; }
+.rich-text ul, .rich-text ol { padding-left: 1.5em; list-style: revert; }
+.rich-text a { text-decoration: underline; }
+.rich-text:empty, .actions:empty, .section-intro:empty { display: none; }
+.site-header { background: #fafafa; position: relative; z-index: 10; }
+.brand-bar { height: 38px; background: #736d79; color: #fff; padding-inline: 32px; }
+.brand-bar ul { display: flex; align-items: center; gap: 24px; height: 100%; list-style: none; padding: 0; margin: 0; }
+.brand-bar a { display: flex; align-items: center; font-size: 13px; font-weight: 700; text-decoration: none; }
+.brand-bar img { max-width: 110px; max-height: 25px; width: auto; }
+.site-header__inner { display: flex; align-items: center; gap: 48px; padding: 6px 32px; min-height: 64px; }
+.site-brand { flex-shrink: 0; color: var(--brand); font-size: 25px; font-weight: 700; }
+.site-brand > a { display: flex; align-items: center; text-decoration: none; }
+.site-brand__logo { width: 134px; max-height: 53px; object-fit: contain; }
+.header-navigation { display: flex; align-items: center; gap: 16px; flex: 1; }
+.site-nav ul, .utility-nav ul { display: flex; gap: 32px; list-style: none; padding: 0; margin: 0; align-items: center; }
+.site-nav a { display: block; padding-block: 12px; font-size: 16px; color: var(--brand); font-weight: 700; text-decoration: none; }
+[data-site="aglc"] .site-nav a { text-transform: uppercase; }
+.site-nav a:hover { text-decoration: underline; }
+.utility-nav { margin-left: auto; }
+.utility-nav ul { gap: 16px; }
+.utility-nav a { display: inline-block; border: 2px solid currentColor; padding: 6px 9px; border-radius: 5px; font-weight: 700; font-size: 14px; text-decoration: none; }
+[data-site="aglc"] .utility-nav li:last-child:not(:first-child) a { background: #edbe48; border-color: #edbe48; }
+.menu-toggle { display: none; }
+.skip-link { position: absolute; top: 4px; left: 16px; padding: 12px; transform: translateY(-200%); background: #fff; color: #222 !important; z-index: 20; }
+.skip-link:focus { transform: translateY(0); }
+.native-search { display: flex; align-items: center; width: 550px; max-width: 100%; background: #fff; color: #333; border: 2px solid #ddd; border-radius: 8px; min-height: 55px; }
+.native-search input[type="search"] { min-width: 0; flex: 1; padding: 10px 12px 10px 0; border: 0; background: transparent; font: inherit; font-size: 20px; color: inherit; }
+.native-search input::placeholder { color: #555; opacity: 1; }
+.native-search button { display: grid; place-items: center; border: 0; padding: 16px 20px; background: transparent; cursor: pointer; color: inherit; }
+.search-icon { width: 14px; height: 14px; border: 2px solid currentColor; border-radius: 50%; position: relative; }
+.search-icon::after { content: ''; position: absolute; width: 7px; height: 2px; background: currentColor; right: -6px; bottom: -3px; transform: rotate(45deg); }
+.header-navigation > .native-search { width: 134px; min-height: 45px; border: 0; border-bottom: 2px solid #444; border-radius: 0; background: transparent; }
+.header-navigation > .native-search input { font-size: 14px; padding-right: 0; }
+.header-navigation > .native-search button { padding: 10px 10px 10px 2px; }
+.native-search-editor { padding: 8px; border: 1px dashed #777; }
+.hero { position: relative; isolation: isolate; }
+.hero__backdrop { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.hero__backdrop img { width: 100%; height: 100%; object-fit: cover; }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.hero__inner { position: relative; padding-block: 76px 120px; min-height: 790px; }
+.hero__copy { max-width: 550px; }
+.hero__summary { font-size: 20px; line-height: 1.5; margin-top: 28px; }
+.hero__copy > .native-search { margin-top: 36px; }
+.eyebrow { font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px !important; }
+.eyebrow:empty { display: none; }
+.hero__media { overflow: hidden; }
+.hero__image { width: 100%; height: 100%; object-fit: cover; }
+[data-site="aglc"] .hero__media { position: absolute; inset: 0 0 0 50%; z-index: -1; }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 26px; }
+.actions:not(:has(a)) { display: none; }
+.button { display: inline-block; padding: 9px 24px; border: 2px solid var(--brand); border-radius: 10px; color: var(--brand) !important; font-size: 14px; font-weight: 700; line-height: 1.4; text-decoration: none; background: transparent; }
+.button:hover { background: var(--brand); color: #fff !important; }
+.hero__quicklinks { margin-top: 78px; max-width: 780px; }
+.hero__quicklinks ul { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px 48px; padding: 0; list-style: none; margin: 0; }
+.hero__quicklinks a { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; font-size: 20px; color: #fff; padding-bottom: 18px; border-bottom: 4px solid #edbe48; text-decoration: none; }
+.hero__quicklinks a::after { content: '›'; font-size: 28px; line-height: 1; }
+.video-toggle { position: absolute; right: 16px; bottom: 16px; z-index: 2; border: 1px solid #fff; border-radius: 5px; background: #0009; color: #fff; padding: 7px 10px; font: inherit; font-size: 12px; cursor: pointer; }
+.hero__video-editor { position: absolute; bottom: 8px; right: 8px; z-index: 3; background: #fff; }
+.card-section { position: relative; padding-block: 80px; }
+.section-intro { margin-bottom: 36px; }
+.section-intro:not(:has(*)) { display: none; }
+.section-intro .rich-text { margin-top: 16px; }
+.card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.content-card { display: flex; flex-direction: column; }
+.content-card__media { aspect-ratio: 1.57; overflow: hidden; border-radius: 20px; }
+.content-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.content-card__body { padding-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.content-card h3 { color: var(--brand); }
+.content-card .rich-text { font-size: 16px; line-height: 1.5; }
+.content-card__link { color: var(--brand) !important; font-weight: 700; text-decoration: underline; }
+.cta-section { position: relative; background: var(--surface); padding-block: 80px 100px; }
+.cta-panel { background: #f3f3f3; border-radius: 20px; overflow: hidden; }
+.cta-panel[data-has-image="true"] { display: grid; grid-template-columns: 1fr 1fr; }
+.cta-panel__copy { padding: 76px 80px; }
+.cta-panel h2 { font-size: 48px; max-width: 450px; }
+.cta-panel .rich-text { margin-top: 28px; }
+.cta-panel .button { margin-top: 24px; }
+.cta-panel__image img { width: 100%; height: 100%; object-fit: cover; }
+.site-footer { position: relative; background: linear-gradient(110deg,#333,#504657); color: #eee; padding-top: 80px; }
+.site-footer__top { display: flex; flex-direction: column-reverse; gap: 60px; }
+.site-footer__identity { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.site-footer__logo { max-width: 145px; max-height: 60px; object-fit: contain; }
+.site-footer__brand { font-size: 28px; font-weight: 700; }
+.site-footer__description { font-size: 14px; }
+.footer-groups { display: flex; flex-wrap: wrap; gap: 40px; }
+.footer-group { flex: 1; min-width: 150px; }
+.footer-group__heading { font-family: var(--font) !important; font-size: 16px !important; font-weight: 700 !important; margin-bottom: 18px !important; }
+.footer-group ul { list-style: none; padding: 0; margin: 0; }
+.footer-group li { margin-bottom: 14px; }
+.footer-group a { text-decoration: none; }
+.footer-group a:hover { text-decoration: underline; }
+.footer-group img { max-width: 120px; max-height: 35px; object-fit: contain; }
+.site-footer__legal { padding-block: 28px 70px; }
+.site-footer__copyright { font-size: 14px; }
+/* CannabisSense composition: the same native components, different site identity. */
+[data-site="cannabissense"] .shell { max-width: 1160px; width: calc(100% - 40px); }
+[data-site="cannabissense"] .site-header { background: #004e35; color: #fff; }
+[data-site="cannabissense"] .brand-bar { background: #455761; padding-inline: 20px; }
+[data-site="cannabissense"] .site-header__inner { min-height: 150px; padding: 30px 20px; gap: 40px; }
+[data-site="cannabissense"] .site-brand { color: #fff; }
+[data-site="cannabissense"] .site-brand__logo { width: 180px; max-height: 40px; }
+[data-site="cannabissense"] .header-navigation { justify-content: flex-end; gap: 40px; }
+[data-site="cannabissense"] .site-nav ul { gap: 50px; }
+[data-site="cannabissense"] .site-nav a { color: #fff; font-size: 14px; }
+[data-site="cannabissense"] .utility-nav { margin-left: 0; }
+[data-site="cannabissense"] .utility-nav a { border-radius: 12px; padding: 9px 16px; }
+[data-site="cannabissense"] .header-navigation > .native-search { color: #fff; border-color: #fff; width: 130px; }
+[data-site="cannabissense"] .header-navigation > .native-search input::placeholder { color: #fff; }
+[data-site="cannabissense"] .hero__inner { min-height: 439px; padding-block: 100px 80px; }
+[data-site="cannabissense"] .hero__backdrop { height: calc(100% + 650px); }
+[data-site="cannabissense"] .hero__backdrop img { object-position: center top; }
+[data-site="cannabissense"] .hero__copy { background: #f6f4ef; padding: 42px 50px 60px; width: calc(100% - 136px); max-width: none; min-height: 259px; }
+[data-site="cannabissense"] .hero h1 { font-size: clamp(60px,6.9vw,99px); font-weight: 700; line-height: 1.15; letter-spacing: -3px; }
+[data-site="cannabissense"] .hero__summary { font-size: 25px; font-weight: 600; margin-top: 20px; }
+[data-site="cannabissense"] .hero__media { position: absolute; width: 273px; height: 362px; right: 0; top: 49px; border-radius: 90% 0 90% 0; border: 1px solid #e65b28; }
+[data-site="cannabissense"] .card-section { padding-top: 0; padding-bottom: 65px; }
+[data-site="cannabissense"] .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
+[data-site="cannabissense"] .content-card { background: #f6f4ef; text-align: center; }
+[data-site="cannabissense"] .content-card__media { border-radius: 0; aspect-ratio: 1.77; border-bottom: 2px solid #004e35; }
+[data-site="cannabissense"] .content-card__body { padding: 30px 20px; gap: 18px; }
+[data-site="cannabissense"] .content-card h3 { font-family: Poppins,Arial,sans-serif; font-size: 25px; font-weight: 600; }
+[data-site="cannabissense"] .content-card .rich-text { font-weight: 600; line-height: 1.65; }
+[data-site="cannabissense"] .cta-section { background: #004e35; color: #f6f4ef; padding-block: 35px; }
+[data-site="cannabissense"] .cta-panel { background: transparent; border-radius: 0; }
+[data-site="cannabissense"] .cta-panel__copy { padding: 0; display: flex; align-items: center; gap: 30px; justify-content: space-between; }
+[data-site="cannabissense"] .cta-panel h2 { font-family: Poppins,Arial,sans-serif; font-size: 20px; font-weight: 600; max-width: 980px; }
+[data-site="cannabissense"] .button { border-color: currentColor; color: inherit !important; font-size: 16px; padding: 12px 24px; }
+[data-site="cannabissense"] .cta-panel .button { flex-shrink: 0; margin-top: 0; }
+[data-site="cannabissense"] .site-footer { background: #455761; padding-top: 30px; }
+[data-site="cannabissense"] .site-footer__top { gap: 24px; }
+[data-site="cannabissense"] .site-footer__identity { justify-content: space-between; }
+[data-site="cannabissense"] .site-footer__description { font-size: 14px; font-weight: 600; }
+[data-site="cannabissense"] .site-footer__legal { background: #333; margin-top: 30px; padding-block: 28px; text-align: center; }
+[data-site="cannabissense"] .site-footer__copyright { font-size: 12px; }
+[data-site="cannabissense"] .footer-groups { gap: 24px; }
+[data-site="cannabissense"] .footer-group { min-width: 0; }
+[data-site="cannabissense"] .footer-group[data-group="legal"] ul { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] ul, [data-site="cannabissense"] .footer-group[data-group="social"] ul { display: flex; gap: 24px; }
+[data-site="cannabissense"] .footer-group[data-group="legal"] .footer-group__heading, [data-site="cannabissense"] .footer-group[data-group="brand"] .footer-group__heading, [data-site="cannabissense"] .footer-group[data-group="social"] .footer-group__heading { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+@media (max-width: 1200px) and (min-width: 901px) { .site-header__inner { gap: 24px; } .site-nav ul { gap: 20px; } [data-site="cannabissense"] .site-nav ul { gap: 20px; } [data-site="cannabissense"] .header-navigation { gap: 20px; } [data-site="cannabissense"] .hero h1 { font-size: 72px; } [data-site="cannabissense"] .hero__summary { max-width: 640px; } }
+@media (max-width: 900px) {
+ .brand-bar { display: none; }
+ .site-header__inner, [data-site="cannabissense"] .site-header__inner { padding: 10px 20px; min-height: 62px; flex-wrap: wrap; justify-content: space-between; gap: 0; }
+ .site-brand__logo { width: 75px; max-height: 40px; }
+ .menu-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 4px; background: transparent; border: 0; color: inherit; cursor: pointer; }
+ .menu-toggle__lines { display: block; width: 26px; height: 20px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; position: relative; }
+ .menu-toggle__lines::after { content: ''; height: 2px; width: 100%; position: absolute; top: 7px; left: 0; background: currentColor; }
+ .header-navigation { display: none; flex-basis: 100%; padding-block: 15px; }
+ .header-navigation[data-open="true"] { display: flex; flex-direction: column; align-items: stretch; gap: 20px; }
+ .site-nav ul { flex-direction: column; align-items: stretch; gap: 4px; }
+ .utility-nav { margin-left: 0; }
+ .header-navigation > .native-search { width: 100%; }
+ .shell { width: calc(100% - 32px); }
+ .hero__inner { padding-block: 34px 80px; min-height: 960px; }
+ .hero h1 { font-size: 40px; }
+ .hero__summary { font-size: 16px; margin-top: 20px; }
+ [data-site="aglc"] .hero__copy > .native-search { display: none; }
+ .hero__quicklinks { margin-top: 185px; max-width: 258px; }
+ .hero__quicklinks ul { grid-template-columns: 1fr; gap: 24px; }
+ .hero__quicklinks a { font-size: 16px; padding-bottom: 18px; }
+ .card-grid { grid-template-columns: 1fr; gap: 40px; }
+ .card-section { padding-block: 50px; }
+ .content-card__body { padding-top: 22px; }
+ .cta-section { padding-block: 30px 60px; }
+ .cta-panel[data-has-image="true"] { grid-template-columns: 1fr; }
+ .cta-panel__copy { padding: 35px 25px; }
+ .cta-panel h2 { font-size: 34px; }
+ .cta-panel__image { min-height: 250px; }
+ .site-footer { padding-top: 50px; }
+ .site-footer__identity { flex-direction: column; align-items: flex-start; }
+ .footer-groups { gap: 30px; }
+ [data-site="cannabissense"] .site-header__inner { min-height: 85px; }
+ [data-site="cannabissense"] .site-brand__logo { width: 180px; }
+ [data-site="cannabissense"] .menu-toggle__lines { width: 30px; height: 25px; border-top-width: 3px; border-bottom-width: 3px; }
+ [data-site="cannabissense"] .menu-toggle__lines::after { height: 3px; top: 8px; }
+ [data-site="cannabissense"] .hero__inner { min-height: 453px; padding-block: 240px 30px; }
+ [data-site="cannabissense"] .hero__copy { width: 100%; min-height: 183px; padding: 35px 25px 50px; text-align: center; }
+ [data-site="cannabissense"] .hero h1 { font-size: 32px; letter-spacing: -1px; }
+ [data-site="cannabissense"] .hero__summary { font-size: 16px; line-height: 1.6; margin-top: 12px; }
+ [data-site="cannabissense"] .hero__media { width: 183px; height: 241px; top: 24px; left: 50%; right: auto; transform: translateX(-50%); }
+ [data-site="cannabissense"] .hero__backdrop { height: calc(100% + 1100px); }
+ [data-site="cannabissense"] .card-grid { grid-template-columns: 1fr; gap: 30px; }
+ [data-site="cannabissense"] .content-card__body { padding: 6px 5px 25px; }
+ [data-site="cannabissense"] .content-card h3 { font-size: 25px; }
+ [data-site="cannabissense"] .card-section { padding-bottom: 30px; }
+ [data-site="cannabissense"] .cta-panel__copy { flex-direction: column; text-align: center; gap: 24px; }
+ [data-site="cannabissense"] .footer-groups { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+.content-card__link { text-decoration: none; }
+.content-card__link:hover { text-decoration: underline; }
+[data-site="aglc"] .content-card__link::after { content: '›'; padding-left: 18px; font-size: 28px; line-height: .8; }
+[data-site="cannabissense"] .brand-bar li:nth-child(2) { background: #fff; height: 38px; display: flex; align-items: center; padding-inline: 15px; }
+/* Optional native style variants for the reference's additional full-width bands. */
+[data-site="cannabissense"] .cta-section.icon-band { padding-block: 60px; }
+[data-site="cannabissense"] .icon-band .cta-panel { display: flex; flex-direction: column-reverse; text-align: center; }
+[data-site="cannabissense"] .icon-band .cta-panel__image { margin: 0 auto 40px; min-height: 0; width: 120px; height: 100px; }
+[data-site="cannabissense"] .icon-band .cta-panel__image img { object-fit: contain; }
+[data-site="cannabissense"] .icon-band .cta-panel__copy { flex-direction: column; gap: 24px; }
+[data-site="cannabissense"] .icon-band h2 { font-family: var(--display); font-size: 50px; }
+[data-site="cannabissense"] .icon-band .rich-text { margin-top: 0; max-width: 740px; }
+[data-site="cannabissense"] .cta-section.band-cream { background: #f6f4ef; color: #004e35; }
+[data-site="cannabissense"] .cta-section.band-brown { background: #87695a; color: #fff; }
+[data-site="cannabissense"] .cta-section.band-deep { background: #00281a; color: #fff; }
+[data-site="cannabissense"] .cta-section.band-green { background: #004e35; color: #70e37d; }
+@media (max-width: 900px) { [data-site="cannabissense"] .icon-band h2 { font-size: 28px; } }
+.site-nav img, .hero__quicklinks img, .utility-nav img { display: inline-block; width: 24px; height: 24px; object-fit: contain; vertical-align: middle; margin-right: 8px; }
+/* Public QA: inline SVGs without intrinsic width need an explicit flex size. */
+.brand-bar img { width: 110px; height: 25px; max-width: none; object-fit: contain; flex-shrink: 0; }
+/* Keep authored footer groups separate even when social labels are full words. */
+[data-site="cannabissense"] .footer-groups { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+[data-site="cannabissense"] .footer-group[data-group="social"] { order: 1; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] { order: 2; }
+[data-site="cannabissense"] .footer-group[data-group="legal"] { order: 3; grid-column: 1 / -1; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] ul, [data-site="cannabissense"] .footer-group[data-group="social"] ul { flex-wrap: wrap; }
+[data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-end; }
+@media (max-width: 900px) { [data-site="cannabissense"] .footer-groups { grid-template-columns: minmax(0,1fr); } [data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-start; } }
+/* Brand SVGs without intrinsic dimensions also need a concrete footer box. */
+.footer-group[data-group="brand"] img { width: 120px; height: 35px; max-width: none; object-fit: contain; flex-shrink: 0; }
+/* Measured from the public reference: green backdrop overlay at 50% opacity. */
+[data-site="cannabissense"] .hero__backdrop::after { content: ''; position: absolute; inset: 0; background: rgba(0, 78, 53, .5); pointer-events: none; }
+/* AGLC's family strip uses monochrome white versions of the shared brand marks. */
+[data-site="aglc"] .brand-bar img { filter: brightness(0) invert(1); }
+
+/* Interior variants are isolated from the Home hero and promotional grid. */
+.interior-shell { width:min(1176px,calc(100% - 40px)); margin-inline:auto; }
+.interior-breadcrumb { padding:18px 0; }
+.interior-breadcrumb ol { display:flex;flex-wrap:wrap;list-style:none;gap:12px;padding:0; }
+.interior-breadcrumb li+li::before { content:'/';margin-right:12px; }
+.interior-breadcrumb a { text-decoration:underline; }
+.page-intro { position:relative;padding:70px 0 40px; }
+.page-intro h1 { font-size:40px;line-height:1.2;margin:0 0 24px; }
+.page-intro--image { min-height:520px;display:flex;align-items:center;color:white; }
+.page-intro__background { position:absolute;inset:0; }
+.page-intro__background img { width:100%;height:100%;object-fit:cover; }
+.page-intro--image .page-intro__background::after { content:'';position:absolute;inset:0;background:rgba(0,0,0,.25); }
+.page-intro__copy { position:relative; }
+.page-intro--image h1 { font-size:80px; }
+.page-intro--image h1::after { content:'';display:block;width:144px;border-bottom:5px solid white;margin-top:16px; }
+.page-intro--image .rich-text { max-width:600px;font-size:22px;line-height:1.45; }
+.interior-content { padding-block:40px;max-width:900px; }
+.interior-content img { max-width:100%;height:auto;margin-top:24px; }
+.interior-content h2,.interior-cards>h2 { font-size:40px; }
+.resource-list { padding:50px 0; }
+.resource-items { list-style:none;padding:0;margin:0; }
+.resource-items li { border-top:2px solid currentColor;padding:20px 0; }
+.resource-items li:last-child { border-bottom:2px solid currentColor; }
+.resource-items h3 { font-size:32px;line-height:1.2;margin:0; }
+.resource-items h3 a { display:flex;align-items:center;justify-content:space-between;gap:24px; }
+.resource-items h3 a::after { content:'➜';color:#c74b25;flex-shrink:0;font-size:40px; }
+.resource-item__meta { display:flex;gap:16px;font-size:14px;margin-bottom:12px; }
+.resource-list--documents .resource-items li { border-color:#eee;padding:28px 24px;background:#f6f9fa;margin-bottom:24px; }
+.resource-list--documents h3 { color:#00647f;font-size:32px; }
+.resource-filters { padding:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;box-shadow:0 2px 12px #0001;margin:24px 0; }
+.resource-filters label { display:grid;gap:12px; }
+.resource-filters input,.resource-filters select { min-width:0;width:100%;padding:12px;border:1px solid #ccd3dd;background:#f7f9fb;border-radius:2px;font:inherit; }
+.resource-list__scope { font-size:14px; }
+.interior-cards { padding-block:60px; }
+.interior-cards__grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
+.interior-cards article { min-width:0; }
+.interior-cards article>img { width:100%;aspect-ratio:1.5;object-fit:cover; }
+.interior-cards h3 { font-size:24px; }
+[data-site="cannabissense"] .interior-breadcrumb,[data-site="cannabissense"] .page-intro { background:#004e35;color:white; }
+[data-site="cannabissense"] .page-intro { padding:36px 0 60px;text-align:center; }
+[data-site="cannabissense"] .page-intro h1 { font-family:Georgia,Cambria,serif;font-size:72px;font-weight:700;margin:0; }
+[data-site="cannabissense"] .resource-list { background:#f6f4ef;color:#004e35; }
+[data-site="cannabissense"] .resource-list .interior-shell { max-width:860px; }
+[data-site="cannabissense"] .interior-cards--resources { background:#f6f4ef;color:#004e35;padding-block:0; }
+.interior-cards--resources .interior-cards__grid { gap:0; }
+.interior-cards--resources article { padding:32px 24px;text-align:center;border:2px solid #004e35;display:flex;align-items:center;flex-direction:column;gap:24px; }
+.interior-cards--resources article>img { width:80px;height:80px;object-fit:contain; }
+.interior-cards--resources h3 { font-family:Georgia,Cambria,serif;font-size:44px;line-height:1.2; }
+.interior-cards--resources .button { margin-top:auto; }
+@media(max-width:767px) {
+ .page-intro { padding:40px 0 24px; }
+ .page-intro--image { min-height:460px; }
+ .page-intro--image h1 { font-size:48px; }
+ .page-intro--image .rich-text { font-size:20px; }
+ [data-site="cannabissense"] .page-intro { text-align:left;padding:24px 0 50px; }
+ [data-site="cannabissense"] .page-intro h1 { font-size:32px; }
+ .resource-list { padding:40px 0; }
+ .resource-filters,.interior-cards__grid { grid-template-columns:1fr; }
+ .resource-items h3 { font-size:30px; }
+ .interior-cards--resources h3 { font-size:30px; }
+ .resource-items h3 a { overflow-wrap:anywhere; }
+}
+
+/* Source link rows use Poppins, unlike the serif display titles. */
+[data-site="cannabissense"] .resource-items h3 { font-family:Poppins,Arial,sans-serif;font-weight:700; }
+.resource-item__meta { flex-wrap:wrap; }
+.topic-band { padding:60px 20px;text-align:center;background:#00281a;color:white; }
+.topic-band h2 { font-family:Georgia,Cambria,serif;font-size:48px;line-height:1.2;margin:0 0 24px; }
+.topic-band .button { display:inline-flex;border:2px solid currentColor;border-radius:12px;padding:12px 32px; }
+.topic-band + .topic-band { background:#004e35;color:#70e37d; }
+@media(max-width:767px) { .topic-band { padding:40px 20px; } .topic-band h2 { font-size:26px; } }

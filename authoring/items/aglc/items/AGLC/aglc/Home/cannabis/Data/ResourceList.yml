@@ -1,0 +1,26 @@
+﻿---
+ID: "47bf1e8d-c296-4f97-8140-57eeca3d81e2"
+Parent: "8365276f-1ea1-40a2-8d7c-0072aa59e63b"
+Template: "637d49f6-fdf2-41dc-a7cd-86d9090ef40a"
+Path: /sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0034bd37-92a4-4c6a-8f67-bfcd1706a598"
+      Hint: Heading
+      Value: For businesses
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054150Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9f83c974-ce97-4e52-913b-47bc70e0b1f4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054150Z

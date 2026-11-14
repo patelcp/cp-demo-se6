@@ -1,0 +1,29 @@
+﻿---
+ID: "ccb2d42b-6fbc-4e5f-8d3d-3a78775fd298"
+Parent: "d42b66fe-bd1d-4ba3-97aa-828778383527"
+Template: "4c4bc580-a8ff-4c61-8ebf-138a68b968f1"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/RichTextSection
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054202Z
+    - ID: "37c4a7fe-26cd-4aa4-a02c-68599f236c80"
+      Hint: Body
+      Value: <p>This demonstration shows a curated selection of official AGLC documents. Filters apply to this authored selection, not the complete AGLC library. Downloads open the official published files. This page is not a submitted application or a digitized Sitecore Form.</p>
+    - ID: "72011789-b012-4b8a-b1a6-0e6c368d3eb2"
+      Hint: Heading
+      Value: Find a resource
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c81da63-5b5d-4181-838a-8651fa9ac1e4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054203Z

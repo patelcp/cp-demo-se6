@@ -1,0 +1,33 @@
+﻿---
+ID: "3928a818-a6d4-4f0c-a322-3c96fcba8dea"
+Parent: "12932651-ecd0-4476-9aea-b39607baa9d7"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: /sitecore/content/aglc/aglc/Home/gaming/Data/PageIntro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054114Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: Gaming
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4e996396-32f9-4faf-a44b-16e96053d55e"
+    - ID: "b6e24546-decb-47b9-b26d-efa3ae4660ac"
+      Hint: Summary
+      Value: <p>AGLC oversees gaming integrity and helps gaming revenue support programs and services across Alberta.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060347Z
+    - ID: "f7f4dca8-69ba-46c6-981e-98d5249189ee"
+      Hint: Image
+      Value: |
+        <image mediaid="{C1C424EC-9438-4642-A16C-379406C1D6DE}" alt="Gaming banner" />

@@ -1,0 +1,44 @@
+﻿---
+ID: "43859271-f0af-43b6-a353-54034c9a9a50"
+Parent: "5342d97d-60f4-4cb6-9b8b-7418bce8716c"
+Template: "a7ad23ca-b3f2-4429-b2e4-b8f716c9a806"
+Path: /sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Reference Brand DrinkSense
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "25963f11-b2f7-46a3-ae86-ee5de63fe061"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T002230Z
+    - ID: "2f073244-a079-407b-a5ea-50b10888b2f0"
+      Hint: Title
+      Value: DrinkSense
+    - ID: "670fb610-b07a-42ac-9589-de0f7eb01b56"
+      Hint: Group
+      Value: brand
+    - ID: "899c63de-aaa5-4f57-a27c-fd9d3ceed4c2"
+      Hint: Logo
+      Value: |
+        <image mediaid="{54C31BE6-25BA-4566-907E-805AD662D59E}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "850e9aa3-3841-4009-9e1f-9fa4f0b38ff2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T002230Z
+    - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://www.drinksenseab.ca/" text="DrinkSense" />
