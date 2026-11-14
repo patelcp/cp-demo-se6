@@ -237,3 +237,7 @@
 @media (max-width: 900px) { [data-site="cannabissense"] .footer-groups { grid-template-columns: minmax(0,1fr); } [data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-start; } }
 /* Brand SVGs without intrinsic dimensions also need a concrete footer box. */
 .footer-group[data-group="brand"] img { width: 120px; height: 35px; max-width: none; object-fit: contain; flex-shrink: 0; }
+/* Measured from the public reference: green backdrop overlay at 50% opacity. */
+[data-site="cannabissense"] .hero__backdrop::after { content: ''; position: absolute; inset: 0; background: rgba(0, 78, 53, .5); pointer-events: none; }
+/* AGLC's family strip uses monochrome white versions of the shared brand marks. */
+[data-site="aglc"] .brand-bar img { filter: brightness(0) invert(1); }
