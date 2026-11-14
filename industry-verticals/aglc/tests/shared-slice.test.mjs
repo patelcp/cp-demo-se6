@@ -6,12 +6,20 @@ import ts from 'typescript';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 const require = createRequire(import.meta.url);
-function component(folder, name) {
-  const path = new URL(`../src/components/${folder}/${name}.tsx`, import.meta.url);
+function loadSource(path) {
   const output = ts.transpileModule(readFileSync(path, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
   const module = { exports: {} };
-  new Function('require', 'module', 'exports', output)(require, module, module.exports);
-  return module.exports.Default;
+  const localRequire = createRequire(path);
+  const resolve = name => {
+    if (!name.startsWith('.')) return localRequire(name);
+    const candidate = new URL(name + '.tsx', path);
+    return loadSource(candidate);
+  };
+  new Function('require', 'module', 'exports', output)(resolve, module, module.exports);
+  return module.exports;
+}
+function component(folder, name) {
+  return loadSource(new URL(`../src/components/${folder}/${name}.tsx`, import.meta.url)).Default;
 }
 const definitions = [['site-header','SiteHeader'],['site-footer','SiteFooter'],['hero','Hero'],['card-grid','CardGrid'],['call-to-action','CallToAction']];
 const base = { params: {}, page: { mode: { isEditing: false } } };
@@ -60,3 +68,34 @@ for (const [folder,name] of [['site-header','SiteHeader'],['site-footer','SiteFo
   assert.match(markup,/>\/about<\/a>/);
  });
 }
+test('header separates authored brand, main and utility navigation without duplicate labels', () => {
+ const entries = [['brand','Related'],['main','Topic'],['utility','Support']].map(([group,title]) => ({id:group,Group:text(group),Title:text(title),Link:{jsonValue:{value:{href:'https://example.org/'+group,text:title}}}}));
+ const markup = renderToStaticMarkup(React.createElement(component('site-header','SiteHeader'), {...base,fields:{data:{datasource:{children:{results:entries}}}}}));
+ assert.match(markup,/aria-label="Related sites"/); assert.match(markup,/aria-label="Main navigation"/); assert.match(markup,/aria-label="Utility navigation"/);
+ for (const title of ['Related','Topic','Support']) assert.equal((markup.match(new RegExp('>'+title+'<','g'))||[]).length,1);
+});
+test('real external search preserves CMS endpoint and query name, with no fake handler', () => {
+ const fields = {SearchAction:{jsonValue:{value:{href:'https://aglc.ca/search-results?scope=public'}}},SearchLabel:text('Search AGLC'),SearchQueryName:text('opq')};
+ const Search = loadSource(new URL('../src/lib/native-controls.tsx',import.meta.url)).NativeSearch;
+ const markup = renderToStaticMarkup(React.createElement(Search,{fields}));
+ assert.match(markup,/action="https:\/\/aglc.ca\/search-results"/);assert.match(markup,/name="opq"/);assert.match(markup,/name="scope" value="public"/);assert.match(markup,/method="get"/);
+ assert.equal(renderToStaticMarkup(React.createElement(Search,{fields:{...fields,SearchAction:{jsonValue:{value:{href:'javascript:alert(1)'}}}}})), '');
+});
+test('Hero does not emit background video before reduced-motion preference is known', () => {
+ const markup=renderToStaticMarkup(React.createElement(component('hero','Hero'),{...base,fields:{data:{datasource:{Title:text('Authored'),BackgroundVideo:{jsonValue:{value:{href:'https://example.org/video.mp4'}}}}}}}));
+ assert.doesNotMatch(markup,/<video/); assert.doesNotMatch(markup,/video\.mp4/);
+});
+test('footer uses authorable group labels rather than invented columns', () => {
+ const markup=renderToStaticMarkup(React.createElement(component('site-footer','SiteFooter'),{...base,fields:{data:{datasource:{children:{results:[{id:'a',Group:text('People'),Title:text('Team'),Link:{jsonValue:{value:{href:'/team'}}}}]}}}}}));
+ assert.match(markup,/>People<\/h2>/);assert.match(markup,/>Team<\/a>/);
+});
+test('ordinary navigation icons retain visible native labels; brand logos may hide theirs', () => {
+ const Nav = loadSource(new URL('../src/lib/native-controls.tsx',import.meta.url)).NativeNavigationLink;
+ const item={id:'icon',Title:text('Resources'),Logo:{jsonValue:{value:{src:'https://example.org/icon.svg',alt:''}}},Link:{jsonValue:{value:{href:'/resources'}}}};
+ const plain=renderToStaticMarkup(React.createElement(Nav,{item}));
+ assert.match(plain,/<span>Resources<\/span>/);assert.doesNotMatch(plain,/visually-hidden/);
+ const brand=renderToStaticMarkup(React.createElement(Nav,{item:{...item,Group:text('brand')}}));
+ assert.match(brand,/<span class="visually-hidden">Resources<\/span>/);
+ const css=readFileSync(new URL('../src/app/globals.css',import.meta.url),'utf8');
+ assert.match(css,/\.site-nav img, \.hero__quicklinks img, \.utility-nav img \{[^}]*width: 24px; height: 24px;/);
+});

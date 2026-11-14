@@ -20,7 +20,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SiteHeader', { ...SiteHeader, componentType: 'client' }],
   ['SiteFooter', { ...SiteFooter }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
-  ['Hero', { ...Hero }],
+  ['Hero', { ...Hero, componentType: 'client' }],
   ['CardGrid', { ...CardGrid }],
   ['CallToAction', { ...CallToAction }],
 ]);

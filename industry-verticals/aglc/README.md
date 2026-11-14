@@ -84,11 +84,33 @@ helpers retain editing metadata. Header/footer belong in shared partial designs;
 Hero/Grid/CTA datasource ownership belongs to each page.
 
 `Layout` selects theme using actual `page.siteName`, not hostname guesses or
-campaign parameters. Public CSS inspected 2026-11-13: https://aglc.ca/ uses
-`#850057` and `#3f4040`; https://cannabissense.ca/ uses `#004e35`, `#f6f4ef`,
-`#8dbf83`. Fonts, spacing, radii and layout are demo approximations, not official
-brand specifications. BrandKit guidance does not automatically apply website CSS.
-No remote fonts, tracking or personalization have been activated.
+campaign parameters. Reference screenshots were viewed at desktop and mobile sizes
+on 2026-11-14. The correction follows AGLC's family-brand bar, compact header,
+landscape-video hero, gold quick links, three image-led sector cards and split CTA;
+CannabisSense uses a dark-green header, landscape background, cream title panel,
+leaf-cropped hiking image and two square promotional tiles. Native field values
+supply logos, images, links and editorial copy; no fixture page substitutes for CMS.
+
+Open Sans (AGLC) and Poppins (CannabisSense) are self-hosted from the official
+Google Fonts repository under the SIL Open Font License. Files and license notices
+are in `public/fonts/`; sources are `google/fonts/main/ofl/opensans` and
+`google/fonts/main/ofl/poppins` at https://github.com/google/fonts.
+The official CannabisSense display font is licensed Utopia Std Headline. This demo
+uses Georgia/Cambria as a disclosed substitute, not a claimed identical font or an
+assumption that the official Adobe kit is licensed for this domain. Measured colors
+include AGLC #850057/#edbe48 and CannabisSense #004e35/#f6f4ef/#70e37d.
+BrandKit guidance does not automatically apply website CSS. No tracking or
+personalization has been activated.
+
+Navigation children may include `Group` and `Logo`: header groups `brand` and
+`utility` are separate from main/empty; footer groups use authored labels. Only
+brand logos replace visible labels; ordinary icons retain visible Text. Search
+uses a real authored HTTPS GET endpoint plus `SearchQueryName`, never a pretend
+Sitecore Search handler. Hero accepts `BackgroundImage` and `BackgroundVideo`;
+video is not loaded before client motion preference is known, does not load for
+reduced motion, and has a pause control. CTA supports native `Image`, and optional
+`icon-band band-cream|band-green|band-brown|band-deep` style combinations for the
+reference's additional CannabisSense bands.
 
 The page route explicitly exports `revalidate = 60`. The installed SDK layout
 service delegates to GraphQL's native fetch without a separate persistent layout
@@ -100,9 +122,15 @@ matching component code before activating native Home renderings, publish, then
 verify Edge and the regenerated live page. No public revalidation webhook added.
 See https://nextjs.org/docs/app/guides/incremental-static-regeneration.
 
-Local slice verification: lint and 24 Node tests passed; tests execute real React
+Local slice verification: lint and 29 Node tests passed; tests execute real React
 SSR with native field helpers, plus source-contract checks. Genuine Edge-context
 production build passed before ISR addition; standalone typecheck also passed
 after ISR addition. Repeat production build when authenticated access is cleared. Browser mobile-menu interaction, native insertion/edit-save-reload,
 image/link picker behavior and live visual QA remain release gates. No fixture
 route, content seed, tenant write or deployment is included in this frontend work.
+
+Visual-correction checkpoint: local lint, standalone typecheck and 29 tests pass.
+Reference pixels were inspected, but corrected deployed pixels have NOT yet been
+verified. Native publication, production build, desktop/mobile comparison, search,
+menu/Escape, video pause/reduced-motion and native edit/save/reload remain required
+release checks. Prior baseline build evidence does not certify this correction.
