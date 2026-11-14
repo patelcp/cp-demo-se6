@@ -99,3 +99,7 @@ test('ordinary navigation icons retain visible native labels; brand logos may hi
  const css=readFileSync(new URL('../src/app/globals.css',import.meta.url),'utf8');
  assert.match(css,/\.site-nav img, \.hero__quicklinks img, \.utility-nav img \{[^}]*width: 24px; height: 24px;/);
 });
+test('footer brand SVGs have explicit dimensions instead of collapsing in flex links', () => {
+ const css=readFileSync(new URL('../src/app/globals.css',import.meta.url),'utf8');
+ assert.match(css,/\.footer-group\[data-group="brand"\] img \{[^}]*width: 120px; height: 35px;/);
+});

@@ -235,3 +235,5 @@
 [data-site="cannabissense"] .footer-group[data-group="brand"] ul, [data-site="cannabissense"] .footer-group[data-group="social"] ul { flex-wrap: wrap; }
 [data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-end; }
 @media (max-width: 900px) { [data-site="cannabissense"] .footer-groups { grid-template-columns: minmax(0,1fr); } [data-site="cannabissense"] .footer-group[data-group="brand"] ul { justify-content: flex-start; } }
+/* Brand SVGs without intrinsic dimensions also need a concrete footer box. */
+.footer-group[data-group="brand"] img { width: 120px; height: 35px; max-width: none; object-fit: contain; flex-shrink: 0; }
