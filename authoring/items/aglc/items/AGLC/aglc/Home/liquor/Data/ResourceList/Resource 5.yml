@@ -1,0 +1,43 @@
+﻿---
+ID: "455d7a24-6ffa-49ab-a691-4bf9821569f4"
+Parent: "648c72e3-93dd-4c94-8606-6a932fa2ecbc"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 5
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "53ab9239-d2f6-443e-9138-83ddb460a50e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054139Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Liquor
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/liquor/liquor-agencies-and-suppliers/become-liquor-agency" text="Become a liquor agency" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c95f956c-f882-43ba-9e1e-22f94424e273"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Information
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: Become a liquor agency
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054140Z

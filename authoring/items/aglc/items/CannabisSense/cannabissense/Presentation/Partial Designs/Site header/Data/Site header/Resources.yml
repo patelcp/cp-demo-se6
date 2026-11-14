@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2f2cfcf1-b5fb-4f09-b150-8041c647041a"
+      Value: "db4f126f-84b0-4158-bc02-80a966e25590"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002201Z
+      Value: 20261114T054557Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://cannabissense.ca/use-legally" text="Use legally" />
+        <link linktype="internal" id="{B50C3C68-C422-4967-93AE-4FE87746093B}" text="Use legally" />

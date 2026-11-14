@@ -1,0 +1,164 @@
+{
+  "assets": [
+    {
+      "site": "aglc",
+      "name": "gaming-hero",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/2023-05/Gaming.jpg",
+      "alt": "Gaming sector banner",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/gaming-hero",
+      "sha256": "58c74b11298594c028330310550b2f600fa184598264ffa8b97e51eeaefc6710",
+      "itemId": "c1c424ec94384642a16c379406c1d6de"
+    },
+    {
+      "site": "aglc",
+      "name": "gaming-trending-1",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2026-01/self-exclusion-1400x800.jpg?itok=eUg3tXRl",
+      "alt": "Self-Exclusion logo",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/gaming-trending-1",
+      "sha256": "fc26e2f493dc35521aa363ee313638aeaffc596f523a510eb8a6e0fea9e338af",
+      "itemId": "cc7654aacaa74a3bb0b7055ee6da29fc"
+    },
+    {
+      "site": "aglc",
+      "name": "gaming-trending-2",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-04/Gaming-Tile-Lotteries.jpeg?itok=7gYSk8-G",
+      "alt": "Woman winning raising hands",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/gaming-trending-2",
+      "sha256": "4a54dbbc7af9260f9c02c6f96e9d1726d08877ef2ccdfcd05d68ac1b22140d92",
+      "itemId": "51c2f0c26dd64d83b8b4483fbb81238d"
+    },
+    {
+      "site": "aglc",
+      "name": "gaming-trending-3",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-02/Modernization-gaming-raffle-Feb-2-740x330.jpg?itok=aGE-YE1w",
+      "alt": "Roll of raffle tickets",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/gaming-trending-3",
+      "sha256": "cd689522de558970d85c104913de209a10679811906f266bc2282ecb1e530081",
+      "itemId": "cf4c2c05fd4f442d9340a5d5c0ebf94f"
+    },
+    {
+      "site": "aglc",
+      "name": "liquor-hero",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/2023-05/Liquor_2023.jpg",
+      "alt": "Liquor sector banner",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/liquor-hero",
+      "sha256": "296a37713c457e4ebe2c65f2f0dbfbd80782e0bd60fa54dc62879b79905bc5c6",
+      "itemId": "ef43c53e1a1549888aa2867654764cff"
+    },
+    {
+      "site": "aglc",
+      "name": "liquor-trending-1",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-04/Liquor-SEL-wedding_table.jpg?itok=IWXNBlAy",
+      "alt": "Empty wedding table outdoors",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/liquor-trending-1",
+      "sha256": "69ad16e3ee4849f08e6ee7e74a6c2c7d1ecce47a5b9bfdf9c51e9c28d4ea13fe",
+      "itemId": "94f7ec3542054f8aac74f1863c1449b3"
+    },
+    {
+      "site": "aglc",
+      "name": "liquor-trending-2",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-04/Liquor-Tile-outdoor_patio.jpg?itok=PUQ-63qq",
+      "alt": "Outdoor patio",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/liquor-trending-2",
+      "sha256": "b494549570bff5d671ab1f3235ae06f746dfbab10c3cfe13b6134bdafd182c25",
+      "itemId": "d8ec7f77409b4384a40d981747375645"
+    },
+    {
+      "site": "aglc",
+      "name": "liquor-trending-3",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2020-12/Modernization-liquor-small-manufacturer-Dec16-740x330.jpg?itok=efxD5S7j",
+      "alt": "Man working on beer bottling machine",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/liquor-trending-3",
+      "sha256": "a34db4cde76dd1cd6102368e5864df2e81ea146358dc660b96289610df02c99b",
+      "itemId": "3d1c9d9501dc4aee9c1266d6acb61bf3"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabis-hero",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/2023-05/Cannabis_2023.jpg",
+      "alt": "Cannabis sector banner",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/cannabis-hero",
+      "sha256": "17f0fa5fdd0aec5d0b034739817781604d243b7122e8fc3194bb4940beb11d36",
+      "itemId": "420fc32e50224bce92ddc9c411222ffc"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabis-trending-1",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2024-10/sellsafe-trending-700x500.png?itok=VOPGd_LK",
+      "alt": "SellSafe Cannabis Staff Training logo",
+      "mime": "image/png",
+      "itemPath": "Project/aglc/aglc/InteriorPages/cannabis-trending-1",
+      "sha256": "ae405ff92d3dc4d078059a017e1c1c25f0bdd121257af7f5016dfd7eab3cd5ef",
+      "itemId": "8fb7b271a2ad49f1a05f97a1d7069bfd"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabis-trending-2",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-04/Cannabis-Tile-Mountains-Trees.jpg?itok=DWsiaWEL",
+      "alt": "Spruce trees in mountain",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/cannabis-trending-2",
+      "sha256": "bd62992656b5213028492237485428e990a55752261abcf11f284bf62bc07130",
+      "itemId": "2037361399844be68a541abeead5b590"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabis-trending-3",
+      "sourceUrl": "https://aglc.ca/sites/aglc.ca/files/styles/trending_content_1208x738/public/2021-04/Cannabis-Retail_POS.jpg?itok=b0i-nefb",
+      "alt": "Retail POS in front of white wall",
+      "mime": "image/jpeg",
+      "itemPath": "Project/aglc/aglc/InteriorPages/cannabis-trending-3",
+      "sha256": "7a4085dc98444323b331e9e8a54eccf6591cd31d66983a5c1ba89b8085253d96",
+      "itemId": "6df5ed4f30ee48ec81c81bd34a2f7442"
+    },
+    {
+      "site": "cannabissense",
+      "name": "resource-icon-1",
+      "sourceUrl": "https://cannabissense.ca/sites/cannabissense/files/2021-11/Cannabis-Leaf%E2%80%93Outlined.svg",
+      "alt": "Cannabis leaf outline",
+      "mime": "image/svg+xml",
+      "itemPath": "Project/aglc/cannabissense/InteriorPages/resource-icon-1",
+      "sha256": "aa0cf75e116423a2a1d22a0ac76b8271a73f875498a74950f24ed36653d72459",
+      "itemId": "8443b0c79c154428bc2ae70a6eab1833"
+    },
+    {
+      "site": "cannabissense",
+      "name": "resource-icon-2",
+      "sourceUrl": "https://cannabissense.ca/sites/cannabissense/files/2024-05/question_mark_bubble.svg",
+      "alt": "Question mark",
+      "mime": "image/svg+xml",
+      "itemPath": "Project/aglc/cannabissense/InteriorPages/resource-icon-2",
+      "sha256": "e2e110a84fefdf78d0222dee6a401011d2592cbf307bb47da87bb03717f19f47",
+      "itemId": "7b534722ac5b49c6a5816224bffdd7d5"
+    },
+    {
+      "site": "cannabissense",
+      "name": "resource-icon-3",
+      "sourceUrl": "https://cannabissense.ca/sites/cannabissense/files/2021-11/Reference%20Icon.svg",
+      "alt": "Looking glass icon.",
+      "mime": "image/svg+xml",
+      "itemPath": "Project/aglc/cannabissense/InteriorPages/resource-icon-3",
+      "sha256": "2ad913c96feb5652fa2748273f5479f17d1d0a08866880874a972d681f4f26db",
+      "itemId": "9a43580aafec4f7e8af7f3f7edde8555"
+    },
+    {
+      "site": "cannabissense",
+      "name": "resource-icon-4",
+      "sourceUrl": "https://cannabissense.ca/sites/cannabissense/files/2022-08/cannabissense_blog_article_icon_v1.svg",
+      "alt": "Blog article",
+      "mime": "image/svg+xml",
+      "itemPath": "Project/aglc/cannabissense/InteriorPages/resource-icon-4",
+      "sha256": "c0d3edbb1bb7e4b7adcf9323760690ba5c11e31201eca7cf38a157cf49ff816c",
+      "itemId": "bc4a66990720472b8cf2765f193314bb"
+    }
+  ]
+}

@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fe63db46-3dfb-4654-8751-b2c64ee6acc3"
+      Value: "57723a3a-ab3f-4b43-94d4-3ac83cedc3f9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002151Z
+      Value: 20261114T054553Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://aglc.ca/liquor" text="Liquor" />
+        <link linktype="internal" id="{A23891B4-FBC3-4264-8738-603C74D48C60}" text="Liquor" />

@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "031e94d6-ac42-464b-91b1-29480261c685"
+      Value: "ab5c25a6-9487-418a-9a6a-aeceece78f77"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002200Z
+      Value: 20261114T054557Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://cannabissense.ca/health-effects" text="Health effects" />
+        <link linktype="internal" id="{8778F709-4872-4CFA-B386-23DA410DA768}" text="Health effects" />

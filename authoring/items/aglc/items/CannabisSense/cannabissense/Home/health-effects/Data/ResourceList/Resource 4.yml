@@ -1,0 +1,43 @@
+﻿---
+ID: "1e058a68-53ae-4a36-b9d1-2c1fe298f67e"
+Parent: "d6626b83-7f29-4252-a1b0-c6b7f3adc8af"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 4"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "19d15c8c-a979-40ac-9b3d-f9ffa8768230"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054237Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Health effects
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://cannabissense.ca/health-effects/medical-use" text="Medical use" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9091b7a6-8ee4-4911-af69-66b6c256fcd1"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Information
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: Medical use
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054237Z

@@ -18,7 +18,7 @@ Languages:
     - ID: "04e0cb6a-3c66-4224-a653-415196124c69"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://aglc.ca/cannabis" text="Learn more" />
+        <link linktype="internal" id="{B4193CD8-BDD6-4486-B2A4-5EA7385F2CC4}" text="Learn more" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20261113T223204Z
@@ -27,14 +27,14 @@ Languages:
       Value: Cannabis
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6bfa3c1c-9281-4d31-88e8-0cb1fbd62032"
+      Value: "c001ceda-8a06-4f79-9eb6-6bc77c88569d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002154Z
+      Value: 20261114T054555Z
     - ID: "f279a129-991e-4f6f-9601-8765463bf6b6"
       Hint: Image
       Value: |

@@ -1,59 +1,89 @@
 {
   "schemaVersion": 1,
   "project": "aglc",
-  "phase": "reference-correction-public-verified",
-  "nextAction": "Complete signed-in Page Builder render/edit/save/reload acceptance on both sites, then review draft PR26 before expanding the multi-page demo.",
+  "phase": "interior-pages-verified",
+  "nextAction": "Verify signed-in Pages insertion/edit/save/reload, then implement privacy-aware campaign, experiment and digital Form demo flows.",
   "checkpoints": [
     {
       "stage": "frontend",
       "result": "pass",
-      "evidence": "Compact native-field adapter preserves editing metadata and legacy aliases. Lint, TypeScript and all34 app tests pass; independent review passed."
+      "evidence": "50 app tests, lint/type-check and independent review pass; native fields retained, no tracking introduced."
     },
     {
       "stage": "transport",
       "result": "pass",
-      "evidence": "12 offline safety tests and fixed-endpoint reviews pass. Preview uses only the existing API key at the exact CM endpoint; management JWT is not sent there."
-    },
-    {
-      "stage": "query-diagnosis",
-      "result": "pass",
-      "evidence": "Preview reproduced Hero depth 18 exceeding 15 and Footer complexity failure. fields(ownFields:true) bulk queries return all 11 Hero / 4 Footer fields and 6/0 plus 19/12 children, with no standard/audit fields. Matching adapter 39aeb4c deployed before query switch."
+      "evidence": "12 offline safety tests; fixed endpoint confinement, no redirects/proxies; new-session-only authenticated operations."
     },
     {
       "stage": "deployment",
       "result": "pass",
-      "evidence": "Both Vercel production deployments READY at f4c9819; editing-host4NJNgNsy8bwiCirMPU8qHb completed all stages at01:23:20UTC. No shared CM/IAR deployment or merge."
+      "evidence": "Both production aliases READY and editing host completed all stages for d4ec774. No shared CM/IAR/CI-policy changes or merge."
     },
     {
       "stage": "native-publication",
       "result": "pass",
-      "evidence": "Two filtered bulk queries and five approved brand items applied and read back. Final exact 8 dependency roots SMART then 2 Homes FULL finished successfully, English/Edge, no recursive or related publishing. Serialization 368 = 93 Definitions + 275 CreateOnly Seed validates."
+      "evidence": "Initial221 dependencies+11pages and final10dependencies+8pages completed, no recursion/related items.561items validate; exact guarded changes independently reviewed."
+    },
+    {
+      "stage": "public-native-payload",
+      "result": "pass",
+      "evidence": "After cache/ISR follow-up all11routes HTTP200, one h1, zero unresolved; eight summaries and five CS TopicBand pages delivered."
     },
     {
       "stage": "public-browser",
       "result": "pass",
-      "evidence": "Final f4c9819 desktop/mobile screenshots inspected: source-matched tint and white brand marks, visible native heroes, footer counts19/12, loaded media, no overflow and zero console errors/warnings. Video pause/resume, reduced-motion(no video requests), Menu/Escape/focus passed on previous runtime39aeb4c; final CSS is noninteractive."
+      "evidence": "Final nine interior routes inspected at 1440px and 390px: one h1, zero overflow/broken images, navigation and local document filters pass. Browser zero errors."
     },
     {
       "stage": "pages-authoring",
       "result": "blocked",
-      "evidence": "Signed-in Page Builder render/edit/save/reload remains unverified."
+      "evidence": "No connected browser; signed-in Pages insertion/edit/save/reload remains unverified."
+    },
+    {
+      "stage": "repository-ci",
+      "result": "blocked",
+      "evidence": "Vercel checks pass; unchanged GitHubActions example build still fails MV-007 missing Sitecore credentials. CI policy not changed."
     }
   ],
-  "note": "User approved five additional brand links and instructed continuing publication where needed. Keep work scoped to these demos and PR26 unmerged; existing content and BrandKit assignments are preserved.",
-  "verifiedRuntime": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+  "note": "Nine new native pages plus two preserved Homes; PR26 remains draft/unmerged. Forms page is a curated PDF selection, not a digital Form. UTM/experiments inactive pending privacy design; no affinity tracking. Developer MCP configured locally but not exposed in this task.",
+  "verifiedRuntime": "d4ec774a560a32f602a7445d7b515506b0dd8758",
   "serialization": {
-    "definitions": 93,
-    "seedCreateOnly": 275,
-    "total": 368,
+    "definitions": 150,
+    "seedCreateOnly": 411,
+    "total": 561,
     "validation": "pass"
   },
   "deployments": {
-    "aglc": "dpl_5H6S6WXSNasXGeZmq8nrYPgJRwGu",
-    "cannabissense": "dpl_8fUizmcMgTjtepcpsUSQ2XVMVRgF",
-    "editingHost": "4NJNgNsy8bwiCirMPU8qHb",
-    "editingHostStartedUtc": "2026-11-14T01:19:49Z",
+    "aglc": "dpl_JAo6pFEyZVbzyzFvk44FAjLbE4Di",
+    "cannabissense": "dpl_13J18cJB7JSnR6Qsm9VxF3vnh5ak",
+    "editingHost": "5heYyLZw1BG0MBQ2wkz2BY",
+    "editingHostCompletedUtc": "2026-11-14T06:02:32.7255309Z",
+    "state": "complete"
+  },
+  "activeFeature": "interior-pages",
+  "interiorRuntime": {
+    "aglc": "dpl_JAo6pFEyZVbzyzFvk44FAjLbE4Di",
+    "cannabissense": "dpl_13J18cJB7JSnR6Qsm9VxF3vnh5ak",
+    "editingHost": "5heYyLZw1BG0MBQ2wkz2BY",
+    "editingHostCompletedUtc": "2026-11-14T06:02:32.7255309Z",
     "state": "complete",
-    "editingHostCompletedUtc": "2026-11-14T01:23:20.520405Z"
+    "commit": "d4ec774a560a32f602a7445d7b515506b0dd8758"
+  },
+  "routes": {
+    "aglc": [
+      "/",
+      "/gaming",
+      "/liquor",
+      "/cannabis",
+      "/forms"
+    ],
+    "cannabissense": [
+      "/",
+      "/basics",
+      "/moderation",
+      "/health-effects",
+      "/use-legally",
+      "/resources"
+    ]
   }
 }

@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2c93b7ba-228b-42d0-9e7d-6870bf215235"
+      Value: "bc9b5fc0-9432-40e8-997c-77af66b0755e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002151Z
+      Value: 20261114T054552Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://aglc.ca/gaming" text="Gaming" />
+        <link linktype="internal" id="{894832E9-0BDF-4667-9F27-7FBBD0D6EAB9}" text="Gaming" />

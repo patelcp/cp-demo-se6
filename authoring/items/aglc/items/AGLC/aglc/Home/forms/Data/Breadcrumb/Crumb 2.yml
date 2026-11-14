@@ -1,0 +1,33 @@
+﻿---
+ID: "2027f948-0a74-47a9-95f6-ae38edb2fa95"
+Parent: "74c264e0-410d-42b0-9778-53fbc3a9f3a5"
+Template: "a7ad23ca-b3f2-4429-b2e4-b8f716c9a806"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb/Crumb 2
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "119ab359-e717-4dbb-a650-07e82c477696"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054201Z
+    - ID: "2f073244-a079-407b-a5ea-50b10888b2f0"
+      Hint: Title
+      Value: Forms & Documents
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "44fe728a-9656-4106-866b-126dc7915a0c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054201Z

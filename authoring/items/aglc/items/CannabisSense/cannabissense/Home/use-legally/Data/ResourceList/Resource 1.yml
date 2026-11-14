@@ -1,0 +1,43 @@
+﻿---
+ID: "cbebf047-0ac5-483d-a03c-73e5e6377e46"
+Parent: "a1323eac-f369-4f76-95e7-905ae7c36b4b"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "5d3a3829-b9fa-4b88-8762-23dd8365174c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054244Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Use legally
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://cannabissense.ca/use-legally/where-can-i-use" text="Where can I use?" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "043b3840-c0d3-4c63-9642-015d312fb9bc"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Information
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: "Where can I use?"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054244Z

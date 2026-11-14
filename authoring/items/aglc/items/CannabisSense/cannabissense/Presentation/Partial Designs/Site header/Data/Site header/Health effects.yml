@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f3084945-22a9-4dcc-9e60-bda9a22d6948"
+      Value: "b4f206e4-54de-47ba-a2f0-7dcad4bb30b0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002200Z
+      Value: 20261114T054556Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://cannabissense.ca/moderation" text="Moderation" />
+        <link linktype="internal" id="{16012FFE-485B-45F7-A08B-489A53544913}" text="Moderation" />

@@ -133,7 +133,7 @@ final desktop/mobile visual inspection with no overflow or console errors. See
 
 Signed-in Page Builder insertion/edit/save/reload and image/link picker behavior
 remain unverified. Public rendering and API verification are not a substitute.
-This is the first shared Home slice, not the complete multi-page customer site.
+The shared Home slice has been extended with native interior hubs; deeper source destinations remain official external links rather than a complete site migration.
 
 Hero and Footer also accept native bulk GraphQL `Fields: fields(ownFields: true) { name jsonValue }`
 (including child `Fields`). An explicit allowlisted adapter preserves each native
@@ -142,7 +142,7 @@ and retains legacy PascalCase aliases. This avoids the verified integrated-query
 depth/complexity limits without introducing fixtures or fallback content. The
 compatible frontend must be deployed before switching native query projection.
 
-### Interior-page extension (local implementation, not deployment evidence)
+### Interior-page extension
 
 Public references inspected at desktop1440 and mobile390: AGLC `/gaming`, `/liquor`, `/cannabis`, `/forms`; CannabisSense `/basics`, `/moderation`, `/health-effects`, `/use-legally`, `/resources`. Sector pages use image banners; the four CannabisSense topic hubs use solid green titles and cream link rows, not accordions. Resources uses icon tiles. Mobile source layout defects are not deliberately reproduced.
 
@@ -150,4 +150,4 @@ Four shared native renderings add no fixture routes: `Breadcrumb` (Navigation Li
 
 Documents filters only its authored selection locally, without tracking, API requests, or claims of Sitecore Search/full official catalogue coverage. Editing shows every item and retains native controls. Source URLs stay authoritative; no generated PDFs or application submissions are implied.
 
-Local validation: lint, type-check, generated component maps and48tests passed. Production build, native insertion/edit/save, publication and desktop/mobile live verification for these interior pages remain pending. The licensed Utopia display font remains substituted with Georgia/Cambria; official Poppins/Open Sans assets and existing licenses are unchanged.
+Validation: lint, type-check and 50 tests pass. Both hosted builds and the editing host completed. Nine native interior pages are published; initial desktop/mobile and filter/navigation checks passed. Final fidelity refinements are published and all nine interior routes passed desktop/mobile screenshot inspection with no overflow or broken images; navigation and local filtering passed. Signed-in native insertion/edit/save/reload remains unverified. The licensed Utopia display font remains substituted with Georgia/Cambria; official Poppins/Open Sans assets and existing licenses are unchanged.

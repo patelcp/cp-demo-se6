@@ -1,0 +1,43 @@
+﻿---
+ID: "f59dcd8b-4616-42b1-b25b-36fc05345a7c"
+Parent: "7d4c6e30-3d58-4730-9022-5f6d3770225e"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 4
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f7bdf7ac-422c-4392-9a9b-ca06c1fba1f4"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054208Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Working in the Gaming Industry
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/sites/aglc.ca/files/forms/Application_for_Background_Check_20251215.pdf" text="Download Application for Background Check" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3f51e9be-ac6c-4098-8818-bf51571933d5"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Form
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: Application for Background Check
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054208Z

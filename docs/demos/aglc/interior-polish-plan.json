@@ -1,0 +1,148 @@
+{
+  "summaries": [
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/PageIntro",
+      "id": "3928a818a6d44f0ca3223c96fcba8dea",
+      "old": "",
+      "new": "<p>AGLC oversees gaming integrity and helps gaming revenue support programs and services across Alberta.</p>",
+      "sourceUrl": "https://aglc.ca/gaming"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/PageIntro",
+      "id": "697d9605a8974519910d87b3d8d0bcdc",
+      "old": "",
+      "new": "<p>AGLC oversees Alberta\u2019s liquor industry, with a focus on consumer choice, access and responsible service.</p>",
+      "sourceUrl": "https://aglc.ca/liquor"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/PageIntro",
+      "id": "89568f50f8ae4895a0782d2347b8c2f4",
+      "old": "",
+      "new": "<p>AGLC oversees a cannabis model designed to offer Albertans trusted choices.</p>",
+      "sourceUrl": "https://aglc.ca/cannabis"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 1",
+      "id": "fe8f1632015946dfa8ef38aa3e633216",
+      "old": "",
+      "new": "<p>Explore recent cannabis research and news from credible sources.</p>",
+      "sourceUrl": "https://cannabissense.ca/resources"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 2",
+      "id": "320e91f791e94d8ca2de225f20bd5ac6",
+      "old": "",
+      "new": "<p>Hear experts address common cannabis questions and misconceptions.</p>",
+      "sourceUrl": "https://cannabissense.ca/resources"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 3",
+      "id": "ff669e84a2ad46bdb70dac1842d74cd5",
+      "old": "",
+      "new": "<p>Check your understanding of cannabis basics, effects and rules with five true-or-false questions.</p>",
+      "sourceUrl": "https://cannabissense.ca/resources"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 4",
+      "id": "babdd9cf4fde4c3e8b1a49643e2eb288",
+      "old": "",
+      "new": "<p>Learn about AGLC\u2019s role in legalization and working in the cannabis industry.</p>",
+      "sourceUrl": "https://cannabissense.ca/resources"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 5",
+      "id": "5d7e85ed623540558f9d9391c7ff6e4e",
+      "old": "",
+      "new": "<p>Read accessible information to help make informed choices about cannabis.</p>",
+      "sourceUrl": "https://cannabissense.ca/resources"
+    }
+  ],
+  "layouts": [
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/gaming",
+      "id": "894832e90bdf46679f277fbbd0d6eab9",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{1C1270D9-081E-52FB-BC2C-4B5777A37A17}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{C847EC30-3140-4E05-8F66-8D1F0B09442C}\" ph=\"headless-main\" par=\"FieldNames=%7B95C60236-D794-4DBF-A382-20747F60A64F%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{7227B571-6218-5CDE-9877-01BCFAD04C8D}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{3928A818-A6D4-4F0C-A322-3C96FCBA8DEA}\" ph=\"headless-main\" par=\"FieldNames=%7B7FB3D349-200D-4C1B-8548-C3DFDE9BADCF%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{D222E02F-8C05-56C7-AF60-B3100CB06DB7}\" id=\"{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}\" ds=\"{FC1B594A-7F17-47BA-9732-AE4CD2462614}\" ph=\"headless-main\" par=\"FieldNames=%7B3E5599A9-C388-4D08-8C18-B3202C0DF787%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{73F1D76D-A749-5A43-B9B1-DD5A5BC25C98}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{1E78DE57-3044-4FD1-9559-302A565AFD3D}\" ph=\"headless-main\" par=\"FieldNames=%7B8992E8E3-CBC9-441B-96B6-DEFDF5546637%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{0F8A2D92-12DB-5D85-BBFD-2AE67360AE97}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{954EF283-A56A-46F7-B731-99042C35D8E0}\" ph=\"headless-main\" par=\"FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{0E78A2B3-1229-483A-914B-614237EADF56}",
+        "__Final Renderings": ""
+      },
+      "kind": "aglc-remove-breadcrumb"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/liquor",
+      "id": "a23891b4fbc342648738603c74d48c60",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{EB829522-30DF-592E-9030-0BDA045819C1}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{561E6795-0F58-41E9-85E2-24F493FD51A6}\" ph=\"headless-main\" par=\"FieldNames=%7B95C60236-D794-4DBF-A382-20747F60A64F%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{8452A4CD-E2F4-5840-B3D9-835920F70E6F}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{697D9605-A897-4519-910D-87B3D8D0BCDC}\" ph=\"headless-main\" par=\"FieldNames=%7B7FB3D349-200D-4C1B-8548-C3DFDE9BADCF%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{34F5B004-0425-5812-81A5-51AC81CCAC89}\" id=\"{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}\" ds=\"{2947C62F-7E85-4247-866E-B25C50BE774F}\" ph=\"headless-main\" par=\"FieldNames=%7B3E5599A9-C388-4D08-8C18-B3202C0DF787%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{CAE4CE09-AB16-5E93-A98D-34C51C378ACB}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{648C72E3-93DD-4C94-8606-6A932FA2ECBC}\" ph=\"headless-main\" par=\"FieldNames=%7B8992E8E3-CBC9-441B-96B6-DEFDF5546637%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{2C9C1ED6-0652-5D37-9EF1-8BEFAFA01AFC}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{48C4B328-C35D-4DCF-8169-8CD8AA8BA8F3}\" ph=\"headless-main\" par=\"FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{0E78A2B3-1229-483A-914B-614237EADF56}",
+        "__Final Renderings": ""
+      },
+      "kind": "aglc-remove-breadcrumb"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/cannabis",
+      "id": "b4193cd8bdd64486b2a45ea7385f2cc4",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{1CFF5762-C1C3-5645-97C0-2BA63644553B}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{715D185E-D3BB-4447-AC07-32EA8157CD66}\" ph=\"headless-main\" par=\"FieldNames=%7B95C60236-D794-4DBF-A382-20747F60A64F%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{F9271190-D7D3-5C21-8BC9-E99B9AED3D60}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{89568F50-F8AE-4895-A078-2D2347B8C2F4}\" ph=\"headless-main\" par=\"FieldNames=%7B7FB3D349-200D-4C1B-8548-C3DFDE9BADCF%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{9CA44631-E124-590C-96F7-5EF0B6CC5834}\" id=\"{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}\" ds=\"{C44C7C4C-F15B-447A-AFA0-0740CF081DEE}\" ph=\"headless-main\" par=\"FieldNames=%7B3E5599A9-C388-4D08-8C18-B3202C0DF787%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{0CA4A2AB-2EF2-51AD-BB7C-1E91372522A3}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{47BF1E8D-C296-4F97-8140-57EECA3D81E2}\" ph=\"headless-main\" par=\"FieldNames=%7B8992E8E3-CBC9-441B-96B6-DEFDF5546637%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{D6468E12-D388-5BF2-A0EB-A68A7BBF5A83}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{714E741A-C78D-4B8F-B0FC-FF9F796EE70E}\" ph=\"headless-main\" par=\"FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{0E78A2B3-1229-483A-914B-614237EADF56}",
+        "__Final Renderings": ""
+      },
+      "kind": "aglc-remove-breadcrumb"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/basics",
+      "id": "b0e0b571167242ba9bb808ff313ac04f",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{928EC0D2-43EF-5B96-B005-FFC040AEC12C}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{22824E0A-6B18-4F9C-9155-131FA3B70133}\" ph=\"headless-main\" par=\"FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{193D1F51-707F-504E-B072-B34B633983C4}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{C81AF99C-DB59-49B0-A0D3-58DAF3A30484}\" ph=\"headless-main\" par=\"FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{6FB1268C-FC61-5371-B992-F949E541CFC3}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{09042845-3DE7-4B87-9828-7D9E110CE2ED}\" ph=\"headless-main\" par=\"FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{27692397-1D1B-51B9-85C1-B9D8615A84FB}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{EB89AD50-0E88-4B72-A0F8-53A94A9AC808}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{55F9B532-F15F-5DD3-8FDD-5456EEEFFF8D}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{DF50529C-6EFE-4800-BF87-25BDB56ECE37}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}",
+        "__Final Renderings": ""
+      },
+      "kind": "cs-topic-band"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/moderation",
+      "id": "16012ffe485b45f7a08b489a53544913",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{8EA57326-A8F2-5DCB-9114-58D5A85694D1}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{D4EA9F90-D28A-4CAC-BE88-4F01CBE9CC31}\" ph=\"headless-main\" par=\"FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{96166FF3-BEED-539B-8EE5-4380C2C875A1}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{3A352B96-994A-4A1E-B198-2E8ACCBFC69E}\" ph=\"headless-main\" par=\"FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{597712F1-862D-54D9-A501-9EF9FCCB8902}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{4999CF4F-FFB5-48C7-B0A4-E49FFAFA2F01}\" ph=\"headless-main\" par=\"FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{0F30B78D-FD18-5297-A42B-3DE83342C907}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{A4E7A36E-9159-40C2-8108-B65792F2F815}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{5FAAF987-74D7-5182-A037-FD80152AE905}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{4F1E5634-2D72-4B9C-8198-9B06CF7198FF}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}",
+        "__Final Renderings": ""
+      },
+      "kind": "cs-topic-band"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/health-effects",
+      "id": "8778f70948724cfab38623da410da768",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{2379F69B-3133-501A-8F29-631F1F0CE908}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{C4985076-6CD3-497B-8E29-D23AB0DCA442}\" ph=\"headless-main\" par=\"FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{83E98B2B-0B6C-5AED-AF7D-DFCA6B5FD1C9}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{423A1533-E508-4D9D-9194-56979DBE8EC0}\" ph=\"headless-main\" par=\"FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{53C589F3-3811-5BFB-99C2-9E2148270377}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{D6626B83-7F29-4252-A1B0-C6B7F3ADC8AF}\" ph=\"headless-main\" par=\"FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{D11B204E-B7AF-5001-B81C-B2A989122D96}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{DC2C8215-AD0B-45A9-93C8-C7DF0D218AEE}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{29E714DA-ED27-5CE8-9F34-0B3AEB5C6CE8}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{474A4547-3117-4C3D-A6E7-FB5B2A53DA94}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}",
+        "__Final Renderings": ""
+      },
+      "kind": "cs-topic-band"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/use-legally",
+      "id": "b50c3c68c422496793ae4fe87746093b",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{4B05356D-97C3-5443-AF63-16909EF035CF}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{84561A00-56E1-458C-8157-8B63C6AB9A20}\" ph=\"headless-main\" par=\"FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{CDBCFFE1-7639-56C9-AE3C-E182E81A3DAF}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{C8DA0317-AF25-460F-B792-F05EF090E859}\" ph=\"headless-main\" par=\"FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{C8BD2AC2-D799-5D46-A116-75499A9354D4}\" id=\"{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}\" ds=\"{A1323EAC-F369-4F76-95E7-905AE7C36B4B}\" ph=\"headless-main\" par=\"FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{A7069CD6-689C-513A-94A6-1E7DCF9CDF77}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{66473C45-0CED-4EA8-B8E3-24745FF3FB92}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{64DAD2AB-82FF-5E3C-8FF1-8F56AADC2EFE}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{D00220F5-062F-434E-8F4D-EAF30D9AEDB1}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}",
+        "__Final Renderings": ""
+      },
+      "kind": "cs-topic-band"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources",
+      "id": "77049d46d8174d21845bc92267b40c10",
+      "old": {
+        "__Renderings": "<r><d id=\"{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}\" l=\"{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}\"><r uid=\"{3722A7BB-3782-506F-9110-14B1C76821FF}\" id=\"{C4E6929B-3B4B-406D-B547-55C8AF094E7A}\" ds=\"{A6EA61C1-B5E1-402B-8710-1C969C6597DF}\" ph=\"headless-main\" par=\"FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1\" /><r uid=\"{D316D3A3-DF13-522E-8F91-A10C01411A16}\" id=\"{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}\" ds=\"{A9299EBB-0816-4496-9BD6-B90140B56321}\" ph=\"headless-main\" par=\"FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2\" /><r uid=\"{223772BE-499A-59AB-9B21-A0904DB7397A}\" id=\"{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}\" ds=\"{C7E903D4-4B79-42D2-8935-308079A51F21}\" ph=\"headless-main\" par=\"FieldNames=%7B93111A12-FC74-4205-A440-BB6D3403D120%7D&amp;DynamicPlaceholderId=3\" /><r uid=\"{E39AE9C1-F89B-53F6-B9AD-D0490B6E7D78}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{123D72B3-0F64-4897-B014-F88B561A8859}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=4\" /><r uid=\"{730545A2-8E93-59B7-AB00-20BBF606E9AA}\" id=\"{020E9010-DAD5-42F2-B92A-A403CB673BEA}\" ds=\"{791E4649-F72E-42F9-88B8-00B38EC4A572}\" ph=\"headless-main\" par=\"FieldNames=%7B43F6C1C8-D3FF-4148-8CE6-FEDBE3C4948D%7D&amp;DynamicPlaceholderId=5\" /></d></r>",
+        "Page Design": "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}",
+        "__Final Renderings": ""
+      },
+      "kind": "cs-topic-band"
+    }
+  ],
+  "variant": {
+    "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction/TopicBand",
+    "parentPath": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction",
+    "templateId": "4d50cdaec2d94de8b0808f992bfb1b55",
+    "parentId": "da39a891abe34106868277877e906539"
+  }
+}

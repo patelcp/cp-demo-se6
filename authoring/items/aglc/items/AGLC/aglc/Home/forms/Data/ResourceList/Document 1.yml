@@ -1,0 +1,43 @@
+﻿---
+ID: "a0939a07-9b8c-478c-b965-380273f2b9ef"
+Parent: "7d4c6e30-3d58-4730-9022-5f6d3770225e"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 1
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6acfb966-be0f-4a86-86ae-780f0b71a470"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054205Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Use of Proceeds
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/sites/aglc.ca/files/forms/Accounting_Fees-Gaming_Financial_Reports__20250401.pdf" text="Download Accounting Fees-Gaming Financial Reports" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9e526343-d48d-4446-977a-6d1e63329240"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Guideline
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: "Accounting Fees-Gaming Financial Reports"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054205Z

@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ede06caa-dec2-49a4-ac60-99a8fa082df8"
+      Value: "3be1efe4-623b-426b-9868-8a3e895212d7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002152Z
+      Value: 20261114T054553Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://aglc.ca/cannabis" text="Cannabis" />
+        <link linktype="internal" id="{B4193CD8-BDD6-4486-B2A4-5EA7385F2CC4}" text="Cannabis" />

@@ -9,10 +9,14 @@ SharedFields:
   Value: "headless-main"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "a686ce61-e34d-4b2a-b077-bf00b8f63c01"
+  Value: "f051dafa-5fe4-4285-9a7c-b9982b5e4b2b"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
-  Value: "{84c91e02b8574fb6b73ff1832b084c0e}|{27e326aa73b74da7b4e48d2f3e1d7a27}|{020e9010dad542f2b92aa403cb673bea}"
+  Value: |
+    {C4E6929B-3B4B-406D-B547-55C8AF094E7A}
+    {0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}
+    {FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}
+    {AFA7F79C-69E1-4075-8C05-9E184E9CA767}
 Languages:
 - Language: en
   Versions:
@@ -31,11 +35,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0c0ff795-c898-4399-9cae-ce5d17557565"
+      Value: "66cef58b-5396-4cdb-bc56-7d550fca7b3b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223218Z
+      Value: 20261114T054545Z

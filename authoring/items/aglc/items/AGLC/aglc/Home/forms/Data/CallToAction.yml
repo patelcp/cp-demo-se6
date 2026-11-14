@@ -1,0 +1,33 @@
+﻿---
+ID: "8279aeff-6d50-40c5-8dbd-a42390c3baad"
+Parent: "d42b66fe-bd1d-4ba3-97aa-828778383527"
+Template: "5043c044-12dc-47f9-a538-e519053df657"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/CallToAction
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1bea189f-79b6-4cc3-a260-ba0fda135d1f"
+      Hint: Title
+      Value: Browse the complete library
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054212Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "89b28f3b-7aaa-400e-903e-40f2826be9ba"
+    - ID: "9720c777-4569-4b1a-ab42-bb6861245563"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/forms" text="Visit AGLC forms and documents" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054212Z
+    - ID: "df7519d3-6e80-43f9-a874-676b3923b3ac"
+      Hint: Body
+      Value: <p>Use the official AGLC library for the latest complete selection.</p>

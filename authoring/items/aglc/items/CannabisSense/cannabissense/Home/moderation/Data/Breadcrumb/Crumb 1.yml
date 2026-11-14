@@ -1,0 +1,37 @@
+﻿---
+ID: "184031dd-f75c-4e2e-aac8-6fff4f141629"
+Parent: "d4ea9f90-d28a-4cac-be88-4f01cbe9cc31"
+Template: "a7ad23ca-b3f2-4429-b2e4-b8f716c9a806"
+Path: /sitecore/content/aglc/cannabissense/Home/moderation/Data/Breadcrumb/Crumb 1
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c6bad018-7652-419b-8024-ff8f3cc386b7"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054223Z
+    - ID: "2f073244-a079-407b-a5ea-50b10888b2f0"
+      Hint: Title
+      Value: Home
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7051b191-0717-48df-9858-07d8d122e7a0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054223Z
+    - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="{4254BCFA-B9C3-485A-AADB-8B5B3F8FD08D}" text="Home" />

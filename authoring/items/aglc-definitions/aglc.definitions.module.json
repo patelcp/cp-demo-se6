@@ -123,6 +123,54 @@
         "path": "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience",
         "scope": "SingleItem",
         "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCBreadcrumbVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Breadcrumb",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCPageIntroVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/PageIntro",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCResourceListVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/ResourceList",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "AGLCRichTextSectionVariant",
+        "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/RichTextSection",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseBreadcrumbVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Breadcrumb",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSensePageIntroVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/PageIntro",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseResourceListVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/ResourceList",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "CannabisSenseRichTextSectionVariant",
+        "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/RichTextSection",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateAndUpdate"
       }
     ]
   }

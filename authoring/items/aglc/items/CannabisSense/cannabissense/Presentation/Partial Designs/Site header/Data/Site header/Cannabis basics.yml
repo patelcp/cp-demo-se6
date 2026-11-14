@@ -26,15 +26,15 @@ Languages:
       Value: main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "adaf4c20-8406-41bf-a9e9-bb50371c5b1f"
+      Value: "47c42285-5d4a-4d2c-b9fc-74dc4ebd1e50"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261114T002159Z
+      Value: 20261114T054556Z
     - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://cannabissense.ca/basics" text="The basics" />
+        <link linktype="internal" id="{B0E0B571-1672-42BA-9BB8-08FF313AC04F}" text="The basics" />

@@ -6,10 +6,14 @@ Path: /sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Sha
 SharedFields:
 - ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
   Hint: Renderings
-  Value: "{19d7d54ca35d426590d903cdd7860643}|{57e2290a551947eeb87b9b421df11917}|{84c91e02b8574fb6b73ff1832b084c0e}|{27e326aa73b74da7b4e48d2f3e1d7a27}|{020e9010dad542f2b92aa403cb673bea}"
+  Value: |
+    {C4E6929B-3B4B-406D-B547-55C8AF094E7A}
+    {0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}
+    {FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}
+    {AFA7F79C-69E1-4075-8C05-9E184E9CA767}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "83d5b6e0-4a42-4a79-8385-77cf4140e5c3"
+  Value: "06d04f4f-db8c-4513-ac8d-23b334f479a7"
 Languages:
 - Language: en
   Versions:
@@ -28,11 +32,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "81ca33d6-ccfd-4412-bd73-0eebfbfaecdf"
+      Value: "c3ef3fee-6d38-4afa-a5fd-57bab231e4c6"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223242Z
+      Value: 20261114T054547Z

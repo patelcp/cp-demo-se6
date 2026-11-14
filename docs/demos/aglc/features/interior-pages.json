@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "interior-pages",
+  "project": "aglc",
+  "title": "Shared authorable interior pages",
+  "baseRevision": "62b15ba62540debf4c697d52c804d9ec0a00d473",
+  "codeScopes": [
+    "industry-verticals/aglc"
+  ],
+  "cmsScopes": [
+    "/sitecore/content/aglc/aglc",
+    "/sitecore/content/aglc/cannabissense",
+    "/sitecore/templates/Project/AGLC",
+    "/sitecore/layout/Renderings/Project/AGLC",
+    "/sitecore/layout/Placeholder Settings/Project/AGLC",
+    "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/aglc/InteriorPages",
+    "/sitecore/media library/Project/aglc/cannabissense/InteriorPages"
+  ],
+  "designReferences": [
+    "https://aglc.ca/",
+    "https://cannabissense.ca/",
+    "docs/demos/aglc/interior-pages-design.md"
+  ],
+  "acceptanceCriteria": [
+    "At least five navigable native pages on AGLC; distinct CannabisSense education pages reuse the shared component implementations.",
+    "Preserve both verified Home experiences, existing authored content IDs, BrandKit assignments and unrelated sites.",
+    "New components use native SDK editable fields and page-local datasources; no fixture routes or synthetic editing UI.",
+    "Desktop/mobile source-informed layout and entry-point navigation verified for every new route.",
+    "No affinity/profile tracking or real personal-data collection; campaign experiences remain separate from audience profiling.",
+    "Signed-in Pages insertion/edit/save/reload is reported separately and is not inferred from API/public rendering."
+  ],
+  "rollback": "Retain original field and layout values privately before narrow existing-item edits. New page/component creation is additive; restore navigation/layout bindings only if release fails, without deleting author content. No shared CM/IAR release or merge.",
+  "stages": {
+    "implementation": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.039Z",
+          "result": "pass",
+          "summary": "Nine native interior pages and four shared renderings implemented and independently reviewed.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": null
+        }
+      ]
+    },
+    "build": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.259Z",
+          "result": "pass",
+          "summary": "50 tests, lint/type-check and hosted builds pass; unrelated repository CI credential gate remains blocked.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": null
+        }
+      ]
+    },
+    "deployment": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.311Z",
+          "result": "pass",
+          "summary": "Both production aliases and editing host verified on runtime d4ec774.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "definitions": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.362Z",
+          "result": "pass",
+          "summary": "561 scoped serialized items validate; independent identity/field/scope review passes.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "publication": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.416Z",
+          "result": "pass",
+          "summary": "Exact initial and final publication batches finished without recursion or related items.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "authoring": {
+      "result": "blocked",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.517Z",
+          "result": "blocked",
+          "summary": "No connected signed-in browser; Pages insert/edit/save/reload remains unverified.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "browser": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.467Z",
+          "result": "pass",
+          "summary": "Nine interior pages at desktop/mobile pass visual, navigation and document-filter acceptance.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "handoff": {
+      "result": "not-ready",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-14T06:13:26.568Z",
+          "result": "not-ready",
+          "summary": "Public deliverable verified; native Pages acceptance and unrelated CI credentials remain outstanding.",
+          "revision": "d4ec774a560a32f602a7445d7b515506b0dd8758",
+          "sourceFingerprint": "f514b270026e876219a2e54689cfc40d8557e193d2f62e53358d2604b0418612",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/interior-pages-verification.md",
+            "sha256": "cd926cc5bbeac485872b3785ee3f5ab74e6ce3b245cd85314e75c4fd7f505f3e"
+          },
+          "externalState": null
+        }
+      ]
+    }
+  },
+  "nextAction": "Verify signed-in Pages insertion/edit/save/reload; resolve CI credentials separately before merge."
+}

@@ -1,0 +1,43 @@
+﻿---
+ID: "3c2b595a-8f44-45c6-b6c3-cf15014a2419"
+Parent: "648c72e3-93dd-4c94-8606-6a932fa2ecbc"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 3
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c9226a30-479a-4fa9-957b-bfe27464f63f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054137Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Liquor
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/liquor/liquor-licensing/liquor-licensee-payment-options" text="Liquor licensee payment options" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c8e3860a-aaeb-4f72-8e1d-8f62be9e6242"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Information
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: Liquor licensee payment options
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054137Z

@@ -51,6 +51,22 @@
           {
             "path": "/Presentation/Available Renderings/Shared experience",
             "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/Breadcrumb",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/PageIntro",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/ResourceList",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/RichTextSection",
+            "scope": "Ignored"
           }
         ]
       },
@@ -94,6 +110,22 @@
           },
           {
             "path": "/Presentation/Available Renderings/Shared experience",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/Breadcrumb",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/PageIntro",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/ResourceList",
+            "scope": "Ignored"
+          },
+          {
+            "path": "/Presentation/Headless Variants/RichTextSection",
             "scope": "Ignored"
           }
         ]

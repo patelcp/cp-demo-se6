@@ -23,7 +23,9 @@
     "/sitecore/layout/Renderings/Project/AGLC",
     "/sitecore/layout/Placeholder Settings/Project/AGLC",
     "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
-    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh"
+    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/aglc/InteriorPages",
+    "/sitecore/media library/Project/aglc/cannabissense/InteriorPages"
   ],
   "connections": {
     "primary": "authoring-graphql-and-sitecore-cli",
