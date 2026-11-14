@@ -1,8 +1,9 @@
 import { Text, RichText, Image } from '@sitecore-content-sdk/nextjs';
 import { NativeNavigationLink } from '../../lib/native-controls';
+import { normalizeNativeFields } from '../../lib/normalize-native-fields';
 import type { SiteFooterProps } from './SiteFooter.props';
 export const Default = ({ fields, params }: SiteFooterProps) => {
-  const data = fields?.data?.datasource;
+  const data = normalizeNativeFields(fields?.data?.datasource);
   if (!data) return null;
   const groups = new Map<string, NonNullable<NonNullable<typeof data.children>['results']>>();
   for (const item of data.children?.results || []) { const group = item.Group?.jsonValue?.value || ''; groups.set(group, [...(groups.get(group) || []), item]); }

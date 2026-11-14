@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Text, RichText, Image, Link } from '@sitecore-content-sdk/nextjs';
 import { NativeNavigationLink, NativeSearch } from '../../lib/native-controls';
+import { normalizeNativeFields } from '../../lib/normalize-native-fields';
 import type { HeroProps } from './Hero.props';
 function subscribeMotion(callback: () => void) {
   const query = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -10,7 +11,7 @@ function subscribeMotion(callback: () => void) {
 }
 const motionSnapshot = () => !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 export const Default = ({ fields, params, page }: HeroProps) => {
-  const data = fields?.data?.datasource;
+  const data = normalizeNativeFields(fields?.data?.datasource);
   const motionAllowed = useSyncExternalStore(subscribeMotion, motionSnapshot, () => false);
   const video = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);

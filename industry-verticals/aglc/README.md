@@ -122,15 +122,22 @@ matching component code before activating native Home renderings, publish, then
 verify Edge and the regenerated live page. No public revalidation webhook added.
 See https://nextjs.org/docs/app/guides/incremental-static-regeneration.
 
-Local slice verification: lint and 29 Node tests passed; tests execute real React
+Local slice verification: lint and 34 Node tests passed; tests execute real React
 SSR with native field helpers, plus source-contract checks. Genuine Edge-context
 production build passed before ISR addition; standalone typecheck also passed
 after ISR addition. Repeat production build when authenticated access is cleared. Browser mobile-menu interaction, native insertion/edit-save-reload,
 image/link picker behavior and live visual QA remain release gates. No fixture
 route, content seed, tenant write or deployment is included in this frontend work.
 
-Visual-correction checkpoint: local lint, standalone typecheck and 29 tests pass.
+Visual-correction checkpoint: local lint, standalone typecheck and 34 tests pass.
 Reference pixels were inspected, but corrected deployed pixels have NOT yet been
 verified. Native publication, production build, desktop/mobile comparison, search,
 menu/Escape, video pause/reduced-motion and native edit/save/reload remain required
 release checks. Prior baseline build evidence does not certify this correction.
+
+Hero and Footer also accept native bulk GraphQL `Fields: fields { name jsonValue }`
+(including child `Fields`). An explicit allowlisted adapter preserves each native
+`jsonValue` object and editing metadata, ignores standard/unknown/dangerous keys,
+and retains legacy PascalCase aliases. This avoids the verified integrated-query
+depth/complexity limits without introducing fixtures or fallback content. The
+compatible frontend must be deployed before switching native query projection.

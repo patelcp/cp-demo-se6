@@ -1,19 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import ts from 'typescript';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 const require = createRequire(import.meta.url);
 function loadSource(path) {
-  const output = ts.transpileModule(readFileSync(path, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
+  const output = ts.transpileModule(readFileSync(path, 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2017, module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
   const module = { exports: {} };
   const localRequire = createRequire(path);
   const resolve = name => {
     if (!name.startsWith('.')) return localRequire(name);
-    const candidate = new URL(name + '.tsx', path);
-    return loadSource(candidate);
+    const tsx = new URL(name + '.tsx', path);
+    return loadSource(existsSync(tsx) ? tsx : new URL(name + '.ts', path));
   };
   new Function('require', 'module', 'exports', output)(resolve, module, module.exports);
   return module.exports;
@@ -102,4 +102,31 @@ test('ordinary navigation icons retain visible native labels; brand logos may hi
 test('footer brand SVGs have explicit dimensions instead of collapsing in flex links', () => {
  const css=readFileSync(new URL('../src/app/globals.css',import.meta.url),'utf8');
  assert.match(css,/\.footer-group\[data-group="brand"\] img \{[^}]*width: 120px; height: 35px;/);
+});
+const normalize = loadSource(new URL('../src/lib/normalize-native-fields.ts',import.meta.url)).normalizeNativeFields;
+test('bulk native fields normalize aliases and children without losing field metadata', () => {
+ const title={value:'Authored title',metadata:{id:'field',editing:true}};
+ const link={value:{href:'/authored'},metadata:{id:'link'}};
+ const source={Fields:[{name:'Title',jsonValue:title}],children:{results:[{id:'child',Fields:[{name:'Link',jsonValue:link}]}]}};
+ const result=normalize(source);
+ assert.strictEqual(result.Title.jsonValue,title);assert.strictEqual(result.children.results[0].Link.jsonValue,link);
+ assert.equal(result.children.results[0].id,'child');assert.equal(source.Title,undefined);
+});
+test('existing alias fields win over bulk projection and missing datasource stays missing', () => {
+ const field={jsonValue:{value:'Original'}};
+ assert.strictEqual(normalize({Title:field,Fields:[{name:'Title',jsonValue:{value:'Other'}}]}).Title,field);
+ assert.equal(normalize(null),null);assert.equal(normalize(undefined),undefined);
+});
+test('bulk normalization rejects dangerous, inherited and unknown field keys', () => {
+ const data=JSON.parse('{"__proto__":{"polluted":true},"Fields":[{"name":"__proto__","jsonValue":{"polluted":true}},{"name":"constructor","jsonValue":{}},{"name":"Unexpected","jsonValue":{}},{"name":"Title","jsonValue":{"value":"Safe"}}]}');
+ const output=normalize(data);
+ assert.deepEqual(Object.keys(output),['Title']);assert.equal({}.polluted,undefined);
+ assert.deepEqual(normalize(Object.create({Title:{jsonValue:{value:'Inherited'}}})),{});
+});
+test('Hero and Footer render bulk native projection and preserve legacy contracts', () => {
+ const toBulk=values=>Object.entries(values).map(([name,value])=>({name,jsonValue:value}));
+ const hero=renderToStaticMarkup(React.createElement(component('hero','Hero'),{...base,fields:{data:{datasource:{Fields:toBulk({Title:{value:'Bulk hero'},Summary:{value:'<p>Native summary</p>'}}),children:{results:[{id:'quick',Fields:toBulk({Title:{value:'Quick link'},Link:{value:{href:'/quick'}}})}]}}}}}));
+ assert.match(hero,/>Bulk hero<\/h1>/);assert.match(hero,/Native summary/);assert.match(hero,/>Quick link<\/a>/);
+ const footer=renderToStaticMarkup(React.createElement(component('site-footer','SiteFooter'),{...base,fields:{data:{datasource:{Fields:toBulk({BrandName:{value:'Bulk brand'}}),children:{results:[{id:'footer',Fields:toBulk({Group:{value:'People'},Title:{value:'Contact'},Link:{value:{href:'/contact'}}})}]}}}}}));
+ assert.match(footer,/Bulk brand/);assert.match(footer,/>People<\/h2>/);assert.match(footer,/>Contact<\/a>/);
 });
