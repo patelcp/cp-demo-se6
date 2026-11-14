@@ -24,17 +24,21 @@ Languages:
       Value: 20261113T223204Z
     - ID: "764b8b59-7e70-406e-9b40-6a9721780fe9"
       Hint: Title
-      Value: Cannabis information
+      Value: Cannabis
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "326def4d-f062-4d23-ac1d-4efaab1ba8c2"
+      Value: "6bfa3c1c-9281-4d31-88e8-0cb1fbd62032"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223204Z
+      Value: 20261114T002154Z
+    - ID: "f279a129-991e-4f6f-9601-8765463bf6b6"
+      Hint: Image
+      Value: |
+        <image mediaid="{A9248238-D908-4FE4-B9BF-D78968FF134B}" />
     - ID: "fc607c48-98bf-4d20-8d34-71c64cd5c21e"
       Hint: Summary
-      Value: <p>Explore Alberta’s cannabis regulation and information resources.</p>
+      Value: "<p>Explore cannabis regulation, retail guidance and responsible-use information.</p>"

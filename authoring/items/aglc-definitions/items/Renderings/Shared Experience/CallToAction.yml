@@ -13,7 +13,7 @@ SharedFields:
 - ID: "17bb046a-a32a-41b3-8315-81217947611b"
   Hint: ComponentQuery
   Value: |
-    query CallToAction($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Title: field(name: "Title") { jsonValue } Body: field(name: "Body") { jsonValue } Link: field(name: "Link") { jsonValue } } }
+    query CallToAction($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Title: field(name: "Title") { jsonValue } Body: field(name: "Body") { jsonValue } Link: field(name: "Link") { jsonValue } Image: field(name: "Image") { jsonValue } } }
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/AGLC/Components/CallToAction
@@ -25,7 +25,7 @@ SharedFields:
   Value: "query:./Data"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "09720990-ec90-4f9d-b2b2-7c97a344cc80"
+  Value: "b432edb4-bf99-4e73-b711-fa975a6727ec"
 Languages:
 - Language: en
   Fields:
@@ -51,11 +51,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "14efa189-5a81-4a12-9eac-00417e38b024"
+      Value: "2f32cee1-d47c-4290-b688-676e77e4399d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T222848Z
+      Value: 20261114T002126Z

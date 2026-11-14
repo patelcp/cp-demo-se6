@@ -1,39 +1,59 @@
 {
   "schemaVersion": 1,
   "project": "aglc",
-  "phase": "shared-slice-live-pages-ui-verification-pending",
-  "nextAction": "Verify Page Builder render/edit/save/reload on both sites with a signed-in browser, review draft PR26, then agree merge workflow before expanding remaining demo pages.",
+  "phase": "reference-correction-public-verified",
+  "nextAction": "Complete signed-in Page Builder render/edit/save/reload acceptance on both sites, then review draft PR26 before expanding the multi-page demo.",
   "checkpoints": [
     {
       "stage": "frontend",
       "result": "pass",
-      "evidence": "Five shared native renderings; lint/typecheck and24app tests pass."
+      "evidence": "Compact native-field adapter preserves editing metadata and legacy aliases. Lint, TypeScript and all34 app tests pass; independent review passed."
     },
     {
-      "stage": "transport-activation",
+      "stage": "transport",
       "result": "pass",
-      "evidence": "Independent reviews plus9 offline tests pass."
+      "evidence": "12 offline safety tests and fixed-endpoint reviews pass. Preview uses only the existing API key at the exact CM endpoint; management JWT is not sent there."
+    },
+    {
+      "stage": "query-diagnosis",
+      "result": "pass",
+      "evidence": "Preview reproduced Hero depth 18 exceeding 15 and Footer complexity failure. fields(ownFields:true) bulk queries return all 11 Hero / 4 Footer fields and 6/0 plus 19/12 children, with no standard/audit fields. Matching adapter 39aeb4c deployed before query switch."
     },
     {
       "stage": "deployment",
       "result": "pass",
-      "evidence": "Both Vercel production deployments READY at1e5a092; managed aglc editing-host deployment3KrfWmmlE2Y1bJAXWOCsIO all stages complete. CM/dev unchanged."
+      "evidence": "Both Vercel production deployments READY at f4c9819; editing-host4NJNgNsy8bwiCirMPU8qHb completed all stages at01:23:20UTC. No shared CM/IAR deployment or merge."
     },
     {
-      "stage": "native",
+      "stage": "native-publication",
       "result": "pass",
-      "evidence": "Six layouts and2page designs activated; exact scoped Edge publishing FINISHED.314 serialized items:81Definitions,233CreateOnly Seed; validation passes."
+      "evidence": "Two filtered bulk queries and five approved brand items applied and read back. Final exact 8 dependency roots SMART then 2 Homes FULL finished successfully, English/Edge, no recursive or related publishing. Serialization 368 = 93 Definitions + 275 CreateOnly Seed validates."
     },
     {
       "stage": "public-browser",
       "result": "pass",
-      "evidence": "Both pages render all5components with distinct themes and3cards. Desktop/mobile visually checked; Menu/Escape/focus/no-overflow pass. Brand links resolve to root, HTTP200,noindex,zero console errors."
+      "evidence": "Final f4c9819 desktop/mobile screenshots inspected: source-matched tint and white brand marks, visible native heroes, footer counts19/12, loaded media, no overflow and zero console errors/warnings. Video pause/resume, reduced-motion(no video requests), Menu/Escape/focus passed on previous runtime39aeb4c; final CSS is noninteractive."
     },
     {
       "stage": "pages-authoring",
       "result": "blocked",
-      "evidence": "Signed-in Page Builder render/edit/save/reload unrun. Public browser proof does not prove editor operation."
+      "evidence": "Signed-in Page Builder render/edit/save/reload remains unverified."
     }
   ],
-  "note": "Both public heads and separate editing host deployed from app commit1e5a092. Scoped native activation/publication and browser QA passed. No shared CM deployment or PR merge. Refreshed session used for intended endpoints only."
+  "note": "User approved five additional brand links and instructed continuing publication where needed. Keep work scoped to these demos and PR26 unmerged; existing content and BrandKit assignments are preserved.",
+  "verifiedRuntime": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+  "serialization": {
+    "definitions": 93,
+    "seedCreateOnly": 275,
+    "total": 368,
+    "validation": "pass"
+  },
+  "deployments": {
+    "aglc": "dpl_5H6S6WXSNasXGeZmq8nrYPgJRwGu",
+    "cannabissense": "dpl_8fUizmcMgTjtepcpsUSQ2XVMVRgF",
+    "editingHost": "4NJNgNsy8bwiCirMPU8qHb",
+    "editingHostStartedUtc": "2026-11-14T01:19:49Z",
+    "state": "complete",
+    "editingHostCompletedUtc": "2026-11-14T01:23:20.520405Z"
+  }
 }

@@ -122,20 +122,20 @@ matching component code before activating native Home renderings, publish, then
 verify Edge and the regenerated live page. No public revalidation webhook added.
 See https://nextjs.org/docs/app/guides/incremental-static-regeneration.
 
-Local slice verification: lint and 34 Node tests passed; tests execute real React
-SSR with native field helpers, plus source-contract checks. Genuine Edge-context
-production build passed before ISR addition; standalone typecheck also passed
-after ISR addition. Repeat production build when authenticated access is cleared. Browser mobile-menu interaction, native insertion/edit-save-reload,
-image/link picker behavior and live visual QA remain release gates. No fixture
-route, content seed, tenant write or deployment is included in this frontend work.
+Verification checkpoint (2026-11-14): lint, standalone type-check and all 34
+Node tests pass; 12 offline safety tests pass. Native reference content is
+published, with Hero/Footer resolution verified on both live demos. Runtime
+`39aeb4c` passed genuine hosted builds, desktop/mobile visual inspection, mobile
+Menu/Escape/focus, video pause/resume, reduced-motion (no video request), media
+loading and overflow checks. Final measured tint/contrast CSS in `f4c9819` passed hosted builds and
+final desktop/mobile visual inspection with no overflow or console errors. See
+`docs/demos/aglc/evidence/reference-correction.md` for current evidence.
 
-Visual-correction checkpoint: local lint, standalone typecheck and 34 tests pass.
-Reference pixels were inspected, but corrected deployed pixels have NOT yet been
-verified. Native publication, production build, desktop/mobile comparison, search,
-menu/Escape, video pause/reduced-motion and native edit/save/reload remain required
-release checks. Prior baseline build evidence does not certify this correction.
+Signed-in Page Builder insertion/edit/save/reload and image/link picker behavior
+remain unverified. Public rendering and API verification are not a substitute.
+This is the first shared Home slice, not the complete multi-page customer site.
 
-Hero and Footer also accept native bulk GraphQL `Fields: fields { name jsonValue }`
+Hero and Footer also accept native bulk GraphQL `Fields: fields(ownFields: true) { name jsonValue }`
 (including child `Fields`). An explicit allowlisted adapter preserves each native
 `jsonValue` object and editing metadata, ignores standard/unknown/dangerous keys,
 and retains legacy PascalCase aliases. This avoids the verified integrated-query

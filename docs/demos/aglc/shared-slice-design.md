@@ -10,11 +10,11 @@ One representative Home on each existing site. Reuse the same five implementatio
 ## Components and ownership
 | Rendering | Content owner | Native fields |
 |---|---|---|
-| SiteHeader | Each site's shared header partial datasource | BrandName, Logo, HomeLink; child navigation Title/Link |
-| Hero | Current Home/Data | Eyebrow, Title, Summary, Image, PrimaryLink, SecondaryLink |
+| SiteHeader | Each site's shared header partial datasource | BrandName, Logo, HomeLink; child navigation Title/Link/Group/Logo |
+| Hero | Current Home/Data | Eyebrow, Title, Summary, Image, PrimaryLink, SecondaryLink, BackgroundImage/BackgroundVideo, search action/label/query name; child quick links |
 | CardGrid | Current Home/Data | Heading, Intro; child Card Title/Summary/Image/Link |
-| CallToAction | Current Home/Data | Title, Body, Link |
-| SiteFooter | Each site's shared footer partial datasource | BrandName, Description, Copyright; child navigation Title/Link |
+| CallToAction | Current Home/Data | Title, Body, Link, Image |
+| SiteFooter | Each site's shared footer partial datasource | BrandName, Logo, Description, Copyright; child navigation Title/Link/Group/Logo |
 
 All query fields preserve SDK jsonValue metadata. Child collections use children.results. Plain copy uses Text; rich copy uses RichText; images and links use native Image/Link helpers. No raw fixture layout payloads and no synthetic editing UI.
 
@@ -35,3 +35,6 @@ No affinity tracking, automatic analytics, campaign personalization, A/B experim
 
 ## Acceptance status
 Planning and contracts recorded. Implementation, tenant provisioning, deployment/publication and native editing acceptance are tracked separately in features/shared-slice.json. Browser inventory was empty at kickoff; Page Builder save/reload is unrun, not passed.
+
+## Reference correction
+See evidence/reference-correction.md for measured layouts, asset/font provenance, current deployment evidence and the pending publication approval. Existing external search destinations are wired through native fields, not a Sitecore Search implementation.

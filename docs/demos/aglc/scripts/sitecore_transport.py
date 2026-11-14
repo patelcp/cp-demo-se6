@@ -54,3 +54,51 @@ def make_graphql(auth):
             # request objects. Caller receives no untrusted response body.
             raise TransportError("Authoring request failed; inspect sanitized diagnostics") from None
     return graphql
+
+
+def make_media_uploader(auth):
+    """Create a confined multipart uploader for uploadMedia's signed CM URL.
+
+    Asset downloading is deliberately not supported here. Pass already reviewed
+    local bytes; neither the bearer nor the signed URL may reach asset hosts.
+    """
+    from urllib.parse import urlsplit, parse_qsl
+    import uuid
+    if auth.get('endpoints', {}).get('cm', {}).get('host') not in (
+        EXPECTED_CM_ORIGIN, EXPECTED_CM_ORIGIN + '/'
+    ):
+        raise TransportError('Unexpected CM origin')
+    token = auth['endpoints']['xmCloud']['accessToken']
+    if not isinstance(token, str) or not token or any(c in token for c in '\r\n'):
+        raise TransportError('Invalid access-token format')
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), RejectRedirects())
+    expected = urlsplit(EXPECTED_CM_ORIGIN)
+    def upload(signed_url, *, filename, content, content_type):
+        try:
+            parsed = urlsplit(signed_url)
+            query = parse_qsl(parsed.query, keep_blank_values=True, strict_parsing=True)
+            if (parsed.scheme != expected.scheme or parsed.netloc != expected.netloc
+                or parsed.path != '/sitecore/api/v1/authoring/media/upload'
+                or parsed.fragment or len(query) != 1 or query[0][0] != 'token'
+                or not query[0][1] or any(c.isspace() for c in signed_url)):
+                raise TransportError('Unexpected media upload destination')
+            if (not filename or any(c in filename for c in '\r\n"/\\')
+                or not filename.isascii() or not isinstance(content, bytes)
+                or not 0 < len(content) <= 32 * 1024 * 1024
+                or content_type not in ('image/png', 'image/jpeg', 'image/webp', 'image/svg+xml')):
+                raise TransportError('Invalid upload file')
+            boundary = 'sitecore-' + uuid.uuid4().hex
+            # Official authoring example uses an unnamed multipart file field.
+            body = (f'--{boundary}\r\nContent-Disposition: form-data; name=""; filename="{filename}"\r\n'
+                    f'Content-Type: {content_type}\r\n\r\n').encode() + content + f'\r\n--{boundary}--\r\n'.encode()
+            request = urllib.request.Request(signed_url, data=body, method='POST', headers={
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'multipart/form-data; boundary=' + boundary,
+            })
+            with opener.open(request, timeout=60) as response:
+                if response.geturl() != signed_url:
+                    raise TransportError('Unexpected upload response URL')
+                return json.load(response)
+        except Exception:
+            raise TransportError('Media upload failed; inspect sanitized diagnostics') from None
+    return upload

@@ -1,8 +1,8 @@
 ﻿---
 ID: "2d447ac0-e930-4344-ab25-f620c55b98f5"
-Parent: "4d9edd8f-2b18-41dd-9802-ce4386567db5"
+Parent: "2aaef76d-b655-4f0d-af28-b79843d6f7d3"
 Template: "a99aa87e-ab91-4589-a7a3-3eb3ca24fdb3"
-Path: /sitecore/content/aglc/cannabissense/Home/Data/CardGrid/Find useful resources
+Path: /sitecore/content/aglc/cannabissense/Home/Data/Archived cards/Find useful resources
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

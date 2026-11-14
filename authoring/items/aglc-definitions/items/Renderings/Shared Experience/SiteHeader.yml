@@ -13,7 +13,7 @@ SharedFields:
 - ID: "17bb046a-a32a-41b3-8315-81217947611b"
   Hint: ComponentQuery
   Value: |
-    query SiteHeader($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { BrandName: field(name: "BrandName") { jsonValue } Logo: field(name: "Logo") { jsonValue } HomeLink: field(name: "HomeLink") { jsonValue } children { results { id Title: field(name: "Title") { jsonValue } Link: field(name: "Link") { jsonValue } } } } }
+    query SiteHeader($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { BrandName: field(name: "BrandName") { jsonValue } Logo: field(name: "Logo") { jsonValue } HomeLink: field(name: "HomeLink") { jsonValue } SearchAction: field(name: "SearchAction") { jsonValue } SearchLabel: field(name: "SearchLabel") { jsonValue } SearchQueryName: field(name: "SearchQueryName") { jsonValue } children { results { id Title: field(name: "Title") { jsonValue } Link: field(name: "Link") { jsonValue } Group: field(name: "Group") { jsonValue } Logo: field(name: "Logo") { jsonValue } } } } }
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/AGLC/Components/SiteHeader
@@ -25,7 +25,7 @@ SharedFields:
   Value: "query:./Data"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "f55ceb63-ccc7-450e-a9c5-29d93947cadf"
+  Value: "c3e474eb-d9ca-4cd1-977b-5289ab4702ac"
 Languages:
 - Language: en
   Fields:
@@ -51,11 +51,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7b981566-affa-4023-905f-805e450f5426"
+      Value: "68ffbd1a-aed6-4f6a-985a-2f0d3b7942ae"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T222845Z
+      Value: 20261114T002124Z

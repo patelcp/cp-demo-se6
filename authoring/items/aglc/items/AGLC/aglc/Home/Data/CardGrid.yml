@@ -13,17 +13,17 @@ Languages:
       Value: 20261113T223130Z
     - ID: "89fb46e3-190b-45fc-b093-4ba30a7c321e"
       Hint: Intro
-      Value: <p>Choose a starting point to find official information and guidance.</p>
+      Value:
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bb4abd6a-ad10-4667-8cf4-dbdca0689747"
+      Value: "089efb1a-542e-4052-a561-f4538c4a31bc"
     - ID: "8d556eea-198b-436e-82a0-8fc3781d658c"
       Hint: Heading
-      Value: Start with what matters to you
+      Value:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223130Z
+      Value: 20261114T002158Z

@@ -12,8 +12,7 @@ SharedFields:
   Value: Office/32x32/document_text.png
 - ID: "17bb046a-a32a-41b3-8315-81217947611b"
   Hint: ComponentQuery
-  Value: |
-    query Hero($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { Eyebrow: field(name: "Eyebrow") { jsonValue } Title: field(name: "Title") { jsonValue } Summary: field(name: "Summary") { jsonValue } Image: field(name: "Image") { jsonValue } PrimaryLink: field(name: "PrimaryLink") { jsonValue } SecondaryLink: field(name: "SecondaryLink") { jsonValue } } }
+  Value: "query Hero($datasource:String!,$language:String!){datasource:item(path:$datasource,language:$language){Fields:fields(ownFields:true){name jsonValue} children(first:6){results{id Fields:fields(ownFields:true){name jsonValue}}}}}"
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/AGLC/Components/Hero
@@ -25,7 +24,7 @@ SharedFields:
   Value: "query:./Data"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "08df173c-509b-44cd-94b4-2f8b33371b0b"
+  Value: "06f48d34-6fc8-40dc-9fb0-b91048ea6edc"
 Languages:
 - Language: en
   Fields:
@@ -51,11 +50,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0d0d5f1c-029f-4be0-b840-1611a26a7793"
+      Value: "14232f48-4ed3-4d52-b226-254bf49f6b5d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T222846Z
+      Value: 20261114T011133Z

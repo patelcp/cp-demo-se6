@@ -18,23 +18,27 @@ Languages:
     - ID: "04e0cb6a-3c66-4224-a653-415196124c69"
       Hint: Link
       Value: |
-        <link linktype="external" url="https://aglc.ca/forms" text="Learn more" />
+        <link linktype="external" url="https://aglc.ca/liquor" text="Learn more" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20261113T223203Z
     - ID: "764b8b59-7e70-406e-9b40-6a9721780fe9"
       Hint: Title
-      Value: Forms and documents
+      Value: Liquor
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8c0be37b-af7c-4446-a692-e6f0cebe7d43"
+      Value: "168c6b46-5845-42bb-98ba-841dba242e35"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223203Z
+      Value: 20261114T002154Z
+    - ID: "f279a129-991e-4f6f-9601-8765463bf6b6"
+      Hint: Image
+      Value: |
+        <image mediaid="{28C5BB9C-21B3-4EE2-8FFB-373FD864D505}" />
     - ID: "fc607c48-98bf-4d20-8d34-71c64cd5c21e"
       Hint: Summary
-      Value: <p>Browse official forms, policies and supporting documents.</p>
+      Value: <p>Find liquor licensing, industry information and responsible service resources.</p>

@@ -8,33 +8,49 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "00ed06b2-7d96-4632-9bf7-60469a549b9b"
+      Hint: SearchQueryName
+      Value: opq
     - ID: "07a8384a-bcfc-459a-b051-8b95a695b2b2"
       Hint: Eyebrow
-      Value: Alberta Gaming, Liquor and Cannabis
+      Value:
+    - ID: "0839782b-84bc-4fed-85ab-66b9a5a1ec8b"
+      Hint: SearchLabel
+      Value: "What can we help you find?"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20261113T223129Z
     - ID: "4e370a53-8859-42f7-9c06-30f2e384b902"
       Hint: PrimaryLink
-      Value: |
-        <link linktype="external" url="https://aglc.ca/licensing" text="Explore licensing" />
+      Value:
     - ID: "7867a1b4-bac5-4882-814d-c1e5d8f7fcac"
       Hint: Summary
-      Value: <p>Explore licensing information, forms and resources for Alberta’s gaming, liquor and cannabis sectors.</p>
+      Value: <p>AGLC regulates gaming, liquor and cannabis in Alberta, supporting public safety and consumer choice.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0670077c-5354-442a-972c-d842525a45d3"
+      Value: "fb1b5b43-ef71-4a92-b028-54286a59c278"
     - ID: "a1f8640d-de9e-4830-8871-e52a349b27e3"
       Hint: SecondaryLink
-      Value: |
-        <link linktype="external" url="https://aglc.ca/forms" text="Find forms and documents" />
+      Value:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "bdd08585-071f-4fb0-b0d9-d4ac034632c8"
       Hint: Title
-      Value: Find the information you need.
+      Value: Alberta Gaming, Liquor & Cannabis
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223129Z
+      Value: 20261114T002153Z
+    - ID: "da49e7fc-f92d-4d22-9a22-9af659423360"
+      Hint: SearchAction
+      Value: |
+        <link linktype="external" url="https://aglc.ca/search-results" text="Search AGLC" />
+    - ID: "e8e3f79f-4a47-4ff2-8661-f44ea013291f"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="{FBC75DB3-EE11-4A12-BC19-7C89622C89F6}" />
+    - ID: "f3b6a70e-4719-4d78-b1cf-fefa85a4f4d6"
+      Hint: BackgroundVideo
+      Value: |
+        <link linktype="external" url="https://aglc.ca/sites/aglc.ca/files/2026-02/aglc%20homepage%20125.mp4" text="Alberta mountain landscape" />

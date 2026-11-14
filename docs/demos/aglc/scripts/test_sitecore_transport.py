@@ -79,9 +79,41 @@ class ConfinementTests(unittest.TestCase):
                 self.assertNotIn(FAKE_TOKEN,str(e.exception))
 
     def test_imports_are_side_effect_free(self):
-        for name in ['prepare-native-slice.py','prepare-slice-content.py']:
+        for name in ['prepare-native-slice.py','prepare-slice-content.py','upload-reference-media.py','extend-reference-fields.py']:
             with patch.object(Path,'read_text',side_effect=AssertionError('No reads')),patch('urllib.request.build_opener',side_effect=AssertionError('No transport')):
                 spec=importlib.util.spec_from_file_location(name,Path(__file__).parent/name)
                 spec.loader.exec_module(importlib.util.module_from_spec(spec))
+
+
+class MediaUploadTests(unittest.TestCase):
+    def test_exact_signed_destination_only(self):
+        from sitecore_transport import make_media_uploader
+        path='/sitecore/api/v1/authoring/media/upload'
+        with patch('urllib.request.build_opener') as build:
+            upload=make_media_uploader(auth())
+            for url in ['https://aglc.ca'+path+'?token=FAKE', EXPECTED_CM_ORIGIN+':443'+path+'?token=FAKE',
+                        EXPECTED_CM_ORIGIN+path+'?token=FAKE&other=1', EXPECTED_CM_ORIGIN+path+'?token=',
+                        EXPECTED_CM_ORIGIN+path+'?token=FAKE#fragment', EXPECTED_CM_ORIGIN+path+'/?token=FAKE',
+                        EXPECTED_CM_ORIGIN+path+'?token=FAKE&token=SECOND']:
+                with self.subTest(url=url), self.assertRaises(TransportError):
+                    upload(url,filename='test.png',content=b'fake-local-bytes',content_type='image/png')
+            build.return_value.open.assert_not_called()
+    def test_multipart_stays_on_cm_and_sanitizes_failures(self):
+        from sitecore_transport import make_media_uploader
+        url=EXPECTED_CM_ORIGIN+'/sitecore/api/v1/authoring/media/upload?token=FAKE-SIGNED-TOKEN'
+        with patch('urllib.request.build_opener') as build:
+            upload=make_media_uploader(auth());build.return_value.open.return_value=response({'itemId':'fake'},url=url)
+            self.assertEqual(upload(url,filename='logo.png',content=b'local-bytes',content_type='image/png'),{'itemId':'fake'})
+            req=build.return_value.open.call_args.args[0]
+            self.assertEqual(req.full_url,url);self.assertEqual(req.get_method(),'POST')
+            self.assertIn(b'filename="logo.png"',req.data);self.assertIn(b'local-bytes',req.data)
+            build.return_value.open.side_effect=RuntimeError(url+' '+FAKE_TOKEN)
+            with self.assertRaises(TransportError) as e:upload(url,filename='logo.png',content=b'local-bytes',content_type='image/png')
+            self.assertNotIn('FAKE',str(e.exception));self.assertTrue(e.exception.__suppress_context__)
+    def test_origin_guard_before_token_access(self):
+        from sitecore_transport import make_media_uploader
+        with patch('urllib.request.build_opener') as build:
+            with self.assertRaises(TransportError):make_media_uploader({'endpoints':{'cm':{'host':'https://aglc.ca'}}})
+            build.assert_not_called()
 
 if __name__=='__main__': unittest.main()

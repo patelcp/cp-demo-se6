@@ -12,8 +12,7 @@ SharedFields:
   Value: Office/32x32/document_text.png
 - ID: "17bb046a-a32a-41b3-8315-81217947611b"
   Hint: ComponentQuery
-  Value: |
-    query SiteFooter($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { BrandName: field(name: "BrandName") { jsonValue } Description: field(name: "Description") { jsonValue } Copyright: field(name: "Copyright") { jsonValue } children { results { id Title: field(name: "Title") { jsonValue } Link: field(name: "Link") { jsonValue } } } } }
+  Value: "query SiteFooter($datasource:String!,$language:String!){datasource:item(path:$datasource,language:$language){Fields:fields(ownFields:true){name jsonValue} children(first:30){results{id Fields:fields(ownFields:true){name jsonValue}}}}}"
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/AGLC/Components/SiteFooter
@@ -25,7 +24,7 @@ SharedFields:
   Value: "query:./Data"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7a1c2fd3-2404-4ae6-972d-52713fd03862"
+  Value: "c182f7a8-c381-41e2-afe9-32f418dbd8ad"
 Languages:
 - Language: en
   Fields:
@@ -51,11 +50,11 @@ Languages:
         sitecore\chirag.patel@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "81f1b1ad-8d56-41a8-8e68-974b11278b49"
+      Value: "70146c0e-95e8-4ba5-a9ae-b0fd0ddd8487"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T222846Z
+      Value: 20261114T011133Z

@@ -12,7 +12,9 @@
     "/sitecore/content/aglc/cannabissense",
     "/sitecore/templates/Project/AGLC",
     "/sitecore/layout/Renderings/Project/AGLC",
-    "/sitecore/layout/Placeholder Settings/Project/AGLC"
+    "/sitecore/layout/Placeholder Settings/Project/AGLC",
+    "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh"
   ],
   "designReferences": [
     "https://aglc.ca/",
@@ -66,6 +68,18 @@
           "artifact": {
             "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
             "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": null
+        },
+        {
+          "recordedAt": "2026-11-14T01:24:57.844Z",
+          "result": "pass",
+          "summary": "Final f4c9819 built successfully on both Vercel projects and shared editing host; 34 app tests, lint, type-check and12 offline safety tests pass.",
+          "revision": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+          "sourceFingerprint": "c631db469dadfb5f14402f2dc67f390f5d5de138b72bb71690746f127fcd0339",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/reference-correction.md",
+            "sha256": "7031ba4e317e0cc75123d7e9508c61d792f1734d4e4daa69f52e3026fd5db097"
           },
           "externalState": null
         }
@@ -148,6 +162,18 @@
           "artifact": {
             "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
             "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        },
+        {
+          "recordedAt": "2026-11-14T01:25:19.944Z",
+          "result": "pass",
+          "summary": "Both final public demos inspected desktop/mobile; reference tint and logos, native Hero/Footer, media and counts pass with no overflow/console errors. Motion/menu tests passed prior noninteractive CSS; Pages remains unverified.",
+          "revision": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+          "sourceFingerprint": "c631db469dadfb5f14402f2dc67f390f5d5de138b72bb71690746f127fcd0339",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/reference-correction.md",
+            "sha256": "7031ba4e317e0cc75123d7e9508c61d792f1734d4e4daa69f52e3026fd5db097"
           },
           "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
         }

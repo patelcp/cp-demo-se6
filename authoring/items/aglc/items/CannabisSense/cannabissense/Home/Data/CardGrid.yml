@@ -13,17 +13,17 @@ Languages:
       Value: 20261113T223222Z
     - ID: "89fb46e3-190b-45fc-b093-4ba30a7c321e"
       Hint: Intro
-      Value: <p>Start with clear information from CannabisSense.</p>
+      Value:
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ea20fd71-e702-46b4-be7d-7f9440e4dd04"
+      Value: "381a11b1-3b35-4f43-bad3-f86c32c9de72"
     - ID: "8d556eea-198b-436e-82a0-8fc3781d658c"
       Hint: Heading
-      Value: Build your cannabis knowledge
+      Value:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223222Z
+      Value: 20261114T002207Z

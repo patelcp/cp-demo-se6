@@ -13,20 +13,24 @@ Languages:
       Value: 20261113T223236Z
     - ID: "6a96e26b-2a7c-4e1c-b1d5-05d1c1f6dedd"
       Hint: Description
-      Value: <p>Information to support informed choices. CannabisSense is an AGLC initiative.</p>
+      Value:
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a00b4f51-cc76-4baf-9ef2-3bc06241d05a"
+      Value: "594e7fa8-ab36-42d7-a556-e06b79359009"
     - ID: "910b7889-c42e-4286-95d5-4a9ac357e5e7"
       Hint: Copyright
       Value: © AGLC
+    - ID: "a9f8c352-792c-48b2-9f42-7f80cd1511b6"
+      Hint: Logo
+      Value: |
+        <image mediaid="{D35ABAC8-7552-4303-B1A9-D67AEEE54B31}" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T223236Z
+      Value: 20261114T002206Z
     - ID: "fb006d86-b55a-4621-84a1-3ad0cbc5c115"
       Hint: BrandName
       Value: CannabisSense
