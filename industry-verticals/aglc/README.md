@@ -141,3 +141,13 @@ Hero and Footer also accept native bulk GraphQL `Fields: fields(ownFields: true)
 and retains legacy PascalCase aliases. This avoids the verified integrated-query
 depth/complexity limits without introducing fixtures or fallback content. The
 compatible frontend must be deployed before switching native query projection.
+
+### Interior-page extension (local implementation, not deployment evidence)
+
+Public references inspected at desktop1440 and mobile390: AGLC `/gaming`, `/liquor`, `/cannabis`, `/forms`; CannabisSense `/basics`, `/moderation`, `/health-effects`, `/use-legally`, `/resources`. Sector pages use image banners; the four CannabisSense topic hubs use solid green titles and cream link rows, not accordions. Resources uses icon tiles. Mobile source layout defects are not deliberately reproduced.
+
+Four shared native renderings add no fixture routes: `Breadcrumb` (Navigation Link children), `PageIntro` (Title, Summary, Image), `RichTextSection` (Heading, Body, Image), `ResourceList` (Heading, Intro; ResourceItem children Title, Summary, Link, Category, DocumentType). All accept Preview-safe `Fields: fields(ownFields:true) { name jsonValue }` projections and preserve native field metadata. `PageIntro.ImageBanner`, `ResourceList.Documents`, `CardGrid.ResourceTiles`, and `CardGrid.SectorTiles` are finite named exports selected by native `FieldNames` variants. Home `Default` renderings remain unchanged.
+
+Documents filters only its authored selection locally, without tracking, API requests, or claims of Sitecore Search/full official catalogue coverage. Editing shows every item and retains native controls. Source URLs stay authoritative; no generated PDFs or application submissions are implied.
+
+Local validation: lint, type-check, generated component maps and48tests passed. Production build, native insertion/edit/save, publication and desktop/mobile live verification for these interior pages remain pending. The licensed Utopia display font remains substituted with Georgia/Cambria; official Poppins/Open Sans assets and existing licenses are unchanged.

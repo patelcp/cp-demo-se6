@@ -7,7 +7,7 @@ const allowedFields = new Set([
   'BrandName', 'Logo', 'HomeLink', 'Description', 'Copyright',
   'Eyebrow', 'Title', 'Summary', 'Image', 'PrimaryLink', 'SecondaryLink',
   'BackgroundImage', 'BackgroundVideo', 'SearchAction', 'SearchLabel',
-  'SearchQueryName', 'Heading', 'Intro', 'Body', 'Link', 'Group',
+  'Category', 'DocumentType', 'SearchQueryName', 'Heading', 'Intro', 'Body', 'Link', 'Group',
 ]);
 
 export type NativeFieldProjection = { name: string; jsonValue: unknown };

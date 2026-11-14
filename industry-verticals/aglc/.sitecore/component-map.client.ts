@@ -7,6 +7,7 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in import section
 import * as SiteHeader from 'src/components/site-header/SiteHeader';
+import * as ResourceList from 'src/components/resource-list/ResourceList';
 import * as Hero from 'src/components/hero/Hero';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -14,6 +15,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['FEaaSWrapper', FEaaSClientWrapper],
   ['Form', Form],
   ['SiteHeader', { ...SiteHeader }],
+  ['ResourceList', { ...ResourceList }],
   ['Hero', { ...Hero }],
 ]);
 

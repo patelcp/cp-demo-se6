@@ -1,3 +1,4 @@
+import { normalizeNativeFields } from '../../lib/normalize-native-fields';
 import { Text, RichText, Image, Link } from '@sitecore-content-sdk/nextjs';
 import type { CardGridProps } from './CardGrid.props';
 export const Default = ({ fields, params, page }: CardGridProps) => {
@@ -11,3 +12,12 @@ export const Default = ({ fields, params, page }: CardGridProps) => {
     </article>)}</div>
   </section>;
 };
+
+// Explicit interior variants share native fields, without inheriting Home layout.
+const InteriorCards = ({ fields, params, page, variant }: CardGridProps & { variant: 'resources' | 'sectors' }) => {
+  const data = normalizeNativeFields(fields?.data?.datasource);
+  if (!data) return null;
+  return <section className={`interior-cards interior-cards--${variant} interior-shell`} id={params.RenderingIdentifier}><Text field={data.Heading?.jsonValue} tag="h2" /><RichText field={data.Intro?.jsonValue} className="rich-text" /><div className="interior-cards__grid">{data.children?.results?.map(item => <article key={item.id}>{(item.Image?.jsonValue?.value?.src || page.mode.isEditing) && <Image field={item.Image?.jsonValue} />}<h3><Text field={item.Title?.jsonValue} /></h3><RichText field={item.Summary?.jsonValue} className="rich-text" />{(item.Link?.jsonValue?.value?.href || item.Link?.jsonValue?.metadata) && <Link field={item.Link.jsonValue} className="button" />}</article>)}</div></section>;
+};
+export const ResourceTiles = (props: CardGridProps) => <InteriorCards {...props} variant="resources" />;
+export const SectorTiles = (props: CardGridProps) => <InteriorCards {...props} variant="sectors" />;

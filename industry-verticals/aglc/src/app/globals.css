@@ -241,3 +241,66 @@
 [data-site="cannabissense"] .hero__backdrop::after { content: ''; position: absolute; inset: 0; background: rgba(0, 78, 53, .5); pointer-events: none; }
 /* AGLC's family strip uses monochrome white versions of the shared brand marks. */
 [data-site="aglc"] .brand-bar img { filter: brightness(0) invert(1); }
+
+/* Interior variants are isolated from the Home hero and promotional grid. */
+.interior-shell { width:min(1176px,calc(100% - 40px)); margin-inline:auto; }
+.interior-breadcrumb { padding:18px 0; }
+.interior-breadcrumb ol { display:flex;flex-wrap:wrap;list-style:none;gap:12px;padding:0; }
+.interior-breadcrumb li+li::before { content:'/';margin-right:12px; }
+.interior-breadcrumb a { text-decoration:underline; }
+.page-intro { position:relative;padding:70px 0 40px; }
+.page-intro h1 { font-size:40px;line-height:1.2;margin:0 0 24px; }
+.page-intro--image { min-height:520px;display:flex;align-items:center;color:white; }
+.page-intro__background { position:absolute;inset:0; }
+.page-intro__background img { width:100%;height:100%;object-fit:cover; }
+.page-intro--image .page-intro__background::after { content:'';position:absolute;inset:0;background:rgba(0,0,0,.25); }
+.page-intro__copy { position:relative; }
+.page-intro--image h1 { font-size:80px; }
+.page-intro--image h1::after { content:'';display:block;width:144px;border-bottom:5px solid white;margin-top:16px; }
+.page-intro--image .rich-text { max-width:600px;font-size:22px;line-height:1.45; }
+.interior-content { padding-block:40px;max-width:900px; }
+.interior-content img { max-width:100%;height:auto;margin-top:24px; }
+.interior-content h2,.interior-cards>h2 { font-size:40px; }
+.resource-list { padding:50px 0; }
+.resource-items { list-style:none;padding:0;margin:0; }
+.resource-items li { border-top:2px solid currentColor;padding:20px 0; }
+.resource-items li:last-child { border-bottom:2px solid currentColor; }
+.resource-items h3 { font-size:32px;line-height:1.2;margin:0; }
+.resource-items h3 a { display:flex;align-items:center;justify-content:space-between;gap:24px; }
+.resource-items h3 a::after { content:'➜';color:#c74b25;flex-shrink:0;font-size:40px; }
+.resource-item__meta { display:flex;gap:16px;font-size:14px;margin-bottom:12px; }
+.resource-list--documents .resource-items li { border-color:#eee;padding:28px 24px;background:#f6f9fa;margin-bottom:24px; }
+.resource-list--documents h3 { color:#00647f;font-size:32px; }
+.resource-filters { padding:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;box-shadow:0 2px 12px #0001;margin:24px 0; }
+.resource-filters label { display:grid;gap:12px; }
+.resource-filters input,.resource-filters select { min-width:0;width:100%;padding:12px;border:1px solid #ccd3dd;background:#f7f9fb;border-radius:2px;font:inherit; }
+.resource-list__scope { font-size:14px; }
+.interior-cards { padding-block:60px; }
+.interior-cards__grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
+.interior-cards article { min-width:0; }
+.interior-cards article>img { width:100%;aspect-ratio:1.5;object-fit:cover; }
+.interior-cards h3 { font-size:24px; }
+[data-site="cannabissense"] .interior-breadcrumb,[data-site="cannabissense"] .page-intro { background:#004e35;color:white; }
+[data-site="cannabissense"] .page-intro { padding:36px 0 60px;text-align:center; }
+[data-site="cannabissense"] .page-intro h1 { font-family:Georgia,Cambria,serif;font-size:72px;font-weight:700;margin:0; }
+[data-site="cannabissense"] .resource-list { background:#f6f4ef;color:#004e35; }
+[data-site="cannabissense"] .resource-list .interior-shell { max-width:860px; }
+[data-site="cannabissense"] .interior-cards--resources { background:#f6f4ef;color:#004e35;padding-block:0; }
+.interior-cards--resources .interior-cards__grid { gap:0; }
+.interior-cards--resources article { padding:32px 24px;text-align:center;border:2px solid #004e35;display:flex;align-items:center;flex-direction:column;gap:24px; }
+.interior-cards--resources article>img { width:80px;height:80px;object-fit:contain; }
+.interior-cards--resources h3 { font-family:Georgia,Cambria,serif;font-size:44px;line-height:1.2; }
+.interior-cards--resources .button { margin-top:auto; }
+@media(max-width:767px) {
+ .page-intro { padding:40px 0 24px; }
+ .page-intro--image { min-height:460px; }
+ .page-intro--image h1 { font-size:48px; }
+ .page-intro--image .rich-text { font-size:20px; }
+ [data-site="cannabissense"] .page-intro { text-align:left;padding:24px 0 50px; }
+ [data-site="cannabissense"] .page-intro h1 { font-size:32px; }
+ .resource-list { padding:40px 0; }
+ .resource-filters,.interior-cards__grid { grid-template-columns:1fr; }
+ .resource-items h3 { font-size:30px; }
+ .interior-cards--resources h3 { font-size:30px; }
+ .resource-items h3 a { overflow-wrap:anywhere; }
+}

@@ -130,3 +130,36 @@ test('Hero and Footer render bulk native projection and preserve legacy contract
  const footer=renderToStaticMarkup(React.createElement(component('site-footer','SiteFooter'),{...base,fields:{data:{datasource:{Fields:toBulk({BrandName:{value:'Bulk brand'}}),children:{results:[{id:'footer',Fields:toBulk({Group:{value:'People'},Title:{value:'Contact'},Link:{value:{href:'/contact'}}})}]}}}}}));
  assert.match(footer,/Bulk brand/);assert.match(footer,/>People<\/h2>/);assert.match(footer,/>Contact<\/a>/);
 });
+
+for (const [folder,name] of [['breadcrumb','Breadcrumb'],['page-intro','PageIntro'],['rich-text-section','RichTextSection'],['resource-list','ResourceList']]) {
+ test(`${name}: absent datasource produces no invented content`,()=>assert.equal(renderToStaticMarkup(React.createElement(component(folder,name),base)),''));
+ test(`${name}: empty datasource is safe`,()=>assert.doesNotThrow(()=>renderToStaticMarkup(React.createElement(component(folder,name),{...base,fields:{data:{datasource:{}}}}))));
+}
+const bulk = (name,value) => ({name,jsonValue:{value}});
+test('interior PageIntro renders one native h1 from filtered bulk projection',()=>{
+ const markup=renderToStaticMarkup(React.createElement(component('page-intro','PageIntro'),{...base,fields:{data:{datasource:{Fields:[bulk('Title','Native interior'),bulk('Summary','<p>Native intro</p>')]}}}}));
+ assert.equal((markup.match(/<h1/g)||[]).length,1);assert.match(markup,/Native interior/);assert.match(markup,/<p>Native intro<\/p>/);assert.doesNotMatch(markup,/page-intro__background/);
+});
+test('Breadcrumb preserves current unlinked native crumb and semantic navigation',()=>{
+ const markup=renderToStaticMarkup(React.createElement(component('breadcrumb','Breadcrumb'),{...base,fields:{data:{datasource:{children:{results:[{id:'home',Fields:[bulk('Title','Home'),bulk('Link',{href:'/',text:'Home'})]},{id:'here',Fields:[bulk('Title','Here'),bulk('Link',{href:''})]}]}}}}}));
+ assert.match(markup,/aria-label="Breadcrumb"/);assert.match(markup,/aria-current="page">Here/);assert.match(markup,/href="\/"/);assert.doesNotMatch(markup,/href=""/);
+});
+test('ResourceList bulk projection keeps native links, summaries and labels',()=>{
+ const markup=renderToStaticMarkup(React.createElement(component('resource-list','ResourceList'),{...base,fields:{data:{datasource:{children:{results:[{id:'one',Fields:[bulk('Title','Resource'),bulk('Link',{href:'https://example.org/document.pdf',text:'Other label'}),bulk('Summary','<p>Authored description</p>')]}]}}}}}));
+ assert.match(markup,/https:\/\/example.org\/document.pdf/);assert.match(markup,/Authored description/);assert.doesNotMatch(markup,/Other label/);
+});
+test('document filtering combines trimmed query, category and type without matching HTML tags',()=>{
+ const {filterResources}=loadSource(new URL('../src/lib/filter-resources.ts',import.meta.url));
+ const items=[{id:'a',Title:text('Gaming report'),Summary:text('<p>Annual data</p>'),Category:text('Gaming'),DocumentType:text('Report')},{id:'b',Title:text('Liquor form'),Category:text('Liquor'),DocumentType:text('Form')},{id:'empty'}];
+ assert.equal(filterResources(items,'','','').length,3);assert.deepEqual(filterResources(items,'  ANNUAL ','Gaming','Report').map(x=>x.id),['a']);assert.equal(filterResources(items,'Annual','Liquor','').length,0);assert.equal(filterResources(items,'<p>','','').length,0);assert.equal(filterResources(items,'','Gaming','Form').length,0);
+});
+test('Documents variant labels limited catalogue and hides filter controls while editing',()=>{
+ const {Documents}=loadSource(new URL('../src/components/resource-list/ResourceList.tsx',import.meta.url));
+ const props={...base,fields:{data:{datasource:{children:{results:[{id:'one',Title:text('Document')}]}}}}};
+ const markup=renderToStaticMarkup(React.createElement(Documents,props));assert.match(markup,/not the full AGLC catalogue/);assert.match(markup,/role="status"/);assert.match(markup,/type="search"/);
+ const editing=renderToStaticMarkup(React.createElement(Documents,{...props,page:{mode:{isEditing:true}}}));assert.doesNotMatch(editing,/type="search"/);assert.match(editing,/Document/);
+});
+test('explicit interior CardGrid variants avoid Home classes and accept native bulk fields',()=>{
+ const {ResourceTiles,SectorTiles}=loadSource(new URL('../src/components/card-grid/CardGrid.tsx',import.meta.url));
+ for(const Variant of [ResourceTiles,SectorTiles]){const html=renderToStaticMarkup(React.createElement(Variant,{...base,fields:{data:{datasource:{Fields:[bulk('Heading','Authored heading')]}}}}));assert.match(html,/Authored heading/);assert.doesNotMatch(html,/class="card-section/);}
+});
