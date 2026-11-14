@@ -304,3 +304,12 @@
  .interior-cards--resources h3 { font-size:30px; }
  .resource-items h3 a { overflow-wrap:anywhere; }
 }
+
+/* Source link rows use Poppins, unlike the serif display titles. */
+[data-site="cannabissense"] .resource-items h3 { font-family:Poppins,Arial,sans-serif;font-weight:700; }
+.resource-item__meta { flex-wrap:wrap; }
+.topic-band { padding:60px 20px;text-align:center;background:#00281a;color:white; }
+.topic-band h2 { font-family:Georgia,Cambria,serif;font-size:48px;line-height:1.2;margin:0 0 24px; }
+.topic-band .button { display:inline-flex;border:2px solid currentColor;border-radius:12px;padding:12px 32px; }
+.topic-band + .topic-band { background:#004e35;color:#70e37d; }
+@media(max-width:767px) { .topic-band { padding:40px 20px; } .topic-band h2 { font-size:26px; } }

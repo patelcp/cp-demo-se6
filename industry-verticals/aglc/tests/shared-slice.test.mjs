@@ -163,3 +163,11 @@ test('explicit interior CardGrid variants avoid Home classes and accept native b
  const {ResourceTiles,SectorTiles}=loadSource(new URL('../src/components/card-grid/CardGrid.tsx',import.meta.url));
  for(const Variant of [ResourceTiles,SectorTiles]){const html=renderToStaticMarkup(React.createElement(Variant,{...base,fields:{data:{datasource:{Fields:[bulk('Heading','Authored heading')]}}}}));assert.match(html,/Authored heading/);assert.doesNotMatch(html,/class="card-section/);}
 });
+test('TopicBand is a separate native variant without altering Home Default',()=>{
+ const {TopicBand}=loadSource(new URL('../src/components/call-to-action/CallToAction.tsx',import.meta.url));
+ assert.equal(renderToStaticMarkup(React.createElement(TopicBand,base)),'');
+ const html=renderToStaticMarkup(React.createElement(TopicBand,{...base,fields:{data:{datasource:{Fields:[bulk('Title','Learn more'),bulk('Link',{href:'/moderation',text:'Explore'})]}}}}));assert.match(html,/class="topic-band"/);assert.match(html,/href="\/moderation"/);assert.match(html,/Learn more/);assert.doesNotMatch(html,/cta-panel/);
+});
+test('document metadata fields retain distinct native elements for visible spacing',()=>{
+ const {Documents}=loadSource(new URL('../src/components/resource-list/ResourceList.tsx',import.meta.url));const html=renderToStaticMarkup(React.createElement(Documents,{...base,fields:{data:{datasource:{children:{results:[{id:'a',Category:text('Gaming'),DocumentType:text('Form')}]}}}}}));assert.match(html,/<span>Gaming<\/span><span>Form<\/span>/);
+});
