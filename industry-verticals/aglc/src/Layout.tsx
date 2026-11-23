@@ -45,6 +45,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           )
         ) : (
           <>
+            <a className="skip-link" href="#main-content">Skip to main content</a>
             <header>
               <div id="header">
                 {route && (

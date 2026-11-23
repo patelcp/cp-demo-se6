@@ -26,6 +26,7 @@
 .brand-bar { height: 38px; background: #736d79; color: #fff; padding-inline: 32px; }
 .brand-bar ul { display: flex; align-items: center; gap: 24px; height: 100%; list-style: none; padding: 0; margin: 0; }
 .brand-bar a { display: flex; align-items: center; font-size: 13px; font-weight: 700; text-decoration: none; }
+.brand-bar--editor-empty { display: flex; align-items: center; }
 .brand-bar img { max-width: 110px; max-height: 25px; width: auto; }
 .site-header__inner { display: flex; align-items: center; gap: 48px; padding: 6px 32px; min-height: 64px; }
 .site-brand { flex-shrink: 0; color: var(--brand); font-size: 25px; font-weight: 700; }
@@ -160,6 +161,8 @@
 @media (max-width: 1200px) and (min-width: 901px) { .site-header__inner { gap: 24px; } .site-nav ul { gap: 20px; } [data-site="cannabissense"] .site-nav ul { gap: 20px; } [data-site="cannabissense"] .header-navigation { gap: 20px; } [data-site="cannabissense"] .hero h1 { font-size: 72px; } [data-site="cannabissense"] .hero__summary { max-width: 640px; } }
 @media (max-width: 900px) {
  .brand-bar { display: none; }
+ .editing-mode .brand-bar { display: block; }
+ .editing-mode .brand-bar--editor-empty { display: flex; }
  .site-header__inner, [data-site="cannabissense"] .site-header__inner { padding: 10px 20px; min-height: 62px; flex-wrap: wrap; justify-content: space-between; gap: 0; }
  .site-brand__logo { width: 75px; max-height: 40px; }
  .menu-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 4px; background: transparent; border: 0; color: inherit; cursor: pointer; }

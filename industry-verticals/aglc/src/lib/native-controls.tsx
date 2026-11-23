@@ -1,10 +1,10 @@
 import { Image, Link, Text } from '@sitecore-content-sdk/nextjs';
 import type { NavigationItem, SearchFields } from './shared-fields';
 
-export function NativeNavigationLink({ item, onClick }: { item: NavigationItem; onClick?: () => void }) {
+export function NativeNavigationLink({ item, onClick, hideLogoTitle = false }: { item: NavigationItem; onClick?: () => void; hideLogoTitle?: boolean }) {
   if (!item.Link?.jsonValue) return null;
   const hasLogo = Boolean(item.Logo?.jsonValue?.value?.src || item.Logo?.jsonValue?.metadata);
-  const brandLogo = item.Group?.jsonValue?.value?.toLowerCase() === 'brand';
+  const brandLogo = hideLogoTitle || item.Group?.jsonValue?.value?.toLowerCase() === 'brand';
   const hasTitle = Boolean(item.Title?.jsonValue?.value?.trim() || item.Title?.jsonValue?.metadata);
   return <Link field={item.Link.jsonValue} onClick={onClick}>
     {hasLogo ? <><Image field={item.Logo?.jsonValue} /><Text field={item.Title?.jsonValue} tag="span" className={brandLogo ? 'visually-hidden' : undefined} /></> : hasTitle ? <Text field={item.Title?.jsonValue} /> : undefined}

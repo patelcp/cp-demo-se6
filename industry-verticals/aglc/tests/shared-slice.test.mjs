@@ -21,7 +21,7 @@ function loadSource(path) {
 function component(folder, name) {
   return loadSource(new URL(`../src/components/${folder}/${name}.tsx`, import.meta.url)).Default;
 }
-const definitions = [['site-header','SiteHeader'],['site-footer','SiteFooter'],['hero','Hero'],['card-grid','CardGrid'],['call-to-action','CallToAction']];
+const definitions = [['site-header','SiteHeader'],['reference-brands','ReferenceBrands'],['site-footer','SiteFooter'],['hero','Hero'],['card-grid','CardGrid'],['call-to-action','CallToAction']];
 const base = { params: {}, page: { mode: { isEditing: false } } };
 const text = value => ({ jsonValue: { value } });
 for (const [folder,name] of definitions) {
@@ -38,7 +38,7 @@ test('CardGrid reads children.results and renders native card content', () => {
 });
 test('mobile navigation exposes a labeled collapsed control', () => {
  const markup = renderToStaticMarkup(React.createElement(component('site-header','SiteHeader'), { ...base, fields: { data: { datasource: { BrandName:text('Brand') } } } }));
- assert.match(markup,/aria-expanded="false"/); assert.match(markup,/aria-controls=/); assert.match(markup,/Skip to main content/);
+ assert.match(markup,/aria-expanded="false"/); assert.match(markup,/aria-controls=/);
 });
 test('theme is selected by actual site name, without activating tracking', () => {
  assert.match(readFileSync(new URL('../src/Layout.tsx',import.meta.url),'utf8'), /data-site=\{page.siteName\?.toLowerCase\(\)\}/);
@@ -73,6 +73,74 @@ test('header separates authored brand, main and utility navigation without dupli
  const markup = renderToStaticMarkup(React.createElement(component('site-header','SiteHeader'), {...base,fields:{data:{datasource:{children:{results:entries}}}}}));
  assert.match(markup,/aria-label="Related sites"/); assert.match(markup,/aria-label="Main navigation"/); assert.match(markup,/aria-label="Utility navigation"/);
  for (const title of ['Related','Topic','Support']) assert.equal((markup.match(new RegExp('>'+title+'<','g'))||[]).length,1);
+});
+
+test('the skip link precedes all header renderings', () => {
+ const layout=readFileSync(new URL('../src/Layout.tsx',import.meta.url),'utf8');
+ assert.match(layout, /href="#main-content">Skip to main content<\/a>\s*<header>/);
+ assert.match(layout, /<main id="main-content" tabIndex=\{-1\}>/);
+});
+const referenceComponent = () => component('reference-brands','ReferenceBrands');
+const linkItem = (id, href, title, group, logo) => ({
+ id, Title:text(title), Link:{jsonValue:{value:{href,text:title}}},
+ ...(group ? {Group:text(group)} : {}),
+ ...(logo ? {Logo:{jsonValue:{value:{src:logo, alt:''}}}} : {}),
+});
+const renderReferenceBrands = (siteName, items) => renderToStaticMarkup(React.createElement(referenceComponent(), {
+ ...base, page:{...base.page,siteName}, fields:{data:{datasource:{children:{results:items}}}},
+}));
+test('one shared brand list drives both sites with the same link, logo and order', () => {
+ const original = [
+  linkItem('a','https://example.org/a','First brand',undefined,'https://example.org/brand.svg'),
+  linkItem('b','https://example.org/b','Second brand'),
+ ];
+ for(const siteName of ['aglc','cannabissense']) {
+  const before = renderReferenceBrands(siteName, original);
+  assert.match(before,/aria-label="Related sites"/);
+  assert.match(before,/class="visually-hidden">First brand</);
+  assert.match(before,/src="https:\/\/example\.org\/brand\.svg"/);
+  assert.doesNotMatch(before,/New brand/);
+  const after = renderReferenceBrands(siteName, [...original, linkItem('c','https://example.org/new','New brand')]);
+  assert.match(after,/href="https:\/\/example\.org\/new">New brand<\/a>/);
+  assert.ok(after.indexOf('First brand') < after.indexOf('Second brand'));
+  assert.ok(after.indexOf('Second brand') < after.indexOf('New brand'));
+ }
+});
+test('legacy brand rows stay until the independent header placement has a resolved source', () => {
+ const assigned = {componentName:'ReferenceBrands',dataSource:'shared-id'};
+ const layout = (header, main=[]) => ({sitecore:{route:{placeholders:{'headless-header':header,'headless-main':main}}}});
+ const items = [
+  linkItem('brand','/old','Legacy brand','brand'),
+  linkItem('topic','/topic','Main topic','main'),
+  linkItem('utility','/utility','Help','utility'),
+ ];
+ const showHeader = pageLayout => renderToStaticMarkup(React.createElement(component('site-header','SiteHeader'), {
+  ...base, page:{...base.page,layout:pageLayout}, fields:{data:{datasource:{children:{results:items}}}},
+ }));
+ for(const oldLayout of [
+  layout([], [assigned]),
+  layout([{componentName:'ReferenceBrands'}]),
+  layout([{...assigned,isContentResolved:false}]),
+ ]) assert.match(showHeader(oldLayout),/Legacy brand/);
+ for(const newLayout of [
+  layout([assigned]),
+  layout([{componentName:'Partial Design',placeholders:{inner:[assigned]}}]),
+ ]) {
+  const header = showHeader(newLayout);
+  assert.doesNotMatch(header,/Legacy brand|Related sites/);
+  assert.match(header,/Main topic/);
+  assert.match(header,/Help/);
+ }
+});
+test('an empty editing rendering identifies where to manage or assign brand content', () => {
+ const edit = {...base,page:{mode:{isEditing:true}}};
+ const unassigned = renderToStaticMarkup(React.createElement(referenceComponent(),edit));
+ const empty = renderToStaticMarkup(React.createElement(referenceComponent(),{
+  ...edit,fields:{data:{datasource:{children:{results:[]}}}},
+ }));
+ assert.match(unassigned,/Assign the shared Reference Brands content item/);
+ assert.match(empty,/Add a brand link using Manage items/);
+ assert.doesNotMatch(empty,/<a/);
 });
 test('real external search preserves CMS endpoint and query name, with no fake handler', () => {
  const fields = {SearchAction:{jsonValue:{value:{href:'https://aglc.ca/search-results?scope=public'}}},SearchLabel:text('Search AGLC'),SearchQueryName:text('opq')};
