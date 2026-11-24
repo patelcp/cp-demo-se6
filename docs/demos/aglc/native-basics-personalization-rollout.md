@@ -21,3 +21,11 @@ Use fresh browser profiles for each control:
 5. If the expected result differs, check the Sitecore rule, variant and datasource publication and Edge scope instead of changing the frontend matching condition or deploying other features.
 
 Rollback: disable `CANNABISSENSE_NATIVE_PERSONALIZATION` and redeploy the intended demo runtime or restore its prior deployment; verify default CTA in a fresh tagged session. Use the existing Sitecore version restore procedure if a published authoring change also needs reversal.
+
+## Independent AGLC pilot
+
+For the AGLC Vercel project/production alias only, verify the same-tenant Live Context IDs and the independently assigned English analytics identifier for the `aglc` site. Set `AGLC_NATIVE_PERSONALIZATION=1` on that project. Keep the other project's flag unset or off in each project. Both switches default off.
+
+Only the exact public AGLC home URL without query parameters can call native evaluation after explicit opt-in. This release defines no AGLC audience, campaign, or variant. AGLC Home should show the ordinary experience if nothing is configured in Sitecore. Under stock SDK behavior it does not create native visitor IDs unless it sees one or more published variants for that exact route. The separate AGLC consent cookie and any future native visitor cookies are host-only and expire with the 30-minute consent window. Since Home is the root path, browsers attach them across this demo hostname, but this code does not run native decisioning on its other paths. Neither hostname may opt in on behalf of the other via the consent endpoint. Browser page-view events and OneTrust integration are deliberately out of scope.
+
+In two clean browsers, grant AGLC consent and verify CannabisSense still requires its own consent, then reverse the order in fresh sessions. Verify AGLC Home remains the default without a published variant and that other AGLC paths and arbitrary query parameters do not run native evaluation. Verify the route's opt-out clears the host's scoped cookies and does not affect the sibling host.

@@ -168,3 +168,49 @@ test('proxy entry applies privacy headers and shortens native visitor cookies on
   assert.equal(outside.headers.get('cache-control'), null);
   assert.equal((await proxy(request('/basics/_variantId_candidate'))).status, 404);
 });
+
+test('AGLC Home pilot has an independent flag, exact same-origin consent and no campaign payload', async t => {
+  const old = process.env.AGLC_NATIVE_PERSONALIZATION;
+  t.after(() => old === undefined ? delete process.env.AGLC_NATIVE_PERSONALIZATION : process.env.AGLC_NATIVE_PERSONALIZATION = old);
+  setEnable(t, '0');
+  const aglcHost = core.AGLC_HOST;
+  const aglcOrigin = 'https://' + aglcHost;
+  process.env.AGLC_NATIVE_PERSONALIZATION = '0';
+  assert.equal((await api.POST(form('choice=allow', aglcOrigin, aglcHost))).status, 404);
+  process.env.AGLC_NATIVE_PERSONALIZATION = '1';
+  assert.equal((await api.POST(form('choice=allow', DEMO_ORIGIN, aglcHost))).status, 403);
+  assert.equal((await api.POST(form('choice=allow'))).status, 404);
+  const optIn = await api.POST(form('choice=allow&' + tag, aglcOrigin, aglcHost));
+  assert.equal(optIn.headers.get('location'), aglcOrigin + '/');
+  assert.equal(optIn.cookies.get(CONSENT_COOKIE), undefined);
+  const consent = optIn.cookies.get(core.AGLC_CONSENT_COOKIE);
+  assert.equal(consent.path, '/');
+  assert.equal(consent.domain, undefined);
+  assert.ok(core.consentRemainingSeconds(consent.value) > 0);
+  class NativeBoundary {
+    getSite(req) { return { name: req.headers.get('fixture-site') ?? 'aglc' }; }
+    getLanguage() { return 'en'; }
+    disabled() { return false; }
+  }
+  const { CannabisSensePersonalizeProxy } = load(new URL('../src/lib/cannabissense-personalize-proxy.ts', import.meta.url),
+    new Map([['@sitecore-content-sdk/nextjs/proxy', { PersonalizeProxy: NativeBoundary }]]));
+  const native = new CannabisSensePersonalizeProxy();
+  const req = (path, extras = {}) => new NextRequest(aglcOrigin + path, {
+    headers: { host: aglcHost, cookie: core.AGLC_CONSENT_COOKIE + '=' + consent.value,
+      referer: 'https://outside.example/example', ...extras },
+  });
+  assert.equal(native.disabled(req('/'), NextResponse.next()), false);
+  assert.equal(native.disabled(req('/gaming'), NextResponse.next()), true);
+  assert.equal(native.disabled(req('/?' + tag), NextResponse.next()), true);
+  assert.equal(native.disabled(req('/', {cookie: CONSENT_COOKIE + '=' + consent.value}), NextResponse.next()), true);
+  assert.equal(native.disabled(req('/', {'fixture-site': 'cannabissense'}), NextResponse.next()), true);
+  assert.deepEqual(native.getExperienceParams(req('/')), {
+    referrer: '', utm: { campaign: undefined, source: undefined, content: undefined, medium: undefined },
+  });
+  const optOut = await api.POST(form('choice=revoke', aglcOrigin, aglcHost));
+  for (const name of [core.AGLC_CONSENT_COOKIE, ...core.SITECORE_COOKIES]) {
+    assert.equal(optOut.cookies.get(name).path, '/');
+    assert.equal(optOut.cookies.get(name).maxAge, 0);
+    assert.equal(optOut.cookies.get(name).domain, undefined);
+  }
+});

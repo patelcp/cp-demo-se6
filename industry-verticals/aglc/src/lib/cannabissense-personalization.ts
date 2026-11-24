@@ -1,4 +1,4 @@
-/** One consent-gated Native SitecoreAI demo. UTM is context, not the visitor's consent or identity. */
+/** Two isolated native SitecoreAI demo scopes. Context is not the visitor's consent or identity. */
 export const DEMO_HOST = 'cannabissense-cp.vercel.app';
 export const DEMO_ORIGIN = `https://${DEMO_HOST}`;
 export const DEMO_PATH = '/basics';
@@ -7,6 +7,23 @@ export const CONSENT_ENDPOINT = '/api/cannabissense-personalization';
 export const CONSENT_COOKIE = '__Secure-cs_edibles_personalization';
 export const CONSENT_SECONDS = 30 * 60;
 export const SITECORE_COOKIES = ['sc_cid', 'sc_cid_personalize'] as const;
+
+export const AGLC_HOST = 'aglc-cp.vercel.app';
+export const AGLC_CONSENT_COOKIE = '__Secure-aglc_native_personalization';
+
+const cannabisSensePolicy = {
+  site: 'cannabissense', host: DEMO_HOST, path: DEMO_PATH, cookie: CONSENT_COOKIE,
+} as const;
+const aglcPolicy = {
+  site: 'aglc', host: AGLC_HOST, path: '/', cookie: AGLC_CONSENT_COOKIE,
+} as const;
+export type PersonalizationPolicy = typeof cannabisSensePolicy | typeof aglcPolicy;
+
+export function configuredPolicy(host: string | null): PersonalizationPolicy | null {
+  if (enabledOnHost(host)) return cannabisSensePolicy;
+  if (process.env.AGLC_NATIVE_PERSONALIZATION === '1' && host?.toLowerCase() === AGLC_HOST) return aglcPolicy;
+  return null;
+}
 
 export const enabledOnHost = (host: string | null) =>
   process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === '1' && host?.toLowerCase() === DEMO_HOST;
@@ -29,9 +46,9 @@ export function consentRemainingSeconds(value: string | undefined, now = Date.no
   return seconds > 0 && seconds <= CONSENT_SECONDS ? seconds : 0;
 }
 
-export function scopedCookie(maxAge: number) {
+export function scopedCookie(maxAge: number, path: string = DEMO_PATH) {
   return {
-    path: DEMO_PATH, httpOnly: true, secure: true, sameSite: 'lax' as const, maxAge,
+    path, httpOnly: true, secure: true, sameSite: 'lax' as const, maxAge,
     expires: new Date(maxAge > 0 ? Date.now() + maxAge * 1000 : 0),
   };
 }

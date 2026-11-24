@@ -12,7 +12,7 @@ import { routing } from './i18n/routing';
 import client from './lib/sitecore-client';
 import { CannabisSensePersonalizeProxy } from './lib/cannabissense-personalize-proxy';
 import {
-  consentRemainingSeconds, CONSENT_COOKIE, DEMO_HOST, DEMO_PATH, enabledOnHost,
+  AGLC_HOST, configuredPolicy, consentRemainingSeconds, DEMO_HOST,
   isExternalVariantPath, scopedCookie, SITECORE_COOKIES,
 } from './lib/cannabissense-personalization';
 
@@ -69,24 +69,26 @@ const personalize = new CannabisSensePersonalizeProxy({
   sites,
   ...scConfig.api.edge,
   ...scConfig.personalize,
-  enabled: process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === '1',
+  enabled: process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === '1' ||
+    process.env.AGLC_NATIVE_PERSONALIZATION === '1',
 });
 
 export default async function proxy(req: NextRequest) {
   const host = req.headers.get('host');
   // A visitor must not force an SDK-internal variant path directly.
-  if (host?.toLowerCase() === DEMO_HOST && isExternalVariantPath(req.nextUrl.pathname)) {
+  if ((host?.toLowerCase() === DEMO_HOST || host?.toLowerCase() === AGLC_HOST) &&
+      isExternalVariantPath(req.nextUrl.pathname)) {
     return new NextResponse(null, { status: 404, headers: { 'Cache-Control': 'private, no-store' } });
   }
-  const isConsentPage = enabledOnHost(host) && req.nextUrl.pathname === DEMO_PATH;
+  const policy = configuredPolicy(host);
   const response = await defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
-  if (isConsentPage) {
+  if (policy && req.nextUrl.pathname === policy.path) {
     response.headers.set('Cache-Control', 'private, no-store');
     response.headers.set('Referrer-Policy', 'no-referrer');
-    const remaining = consentRemainingSeconds(req.cookies.get(CONSENT_COOKIE)?.value);
+    const remaining = consentRemainingSeconds(req.cookies.get(policy.cookie)?.value);
     for (const name of SITECORE_COOKIES) {
       const cookie = response.cookies.get(name);
-      if (cookie) response.cookies.set(name, cookie.value, { ...scopedCookie(remaining) });
+      if (cookie) response.cookies.set(name, cookie.value, scopedCookie(remaining, policy.path));
     }
   }
   return response;

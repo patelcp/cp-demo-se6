@@ -14,7 +14,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getBaseUrl } from "lib/utils";
 import { CannabisSensePersonalizationConsent } from "components/content-sdk/CannabisSensePersonalizationConsent";
 import {
-  campaignContext, consentRemainingSeconds, CONSENT_COOKIE, enabledOnHost, parsedSearch,
+  campaignContext, configuredPolicy, consentRemainingSeconds, parsedSearch,
 } from "lib/cannabissense-personalization";
 
 // Refresh published Edge content on the next request after this interval.
@@ -64,16 +64,21 @@ export default async function Page({ params, searchParams }: PageProps) {
   );
 
   let campaignConsent;
-  if (!draft.isEnabled && site === "cannabissense" && locale === "en" &&
-      path?.[0] === "basics" && path.slice(1).every(part => part.startsWith("_variantId_")) &&
-      process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === "1" &&
-      enabledOnHost((await nextHeaders()).get("host"))) {
-    campaignConsent = (
-      <CannabisSensePersonalizationConsent
-        allowed={Boolean(consentRemainingSeconds((await cookies()).get(CONSENT_COOKIE)?.value))}
-        campaign={campaignContext(parsedSearch(await searchParams))}
-      />
-    );
+  const campaignRoute = site === "cannabissense" && path?.[0] === "basics" &&
+    path.slice(1).every(part => part.startsWith("_variantId_"));
+  const aglcHome = site === "aglc" &&
+    (path ?? []).every(part => part.startsWith("_variantId_"));
+  if (!draft.isEnabled && locale === "en" && (campaignRoute || aglcHome)) {
+    const policy = configuredPolicy((await nextHeaders()).get("host"));
+    if (policy?.site === site) {
+      campaignConsent = (
+        <CannabisSensePersonalizationConsent
+          site={policy.site}
+          allowed={Boolean(consentRemainingSeconds((await cookies()).get(policy.cookie)?.value))}
+          campaign={campaignRoute ? campaignContext(parsedSearch(await searchParams)) : null}
+        />
+      );
+    }
   }
 
   return (

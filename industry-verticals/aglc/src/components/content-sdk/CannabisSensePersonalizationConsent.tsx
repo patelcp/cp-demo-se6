@@ -1,17 +1,20 @@
 import { CONSENT_ENDPOINT } from '../../lib/cannabissense-personalization';
 
 export function CannabisSensePersonalizationConsent({
-  allowed, campaign,
+  allowed, campaign, site,
 }: {
   allowed: boolean;
+  site: 'aglc' | 'cannabissense';
   campaign: { campaign: string; source?: string } | null;
 }) {
   return (
-    <aside className="shell campaign-consent" aria-label="Campaign personalization">
+    <aside className="shell campaign-consent" aria-label="Demo personalization">
       <p>
         {allowed
-          ? 'Campaign personalization is allowed for 30 minutes on this page.'
-          : 'Optional: allow Sitecore personalization for the edibles campaign. This uses visitor cookies on this page for up to 30 minutes.'}
+          ? 'Demo personalization is allowed on this page until your choice expires.'
+          : site === 'cannabissense'
+            ? 'Optional: allow Sitecore personalization for the edibles campaign. This uses visitor cookies on this page for up to 30 minutes.'
+            : 'Optional: allow Sitecore personalization on the AGLC demo home page. If a native variant is configured, this uses visitor cookies on this demo site for up to 30 minutes.'}
       </p>
       <form method="post" action={CONSENT_ENDPOINT}>
         <input type="hidden" name="choice" value={allowed ? 'revoke' : 'allow'} />

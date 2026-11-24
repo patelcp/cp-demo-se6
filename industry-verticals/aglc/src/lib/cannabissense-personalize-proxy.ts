@@ -1,7 +1,7 @@
 import { type NextRequest, type NextResponse } from 'next/server';
 import { PersonalizeProxy } from '@sitecore-content-sdk/nextjs/proxy';
 import {
-  campaignContext, consentRemainingSeconds, CONSENT_COOKIE, DEMO_PATH, enabledOnHost,
+  campaignContext, configuredPolicy, consentRemainingSeconds,
 } from './cannabissense-personalization';
 
 /**
@@ -11,17 +11,18 @@ import {
  */
 export class CannabisSensePersonalizeProxy extends PersonalizeProxy {
   protected disabled(req: NextRequest, res: NextResponse) {
-    return !enabledOnHost(req.headers.get('host')) ||
-      req.method !== 'GET' || req.nextUrl.pathname !== DEMO_PATH ||
-      !campaignContext(req.nextUrl.searchParams) ||
-      !consentRemainingSeconds(req.cookies.get(CONSENT_COOKIE)?.value) ||
-      this.getSite(req, res).name.toLowerCase() !== 'cannabissense' ||
+    const policy = configuredPolicy(req.headers.get('host'));
+    return !policy || req.method !== 'GET' || req.nextUrl.pathname !== policy.path ||
+      (policy.site === 'cannabissense' ? !campaignContext(req.nextUrl.searchParams) : Boolean(req.nextUrl.search)) ||
+      !consentRemainingSeconds(req.cookies.get(policy.cookie)?.value) ||
+      this.getSite(req, res).name.toLowerCase() !== policy.site ||
       this.getLanguage(req, res).toLowerCase() !== 'en' ||
       super.disabled(req, res);
   }
 
   protected getExperienceParams(req: NextRequest) {
-    const campaign = campaignContext(req.nextUrl.searchParams);
+    const campaign = configuredPolicy(req.headers.get('host'))?.site === 'cannabissense'
+      ? campaignContext(req.nextUrl.searchParams) : null;
     return {
       referrer: '',
       utm: { campaign: campaign?.campaign, source: campaign?.source, content: undefined, medium: undefined },
