@@ -171,3 +171,16 @@ test('TopicBand is a separate native variant without altering Home Default',()=>
 test('document metadata fields retain distinct native elements for visible spacing',()=>{
  const {Documents}=loadSource(new URL('../src/components/resource-list/ResourceList.tsx',import.meta.url));const html=renderToStaticMarkup(React.createElement(Documents,{...base,fields:{data:{datasource:{children:{results:[{id:'a',Category:text('Gaming'),DocumentType:text('Form')}]}}}}}));assert.match(html,/<span>Gaming<\/span><span>Form<\/span>/);
 });
+
+test('published ReferenceBrands placement stays invisible until the header cutover', () => {
+ const map=readFileSync(new URL('../.sitecore/component-map.ts',import.meta.url),'utf8');
+ assert.match(map,/\['ReferenceBrands', \{ \.\.\.ReferenceBrands \}\]/);
+ const items=[{id:'brand',Group:text('brand'),Title:text('Existing brand'),
+  Link:{jsonValue:{value:{href:'/example',text:'Existing brand'}}}}];
+ const fields={data:{datasource:{children:{results:items}}}};
+ const early=renderToStaticMarkup(React.createElement(component('reference-brands','ReferenceBrands'),{...base,fields}));
+ const existing=renderToStaticMarkup(React.createElement(component('site-header','SiteHeader'),{...base,fields}));
+ assert.equal(early,'');
+ assert.equal((existing.match(/aria-label="Related sites"/g)||[]).length,1);
+ assert.match(existing,/>Existing brand<\/a>/);
+});

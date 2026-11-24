@@ -11,6 +11,7 @@ import * as SiteHeader from 'src/components/site-header/SiteHeader';
 import * as SiteFooter from 'src/components/site-footer/SiteFooter';
 import * as RichTextSection from 'src/components/rich-text-section/RichTextSection';
 import * as ResourceList from 'src/components/resource-list/ResourceList';
+import * as ReferenceBrands from 'src/components/reference-brands/ReferenceBrands';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageIntro from 'src/components/page-intro/PageIntro';
 import * as Hero from 'src/components/hero/Hero';
@@ -27,6 +28,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SiteFooter', { ...SiteFooter }],
   ['RichTextSection', { ...RichTextSection }],
   ['ResourceList', { ...ResourceList, componentType: 'client' }],
+  ['ReferenceBrands', { ...ReferenceBrands }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageIntro', { ...PageIntro }],
   ['Hero', { ...Hero, componentType: 'client' }],
