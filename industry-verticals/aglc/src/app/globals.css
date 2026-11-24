@@ -317,3 +317,15 @@
 .campaign-consent { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; font-size: 13px; }
 .campaign-consent button { border: 1px solid currentColor; border-radius: 4px; padding: 6px 10px; white-space: nowrap; background: transparent; color: inherit; cursor: pointer; }
 @media (max-width: 600px) { .campaign-consent { flex-wrap: wrap; gap: 8px; } }
+/* AGLC Search Experience; layout and typography inherit the AGLC tokens. */
+.aglc-search-results { max-width: 52rem; padding-block: 1.75rem 3.5rem; }
+.aglc-search-results__form { margin-bottom: 1.5rem; }
+.aglc-search-results__form label { display: block; margin-bottom: .5rem; font-weight: 700; }
+.aglc-search-results__form > div { display: flex; flex-wrap: wrap; align-items: stretch; gap: .75rem; }
+.aglc-search-results__form input { flex: 1 1 14rem; min-width: 0; padding: .65rem .8rem; border: 1px solid currentColor; border-radius: .5rem; background: var(--surface); font: inherit; }
+.aglc-search-results__form button { cursor: pointer; }
+.aglc-search-results__form :focus-visible, .aglc-search-results__matches a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.aglc-search-results__matches ul { margin-top: .75rem; padding: 0; list-style: none; }
+.aglc-search-results__matches li { padding: 1rem 0; border-top: 1px solid #d5d5d5; }
+.aglc-search-results__matches a { color: var(--brand); font-weight: 700; text-decoration: underline; }
+.aglc-search-results__matches li p { margin-top: .3rem; }

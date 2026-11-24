@@ -6,6 +6,7 @@ import { BYOCServerWrapper, FEaaSServerWrapper } from '@sitecore-content-sdk/nex
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in import section
+import * as SearchExperience from 'src/components/search-experience/SearchExperience';
 import * as SiteHeader from 'src/components/site-header/SiteHeader';
 import * as SiteFooter from 'src/components/site-footer/SiteFooter';
 import * as RichTextSection from 'src/components/rich-text-section/RichTextSection';
@@ -21,6 +22,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCServerWrapper],
   ['FEaaSWrapper', FEaaSServerWrapper],
   ['Form', { ...Form, componentType: 'client' }],
+  ['SearchExperience', { ...SearchExperience, componentType: 'client' }],
   ['SiteHeader', { ...SiteHeader, componentType: 'client' }],
   ['SiteFooter', { ...SiteFooter }],
   ['RichTextSection', { ...RichTextSection }],
