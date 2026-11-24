@@ -53,12 +53,12 @@ test('route contract: search receives reviewed index config, strips every other-
         async search(p, opts) {
           fetchCalls.push({ p, opts, config: this.config });
           return { total: 6, results: [
-            { id: cannabisSenseId, sc_title: 'Foreign result', url: 'https://foreign.example' },
-            { id: '{37AB3096-40B7-490A-BC2E-AF3BBE64C9C0}', sc_title: 'Forms and documents', sc_description: '<p>Approved forms</p>', url: 'https://foreign.example' },
-            { id: inquiryDraftId, sc_title: 'Draft inquiry' },
-            { id: formsId, sc_title: 'duplicate' },
-            { id: liquorId, sc_title: '' },
-            { id: '986b11cfe8c54f52a7be64a21bef4b09', sc_title: 'Other tenant content' },
+            { sc_item_id: cannabisSenseId, Title: 'Foreign result', url: 'https://foreign.example' },
+            { sc_item_id: '{37AB3096-40B7-490A-BC2E-AF3BBE64C9C0}', Title: 'Forms and documents', sc_description: '<p>Approved forms</p>', url: 'https://foreign.example' },
+            { sc_item_id: inquiryDraftId, Title: 'Draft inquiry' },
+            { sc_item_id: formsId, Title: 'duplicate' },
+            { sc_item_id: liquorId, Title: '' },
+            { sc_item_id: '986b11cfe8c54f52a7be64a21bef4b09', Title: 'Other tenant content' },
           ] };
         }
       },
@@ -92,18 +92,18 @@ test('route contract: search receives reviewed index config, strips every other-
 
 test('a source containing only foreign items has zero AGLC results, never the foreign total', async () => {
   const response = await handler(request(), defaultEnv, () => ({ search: async () => ({
-    total: 2, results: [{ id: cannabisSenseId }, { id: inquiryDraftId }],
+    total: 2, results: [{ sc_item_id: cannabisSenseId }, { sc_item_id: inquiryDraftId }],
   }) }));
   assert.deepEqual(await response.json(), { results: [], total: 0 });
 });
 
 test('an incomplete, too large, or unidentifiable source fails without partial results or a false zero', async () => {
   for (const reply of [
-    { total: nativeResultCap + 1, results: [{ id: formsId }] },
-    { total: 2, results: [{ id: formsId }] },
-    { total: 0, results: [{ id: formsId }] },
-    { total: 1, results: [{ sc_title: 'Missing identity', route: '/forms' }] },
-    { total: 2, results: [{ id: formsId }, { id: 'noncanonical', sc_title: 'Other' }] },
+    { total: nativeResultCap + 1, results: [{ sc_item_id: formsId }] },
+    { total: 2, results: [{ sc_item_id: formsId }] },
+    { total: 0, results: [{ sc_item_id: formsId }] },
+    { total: 1, results: [{ Title: 'Missing identity', route: '/forms' }] },
+    { total: 2, results: [{ sc_item_id: formsId }, { sc_item_id: 'noncanonical', Title: 'Other' }] },
     { total: 1, results: [null] },
   ]) {
     const response = await handler(request(), defaultEnv, () => ({ search: async () => reply }));
@@ -183,7 +183,7 @@ test('installed Sitecore SDK sends a native keyword request with no browser sess
     const headers = new Headers(init.headers);
     captured.push({ path: target.pathname, method: init.method, body: JSON.parse(init.body), context: headers.get('x-sitecore-contextid'), cookie: headers.get('cookie') });
     return Response.json({ content: [
-      { id: formsId, sc_title: 'Forms and documents' }, { id: cannabisSenseId, sc_title: 'Other site' },
+      { sc_item_id: formsId, Title: 'Forms and documents' }, { sc_item_id: cannabisSenseId, Title: 'Other site' },
     ], total: 2 });
   };
   try {

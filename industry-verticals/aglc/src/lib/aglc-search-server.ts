@@ -37,8 +37,8 @@ function fieldName(value: string | undefined, fallback?: string): string | undef
 export function readNativeSearchScope(env: NodeJS.ProcessEnv): NativeSearchScope | undefined {
   const nativeIndexId = env.AGLC_SEARCH_INDEX_ID?.trim() ?? '';
   const searchIndexId = normalizeGuid(nativeIndexId);
-  const identityField = fieldName(env.AGLC_SEARCH_ID_FIELD, 'id');
-  const titleField = fieldName(env.AGLC_SEARCH_TITLE_FIELD, 'sc_title');
+  const identityField = fieldName(env.AGLC_SEARCH_ID_FIELD, 'sc_item_id');
+  const titleField = fieldName(env.AGLC_SEARCH_TITLE_FIELD, 'Title');
   const summaryField = fieldName(env.AGLC_SEARCH_SUMMARY_FIELD);
   const locale = env.AGLC_SEARCH_LOCALE?.trim() || undefined;
   if (!searchIndexId || !identityField || !titleField || (env.AGLC_SEARCH_SUMMARY_FIELD && !summaryField) ||
