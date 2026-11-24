@@ -84,7 +84,9 @@ export default async function proxy(req: NextRequest) {
   const response = await defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
   if (policy && req.nextUrl.pathname === policy.path) {
     response.headers.set('Cache-Control', 'private, no-store');
-    response.headers.set('Referrer-Policy', 'no-referrer');
+    // Native form POST requires a same-origin Origin header for our CSRF check.
+    // no-referrer would turn it into Origin: null; same-origin still hides cross-site referrers.
+    response.headers.set('Referrer-Policy', 'same-origin');
     const remaining = consentRemainingSeconds(req.cookies.get(policy.cookie)?.value);
     for (const name of SITECORE_COOKIES) {
       const cookie = response.cookies.get(name);

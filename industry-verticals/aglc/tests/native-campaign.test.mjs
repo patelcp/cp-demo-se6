@@ -56,6 +56,7 @@ test('consent posts are disabled by default or on other hosts and reject cross-o
   process.env.CANNABISSENSE_NATIVE_PERSONALIZATION = '1';
   assert.equal((await api.POST(form('choice=allow', DEMO_ORIGIN, 'aglc-cp.vercel.app'))).status, 404);
   assert.equal((await api.POST(form('choice=allow', 'https://example.org'))).status, 403);
+  assert.equal((await api.POST(form('choice=allow', 'null'))).status, 403);
   assert.equal((await api.POST(form('choice=allow&choice=revoke'))).status, 400);
 });
 
@@ -152,7 +153,7 @@ test('proxy entry applies privacy headers and shortens native visitor cookies on
   const denied = await proxy(request('/basics?' + tag));
   assert.equal(denied.cookies.get('sc_cid'), undefined);
   assert.equal(denied.headers.get('cache-control'), 'private, no-store');
-  assert.equal(denied.headers.get('referrer-policy'), 'no-referrer');
+  assert.equal(denied.headers.get('referrer-policy'), 'same-origin');
   const granted = await proxy(request('/basics?' + tag, CONSENT_COOKIE + '=' + expiry));
   for (const key of core.SITECORE_COOKIES) {
     const cookie = granted.cookies.get(key);
