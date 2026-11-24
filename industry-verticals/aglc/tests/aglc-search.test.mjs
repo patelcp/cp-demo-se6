@@ -275,6 +275,8 @@ test('published catchall prefers native results page and otherwise keeps publish
     'lib/utils': { getBaseUrl: () => 'https://staged.example' },
     'components/search-experience/SearchExperience': { Default: LiveSearchExperience },
     'lib/native-search-mode': { NativeSearchModeProvider: providers },
+    'components/content-sdk/CannabisSensePersonalizationConsent': { CannabisSensePersonalizationConsent: () => null },
+    'lib/cannabissense-personalization': fromApp('lib/cannabissense-personalization.ts'),
     'lib/aglc-search-fallback': {
       mayCheckLiveAglcSearch: () => false,
       isLiveAglcSearchOnHost: () => false,
