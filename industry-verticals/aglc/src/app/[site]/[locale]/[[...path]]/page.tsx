@@ -17,7 +17,8 @@ import {
   campaignContext, configuredPolicy, consentRemainingSeconds, parsedSearch,
 } from "lib/cannabissense-personalization";
 import { Default as SearchExperience } from "components/search-experience/SearchExperience";
-import { getSearchFallbackIndex, mayCheckSearchFallback } from "lib/aglc-search-fallback";
+import { getSearchFallbackIndex, mayCheckLiveAglcSearch, mayCheckSearchFallback, isLiveAglcSearchOnHost } from "lib/aglc-search-fallback";
+import { NativeSearchModeProvider } from "lib/native-search-mode";
 
 // Refresh published Edge content on the next request after this interval.
 export const revalidate = 60;
@@ -42,6 +43,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   // Fetch the page data from Sitecore
   let page;
   let searchFallbackIndex: string | undefined;
+  let serveNativeSearch = false;
   if (draft.isEnabled) {
     const headers = await nextHeaders();
     const previewData = client.getPreviewData(headers);
@@ -52,10 +54,13 @@ export default async function Page({ params, searchParams }: PageProps) {
     }
   } else {
     page = await client.getPage(path ?? [], { site, locale });
-    if (!page && mayCheckSearchFallback({ site, locale, path }, process.env)) {
-      searchFallbackIndex = getSearchFallbackIndex(
-        { site, locale, path }, (await nextHeaders()).get("host"), process.env,
-      );
+    const scope = { site, locale, path };
+    const checkFallback = !page && mayCheckSearchFallback(scope, process.env);
+    const checkLive = mayCheckLiveAglcSearch(scope, process.env);
+    const requestHost = checkFallback || checkLive ? (await nextHeaders()).get("host") : null;
+    serveNativeSearch = checkLive && isLiveAglcSearchOnHost(scope, requestHost, process.env);
+    if (checkFallback) {
+      searchFallbackIndex = getSearchFallbackIndex(scope, requestHost, process.env);
       if (searchFallbackIndex) {
         const home = await client.getPage([], { site, locale });
         if (home?.siteName === site && home.layout.sitecore.route &&
@@ -97,17 +102,20 @@ export default async function Page({ params, searchParams }: PageProps) {
   return (
     <NextIntlClientProvider>
       <Providers page={page} componentProps={componentProps}>
-        <Layout page={page} campaignConsent={campaignConsent} mainContent={searchFallbackIndex ? (
-          <>
-            <section className="page-intro">
-              <div className="interior-shell page-intro__copy"><h1>Search AGLC</h1></div>
-            </section>
-            <SearchExperience
-              page={page}
-              fields={{ search: { value: JSON.stringify({ searchIndex: searchFallbackIndex, fieldsMapping: {} }) } }}
-            />
-          </>
-        ) : undefined} />
+        <NativeSearchModeProvider enabled={serveNativeSearch && page.siteName === "aglc" &&
+          !page.mode.isEditing && !page.mode.isPreview && !page.mode.isDesignLibrary}>
+          <Layout page={page} campaignConsent={campaignConsent} mainContent={searchFallbackIndex ? (
+            <>
+              <section className="page-intro">
+                <div className="interior-shell page-intro__copy"><h1>Search AGLC</h1></div>
+              </section>
+              <SearchExperience
+                page={page}
+                fields={{ search: { value: JSON.stringify({ searchIndex: searchFallbackIndex, fieldsMapping: {} }) } }}
+              />
+            </>
+          ) : undefined} />
+        </NativeSearchModeProvider>
       </Providers>
     </NextIntlClientProvider>
   );

@@ -274,7 +274,10 @@ test('published catchall prefers native results page and otherwise keeps publish
     'next-intl/server': { setRequestLocale: () => {} },
     'lib/utils': { getBaseUrl: () => 'https://staged.example' },
     'components/search-experience/SearchExperience': { Default: LiveSearchExperience },
+    'lib/native-search-mode': { NativeSearchModeProvider: providers },
     'lib/aglc-search-fallback': {
+      mayCheckLiveAglcSearch: () => false,
+      isLiveAglcSearchOnHost: () => false,
       mayCheckSearchFallback: (scope) => fallbackLib.mayCheckSearchFallback(scope, env),
       getSearchFallbackIndex: (scope, host) => fallbackLib.getSearchFallbackIndex(scope, host, env),
     },
@@ -300,4 +303,78 @@ test('published catchall prefers native results page and otherwise keeps publish
   draft = true;
   await assert.rejects(() => page(args), /404/);
   assert.deepEqual(calls, []);
+});
+
+test('native production search requires the exact AGLC host, production, enabled source, context, locale, and affirmative flag', () => {
+  const { getSearchFallbackIndex, isLiveAglcSearchOnHost } = fromApp('lib/aglc-search-fallback.ts');
+  const scope = { site: 'aglc', locale: 'en', path: ['search-results'] };
+  const host = 'aglc-cp.vercel.app';
+  const env = { ...defaultEnv, AGLC_NATIVE_SEARCH_LIVE: '1', VERCEL_ENV: 'production' };
+  assert.equal(isLiveAglcSearchOnHost(scope, host, env), true);
+  assert.equal(getSearchFallbackIndex(scope, host, env), sourceId.replaceAll('-', ''));
+  assert.equal(getSearchFallbackIndex(scope, host, { ...env, AGLC_NATIVE_SEARCH_LIVE: '0' }), undefined);
+  for (const [testScope, testHost, testEnv] of [
+    [{ ...scope, site: 'cannabissense' }, host, env],
+    [{ ...scope, locale: 'fr' }, host, env],
+    [scope, 'cannabissense-cp.vercel.app', env],
+    [scope, 'test.vercel.app', env],
+    [scope, host + ':443', env],
+    [scope, host + '.example', env],
+    [scope, host, { ...env, VERCEL_ENV: 'preview' }],
+    [scope, host, { ...env, AGLC_SEARCH_INDEX_ID: '' }],
+    [scope, host, { ...env, AGLC_SEARCH_CONTEXT_ID: '' }],
+  ]) assert.equal(isLiveAglcSearchOnHost(testScope, testHost, testEnv), false);
+  assert.equal(isLiveAglcSearchOnHost({ ...scope, path: ['gaming'] }, host, env), true);
+  assert.equal(getSearchFallbackIndex({ ...scope, path: ['gaming'] }, host, env), undefined);
+});
+
+test('authoring and untouched search inputs are unchanged; approved AGLC boxes use q only with server provider on', () => {
+  const modeModule = fromApp('lib/native-search-mode.tsx');
+  const NativeSearch = fromApp('lib/native-controls.tsx', { './native-search-mode': modeModule }).NativeSearch;
+  const control = (enabled, editing = false, url = 'https://aglc.ca/search-results?fixed=1', queryName = 'opq') =>
+    renderToStaticMarkup(React.createElement(modeModule.NativeSearchModeProvider, { enabled },
+      React.createElement(NativeSearch, { editing, fields: {
+        SearchAction: { jsonValue: { value: { href: url, text: 'External search' } } },
+        SearchLabel: { jsonValue: { value: 'Search AGLC' } },
+        SearchQueryName: { jsonValue: { value: queryName } },
+      } })));
+  assert.match(control(false), /action="https:\/\/aglc.ca\/search-results"/);
+  assert.match(control(false), /name="fixed"/);
+  assert.match(control(false), /name="opq"/);
+  assert.match(control(true), /action="\/search-results"/);
+  assert.match(control(true), /name="q"/);
+  assert.doesNotMatch(control(true), /name="(?:opq|fixed)"/);
+  assert.match(control(true, true), /native-search-editor/);
+  assert.match(control(true, true), /https:\/\/aglc.ca\/search-results/);
+  assert.doesNotMatch(control(true, true), /<form/);
+  assert.match(control(true, false, 'https://example.org/search'), /action="https:\/\/example.org\/search"/);
+});
+
+test('Vercel production API refuses other hosts and does not query Sitecore with the live flag off', async () => {
+  let calls = 0;
+  const route = fromApp('app/api/aglc-search/route.ts', {
+    '@sitecore-content-sdk/search': { SearchService: class {
+      async search() { calls++; return { total: 1, results: [{ sc_item_id: formsId, Title: 'Forms' }] }; }
+    } },
+  });
+  const live = { ...defaultEnv, VERCEL_ENV: 'production', AGLC_NATIVE_SEARCH_LIVE: '0' };
+  const saved = Object.fromEntries(Object.keys(live).map((key) => [key, process.env[key]]));
+  const againstHost = (host) => route.POST(request(phoneLikeBody, { 'content-type': 'application/json', host }));
+  try {
+    Object.assign(process.env, live);
+    assert.equal((await againstHost('aglc-cp.vercel.app')).status, 503);
+    process.env.AGLC_NATIVE_SEARCH_LIVE = '1';
+    assert.equal((await againstHost('cannabissense-cp.vercel.app')).status, 503);
+    assert.equal((await againstHost('stage.example')).status, 503);
+    assert.equal(calls, 0);
+    const permitted = await againstHost('aglc-cp.vercel.app');
+    assert.equal(permitted.status, 200);
+    assert.equal((await permitted.json()).total, 1);
+    assert.equal(calls, 1);
+  } finally {
+    for (const [key, value] of Object.entries(saved)) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
 });

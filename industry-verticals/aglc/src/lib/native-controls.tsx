@@ -1,6 +1,7 @@
 import { Image, Link, Text } from '@sitecore-content-sdk/nextjs';
 import type { NavigationItem, SearchFields } from './shared-fields';
-import { resolveSearchDestination } from './aglc-search-contract';
+import { maxQueryLength, resolveSearchDestination, searchPath, searchQueryParam } from './aglc-search-contract';
+import { useNativeSearchMode } from './native-search-mode';
 
 export function NativeNavigationLink({ item, onClick }: { item: NavigationItem; onClick?: () => void }) {
   if (!item.Link?.jsonValue) return null;
@@ -13,6 +14,7 @@ export function NativeNavigationLink({ item, onClick }: { item: NavigationItem; 
 }
 
 export function NativeSearch({ fields, editing = false }: { fields: SearchFields; editing?: boolean }) {
+  const useLocalSearch = useNativeSearchMode();
   const action = fields.SearchAction?.jsonValue;
   const label = fields.SearchLabel?.jsonValue;
   const queryName = fields.SearchQueryName?.jsonValue?.value;
@@ -20,9 +22,10 @@ export function NativeSearch({ fields, editing = false }: { fields: SearchFields
   if (!action?.value?.href || !label?.value?.trim() || !queryName?.match(/^[a-zA-Z][a-zA-Z0-9_-]*$/)) return null;
   const destination = resolveSearchDestination(action.value.href, queryName);
   if (!destination) return null;
-  return <form className="native-search" role="search" action={destination.action} method="get" aria-label={label.value}>
-    {destination.params.map(([name, value], index) => <input key={`${name}-${index}`} type="hidden" name={name} value={value} />)}
+  const switchToNative = useLocalSearch && destination.action === 'https://aglc.ca/search-results' && queryName === 'opq';
+  return <form className="native-search" role="search" action={switchToNative ? searchPath : destination.action} method="get" aria-label={label.value}>
+    {!switchToNative && destination.params.map(([name, value], index) => <input key={`${name}-${index}`} type="hidden" name={name} value={value} />)}
     <button type="submit" aria-label={label.value}><span className="search-icon" aria-hidden="true" /></button>
-    <input type="search" name={queryName} placeholder={label.value} aria-label={label.value} required />
+    <input type="search" name={switchToNative ? searchQueryParam : queryName} maxLength={switchToNative ? maxQueryLength : undefined} placeholder={label.value} aria-label={label.value} required />
   </form>;
 }
