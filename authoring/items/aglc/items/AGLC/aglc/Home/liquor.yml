@@ -1,0 +1,80 @@
+﻿---
+ID: "a23891b4-fbc3-4264-8738-603c74d48c60"
+Parent: "b25704d6-68a6-4e40-96a5-b869529e992c"
+Template: "95902259-996f-4932-980a-cdac2de84b0a"
+Path: /sitecore/content/aglc/aglc/Home/liquor
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E78A2B3-1229-483A-914B-614237EADF56}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6D512095-74BB-42B9-ACC1-459A10E7D403}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "5a2ed83d-266e-4687-9cf7-30010ff68418"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{8452A4CD-E2F4-5840-B3D9-835920F70E6F}"
+          id="{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}"
+          ds="{697D9605-A897-4519-910D-87B3D8D0BCDC}"
+          ph="headless-main"
+          par="FieldNames=%7B7FB3D349-200D-4C1B-8548-C3DFDE9BADCF%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{34F5B004-0425-5812-81A5-51AC81CCAC89}"
+          id="{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}"
+          ds="{2947C62F-7E85-4247-866E-B25C50BE774F}"
+          ph="headless-main"
+          par="FieldNames=%7B3E5599A9-C388-4D08-8C18-B3202C0DF787%7D&amp;DynamicPlaceholderId=3" />
+        <r
+          uid="{CAE4CE09-AB16-5E93-A98D-34C51C378ACB}"
+          id="{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}"
+          ds="{648C72E3-93DD-4C94-8606-6A932FA2ECBC}"
+          ph="headless-main"
+          par="FieldNames=%7B8992E8E3-CBC9-441B-96B6-DEFDF5546637%7D&amp;DynamicPlaceholderId=4" />
+        <r
+          uid="{2C9C1ED6-0652-5D37-9EF1-8BEFAFA01AFC}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{48C4B328-C35D-4DCF-8169-8CD8AA8BA8F3}"
+          ph="headless-main"
+          par="FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=5" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "c9b60abc-3a50-47df-ab01-caa0dcb21e6d"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Liquor
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054045Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: liquor
+    - ID: "75b183c2-6155-4a48-a7d2-45cd98c691c1"
+      Hint: Title
+      Value: Liquor
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d50eb813-8405-445d-8192-de247d586f18"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060352Z

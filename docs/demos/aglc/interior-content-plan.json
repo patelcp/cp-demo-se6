@@ -1,0 +1,1615 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Create-only illustrative interior pages; existing Home content preserved; no digital form or native Search claim",
+  "pages": [
+    {
+      "site": "aglc",
+      "slug": "gaming",
+      "path": "/sitecore/content/aglc/aglc/Home/gaming",
+      "title": "Gaming",
+      "sourceUrl": "https://aglc.ca/gaming",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "0e78a2b31229483a914b614237eadf56",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Gaming",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Gaming",
+            "Summary": "",
+            "Image": "<image mediaid=\"{C1C424EC-9438-4642-A16C-379406C1D6DE}\" alt=\"Gaming banner\" />"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/CardGrid",
+          "templateId": "45f9bc08f72640419f45aa3379ef755e",
+          "fields": {
+            "Heading": "Trending",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/CardGrid/Card 1",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Self-Exclusion Program",
+            "Summary": "",
+            "Image": "<image mediaid=\"{CC7654AA-CAA7-4A3B-B0B7-055EE6DA29FC}\" alt=\"Self-Exclusion Program\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/self-exclusion\" text=\"Self-Exclusion Program\" />",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/CardGrid/Card 2",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Lotteries",
+            "Summary": "",
+            "Image": "<image mediaid=\"{51C2F0C2-6DD6-4D83-B8B4-483FBB81238D}\" alt=\"Lotteries\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/lotteries\" text=\"Lotteries\" />",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/CardGrid/Card 3",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Raffles",
+            "Summary": "",
+            "Image": "<image mediaid=\"{CF4C2C05-FD4F-442D-9340-A5D5C0EBF94F}\" alt=\"Raffles\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/raffle-faq\" text=\"Raffles\" />",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "For charitable organizations and businesses",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Licences",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/licences\" text=\"Licences\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Gaming legislation and policies",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/gaming-legislation-policies\" text=\"Gaming legislation and policies\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "GAIN",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/training/gaming-information-charitable-groups\" text=\"GAIN\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Alberta's charitable gaming model",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/charitablegaming\" text=\"Alberta&#x27;s charitable gaming model\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 5",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Eligibility for charitable gaming",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/charitablegaming/eligibility-charitable-gaming\" text=\"Eligibility for charitable gaming\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList/Resource 6",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Use of gaming proceeds",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/gaming/licences/use-gaming-proceeds\" text=\"Use of gaming proceeds\" />",
+            "Category": "Gaming",
+            "DocumentType": "Information",
+            "__Sortorder": "600"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/gaming/Data/CallToAction",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Forms and documents",
+            "Body": "<p>Explore a selection of official AGLC resources.</p>",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home/forms",
+              "text": "View forms and documents"
+            },
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/gaming/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/gaming/Data/PageIntro",
+          "variant": "ImageBanner"
+        },
+        {
+          "component": "CardGrid",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/gaming/Data/CardGrid",
+          "variant": "SectorTiles"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/gaming/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/gaming/Data/CallToAction",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "aglc",
+      "slug": "liquor",
+      "path": "/sitecore/content/aglc/aglc/Home/liquor",
+      "title": "Liquor",
+      "sourceUrl": "https://aglc.ca/liquor",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "0e78a2b31229483a914b614237eadf56",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Liquor",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Liquor",
+            "Summary": "",
+            "Image": "<image mediaid=\"{EF43C53E-1A15-4988-8AA2-867654764CFF}\" alt=\"Liquor banner\" />"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid",
+          "templateId": "45f9bc08f72640419f45aa3379ef755e",
+          "fields": {
+            "Heading": "Trending",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid/Card 1",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Apply for a private special event liquor licence",
+            "Summary": "",
+            "Image": "<image mediaid=\"{94F7EC35-4205-4F8A-AC74-F1863C1449B3}\" alt=\"Apply for a private special event liquor licence\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/event-licence\" text=\"Apply for a private special event liquor licence\" />",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid/Card 2",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Liquor handbooks and policies",
+            "Summary": "",
+            "Image": "<image mediaid=\"{D8EC7F77-409B-4384-A40D-981747375645}\" alt=\"Liquor handbooks and policies\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/liquor-legislation-and-policies\" text=\"Liquor handbooks and policies\" />",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid/Card 3",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Alberta liquor manufacturers",
+            "Summary": "",
+            "Image": "<image mediaid=\"{3D1C9D95-01DC-4AEE-9C12-66D6ACB61BF3}\" alt=\"Alberta liquor manufacturers\" />",
+            "Link": "<link linktype=\"external\" url=\"https://albertamadeliquor.aglc.ca/\" text=\"Alberta liquor manufacturers\" />",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "For businesses",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Apply for a liquor licence",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/liquor-licences/apply-liquor-licence\" text=\"Apply for a liquor licence\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Liquor legislation and policies",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/liquor-legislation-and-policies\" text=\"Liquor legislation and policies\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Liquor licensee payment options",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/liquor-licensing/liquor-licensee-payment-options\" text=\"Liquor licensee payment options\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "SMART Training Programs",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/training\" text=\"SMART Training Programs\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 5",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Become a liquor agency",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/liquor-agencies-and-suppliers/become-liquor-agency\" text=\"Become a liquor agency\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList/Resource 6",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Warehouse and distribution",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/liquor/warehouse-and-distribution\" text=\"Warehouse and distribution\" />",
+            "Category": "Liquor",
+            "DocumentType": "Information",
+            "__Sortorder": "600"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/liquor/Data/CallToAction",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Forms and documents",
+            "Body": "<p>Explore a selection of official AGLC resources.</p>",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home/forms",
+              "text": "View forms and documents"
+            },
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/liquor/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/liquor/Data/PageIntro",
+          "variant": "ImageBanner"
+        },
+        {
+          "component": "CardGrid",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid",
+          "variant": "SectorTiles"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/liquor/Data/CallToAction",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "aglc",
+      "slug": "cannabis",
+      "path": "/sitecore/content/aglc/aglc/Home/cannabis",
+      "title": "Cannabis",
+      "sourceUrl": "https://aglc.ca/cannabis",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "0e78a2b31229483a914b614237eadf56",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Cannabis",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Cannabis",
+            "Summary": "",
+            "Image": "<image mediaid=\"{420FC32E-5022-4BCE-92DD-C9C411222FFC}\" alt=\"Cannabis banner\" />"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid",
+          "templateId": "45f9bc08f72640419f45aa3379ef755e",
+          "fields": {
+            "Heading": "Trending",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid/Card 1",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "SellSafe Cannabis Staff Training",
+            "Summary": "",
+            "Image": "<image mediaid=\"{8FB7B271-A2AD-49F1-A05F-97A1D7069BFD}\" alt=\"SellSafe Cannabis Staff Training\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/training/sellsafe-cannabis-staff-training\" text=\"SellSafe Cannabis Staff Training\" />",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid/Card 2",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Cannabis legislation and policies",
+            "Summary": "",
+            "Image": "<image mediaid=\"{20373613-9984-4BE6-8A54-1ABEEAD5B590}\" alt=\"Cannabis legislation and policies\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/cannabis-legislation-and-policies\" text=\"Cannabis legislation and policies\" />",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid/Card 3",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Search for a cannabis retailer",
+            "Summary": "",
+            "Image": "<image mediaid=\"{6DF5ED4F-30EE-48EC-81C8-1BD34A2F7442}\" alt=\"Search for a cannabis retailer\" />",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search\" text=\"Search for a cannabis retailer\" />",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "For businesses",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Become a cannabis representative",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/licensed-producers/cannabis-representatives\" text=\"Become a cannabis representative\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "SMART Training Programs",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/training\" text=\"SMART Training Programs\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Requirements for retail staff",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/working-cannabis-industry/requirements-retail-staff\" text=\"Requirements for retail staff\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Apply for a retail cannabis store licence",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/retail-cannabis/apply-retail-cannabis-store-licence\" text=\"Apply for a retail cannabis store licence\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 5",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis retailer manual and forms",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/retail-cannabis/cannabis-retailer-manual-and-forms\" text=\"Cannabis retailer manual and forms\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList/Resource 6",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis licence and registration fees",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis/retail-cannabis/cannabis-licence-and-registration-fees\" text=\"Cannabis licence and registration fees\" />",
+            "Category": "Cannabis",
+            "DocumentType": "Information",
+            "__Sortorder": "600"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CallToAction",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Forms and documents",
+            "Body": "<p>Explore a selection of official AGLC resources.</p>",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home/forms",
+              "text": "View forms and documents"
+            },
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/cannabis/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/cannabis/Data/PageIntro",
+          "variant": "ImageBanner"
+        },
+        {
+          "component": "CardGrid",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid",
+          "variant": "SectorTiles"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/cannabis/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/cannabis/Data/CallToAction",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "aglc",
+      "slug": "forms",
+      "path": "/sitecore/content/aglc/aglc/Home/forms",
+      "title": "Forms & Documents",
+      "sourceUrl": "https://aglc.ca/forms",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "0e78a2b31229483a914b614237eadf56",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/aglc/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Forms & Documents",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Forms & Documents",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/RichTextSection",
+          "templateId": "4c4bc580a8ff4c618ebf138a68b968f1",
+          "fields": {
+            "Heading": "Find a resource",
+            "Body": "<p>This demonstration shows a curated selection of official AGLC documents. Filters apply to this authored selection, not the complete AGLC library. Downloads open the official published files. This page is not a submitted application or a digitized Sitecore Form.</p>",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "Forms and documents",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Accounting Fees-Gaming Financial Reports",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Accounting_Fees-Gaming_Financial_Reports__20250401.pdf\" text=\"Download Accounting Fees-Gaming Financial Reports\" />",
+            "Category": "Use of Proceeds",
+            "DocumentType": "Guideline",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Bursaries and Scholarships",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Bursaries_and_Scholarships__20250401.pdf\" text=\"Download Bursaries and Scholarships\" />",
+            "Category": "Use of Proceeds",
+            "DocumentType": "Guideline",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Activity and Winner\u2019s Edge Casino Reports Portal Request Form",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Activity_and_Winner%E2%80%99s_Edge_Casino_Reports_Portal_Request_Form_20250919.pdf\" text=\"Download Activity and Winner\u2019s Edge Casino Reports Portal Request Form\" />",
+            "Category": "Casino",
+            "DocumentType": "Form",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Application for Background Check",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Application_for_Background_Check_20251215.pdf\" text=\"Download Application for Background Check\" />",
+            "Category": "Working in the Gaming Industry",
+            "DocumentType": "Form",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 5",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Application for Electronic Raffle System ERS Administrator",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Application_for_Electronic_Raffle_System_%28ERS%29_Administrator_%285647%29_20260826.pdf\" text=\"Download Application for Electronic Raffle System ERS Administrator\" />",
+            "Category": "Working in the Gaming Industry",
+            "DocumentType": "Form",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 6",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Bingo Association - Bingo Facility Licence Application",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Bingo_Association_-_Bingo_Facility_Licence_Application_20250616.pdf\" text=\"Download Bingo Association - Bingo Facility Licence Application\" />",
+            "Category": "Bingo",
+            "DocumentType": "Form",
+            "__Sortorder": "600"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 7",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Bingo Licence Application - Association Charity Group",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Bingo_Licence_Application_Association_Charity_Group_20250616.pdf\" text=\"Download Bingo Licence Application - Association Charity Group\" />",
+            "Category": "Bingo",
+            "DocumentType": "Form",
+            "__Sortorder": "700"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList/Document 8",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Bingo Licence Application Community",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/sites/aglc.ca/files/forms/Bingo_Licence_Application_Community_20260313.pdf\" text=\"Download Bingo Licence Application Community\" />",
+            "Category": "Bingo",
+            "DocumentType": "Form",
+            "__Sortorder": "800"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/aglc/Home/forms/Data/CallToAction",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Browse the complete library",
+            "Body": "<p>Use the official AGLC library for the latest complete selection.</p>",
+            "Link": "<link linktype=\"external\" url=\"https://aglc.ca/forms\" text=\"Visit AGLC forms and documents\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/forms/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "RichTextSection",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/forms/Data/RichTextSection",
+          "variant": "Default"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/forms/Data/ResourceList",
+          "variant": "Documents"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/aglc/Home/forms/Data/CallToAction",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "cannabissense",
+      "slug": "basics",
+      "path": "/sitecore/content/aglc/cannabissense/Home/basics",
+      "title": "The basics",
+      "sourceUrl": "https://cannabissense.ca/basics",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "The basics",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "The basics",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis 101",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/basics/cannabis-101\" text=\"Cannabis 101\" />",
+            "Category": "The basics",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Safe storage",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/safe-storage\" text=\"Safe storage\" />",
+            "Category": "The basics",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis use under 25",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/cannabis-use-under-25\" text=\"Cannabis use under 25\" />",
+            "Category": "The basics",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Talking to kids and teens about cannabis",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/talking-to-teens\" text=\"Talking to kids and teens about cannabis\" />",
+            "Category": "The basics",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Next topic",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Learn about moderation",
+            "Body": "",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home/moderation",
+              "text": "Learn more"
+            },
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Find support",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Find support",
+            "Body": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/find-support\" text=\"Learn more\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/basics/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/basics/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Next topic",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/basics/Data/Find support",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "cannabissense",
+      "slug": "moderation",
+      "path": "/sitecore/content/aglc/cannabissense/Home/moderation",
+      "title": "Moderation",
+      "sourceUrl": "https://cannabissense.ca/moderation",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Moderation",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Moderation",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Moderation tips",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/moderation/moderation-tips\" text=\"Moderation tips\" />",
+            "Category": "Moderation",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis Use Guidelines",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/moderation/cannabis-use-guidelines\" text=\"Cannabis Use Guidelines\" />",
+            "Category": "Moderation",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Next topic",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Learn about health effects",
+            "Body": "",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home/health-effects",
+              "text": "Learn more"
+            },
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Find support",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Find support",
+            "Body": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/find-support\" text=\"Learn more\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Next topic",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/moderation/Data/Find support",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "cannabissense",
+      "slug": "health-effects",
+      "path": "/sitecore/content/aglc/cannabissense/Home/health-effects",
+      "title": "Health effects",
+      "sourceUrl": "https://cannabissense.ca/health-effects",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Health effects",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Health effects",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Know the effects",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects/know-effects\" text=\"Know the effects\" />",
+            "Category": "Health effects",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Vaping",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects/vaping\" text=\"Vaping\" />",
+            "Category": "Health effects",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Pregnancy & breastfeeding",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects/pregnancy-breastfeeding\" text=\"Pregnancy &amp; breastfeeding\" />",
+            "Category": "Health effects",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Medical use",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects/medical-use\" text=\"Medical use\" />",
+            "Category": "Health effects",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList/Resource 5",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Cannabis & mental health",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects/cannabis-mental-health\" text=\"Cannabis &amp; mental health\" />",
+            "Category": "Health effects",
+            "DocumentType": "Information",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Next topic",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Learn about legal use",
+            "Body": "",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home/use-legally",
+              "text": "Learn more"
+            },
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Find support",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Find support",
+            "Body": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/find-support\" text=\"Learn more\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Next topic",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/Find support",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "cannabissense",
+      "slug": "use-legally",
+      "path": "/sitecore/content/aglc/cannabissense/Home/use-legally",
+      "title": "Use legally",
+      "sourceUrl": "https://cannabissense.ca/use-legally",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Use legally",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Use legally",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList",
+          "templateId": "637d49f6fdf241dca7cd86d9090ef40a",
+          "fields": {
+            "Heading": "",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 1",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Where can I use?",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/use-legally/where-can-i-use\" text=\"Where can I use?\" />",
+            "Category": "Use legally",
+            "DocumentType": "Information",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 2",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Possession limits",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/use-legally/possession-limits\" text=\"Possession limits\" />",
+            "Category": "Use legally",
+            "DocumentType": "Information",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 3",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Driving legal",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/use-legally/drivinglegal\" text=\"Driving legal\" />",
+            "Category": "Use legally",
+            "DocumentType": "Information",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 4",
+          "templateId": "95a3c89e1f5f435ead69023edc0f1147",
+          "fields": {
+            "Title": "Buy legal",
+            "Summary": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/buylegal\" text=\"Buy legal\" />",
+            "Category": "Use legally",
+            "DocumentType": "Information",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Next topic",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Learn about moderation",
+            "Body": "",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home/moderation",
+              "text": "Learn more"
+            },
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Find support",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Find support",
+            "Body": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/find-support\" text=\"Learn more\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "ResourceList",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Next topic",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/Find support",
+          "variant": "Default"
+        }
+      ]
+    },
+    {
+      "site": "cannabissense",
+      "slug": "resources",
+      "path": "/sitecore/content/aglc/cannabissense/Home/resources",
+      "title": "Resources",
+      "sourceUrl": "https://cannabissense.ca/resources",
+      "pageTemplateId": "95902259996f4932980acdac2de84b0a",
+      "pageDesignId": "ba3358d8891b4d4da19a545a0f534ab5",
+      "items": [
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Breadcrumb",
+          "templateId": "29bb677e232e4db1aa9d5e24fc3f7470",
+          "fields": {}
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Breadcrumb/Crumb 1",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Home",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home",
+              "text": "Home"
+            },
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Breadcrumb/Crumb 2",
+          "templateId": "a7ad23cab3f24429b2e4b8f716c9a806",
+          "fields": {
+            "Title": "Resources",
+            "Link": "",
+            "Group": "",
+            "Logo": "",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/PageIntro",
+          "templateId": "38a37125ee764c77bc0f1c977ca9b91b",
+          "fields": {
+            "Title": "Resources",
+            "Summary": "",
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid",
+          "templateId": "45f9bc08f72640419f45aa3379ef755e",
+          "fields": {
+            "Heading": "",
+            "Intro": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 1",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Trending",
+            "Summary": "",
+            "Image": "<image mediaid=\"{8443B0C7-9C15-4428-BC2A-E70A6EAB1833}\" alt=\"Trending\" />",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/trending\" text=\"Learn more\" />",
+            "__Sortorder": "100"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 2",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "CannabisSense\u2019s 4 in 20",
+            "Summary": "",
+            "Image": "<image mediaid=\"{8443B0C7-9C15-4428-BC2A-E70A6EAB1833}\" alt=\"CannabisSense\u2019s 4 in 20\" />",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/4in20\" text=\"Learn more\" />",
+            "__Sortorder": "200"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 3",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "CannabisSense quiz",
+            "Summary": "",
+            "Image": "<image mediaid=\"{7B534722-AC5B-49C6-A581-6224BFFDD7D5}\" alt=\"CannabisSense quiz\" />",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/quiz/cannabissense-quiz\" text=\"Learn more\" />",
+            "__Sortorder": "300"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 4",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Reference",
+            "Summary": "",
+            "Image": "<image mediaid=\"{9A43580A-AFEC-4F7E-8AF7-F3F7EDDE8555}\" alt=\"Reference\" />",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/resources/reference\" text=\"Learn more\" />",
+            "__Sortorder": "400"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid/Card 5",
+          "templateId": "a99aa87eab914589a7a33eb3ca24fdb3",
+          "fields": {
+            "Title": "Blogs",
+            "Summary": "",
+            "Image": "<image mediaid=\"{BC4A6699-0720-472B-8CF2-765F193314BB}\" alt=\"Blogs\" />",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/resources/blogs\" text=\"Learn more\" />",
+            "__Sortorder": "500"
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Next topic",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Learn about health effects",
+            "Body": "",
+            "Link": {
+              "internalPath": "/sitecore/content/aglc/cannabissense/Home/health-effects",
+              "text": "Learn more"
+            },
+            "Image": ""
+          }
+        },
+        {
+          "path": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Find support",
+          "templateId": "5043c04412dc47f9a538e519053df657",
+          "fields": {
+            "Title": "Find support",
+            "Body": "",
+            "Link": "<link linktype=\"external\" url=\"https://cannabissense.ca/find-support\" text=\"Learn more\" />",
+            "Image": ""
+          }
+        }
+      ],
+      "placements": [
+        {
+          "component": "Breadcrumb",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Breadcrumb",
+          "variant": "Default"
+        },
+        {
+          "component": "PageIntro",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/resources/Data/PageIntro",
+          "variant": "Default"
+        },
+        {
+          "component": "CardGrid",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/resources/Data/CardGrid",
+          "variant": "ResourceTiles"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Next topic",
+          "variant": "Default"
+        },
+        {
+          "component": "CallToAction",
+          "datasourcePath": "/sitecore/content/aglc/cannabissense/Home/resources/Data/Find support",
+          "variant": "Default"
+        }
+      ]
+    }
+  ],
+  "navigationUpdates": []
+}

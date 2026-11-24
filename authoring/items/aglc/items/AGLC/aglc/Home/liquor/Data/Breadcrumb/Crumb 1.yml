@@ -1,0 +1,37 @@
+﻿---
+ID: "94c1adce-bc17-4631-b5f3-803e8d9f00ac"
+Parent: "561e6795-0f58-41e9-85e2-24f493fd51a6"
+Template: "a7ad23ca-b3f2-4429-b2e4-b8f716c9a806"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/Breadcrumb/Crumb 1
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9bfb115f-80a2-4c1f-88e1-40bbc6ea22a7"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054128Z
+    - ID: "2f073244-a079-407b-a5ea-50b10888b2f0"
+      Hint: Title
+      Value: Home
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "131e5362-d889-4677-8b83-ec6541cf3d37"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054128Z
+    - ID: "fa52a6dd-1f00-45a5-ab06-41dbaf526567"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="{B25704D6-68A6-4E40-96A5-B869529E992C}" text="Home" />

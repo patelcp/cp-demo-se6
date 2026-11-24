@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "id": "shared-slice",
+  "project": "aglc",
+  "title": "Shared authorable home slice",
+  "baseRevision": "7973577427004973baea3c256d1bdea12a50aafd",
+  "codeScopes": [
+    "industry-verticals/aglc"
+  ],
+  "cmsScopes": [
+    "/sitecore/content/aglc/aglc",
+    "/sitecore/content/aglc/cannabissense",
+    "/sitecore/templates/Project/AGLC",
+    "/sitecore/layout/Renderings/Project/AGLC",
+    "/sitecore/layout/Placeholder Settings/Project/AGLC",
+    "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
+    "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh"
+  ],
+  "designReferences": [
+    "https://aglc.ca/",
+    "https://cannabissense.ca/",
+    "docs/demos/aglc/shared-slice-design.md"
+  ],
+  "acceptanceCriteria": [
+    "Same five native rendering implementations on both Home pages with site-specific tokens and content.",
+    "Native SDK fields preserve editing metadata; repeatable cards/navigation are child items.",
+    "No changes to BrandKit assignments or unrelated customer resources.",
+    "Page-local hero/cards/CTA; site-owned shared header/footer partial data.",
+    "Tests, lint, typecheck, genuine Edge build and real layouts verified; Pages save/reload explicitly blocked until browser available."
+  ],
+  "rollback": "Before layout activation retain original Home final/shared rendering values and existing design bindings; restore only this slice placements if needed. Do not delete authored data or unrelated definitions.",
+  "stages": {
+    "implementation": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:04:54.206Z",
+          "result": "not-ready",
+          "summary": "Five shared native frontend renderings implemented locally. Independent reviewer confirms empty HomeLink and empty navigation Title regressions fixed; 21 real-SDK SSR tests pass. No commit or deployment. Browser/Pages checks remain unrun; authenticated work paused pending transport security review.",
+          "revision": "7973577427004973baea3c256d1bdea12a50aafd",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": null,
+          "externalState": null
+        },
+        {
+          "recordedAt": "2026-11-13T23:48:21.926Z",
+          "result": "pass",
+          "summary": "Five native shared renderings implemented, deployed and publicly verified on both sites. Signed-in Page Builder acceptance remains pending separately.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "2c5b562f7089f111e83f9f3ed7d040fc78c964170d4ccd2f8bab210e76bac7ff",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": null
+        }
+      ]
+    },
+    "build": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.144Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": null
+        },
+        {
+          "recordedAt": "2026-11-14T01:24:57.844Z",
+          "result": "pass",
+          "summary": "Final f4c9819 built successfully on both Vercel projects and shared editing host; 34 app tests, lint, type-check and12 offline safety tests pass.",
+          "revision": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+          "sourceFingerprint": "c631db469dadfb5f14402f2dc67f390f5d5de138b72bb71690746f127fcd0339",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/reference-correction.md",
+            "sha256": "7031ba4e317e0cc75123d7e9508c61d792f1734d4e4daa69f52e3026fd5db097"
+          },
+          "externalState": null
+        }
+      ]
+    },
+    "deployment": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.042Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "definitions": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.199Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "publication": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:06.094Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "authoring": {
+      "result": "blocked",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T22:27:45.483Z",
+          "result": "blocked",
+          "summary": "Connected Mac exposes no browser surface; native Page Builder render/edit/save/reload unrun. API/schema work continues independently.",
+          "revision": "7973577427004973baea3c256d1bdea12a50aafd",
+          "sourceFingerprint": "3385e3e1d546cc0ae1db42c9aedd140f6b1f648af790be30ba6c66b1aa42eaa5",
+          "artifact": null,
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "browser": {
+      "result": "pass",
+      "evidence": [
+        {
+          "recordedAt": "2026-11-13T23:47:05.867Z",
+          "result": "pass",
+          "summary": "Verified evidence and explicit UI gap recorded in shared-slice-verification.md.",
+          "revision": "1e5a0929907c1d0370868d96065c2a415855cd4a",
+          "sourceFingerprint": "e433d9f85c3fba57d572e98e5b34a17b0cecb18df15796ce406db734a2291eaf",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/shared-slice-verification.md",
+            "sha256": "a465a548011196de63a4c45229dc9cf967109c77a5bd149fb1139daef0315beb"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        },
+        {
+          "recordedAt": "2026-11-14T01:25:19.944Z",
+          "result": "pass",
+          "summary": "Both final public demos inspected desktop/mobile; reference tint and logos, native Hero/Footer, media and counts pass with no overflow/console errors. Motion/menu tests passed prior noninteractive CSS; Pages remains unverified.",
+          "revision": "f4c9819e80fbd68dd1e13f2ff0a965c7c15ff196",
+          "sourceFingerprint": "c631db469dadfb5f14402f2dc67f390f5d5de138b72bb71690746f127fcd0339",
+          "artifact": {
+            "path": "docs/demos/aglc/evidence/reference-correction.md",
+            "sha256": "7031ba4e317e0cc75123d7e9508c61d792f1734d4e4daa69f52e3026fd5db097"
+          },
+          "externalState": "Recorded observation only; recheck tenant/deployment state before rehearsal."
+        }
+      ]
+    },
+    "handoff": {
+      "result": "not-run",
+      "evidence": []
+    }
+  },
+  "nextAction": "Verify signed-in Page Builder render/edit/save/reload on both sites, review draft PR26 and agree merge before further demo expansion."
+}

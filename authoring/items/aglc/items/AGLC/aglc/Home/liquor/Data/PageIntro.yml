@@ -1,0 +1,33 @@
+﻿---
+ID: "697d9605-a897-4519-910d-87b3d8d0bcdc"
+Parent: "548e3061-e254-4419-bc62-596bdf2b618a"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/PageIntro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054130Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: Liquor
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "809ff7ac-9259-4d14-ae16-c53c8ddc155a"
+    - ID: "b6e24546-decb-47b9-b26d-efa3ae4660ac"
+      Hint: Summary
+      Value: <p>AGLC oversees Alberta’s liquor industry, with a focus on consumer choice, access and responsible service.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060347Z
+    - ID: "f7f4dca8-69ba-46c6-981e-98d5249189ee"
+      Hint: Image
+      Value: |
+        <image mediaid="{EF43C53E-1A15-4988-8AA2-867654764CFF}" alt="Liquor banner" />

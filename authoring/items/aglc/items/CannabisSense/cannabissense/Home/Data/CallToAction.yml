@@ -1,0 +1,33 @@
+﻿---
+ID: "a9dbc4b8-f316-4ca3-9bef-566f0698f716"
+Parent: "37b41cf4-8196-498f-802d-0493e3059e5c"
+Template: "5043c044-12dc-47f9-a538-e519053df657"
+Path: /sitecore/content/aglc/cannabissense/Home/Data/CallToAction
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1bea189f-79b6-4cc3-a260-ba0fda135d1f"
+      Hint: Title
+      Value: "If you have a question related to legal non-medical consumption of cannabis, let us know."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223223Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "213a1801-cf76-407b-bbcc-92c8fe9294c3"
+    - ID: "9720c777-4569-4b1a-ab42-bb6861245563"
+      Hint: Link
+      Value: |
+        <link linktype="mailto" url="mailto:cannabissense@aglc.ca" text="Ask us" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T004552Z
+    - ID: "df7519d3-6e80-43f9-a874-676b3923b3ac"
+      Hint: Body
+      Value:

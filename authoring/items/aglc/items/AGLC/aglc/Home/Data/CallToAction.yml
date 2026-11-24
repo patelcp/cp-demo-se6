@@ -1,0 +1,37 @@
+﻿---
+ID: "c362935f-cff0-4d57-bb1f-5ed783e82071"
+Parent: "b2aaddc0-94cb-4968-8156-1f018d7e3c81"
+Template: "5043c044-12dc-47f9-a538-e519053df657"
+Path: /sitecore/content/aglc/aglc/Home/Data/CallToAction
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1bea189f-79b6-4cc3-a260-ba0fda135d1f"
+      Hint: Title
+      Value: Your cannabis questions. Answered.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223132Z
+    - ID: "3a7366e6-2302-462f-9f1a-87496828adf2"
+      Hint: Image
+      Value: |
+        <image mediaid="{DCFC330E-05BA-4D8B-B134-DC4542D0930B}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93543869-4bba-4037-ac1a-d8c568f7e7dd"
+    - ID: "9720c777-4569-4b1a-ab42-bb6861245563"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://cannabissense.ca" text="Visit CannabisSense.ca" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T002155Z
+    - ID: "df7519d3-6e80-43f9-a874-676b3923b3ac"
+      Hint: Body
+      Value: <p>Find trusted research, practical information and answers to your cannabis questions.</p>

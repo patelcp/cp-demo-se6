@@ -1,0 +1,1323 @@
+{
+  "status": "Reviewed exact80-command plan; automatic generation is inference, empty dependency and binding verified",
+  "target": {
+    "name": "Edge",
+    "database": "experienceedge",
+    "id": "8e080626-ddc3-4ef4-a1d1-f0be4a200254"
+  },
+  "language": "en",
+  "relatedItems": false,
+  "republish": false,
+  "cli": "DOTNET_ROLL_FORWARD=Major dotnet \"$HOME/.nuget/packages/sitecore.cli/6.0.23/tools/net8.0/any/sitecore.cli.dll\"",
+  "commands": [
+    {
+      "path": "/sitecore/templates/Project/aglc/Components",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CardGrid",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CardGrid"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Navigation Link",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Navigation Link"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Rendering Parameters/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Rendering Parameters/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Rendering Parameters",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Rendering Parameters"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CardGrid/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CardGrid/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CardGrid/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CardGrid/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Navigation Link/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Navigation Link/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Navigation Link/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Navigation Link/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader/Content",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader/Content"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader/__Standard Values",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader/__Standard Values"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Body",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Body"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Link",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Link"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Title",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CallToAction/Content/Title"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/Content/Image",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/Content/Image"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/Content/Link",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/Content/Link"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/Content/Summary",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/Content/Summary"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Card/Content/Title",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Card/Content/Title"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CardGrid/Content/Heading",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CardGrid/Content/Heading"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/CardGrid/Content/Intro",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/CardGrid/Content/Intro"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/Eyebrow",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/Eyebrow"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/Image",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/Image"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/PrimaryLink",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/PrimaryLink"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/SecondaryLink",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/SecondaryLink"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/Summary",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/Summary"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Hero/Content/Title",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Hero/Content/Title"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Navigation Link/Content/Link",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Navigation Link/Content/Link"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/Navigation Link/Content/Title",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/Navigation Link/Content/Title"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/BrandName",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/BrandName"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/Copyright",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/Copyright"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/Description",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteFooter/Content/Description"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/BrandName",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/BrandName"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/HomeLink",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/HomeLink"
+      ]
+    },
+    {
+      "path": "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/Logo",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/templates/Project/aglc/Components/SiteHeader/Content/Logo"
+      ]
+    },
+    {
+      "path": "/sitecore/layout/Renderings/Project/AGLC/Shared Experience",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/layout/Renderings/Project/AGLC/Shared Experience",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteHeader",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteHeader",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteFooter",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Headless Variants/SiteFooter",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Hero",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Headless Variants/Hero",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CardGrid",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CardGrid",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CallToAction",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Headless Variants/CallToAction",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-header",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-header"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-main",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-main"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-footer",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/headless-footer"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Available Renderings/Shared experience",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Available Renderings/Shared experience"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteHeader",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteHeader",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteFooter",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/SiteFooter",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Hero",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/Hero",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CardGrid",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CardGrid",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Headless Variants/CallToAction",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-header",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-header"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-main",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-main"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-footer",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/headless-footer"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Available Renderings/Shared experience"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/Data",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Home/Data",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/Partial Design/Site header",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/Partial Design/Site header"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site footer",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/Partial Design/Site footer",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Placeholder Settings/Partial Design/Site footer"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Page Designs/Shared experience",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Presentation/Page Designs/Shared experience"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home/Data",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Home/Data",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/Partial Design/Site header",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/Partial Design/Site header"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer",
+      "subitems": true,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site footer",
+        "--subitems"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/Partial Design/Site footer",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Placeholder Settings/Partial Design/Site footer"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Page Designs/Shared experience",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Presentation/Page Designs/Shared experience"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/aglc/Home"
+      ]
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Home",
+      "subitems": false,
+      "args": [
+        "publish",
+        "item",
+        "-n",
+        "cm",
+        "--languages",
+        "en",
+        "--targets",
+        "Edge",
+        "--path",
+        "/sitecore/content/aglc/cannabissense/Home"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use newly authorized ignored worktree session only",
+    "Re-read approved scopes and abort if unexpected descendants have appeared",
+    "Require activation journal and matching-host READY evidence before execution",
+    "Never omit --path or --targets; never set --related",
+    "Stop on any CLI failure; capture operation result and verify Edge before declaring success",
+    "No collection/site root, global layout, shared headless placeholder, Default host or Settings publish"
+  ],
+  "reviewedAdditionalDependency": {
+    "path": "/sitecore/templates/Project/aglc/Components/Rendering Parameters/__Standard Values",
+    "id": "139c2100-dec4-4b1f-9273-b307e184f586"
+  }
+}

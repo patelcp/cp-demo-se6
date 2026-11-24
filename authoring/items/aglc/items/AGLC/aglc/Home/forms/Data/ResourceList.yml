@@ -1,0 +1,26 @@
+﻿---
+ID: "7d4c6e30-3d58-4730-9022-5f6d3770225e"
+Parent: "d42b66fe-bd1d-4ba3-97aa-828778383527"
+Template: "637d49f6-fdf2-41dc-a7cd-86d9090ef40a"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/ResourceList
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0034bd37-92a4-4c6a-8f67-bfcd1706a598"
+      Hint: Heading
+      Value: Forms and documents
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054203Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "13ab3516-487d-4f07-bc2a-540640597e21"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054203Z

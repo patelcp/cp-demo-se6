@@ -1,0 +1,247 @@
+{
+  "note": "Native media imported from official reference sites. No blobs, credentials or signed upload URLs stored here. Five CannabisSense icons are available for later authored sections.",
+  "folders": [
+    {
+      "path": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh",
+      "itemId": "9d9df14648d54c4d843c24bad6f0d048"
+    },
+    {
+      "path": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh",
+      "itemId": "6f654804a00240838121afcd998fbd77"
+    }
+  ],
+  "assets": [
+    {
+      "site": "aglc",
+      "name": "aglc-logo",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/aglc-logo",
+      "sha256": "c9e1c5016eb8db4f9f352a9215ff46d213adfc58761ea1a86e42316bdcbfca35",
+      "mime": "image/svg+xml",
+      "alt": "AGLC",
+      "source": "https://aglc.ca/ (official header logo)",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/aglc-logo",
+      "itemId": "6cce54ac7d4a4271914453b7267fea39"
+    },
+    {
+      "site": "aglc",
+      "name": "aglc-footer-logo",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/aglc-footer-logo",
+      "sha256": "42b9d114b0fd1c6bb31a0e1a0e8dc31720daee3fbc131c20e8aadffbd35aaaf1",
+      "mime": "image/svg+xml",
+      "alt": "AGLC",
+      "source": "https://aglc.ca/themes/aglc/images/aglc-refresh-footer-logo.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/aglc-footer-logo",
+      "itemId": "28ee95130795409a8289d08f8616d978"
+    },
+    {
+      "site": "aglc",
+      "name": "gaming",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/gaming",
+      "sha256": "bff88428588aef250a5972b1af6928a96b8659c955e6de04df3a58975e9eafa1",
+      "mime": "image/jpeg",
+      "alt": "Gaming in Alberta",
+      "source": "https://aglc.ca/sites/aglc.ca/files/2026-02/gaming-homepage-card-1200x800.jpeg",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/gaming",
+      "itemId": "657dc6886e4a434a875ad9033c42b12b"
+    },
+    {
+      "site": "aglc",
+      "name": "liquor",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/liquor",
+      "sha256": "219127b0ad802e28bd62d9933d15f96508e6554cdf5d3135d0bcd92a5d94b6d9",
+      "mime": "image/jpeg",
+      "alt": "Liquor in Alberta",
+      "source": "https://aglc.ca/sites/aglc.ca/files/2026-02/cheers-beers-1200x800.jpeg",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/liquor",
+      "itemId": "28c5bb9c21b34ee28ffb373fd864d505"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabis",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/cannabis",
+      "sha256": "6cc47d2938b3f65ff1d715f466add5f0b85f6d923b7c47fd6d360cd7571bf618",
+      "mime": "image/jpeg",
+      "alt": "Cannabis in Alberta",
+      "source": "https://aglc.ca/sites/aglc.ca/files/2026-02/cannabis-homepage-card-1200x800.jpeg",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/cannabis",
+      "itemId": "a9248238d9084fe4b9bfd78968ff134b"
+    },
+    {
+      "site": "aglc",
+      "name": "cannabissense-promo",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/cannabissense-promo",
+      "sha256": "3e27fc115c73ab935ff8dc8ef46da4075578dc2c905c7e5158a1958e7984ba74",
+      "mime": "image/jpeg",
+      "alt": "CannabisSense",
+      "source": "https://aglc.ca/sites/aglc.ca/files/2026-02/CannabisSense---715x480.jpeg",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/cannabissense-promo",
+      "itemId": "dcfc330e05ba4d8bb134dc4542d0930b"
+    },
+    {
+      "site": "aglc",
+      "name": "mountain-poster",
+      "itemPath": "Project/aglc/aglc/ReferenceRefresh/mountain-poster",
+      "sha256": "534820edad44fca6743b221652ba03828dde4b10a37d746222c30115257ab282",
+      "mime": "image/jpeg",
+      "alt": "Alberta mountain landscape",
+      "source": "https://aglc.ca/sites/aglc.ca/files/2026-05/SP_BP-Hero_v2.jpg",
+      "note": "Official strategy-banner still used as reduced-motion fallback; not original homepage video poster",
+      "nativePath": "/sitecore/media library/Project/aglc/aglc/ReferenceRefresh/mountain-poster",
+      "itemId": "fbc75db3ee114a12bc197c89622c89f6"
+    },
+    {
+      "site": "cannabissense",
+      "name": "cannabis-hike",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/cannabis-hike",
+      "sha256": "928e3647edc126247a83be1209a05959be6ceffbd2d00dfa98a1c34f27595abb",
+      "mime": "image/jpeg",
+      "alt": "People hiking in the mountains",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/styles/responsive_768/public/2025-05/gettyimages-1369171053.jpg?itok=YBAS_CLp",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/cannabis-hike",
+      "itemId": "733d89d6e6e849848540aa6b1a321674"
+    },
+    {
+      "site": "cannabissense",
+      "name": "cannabis-landscape",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/cannabis-landscape",
+      "sha256": "f209383bd5b7cef213baa00b26ce5f587251a51f1d2c127c03457950c0055b49",
+      "mime": "image/jpeg",
+      "alt": "Alberta mountain landscape",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/styles/responsive_1040/public/2022-09/cs_homepage_background1920.jpg?itok=PNmzB9tM",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/cannabis-landscape",
+      "itemId": "30e8535f43cd47aba46dd7282917f855"
+    },
+    {
+      "site": "cannabissense",
+      "name": "cannabis-420",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/cannabis-420",
+      "sha256": "7ba5618d8a91bd2564381e7ec3ee1b90a0168fde3a29cff7be9bcad6a35bcce6",
+      "mime": "image/png",
+      "alt": "CannabisSense\u2019s 4 in 20",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/styles/responsive_520/public/2026-10/Promo%20Tile_v4.png?itok=cEMoyOib",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/cannabis-420",
+      "itemId": "b9a288f04ad2458793e82aa43ec51944"
+    },
+    {
+      "site": "cannabissense",
+      "name": "cannabis-trending",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/cannabis-trending",
+      "sha256": "e07cf2b75cfa4068108665e435d275956a7e3a278ef21c675d6b0404784458d9",
+      "mime": "image/jpeg",
+      "alt": "Trending cannabis information",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/styles/responsive_520/public/2025-06/trending-page_promo-tile.jpg?itok=uaV4RWwW",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/cannabis-trending",
+      "itemId": "3059af405951444dac381093ad9c5815"
+    },
+    {
+      "site": "cannabissense",
+      "name": "cannabis-logo",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/cannabis-logo",
+      "sha256": "113d4f89521e1a4bbb6fadaf033b82d05a2059a020c8009faaf58c15775dd450",
+      "mime": "image/svg+xml",
+      "alt": "CannabisSense",
+      "source": "https://cannabissense.ca/#header-inline-svg:/",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/cannabis-logo",
+      "itemId": "d35abac875524303b1a9d67aeee54b31"
+    },
+    {
+      "site": "cannabissense",
+      "name": "quiz",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/quiz",
+      "sha256": "5453470f654e78936ba23d0e3c88cb140d4af22a6f1f50f4c7ffc892d1e70197",
+      "mime": "image/svg+xml",
+      "alt": "Cannabis knowledge quiz",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/2024-11/quiz_website_icons_homepage_120x100px-01.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/quiz",
+      "itemId": "5c82d037a8ad4bd2afdb534d00237071"
+    },
+    {
+      "site": "cannabissense",
+      "name": "moderation",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/moderation",
+      "sha256": "4aa214407d7e6f352c5e4f98fa284df0ffff67bbb30b359ea001ad56c85d302a",
+      "mime": "image/svg+xml",
+      "alt": "Moderation",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/2024-11/moderation_website_icons_homepage_120x100px-03.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/moderation",
+      "itemId": "0d017216aa414727a9cecf23d92f8075"
+    },
+    {
+      "site": "cannabissense",
+      "name": "health",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/health",
+      "sha256": "fb13986fcf482b9cf7e22ca13dc846ea2caa5daea9ff32d37bd0a263c314be81",
+      "mime": "image/svg+xml",
+      "alt": "Health effects",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/2024-11/health_effects_website_icons_homepage_120x100px-02.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/health",
+      "itemId": "e3fc61bde2cf4d1a87a06d0cda49fc40"
+    },
+    {
+      "site": "cannabissense",
+      "name": "legal",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/legal",
+      "sha256": "4c92e7892f117dec244a5e9a5a5e51dac12c8a920074189fd0b0617c9a6685e8",
+      "mime": "image/svg+xml",
+      "alt": "Use legally",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/2024-11/buy_legal_website_icons_homepage_120x100px-04.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/legal",
+      "itemId": "32aaf093dd1b4f6189c8a1e14c9bcb3e"
+    },
+    {
+      "site": "cannabissense",
+      "name": "resources",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/resources",
+      "sha256": "1db32f6d6051f27ade121ceb79adc12b78a83bfe34cf1d1fb486bf8ebc718ec7",
+      "mime": "image/svg+xml",
+      "alt": "Resources",
+      "source": "https://cannabissense.ca/sites/cannabissense/files/2024-11/resources_website_icons_homepage_120x100px-05.svg",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/resources",
+      "itemId": "ec23136b13db4ef19e9ad6b283becedb"
+    },
+    {
+      "site": "cannabissense",
+      "name": "brand-aglc",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/brand-aglc",
+      "sha256": "0e9ce0aca6833b2bd62be6db071706cdcb9a3663dbe3aee688369341d3c6f7af",
+      "mime": "image/svg+xml",
+      "alt": "AGLC",
+      "source": "https://cannabissense.ca/#header-inline-svg:https://www.aglc.ca/",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/brand-aglc",
+      "itemId": "61589424481c4e1fa03a77ab132220e9"
+    },
+    {
+      "site": "cannabissense",
+      "name": "brand-cannabissense",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/brand-cannabissense",
+      "sha256": "3391627cbfb1a20a62e5adfd7592de18447fd3f3db67a20fc97f3ef1e369fbbe",
+      "mime": "image/svg+xml",
+      "alt": "CannabisSense",
+      "source": "https://cannabissense.ca/#header-inline-svg:https://cannabissense.ca/",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/brand-cannabissense",
+      "itemId": "926bbcb87b534581b66d2e5452ce4bd7"
+    },
+    {
+      "site": "cannabissense",
+      "name": "brand-drinksense",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/brand-drinksense",
+      "sha256": "0e283fc3f4d32d83706c55777a633f13da1c65768765ec1861ce262ab5e65ddc",
+      "mime": "image/svg+xml",
+      "alt": "DrinkSense",
+      "source": "https://cannabissense.ca/#header-inline-svg:https://www.drinksenseab.ca/",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/brand-drinksense",
+      "itemId": "54c31be625ba4566907e805ad662d59e"
+    },
+    {
+      "site": "cannabissense",
+      "name": "brand-gamesense",
+      "itemPath": "Project/aglc/cannabissense/ReferenceRefresh/brand-gamesense",
+      "sha256": "0493c6022fa698309cebca3cca2f52ab5bfd1027a68239b23ffa74288b44558f",
+      "mime": "image/svg+xml",
+      "alt": "GameSense",
+      "source": "https://cannabissense.ca/#header-inline-svg:https://gamesenseab.ca/",
+      "nativePath": "/sitecore/media library/Project/aglc/cannabissense/ReferenceRefresh/brand-gamesense",
+      "itemId": "6e9d9df4f64448918b836cf115d2bb39"
+    }
+  ]
+}

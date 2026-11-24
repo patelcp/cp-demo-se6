@@ -1,0 +1,38 @@
+﻿---
+ID: "28a56537-a724-47d4-8eec-6e5923c663be"
+Parent: "7ff8b1a3-7f53-412f-9347-52a1688ff7dc"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/aglc/aglc/Presentation/Placeholder Settings/Partial Design/Site footer
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-sitefooter"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "fc3f5ce6-f0dc-46ec-a872-2e451e385acd"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223212Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a6c641a7-7301-4457-98aa-2c45ad094d58"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261113T223212Z

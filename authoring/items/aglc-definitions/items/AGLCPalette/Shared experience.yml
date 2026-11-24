@@ -1,0 +1,42 @@
+﻿---
+ID: "4c206d47-9052-4809-87cf-8bf6280bbf4e"
+Parent: "54711edf-a6ec-4373-83ff-8947a68842cd"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/aglc/aglc/Presentation/Available Renderings/Shared experience
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {C4E6929B-3B4B-406D-B547-55C8AF094E7A}
+    {0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}
+    {FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}
+    {AFA7F79C-69E1-4075-8C05-9E184E9CA767}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2ef754c1-42cd-4f77-8fd1-df917ad7fdf2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261113T223219Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5b755488-8c19-4979-bded-fc892010738b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054546Z

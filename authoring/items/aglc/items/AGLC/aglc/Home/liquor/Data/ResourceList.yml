@@ -1,0 +1,26 @@
+﻿---
+ID: "648c72e3-93dd-4c94-8606-6a932fa2ecbc"
+Parent: "548e3061-e254-4419-bc62-596bdf2b618a"
+Template: "637d49f6-fdf2-41dc-a7cd-86d9090ef40a"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/ResourceList
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0034bd37-92a4-4c6a-8f67-bfcd1706a598"
+      Hint: Heading
+      Value: For businesses
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054134Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7a6c4468-d2d4-4726-a758-1751801e1cf6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054135Z

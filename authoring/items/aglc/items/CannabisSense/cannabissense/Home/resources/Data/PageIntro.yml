@@ -1,0 +1,26 @@
+﻿---
+ID: "a9299ebb-0816-4496-9bd6-b90140b56321"
+Parent: "79402ace-1d00-4283-b32f-3d5f48e5e0da"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: /sitecore/content/aglc/cannabissense/Home/resources/Data/PageIntro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054252Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: Resources
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b44146bd-b6e5-415e-b3ce-d3cc5ce9da83"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054252Z

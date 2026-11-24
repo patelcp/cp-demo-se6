@@ -1,0 +1,26 @@
+﻿---
+ID: "c8da0317-af25-460f-b792-f05ef090e859"
+Parent: "3c10d3db-25bf-4135-b140-e4030db9bbe5"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/PageIntro"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054243Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: Use legally
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68d53168-046d-443f-bcc8-03cb4e3f039b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054243Z

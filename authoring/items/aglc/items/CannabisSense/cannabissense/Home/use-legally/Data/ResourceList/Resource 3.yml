@@ -1,0 +1,43 @@
+﻿---
+ID: "32982ee7-84db-4dd6-a106-640e6dc99f0e"
+Parent: "a1323eac-f369-4f76-95e7-905ae7c36b4b"
+Template: "95a3c89e-1f5f-435e-ad69-023edc0f1147"
+Path: "/sitecore/content/aglc/cannabissense/Home/use-legally/Data/ResourceList/Resource 3"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3043f110-127b-4c0c-9727-6bbd03253264"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054246Z
+    - ID: "3b3d917a-cfea-45ff-871a-9b78889d968e"
+      Hint: Category
+      Value: Use legally
+    - ID: "59c55e69-24ef-4ee1-a1af-e8c9c25e55a3"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://cannabissense.ca/use-legally/drivinglegal" text="Driving legal" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1489e300-ed85-4a90-a82b-fdf4e834f92e"
+    - ID: "915fe071-0273-4023-99dd-93235c0d6475"
+      Hint: DocumentType
+      Value: Information
+    - ID: "9e6b19bf-d3d6-4743-b426-70950c4bf6c4"
+      Hint: Title
+      Value: Driving legal
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054246Z

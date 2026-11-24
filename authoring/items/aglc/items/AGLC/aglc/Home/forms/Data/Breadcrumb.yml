@@ -1,0 +1,23 @@
+﻿---
+ID: "74c264e0-410d-42b0-9778-53fbc3a9f3a5"
+Parent: "d42b66fe-bd1d-4ba3-97aa-828778383527"
+Template: "29bb677e-232e-4db1-aa9d-5e24fc3f7470"
+Path: /sitecore/content/aglc/aglc/Home/forms/Data/Breadcrumb
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054158Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ef5bd9c6-d096-4109-a894-8db061004eca"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054158Z

@@ -1,0 +1,88 @@
+{
+  "updates": [
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Licensing",
+      "id": "f71ea2fdfa004a7882c4cbfcc52a312f",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/gaming\" text=\"Gaming\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/gaming",
+      "text": "Gaming"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Liquor",
+      "id": "1cbea3f5922d4847be02bc4fa9f48fd8",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/liquor\" text=\"Liquor\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/liquor",
+      "text": "Liquor"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Presentation/Partial Designs/Site header/Data/Site header/Cannabis",
+      "id": "239ff378807e45c3b84429d6826ce324",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis\" text=\"Cannabis\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/cannabis",
+      "text": "Cannabis"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/Data/Hero/Reference Forms",
+      "id": "4bc72661bfcd47bd85e9316e4b4e85de",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/forms\" text=\"Forms\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/forms",
+      "text": "Forms"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Licensing",
+      "id": "13af8fb344ac477786d737055af2505f",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/gaming\" text=\"Learn more\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/gaming",
+      "text": "Learn more"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Forms and documents",
+      "id": "e682c0dac7674af4843b115be200c6b5",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/liquor\" text=\"Learn more\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/liquor",
+      "text": "Learn more"
+    },
+    {
+      "path": "/sitecore/content/aglc/aglc/Home/Data/CardGrid/Cannabis information",
+      "id": "080828c946644ff7970a157db3b89889",
+      "oldLink": "<link linktype=\"external\" url=\"https://aglc.ca/cannabis\" text=\"Learn more\" />",
+      "targetPath": "/sitecore/content/aglc/aglc/Home/cannabis",
+      "text": "Learn more"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Cannabis basics",
+      "id": "16b81765e2ea4c7f916255aa51512c46",
+      "oldLink": "<link linktype=\"external\" url=\"https://cannabissense.ca/basics\" text=\"The basics\" />",
+      "targetPath": "/sitecore/content/aglc/cannabissense/Home/basics",
+      "text": "The basics"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Health effects",
+      "id": "339c9e22743e490f8624833fea57598f",
+      "oldLink": "<link linktype=\"external\" url=\"https://cannabissense.ca/moderation\" text=\"Moderation\" />",
+      "targetPath": "/sitecore/content/aglc/cannabissense/Home/moderation",
+      "text": "Moderation"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Lower-risk guidelines",
+      "id": "06f11862c4034cba9c6a352ee83b00ac",
+      "oldLink": "<link linktype=\"external\" url=\"https://cannabissense.ca/health-effects\" text=\"Health effects\" />",
+      "targetPath": "/sitecore/content/aglc/cannabissense/Home/health-effects",
+      "text": "Health effects"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Resources",
+      "id": "e438150fd4c2411cbf560bae1e43d156",
+      "oldLink": "<link linktype=\"external\" url=\"https://cannabissense.ca/use-legally\" text=\"Use legally\" />",
+      "targetPath": "/sitecore/content/aglc/cannabissense/Home/use-legally",
+      "text": "Use legally"
+    },
+    {
+      "path": "/sitecore/content/aglc/cannabissense/Presentation/Partial Designs/Site header/Data/Site header/Reference Resources",
+      "id": "05c71505e42f47cea3c789939935d8c1",
+      "oldLink": "<link linktype=\"external\" url=\"https://cannabissense.ca/resources\" text=\"Resources\" />",
+      "targetPath": "/sitecore/content/aglc/cannabissense/Home/resources",
+      "text": "Resources"
+    }
+  ]
+}

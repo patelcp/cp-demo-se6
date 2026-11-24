@@ -1,0 +1,33 @@
+﻿---
+ID: "89568f50-f8ae-4895-a078-2d2347b8c2f4"
+Parent: "8365276f-1ea1-40a2-8d7c-0072aa59e63b"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: /sitecore/content/aglc/aglc/Home/cannabis/Data/PageIntro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054145Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: Cannabis
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "57f2af31-9a93-4c84-951d-c30ff4572b3c"
+    - ID: "b6e24546-decb-47b9-b26d-efa3ae4660ac"
+      Hint: Summary
+      Value: <p>AGLC oversees a cannabis model designed to offer Albertans trusted choices.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060348Z
+    - ID: "f7f4dca8-69ba-46c6-981e-98d5249189ee"
+      Hint: Image
+      Value: |
+        <image mediaid="{420FC32E-5022-4BCE-92DD-C9C411222FFC}" alt="Cannabis banner" />

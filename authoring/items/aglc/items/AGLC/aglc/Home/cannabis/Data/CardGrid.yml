@@ -1,0 +1,26 @@
+﻿---
+ID: "c44c7c4c-f15b-447a-afa0-0740cf081dee"
+Parent: "8365276f-1ea1-40a2-8d7c-0072aa59e63b"
+Template: "45f9bc08-f726-4041-9f45-aa3379ef755e"
+Path: /sitecore/content/aglc/aglc/Home/cannabis/Data/CardGrid
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054146Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cf1a5008-ee9b-481c-9961-cd3ee1e5b0d3"
+    - ID: "8d556eea-198b-436e-82a0-8fc3781d658c"
+      Hint: Heading
+      Value: Trending
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054146Z

@@ -1,0 +1,23 @@
+﻿---
+ID: "d6626b83-7f29-4252-a1b0-c6b7f3adc8af"
+Parent: "eff2c3cc-fdc3-4bae-88a8-ecb8ada93aee"
+Template: "637d49f6-fdf2-41dc-a7cd-86d9090ef40a"
+Path: "/sitecore/content/aglc/cannabissense/Home/health-effects/Data/ResourceList"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054233Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "674f275a-4bcd-4a51-9f13-9f61d7f59bb7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054233Z

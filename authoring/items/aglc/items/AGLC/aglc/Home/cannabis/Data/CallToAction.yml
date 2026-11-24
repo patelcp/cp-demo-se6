@@ -1,0 +1,33 @@
+﻿---
+ID: "714e741a-c78d-4b8f-b0fc-ff9f796ee70e"
+Parent: "8365276f-1ea1-40a2-8d7c-0072aa59e63b"
+Template: "5043c044-12dc-47f9-a538-e519053df657"
+Path: /sitecore/content/aglc/aglc/Home/cannabis/Data/CallToAction
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1bea189f-79b6-4cc3-a260-ba0fda135d1f"
+      Hint: Title
+      Value: Forms and documents
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054157Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "81ce244e-eebb-4cab-89b4-e979164ae66e"
+    - ID: "9720c777-4569-4b1a-ab42-bb6861245563"
+      Hint: Link
+      Value: |
+        <link linktype="internal" id="{37AB3096-40B7-490A-BC2E-AF3BBE64C9C0}" text="View forms and documents" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054157Z
+    - ID: "df7519d3-6e80-43f9-a874-676b3923b3ac"
+      Hint: Body
+      Value: <p>Explore a selection of official AGLC resources.</p>

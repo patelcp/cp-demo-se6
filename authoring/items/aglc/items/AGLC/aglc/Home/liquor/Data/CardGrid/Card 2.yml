@@ -1,0 +1,41 @@
+﻿---
+ID: "52315e67-cca1-4924-860d-e0f7b0886418"
+Parent: "2947c62f-7e85-4247-866e-b25c50be774f"
+Template: "a99aa87e-ab91-4589-a7a3-3eb3ca24fdb3"
+Path: /sitecore/content/aglc/aglc/Home/liquor/Data/CardGrid/Card 2
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e56c17ac-a8fa-4dd2-9440-30e19d063c20"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04e0cb6a-3c66-4224-a653-415196124c69"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://aglc.ca/liquor/liquor-legislation-and-policies" text="Liquor handbooks and policies" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054132Z
+    - ID: "764b8b59-7e70-406e-9b40-6a9721780fe9"
+      Hint: Title
+      Value: Liquor handbooks and policies
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bd89046b-daf2-43ab-a904-e9cad1663f16"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054133Z
+    - ID: "f279a129-991e-4f6f-9601-8765463bf6b6"
+      Hint: Image
+      Value: |
+        <image mediaid="{D8EC7F77-409B-4384-A40D-981747375645}" alt="Liquor handbooks and policies" />

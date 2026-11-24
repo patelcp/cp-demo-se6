@@ -1,0 +1,86 @@
+﻿---
+ID: "8778f709-4872-4cfa-b386-23da410da768"
+Parent: "4254bcfa-b9c3-485a-aadb-8b5b3f8fd08d"
+Template: "95902259-996f-4932-980a-cdac2de84b0a"
+Path: "/sitecore/content/aglc/cannabissense/Home/health-effects"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{BA3358D8-891B-4D4D-A19A-545A0F534AB5}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{56CFA3BA-D188-4A07-BA9D-16DE2337027A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e42448ce-bb19-40ca-b453-9c72494998f6"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{2379F69B-3133-501A-8F29-631F1F0CE908}"
+          id="{C4E6929B-3B4B-406D-B547-55C8AF094E7A}"
+          ds="{C4985076-6CD3-497B-8E29-D23AB0DCA442}"
+          ph="headless-main"
+          par="FieldNames=%7BB66C39D4-A574-4093-BBAD-FFEC44FE6BAE%7D&amp;DynamicPlaceholderId=1" />
+        <r
+          uid="{83E98B2B-0B6C-5AED-AF7D-DFCA6B5FD1C9}"
+          id="{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}"
+          ds="{423A1533-E508-4D9D-9194-56979DBE8EC0}"
+          ph="headless-main"
+          par="FieldNames=%7BE733ADC8-ADDD-48BD-9C8E-781FCC81AF38%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{53C589F3-3811-5BFB-99C2-9E2148270377}"
+          id="{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}"
+          ds="{D6626B83-7F29-4252-A1B0-C6B7F3ADC8AF}"
+          ph="headless-main"
+          par="FieldNames=%7BF048388A-B418-457A-AE1A-E12F23C371C0%7D&amp;DynamicPlaceholderId=3" />
+        <r
+          uid="{D11B204E-B7AF-5001-B81C-B2A989122D96}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{DC2C8215-AD0B-45A9-93C8-C7DF0D218AEE}"
+          ph="headless-main"
+          par="FieldNames=%7BD1CADF34-8ED7-4A64-A2A9-E6CB8C3245FF%7D&amp;DynamicPlaceholderId=4" />
+        <r
+          uid="{29E714DA-ED27-5CE8-9F34-0B3AEB5C6CE8}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{474A4547-3117-4C3D-A6E7-FB5B2A53DA94}"
+          ph="headless-main"
+          par="FieldNames=%7BD1CADF34-8ED7-4A64-A2A9-E6CB8C3245FF%7D&amp;DynamicPlaceholderId=5" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "5e7ffb62-72d6-4bf3-8514-0fa4e8e3d8b8"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Health effects
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054102Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "health-effects"
+    - ID: "75b183c2-6155-4a48-a7d2-45cd98c691c1"
+      Hint: Title
+      Value: Health effects
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a34ac35a-d122-4f34-bc06-b5b08e470ba2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060354Z

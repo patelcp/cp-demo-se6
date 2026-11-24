@@ -1,0 +1,26 @@
+﻿---
+ID: "c81af99c-db59-49b0-a0d3-58daf3a30484"
+Parent: "5ec27da7-9677-413b-a2ca-c9b50c471c9d"
+Template: "38a37125-ee76-4c77-bc0f-1c977ca9b91b"
+Path: /sitecore/content/aglc/cannabissense/Home/basics/Data/PageIntro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054216Z
+    - ID: "6ebde9e8-0107-4870-854b-2885d19e8b81"
+      Hint: Title
+      Value: The basics
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3790d120-92eb-4587-9b54-63b71b5b4830"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054216Z

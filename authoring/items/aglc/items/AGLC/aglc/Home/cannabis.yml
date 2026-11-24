@@ -1,0 +1,80 @@
+﻿---
+ID: "b4193cd8-bdd6-4486-b2a4-5ea7385f2cc4"
+Parent: "b25704d6-68a6-4e40-96a5-b869529e992c"
+Template: "95902259-996f-4932-980a-cdac2de84b0a"
+Path: /sitecore/content/aglc/aglc/Home/cannabis
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E78A2B3-1229-483A-914B-614237EADF56}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{981D8C99-B33B-4906-9B70-8C6FD534B893}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "aff6f46d-b218-45f5-b1c3-735144e00800"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{F9271190-D7D3-5C21-8BC9-E99B9AED3D60}"
+          id="{0CA6E47D-2C34-4053-A944-FF6A18D0D5CC}"
+          ds="{89568F50-F8AE-4895-A078-2D2347B8C2F4}"
+          ph="headless-main"
+          par="FieldNames=%7B7FB3D349-200D-4C1B-8548-C3DFDE9BADCF%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{9CA44631-E124-590C-96F7-5EF0B6CC5834}"
+          id="{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}"
+          ds="{C44C7C4C-F15B-447A-AFA0-0740CF081DEE}"
+          ph="headless-main"
+          par="FieldNames=%7B3E5599A9-C388-4D08-8C18-B3202C0DF787%7D&amp;DynamicPlaceholderId=3" />
+        <r
+          uid="{0CA4A2AB-2EF2-51AD-BB7C-1E91372522A3}"
+          id="{FF9BD9AD-39F6-4AA6-82C2-0336E551FDF4}"
+          ds="{47BF1E8D-C296-4F97-8140-57EECA3D81E2}"
+          ph="headless-main"
+          par="FieldNames=%7B8992E8E3-CBC9-441B-96B6-DEFDF5546637%7D&amp;DynamicPlaceholderId=4" />
+        <r
+          uid="{D6468E12-D388-5BF2-A0EB-A68A7BBF5A83}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{714E741A-C78D-4B8F-B0FC-FF9F796EE70E}"
+          ph="headless-main"
+          par="FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=5" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "8a562715-cde5-4cfe-b90a-9c8439f5298c"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Cannabis
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054051Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: cannabis
+    - ID: "75b183c2-6155-4a48-a7d2-45cd98c691c1"
+      Hint: Title
+      Value: Cannabis
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f22a7d48-f153-4e33-81fa-e92026a99a62"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T060352Z

@@ -5,10 +5,43 @@ Template: "95902259-996f-4932-980a-cdac2de84b0a"
 Path: /sitecore/content/aglc/aglc/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E78A2B3-1229-483A-914B-614237EADF56}"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
     <image mediaid="{014C6DA4-9AEE-4AE2-90FC-6A709454ADE1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "03be29f8-b620-4796-92dd-e1eb000682fd"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{347D019F-C5B4-5F81-96E9-575C96C71F60}"
+          id="{84C91E02-B857-4FB6-B73F-F1832B084C0E}"
+          ds="{8D0ABC77-C58B-4C95-9DE8-118FEF164206}"
+          ph="headless-main"
+          par="FieldNames=%7B27E0CDF7-060E-4DF4-99D5-AC97E4360136%7D&amp;DynamicPlaceholderId=1" />
+        <r
+          uid="{434151CE-21AB-51EB-B246-EFD685D377EF}"
+          id="{27E326AA-73B7-4DA7-B4E4-8D2F3E1D7A27}"
+          ds="{A4408A5B-1BE2-4699-B10A-E08859D34AC3}"
+          ph="headless-main"
+          par="FieldNames=%7BEFDF5D60-DD4B-4B7D-A9DC-0F562A356D97%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{631580A4-DD59-5A9E-9A28-4548A4E522AA}"
+          id="{020E9010-DAD5-42F2-B92A-A403CB673BEA}"
+          ds="{C362935F-CFF0-4D57-BB1F-5ED783E82071}"
+          ph="headless-main"
+          par="FieldNames=%7BDB065B97-AD42-4DDC-A386-B27478FB3D26%7D&amp;DynamicPlaceholderId=3" />
+      </d>
+    </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
@@ -36,11 +69,11 @@ Languages:
       Value: aglc
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "96851e5e-df63-4e2a-aed1-3779b9243052"
+      Value: "3b8bed49-dd56-4c03-8d31-63ff2ea66426"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\chirag.patel@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20261113T062007Z
+      Value: 20261113T232618Z

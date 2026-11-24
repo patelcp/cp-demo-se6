@@ -13,7 +13,7 @@ SharedFields:
   Value: isSiteThumbnailSource=true
 - ID: "475031d8-724d-463c-80b2-90839dd1ad98"
   Hint: VirtualFolder
-  Value: 
+  Value:
 - ID: "4e9e2ae5-36db-4955-9af1-5a1934a27c7d"
   Hint: Language Embedding
   Value: 0

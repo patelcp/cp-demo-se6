@@ -1,0 +1,30 @@
+﻿---
+ID: "4f1e5634-2d72-4b9c-8198-9b06cf7198ff"
+Parent: "7f8cb7d7-ab49-41a6-a244-647e7216b23c"
+Template: "5043c044-12dc-47f9-a538-e519053df657"
+Path: /sitecore/content/aglc/cannabissense/Home/moderation/Data/Find support
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1bea189f-79b6-4cc3-a260-ba0fda135d1f"
+      Hint: Title
+      Value: Find support
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261114T054229Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e809795-2c62-4543-8440-252e1b3bc03c"
+    - ID: "9720c777-4569-4b1a-ab42-bb6861245563"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://cannabissense.ca/find-support" text="Learn more" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chirag.patel@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261114T054229Z
