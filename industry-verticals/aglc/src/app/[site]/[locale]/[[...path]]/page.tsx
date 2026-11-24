@@ -1,6 +1,6 @@
 import { isDesignLibraryPreviewData } from "@sitecore-content-sdk/nextjs/editing";
 import { notFound } from "next/navigation";
-import { draftMode, headers as nextHeaders } from "next/headers";
+import { cookies, draftMode, headers as nextHeaders } from "next/headers";
 import { SiteInfo } from "@sitecore-content-sdk/nextjs";
 import sites from ".sitecore/sites.json";
 import { routing } from "src/i18n/routing";
@@ -12,11 +12,16 @@ import Providers from "src/Providers";
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { getBaseUrl } from "lib/utils";
+import { CannabisSensePersonalizationConsent } from "components/content-sdk/CannabisSensePersonalizationConsent";
+import {
+  campaignContext, consentRemainingSeconds, CONSENT_COOKIE, enabledOnHost, parsedSearch,
+} from "lib/cannabissense-personalization";
 
 // Refresh published Edge content on the next request after this interval.
 export const revalidate = 60;
 
 type PageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
   params: Promise<{
     site: string;
     locale: string;
@@ -25,7 +30,7 @@ type PageProps = {
   }>;
 };
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
   const { site, locale, path } = await params;
   const draft = await draftMode();
 
@@ -58,10 +63,23 @@ export default async function Page({ params }: PageProps) {
     components,
   );
 
+  let campaignConsent;
+  if (!draft.isEnabled && site === "cannabissense" && locale === "en" &&
+      path?.[0] === "basics" && path.slice(1).every(part => part.startsWith("_variantId_")) &&
+      process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === "1" &&
+      enabledOnHost((await nextHeaders()).get("host"))) {
+    campaignConsent = (
+      <CannabisSensePersonalizationConsent
+        allowed={Boolean(consentRemainingSeconds((await cookies()).get(CONSENT_COOKIE)?.value))}
+        campaign={campaignContext(parsedSearch(await searchParams))}
+      />
+    );
+  }
+
   return (
     <NextIntlClientProvider>
       <Providers page={page} componentProps={componentProps}>
-        <Layout page={page} />
+        <Layout page={page} campaignConsent={campaignConsent} />
       </Providers>
     </NextIntlClientProvider>
   );

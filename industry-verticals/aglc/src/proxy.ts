@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 import {
   defineProxy,
   PreviewProxy,
@@ -10,6 +10,11 @@ import sites from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
 import client from './lib/sitecore-client';
+import { CannabisSensePersonalizeProxy } from './lib/cannabissense-personalize-proxy';
+import {
+  consentRemainingSeconds, CONSENT_COOKIE, DEMO_HOST, DEMO_PATH, enabledOnHost,
+  isExternalVariantPath, scopedCookie, SITECORE_COOKIES,
+} from './lib/cannabissense-personalization';
 
 const preview = new PreviewProxy({
     client,
@@ -60,11 +65,31 @@ const redirects = new RedirectsProxy({
   skip: () => false,
 });
 
-// Personalization intentionally remains uninitialized in the blank foundation.
-// Enable it only with the later campaign/consent implementation and verification.
+const personalize = new CannabisSensePersonalizeProxy({
+  sites,
+  ...scConfig.api.edge,
+  ...scConfig.personalize,
+  enabled: process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === '1',
+});
 
-export default function proxy(req: NextRequest) {
-  return defineProxy(preview, locale, multisite, redirects).exec(req);
+export default async function proxy(req: NextRequest) {
+  const host = req.headers.get('host');
+  // A visitor must not force an SDK-internal variant path directly.
+  if (host?.toLowerCase() === DEMO_HOST && isExternalVariantPath(req.nextUrl.pathname)) {
+    return new NextResponse(null, { status: 404, headers: { 'Cache-Control': 'private, no-store' } });
+  }
+  const isConsentPage = enabledOnHost(host) && req.nextUrl.pathname === DEMO_PATH;
+  const response = await defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
+  if (isConsentPage) {
+    response.headers.set('Cache-Control', 'private, no-store');
+    response.headers.set('Referrer-Policy', 'no-referrer');
+    const remaining = consentRemainingSeconds(req.cookies.get(CONSENT_COOKIE)?.value);
+    for (const name of SITECORE_COOKIES) {
+      const cookie = response.cookies.get(name);
+      if (cookie) response.cookies.set(name, cookie.value, { ...scopedCookie(remaining) });
+    }
+  }
+  return response;
 }
 
 export const config = {

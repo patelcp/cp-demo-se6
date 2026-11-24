@@ -313,3 +313,7 @@
 .topic-band .button { display:inline-flex;border:2px solid currentColor;border-radius:12px;padding:12px 32px; }
 .topic-band + .topic-band { background:#004e35;color:#70e37d; }
 @media(max-width:767px) { .topic-band { padding:40px 20px; } .topic-band h2 { font-size:26px; } }
+
+.campaign-consent { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; font-size: 13px; }
+.campaign-consent button { border: 1px solid currentColor; border-radius: 4px; padding: 6px 10px; white-space: nowrap; background: transparent; color: inherit; cursor: pointer; }
+@media (max-width: 600px) { .campaign-consent { flex-wrap: wrap; gap: 8px; } }
