@@ -3,7 +3,8 @@ import type { NavigationItem, SearchFields } from './shared-fields';
 
 export function NativeNavigationLink({ item, onClick, hideLogoTitle = false }: { item: NavigationItem; onClick?: () => void; hideLogoTitle?: boolean }) {
   if (!item.Link?.jsonValue) return null;
-  const hasLogo = Boolean(item.Logo?.jsonValue?.value?.src || item.Logo?.jsonValue?.metadata);
+  // Editing metadata exists even when the author has not chosen an image.
+  const hasLogo = Boolean(item.Logo?.jsonValue?.value?.src?.trim());
   const brandLogo = hideLogoTitle || item.Group?.jsonValue?.value?.toLowerCase() === 'brand';
   const hasTitle = Boolean(item.Title?.jsonValue?.value?.trim() || item.Title?.jsonValue?.metadata);
   return <Link field={item.Link.jsonValue} onClick={onClick}>

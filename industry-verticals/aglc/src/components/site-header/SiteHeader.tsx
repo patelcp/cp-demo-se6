@@ -16,8 +16,8 @@ export const Default = ({ fields, params, page }: SiteHeaderProps) => {
     : items.filter(item => item.Group?.jsonValue?.value?.toLowerCase() === 'brand');
   const utility = items.filter(item => item.Group?.jsonValue?.value?.toLowerCase() === 'utility');
   const main = items.filter(item => !['brand', 'utility'].includes(item.Group?.jsonValue?.value?.toLowerCase() || ''));
-  const hasLogo = Boolean(data.Logo?.jsonValue?.value?.src || data.Logo?.jsonValue?.metadata);
-  const brand = <><Image field={data.Logo?.jsonValue} className="site-brand__logo" /><Text field={data.BrandName?.jsonValue} tag="span" className={hasLogo ? 'visually-hidden' : undefined} /></>;
+  const hasLogo = Boolean(data.Logo?.jsonValue?.value?.src?.trim());
+  const brand = <>{hasLogo && <Image field={data.Logo?.jsonValue} className="site-brand__logo" />}<Text field={data.BrandName?.jsonValue} tag="span" className={hasLogo ? 'visually-hidden' : undefined} /></>;
   return <div className={`site-header ${params.styles || ''}`} id={params.RenderingIdentifier} onKeyDown={(event) => { if (event.key === 'Escape' && open) { setOpen(false); button.current?.focus(); } }}>
     <ReferenceBrandNav items={legacyBrands} />
     <div className="site-header__inner">
