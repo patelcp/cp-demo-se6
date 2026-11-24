@@ -69,6 +69,9 @@ const personalize = new CannabisSensePersonalizeProxy({
   sites,
   ...scConfig.api.edge,
   ...scConfig.personalize,
+  // Cold Live Edge metadata reads exceeded the SDK's 400ms default during rollout.
+  // The timeout applies only after the exact demo route, context and consent gates.
+  edgeTimeout: 2000,
   enabled: process.env.CANNABISSENSE_NATIVE_PERSONALIZATION === '1' ||
     process.env.AGLC_NATIVE_PERSONALIZATION === '1',
 });

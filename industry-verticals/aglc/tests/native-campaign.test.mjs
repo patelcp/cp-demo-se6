@@ -120,7 +120,7 @@ test('proxy entry applies privacy headers and shortens native visitor cookies on
   setEnable(t);
   class OtherProxy {}
   class NativeProxy {
-    constructor() {}
+    constructor(config) { assert.equal(config.edgeTimeout, 2000); }
     getSite() { return { name: 'cannabissense' }; }
     getLanguage() { return 'en'; }
     disabled() { return false; }
