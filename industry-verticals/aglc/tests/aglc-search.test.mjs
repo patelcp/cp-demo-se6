@@ -207,3 +207,97 @@ test('installed Sitecore SDK sends a native keyword request with no browser sess
     globalThis.fetch = originalFetch;
   }
 });
+
+test('staged fallback is restricted to the exact configured host and English AGLC results route', () => {
+  const { getSearchFallbackIndex } = fromApp('lib/aglc-search-fallback.ts');
+  const routeScope = { site: 'aglc', locale: 'en', path: ['search-results'] };
+  const env = { ...defaultEnv, AGLC_SEARCH_FALLBACK_HOST: 'localhost:3000' };
+  const normalizedIndex = sourceId.replaceAll('-', '');
+  assert.equal(getSearchFallbackIndex(routeScope, 'localhost:3000', env), normalizedIndex);
+  assert.equal(getSearchFallbackIndex(routeScope, 'localhost:3001', env), undefined);
+  assert.equal(getSearchFallbackIndex(routeScope, 'localhost:3000.evil.example', env), undefined);
+  assert.equal(getSearchFallbackIndex({ ...routeScope, site: 'cannabissense' }, 'localhost:3000', env), undefined);
+  assert.equal(getSearchFallbackIndex({ ...routeScope, locale: 'fr' }, 'localhost:3000', env), undefined);
+  assert.equal(getSearchFallbackIndex({ ...routeScope, path: ['search-results', 'other'] }, 'localhost:3000', env), undefined);
+  assert.equal(getSearchFallbackIndex(routeScope, 'localhost:3000', { ...env, AGLC_SEARCH_INDEX_ID: '' }), undefined);
+  assert.equal(getSearchFallbackIndex(routeScope, 'aglc-cp.vercel.app', { ...env, AGLC_SEARCH_FALLBACK_HOST: 'aglc-cp.vercel.app' }), undefined);
+  const preview = { ...defaultEnv, AGLC_SEARCH_FALLBACK_USE_VERCEL_URL: '1', VERCEL_URL: 'staged.example', VERCEL_ENV: 'preview' };
+  assert.equal(getSearchFallbackIndex(routeScope, 'staged.example', preview), normalizedIndex);
+  assert.equal(getSearchFallbackIndex(routeScope, 'staged.example', { ...preview, VERCEL_ENV: 'production' }), undefined);
+});
+
+test('published catchall prefers native results page and otherwise keeps published homepage chrome with the real SearchExperience', async () => {
+  const fallbackLib = fromApp('lib/aglc-search-fallback.ts');
+  const env = { ...defaultEnv, AGLC_SEARCH_FALLBACK_HOST: 'staged.example' };
+  const path = ['search-results'];
+  const route = (itemName) => ({ siteName: 'aglc', mode: { isEditing: false, isPreview: false }, layout: { sitecore: { route: { itemName } } } });
+  const home = route('Home');
+  const native = route('Native Results');
+  const calls = [];
+  let nativeExists = false;
+  let requestHost = 'staged.example';
+  let draft = false;
+  const providers = ({ children }) => children;
+  const LiveSearchExperience = fromApp('components/search-experience/SearchExperience.tsx', {
+    'next/navigation': { useSearchParams: () => new URLSearchParams({ q: 'forms' }) },
+  }).Default;
+  const Layout = fromApp('Layout.tsx', {
+    'src/Scripts': () => null,
+    'components/content-sdk/SitecoreStyles': () => null,
+    '.sitecore/component-map': new Map(),
+    '@sitecore-content-sdk/nextjs': {
+      AppPlaceholder: ({ name }) => React.createElement('div', { 'data-placeholder': name }),
+    },
+  }).default;
+  const page = fromApp('app/[site]/[locale]/[[...path]]/page.tsx', {
+    'next/navigation': { notFound: () => { throw new Error('404'); } },
+    'next/headers': {
+      draftMode: async () => ({ isEnabled: draft }),
+      headers: async () => new Headers({ host: requestHost }),
+    },
+    '.sitecore/sites.json': [],
+    'src/i18n/routing': { routing: { locales: ['en'] } },
+    'sitecore.config': {},
+    'src/lib/sitecore-client': {
+      async getPage(part) {
+        calls.push(part.join('/'));
+        return part.length ? (nativeExists ? native : null) : home;
+      },
+      getPreviewData() { return {}; },
+      async getPreview() { return null; },
+      async getComponentData() { return {}; },
+    },
+    'src/Layout': Layout,
+    'src/Providers': providers,
+    '.sitecore/component-map': new Map(),
+    'next-intl': { NextIntlClientProvider: providers },
+    'next-intl/server': { setRequestLocale: () => {} },
+    'lib/utils': { getBaseUrl: () => 'https://staged.example' },
+    'components/search-experience/SearchExperience': { Default: LiveSearchExperience },
+    'lib/aglc-search-fallback': {
+      mayCheckSearchFallback: (scope) => fallbackLib.mayCheckSearchFallback(scope, env),
+      getSearchFallbackIndex: (scope, host) => fallbackLib.getSearchFallbackIndex(scope, host, env),
+    },
+  }).default;
+  const args = { params: Promise.resolve({ site: 'aglc', locale: 'en', path }) };
+  const fallback = renderToStaticMarkup(await page(args));
+  assert.deepEqual(calls.splice(0), ['search-results', '']);
+  assert.match(fallback, /data-placeholder="headless-header"/);
+  assert.match(fallback, /data-placeholder="headless-footer"/);
+  assert.match(fallback, /<h1>Search AGLC<\/h1>/);
+  assert.match(fallback, /action="\/search-results".*name="q"/);
+  assert.doesNotMatch(fallback, /data-placeholder="headless-main"/);
+  nativeExists = true;
+  const published = renderToStaticMarkup(await page(args));
+  assert.deepEqual(calls.splice(0), ['search-results']);
+  assert.match(published, /data-placeholder="headless-main"/);
+  assert.doesNotMatch(published, /<h1>Search AGLC<\/h1>/);
+  nativeExists = false;
+  requestHost = 'other.example';
+  await assert.rejects(() => page(args), /404/);
+  assert.deepEqual(calls.splice(0), ['search-results']);
+  requestHost = 'staged.example';
+  draft = true;
+  await assert.rejects(() => page(args), /404/);
+  assert.deepEqual(calls, []);
+});

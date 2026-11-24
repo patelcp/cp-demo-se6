@@ -16,6 +16,8 @@ import { CannabisSensePersonalizationConsent } from "components/content-sdk/Cann
 import {
   campaignContext, configuredPolicy, consentRemainingSeconds, parsedSearch,
 } from "lib/cannabissense-personalization";
+import { Default as SearchExperience } from "components/search-experience/SearchExperience";
+import { getSearchFallbackIndex, mayCheckSearchFallback } from "lib/aglc-search-fallback";
 
 // Refresh published Edge content on the next request after this interval.
 export const revalidate = 60;
@@ -39,6 +41,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   // Fetch the page data from Sitecore
   let page;
+  let searchFallbackIndex: string | undefined;
   if (draft.isEnabled) {
     const headers = await nextHeaders();
     const previewData = client.getPreviewData(headers);
@@ -49,6 +52,16 @@ export default async function Page({ params, searchParams }: PageProps) {
     }
   } else {
     page = await client.getPage(path ?? [], { site, locale });
+    if (!page && mayCheckSearchFallback({ site, locale, path }, process.env)) {
+      searchFallbackIndex = getSearchFallbackIndex(
+        { site, locale, path }, (await nextHeaders()).get("host"), process.env,
+      );
+      if (searchFallbackIndex) {
+        const home = await client.getPage([], { site, locale });
+        if (home?.siteName === site && home.layout.sitecore.route &&
+          !home.mode.isEditing && !home.mode.isPreview) page = home;
+      }
+    }
   }
 
   // If the page is not found, return a 404
@@ -84,7 +97,17 @@ export default async function Page({ params, searchParams }: PageProps) {
   return (
     <NextIntlClientProvider>
       <Providers page={page} componentProps={componentProps}>
-        <Layout page={page} campaignConsent={campaignConsent} />
+        <Layout page={page} campaignConsent={campaignConsent} mainContent={searchFallbackIndex ? (
+          <>
+            <section className="page-intro">
+              <div className="interior-shell page-intro__copy"><h1>Search AGLC</h1></div>
+            </section>
+            <SearchExperience
+              page={page}
+              fields={{ search: { value: JSON.stringify({ searchIndex: searchFallbackIndex, fieldsMapping: {} }) } }}
+            />
+          </>
+        ) : undefined} />
       </Providers>
     </NextIntlClientProvider>
   );
@@ -122,6 +145,10 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
   // The same call as for rendering the page. Should be cached by default react behavior
   const page = await client.getPage(path ?? [], { site, locale });
+  if (!page && mayCheckSearchFallback({ site, locale, path }, process.env) &&
+    getSearchFallbackIndex({ site, locale, path }, (await nextHeaders()).get("host"), process.env)) {
+    return { title: "Search AGLC", robots: { index: false, follow: false } };
+  }
   const fields = page?.layout.sitecore.route?.fields as RouteFields;
 
   // Parse keywords from comma-separated string to array

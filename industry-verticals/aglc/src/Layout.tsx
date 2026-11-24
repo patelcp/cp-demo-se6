@@ -8,6 +8,7 @@ import componentMap from ".sitecore/component-map";
 interface LayoutProps {
   page: Page;
   campaignConsent?: React.ReactNode;
+  mainContent?: React.ReactNode;
 }
 
 export interface RouteFields {
@@ -24,7 +25,7 @@ export interface RouteFields {
   thumbnailImage?: ImageField;
 }
 
-const Layout = ({ page, campaignConsent }: LayoutProps): JSX.Element => {
+const Layout = ({ page, campaignConsent, mainContent }: LayoutProps): JSX.Element => {
   const { layout, mode } = page;
   const { route } = layout.sitecore;
   const mainClassPageEditing = mode.isEditing ? "editing-mode" : "prod-mode";
@@ -61,14 +62,14 @@ const Layout = ({ page, campaignConsent }: LayoutProps): JSX.Element => {
             <main id="main-content" tabIndex={-1}>
               {campaignConsent}
               <div id="content">
-                {route && (
+                {mainContent ?? (route && (
                   <AppPlaceholder
                     page={page}
                     componentMap={componentMap}
                     name="headless-main"
                     rendering={route}
                   />
-                )}
+                ))}
               </div>
             </main>
             <footer>
